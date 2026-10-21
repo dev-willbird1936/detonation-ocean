@@ -1,0 +1,306 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Imani Okoro",
+    "short": "imani",
+    "email": "imani.okoro@chirpwell.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "pink",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-aurora.jpg",
+    "wifiNetwork": "Home-WiFi"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "imani"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Queue review.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 51,
+        "modified": "2020-07-09T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Escalation guide.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 42,
+        "modified": "2020-06-20T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Imani",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2020-07-14T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "stickies"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-remote-working-q",
+          "folder": "inbox",
+          "from": "Chirpwell Support Ops <supportops@chirpwell.example>",
+          "to": "imani.okoro@chirpwell.example",
+          "subject": "Remote working: queue handover rules",
+          "body": "Everyone is working from home until further notice. Hand over your queue in the support channel at the end of each shift.\n\nSupport Ops",
+          "time": "2020-07-13T09:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-remote-access-is",
+          "folder": "inbox",
+          "from": "Chirpwell IT <it@chirpwell.example>",
+          "to": "imani.okoro@chirpwell.example",
+          "subject": "Remote access is changing next month",
+          "body": "We will announce the change by email and in the staff meeting. Nobody from IT will call you to start it.\n\nChirpwell IT",
+          "time": "2020-07-10T11:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-queue-review-not",
+          "folder": "inbox",
+          "from": "Kit Delaney <kit.delaney@chirpwell.example>",
+          "to": "imani.okoro@chirpwell.example",
+          "subject": "Queue review notes",
+          "body": "Imani, the notes from the queue review are in the shared folder.\n\nKit",
+          "time": "2020-07-09T16:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-kit-delaney",
+          "with": "Kit Delaney",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Kit Delaney",
+              "text": "Queue is heavy today.",
+              "time": "2020-07-14T08:10:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-support-team",
+          "with": "Support team",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Arlo Weiss",
+              "text": "Anyone have a minute for a policy question?",
+              "time": "2020-07-14T08:25:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-home-setup",
+        "folder": "notes",
+        "title": "Home setup",
+        "body": "Desk by the window\nHeadset on charge\nBackup phone for calls",
+        "modified": "2020-07-02T18:00:00Z",
+        "pinned": false
+      },
+      {
+        "id": "n-2-policy-cheat-sheet",
+        "folder": "notes",
+        "title": "Policy cheat sheet",
+        "body": "Verified accounts: send to the escalation team\nReports: log in the tracker",
+        "modified": "2020-07-08T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-team-check-in",
+        "title": "Team check-in",
+        "start": "2020-07-15T09:30:00Z",
+        "end": "2020-07-15T09:45:00Z",
+        "location": "Video call"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-hand-over-the-queue",
+        "list": "work",
+        "title": "Hand over the queue",
+        "due": "2020-07-14T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-kit-delaney",
+        "name": "Kit Delaney",
+        "email": "kit.delaney@chirpwell.example",
+        "phone": "+1 555 0261",
+        "org": "Chirpwell"
+      },
+      {
+        "id": "p-2-arlo-weiss",
+        "name": "Arlo Weiss",
+        "email": "arlo.weiss@chirpwell.example",
+        "phone": "+1 555 0262",
+        "org": "Chirpwell"
+      },
+      {
+        "id": "p-3-chirpwell-it",
+        "name": "Chirpwell IT",
+        "email": "it@chirpwell.example",
+        "phone": "+1 555 0260",
+        "org": "Chirpwell"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Queue review, July\nOpen tickets: 214\nOldest: 3 days"
+      },
+      "c-doc-2": {
+        "text": "Escalation contacts for verified accounts."
+      }
+    },
+    "web": {
+      "pages": {
+        "chirpwell-remote": {
+          "title": "Chirpwell remote access",
+          "url": "remote.chirpwell.example",
+          "body": "Remote access\n\nNo changes are scheduled. IT will announce any change in the staff meeting.",
+          "choices": []
+        },
+        "chirpwell-wiki": {
+          "title": "Support wiki",
+          "url": "wiki.chirpwell.example",
+          "body": "Support policies and escalation paths.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-chirpwell-remote",
+          "title": "Chirpwell remote access",
+          "url": "scene:chirpwell-remote"
+        },
+        {
+          "id": "bm-chirpwell-wiki",
+          "title": "Support wiki",
+          "url": "scene:chirpwell-wiki"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-chirpwell-remote",
+          "url": "scene:chirpwell-remote",
+          "title": "Chirpwell remote access",
+          "time": "2020-07-14T08:15:00Z"
+        },
+        {
+          "id": "h-chirpwell-wiki",
+          "url": "scene:chirpwell-wiki",
+          "title": "Support wiki",
+          "time": "2020-07-13T10:20:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "IT never starts a change by phone",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

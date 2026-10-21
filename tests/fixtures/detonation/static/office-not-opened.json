@@ -1,0 +1,1 @@
+{"_note":"Authored in the shape the runner prints; not recorded from a run.","detonationRunner":1,"kind":"office","started":true,"file":"Downloads/sample.docx","exitCode":0,"office":{"olevba":{"ok":false,"error":"olevba output was not JSON"},"libreoffice":{"opened":false,"exitCode":124,"timedOut":true,"seconds":28,"stderr":""}}}

@@ -1,0 +1,26 @@
+{
+  "description": "A system registry setting changes in a way no rule matches.",
+  "path": "wine",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "family": "intrusion",
+    "findings": [
+      "other-harm"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "registry",
+      "kind": "key-changed",
+      "detail": "key-changed System\\CurrentControlSet\\Control\\Nls\\CodePage",
+      "at": "2026-01-01T00:00:00.000Z",
+      "hive": "HKLM",
+      "key": "System\\CurrentControlSet\\Control\\Nls\\CodePage",
+      "value": "ACP",
+      "data": "1252"
+    }
+  ]
+}

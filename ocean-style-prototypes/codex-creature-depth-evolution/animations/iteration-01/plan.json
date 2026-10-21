@@ -1,0 +1,824 @@
+{
+  "schema": "evolution-stage-animation-plan-v1",
+  "status": "prepared-not-generated",
+  "provider": "retrodiffusion",
+  "endpoint": "POST /v2/inferences",
+  "style": "rd_advanced_animation__custom_action",
+  "cap_microdollars": 4500000,
+  "unit_estimate_microdollars": 250000,
+  "estimated_microdollars": 4500000,
+  "estimate_basis": "Published unit price; every paid call is guarded by a fresh live check_cost quote.",
+  "depth_manifest": {
+    "file": "depth-colors/depth-color-manifest.json",
+    "sha256": "2828e36737dba619fe691a62074a550d1a6f7e77ad0a65bc6837dfe6ca7bdf51"
+  },
+  "pilot": "squid-base-rich",
+  "stage_depths": {
+    "base-rich": [
+      "sunlight",
+      "twilight"
+    ],
+    "midnight-abyss": [
+      "midnight",
+      "abyss"
+    ],
+    "trench": [
+      "trench"
+    ]
+  },
+  "loops": [
+    {
+      "id": "anglerfish-base-rich",
+      "form": "anglerfish",
+      "stage": "base-rich",
+      "index": 0,
+      "depths": [
+        "sunlight",
+        "twilight"
+      ],
+      "source_id": "anglerfish-base-rich",
+      "source_file": "morphology/anglerfish-base-rich-128.png",
+      "source_sha256": "1bdc835521ce3db2eced833b28777ef14039d3ff4317e05b481a846d0fb29a47",
+      "upload_pixels_sha256": "a36b6c1ea2eabc81c2baf1ace0d38528f019d1e3b460e52eea1b5bc50635036a",
+      "seed": 7100,
+      "prompt": "Left-facing anglerfish with a rounded teal head, one white-ringed eye, a wide toothed mouth, a ring-shaped gill disc, two orange marks on the back, blocky grey pectoral and pelvic fins, a scalloped grey fan tail, and one curved forehead stalk ending in a single orange lure bulb. Only small motions: the tail fan sways, the fins paddle gently, the lure stalk sways softly and the lure bulb pulses slightly. Head, eye, toothed jaw, gill disc and every fin stay attached in place. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "e09feab397f36c51e5b1d6e1fe52fe9120c05f3fd4bb6f4603c36d6db373272b",
+      "request": {
+        "prompt": "Left-facing anglerfish with a rounded teal head, one white-ringed eye, a wide toothed mouth, a ring-shaped gill disc, two orange marks on the back, blocky grey pectoral and pelvic fins, a scalloped grey fan tail, and one curved forehead stalk ending in a single orange lure bulb. Only small motions: the tail fan sways, the fins paddle gently, the lure stalk sways softly and the lure bulb pulses slightly. Head, eye, toothed jaw, gill disc and every fin stay attached in place. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7100
+      },
+      "input_image": "RGB upload of morphology/anglerfish-base-rich-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/anglerfish-base-rich-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "anglerfish-midnight-abyss",
+      "form": "anglerfish",
+      "stage": "midnight-abyss",
+      "index": 1,
+      "depths": [
+        "midnight",
+        "abyss"
+      ],
+      "source_id": "anglerfish-midnight-abyss",
+      "source_file": "morphology/anglerfish-midnight-abyss-128.png",
+      "source_sha256": "8e83b2ec00a4d40a6d4653d4e95c03c88e239cef9b2553fc8f21b07ad411bafb",
+      "upload_pixels_sha256": "9b3a3dd3f52187cd6e9691399917cd5d30b80be5c38f3b8f14986c1edf843c4b",
+      "seed": 7197,
+      "prompt": "Left-facing anglerfish with a rounded teal body, one white-ringed eye, a wide mouth full of long needle teeth, a ring-shaped gill disc, two small orange-tipped dorsal fins, pale pectoral and pelvic fins, a rayed fan tail, and one long thin forehead stalk ending in a single orange lure bulb. Only small motions: the tail fan sways, the fins paddle gently, the lure stalk sways softly and the lure bulb pulses slightly. Head, eye, toothed jaw, gill disc and every fin stay attached in place. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "3f9655e108fa8beb42c61260ec8c456fbc4e82b77b0ae8639f8482d4925ec41d",
+      "request": {
+        "prompt": "Left-facing anglerfish with a rounded teal body, one white-ringed eye, a wide mouth full of long needle teeth, a ring-shaped gill disc, two small orange-tipped dorsal fins, pale pectoral and pelvic fins, a rayed fan tail, and one long thin forehead stalk ending in a single orange lure bulb. Only small motions: the tail fan sways, the fins paddle gently, the lure stalk sways softly and the lure bulb pulses slightly. Head, eye, toothed jaw, gill disc and every fin stay attached in place. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7197
+      },
+      "input_image": "RGB upload of morphology/anglerfish-midnight-abyss-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/anglerfish-midnight-abyss-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "anglerfish-trench",
+      "form": "anglerfish",
+      "stage": "trench",
+      "index": 2,
+      "depths": [
+        "trench"
+      ],
+      "source_id": "anglerfish-trench",
+      "source_file": "morphology/anglerfish-trench-128.png",
+      "source_sha256": "59de45697c6d00000cf004fc8f586099edafc906b56aa58d52ae532df7ffac21",
+      "upload_pixels_sha256": "89c3b6307aaefb9c280720a2014bcbf6405fe92cfe5a773e0925c5eaeff3b0b9",
+      "seed": 7294,
+      "prompt": "Left-facing anglerfish with a scaled teal body, one white-ringed eye, a wide mouth full of long needle teeth, a ring-shaped gill disc, three tall orange-tipped dorsal spines, pale pectoral and pelvic fins, a rayed fan tail, and one long thin forehead stalk ending in a single orange lure bulb. Only small motions: the tail fan sways, the fins paddle gently, the lure stalk sways softly and the lure bulb pulses slightly. Head, eye, toothed jaw, gill disc and every fin stay attached in place. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "94d972cef6e1c47deabbc4d6f8d9ad7e422cd2b31cb51381229b8ab6b390d04d",
+      "request": {
+        "prompt": "Left-facing anglerfish with a scaled teal body, one white-ringed eye, a wide mouth full of long needle teeth, a ring-shaped gill disc, three tall orange-tipped dorsal spines, pale pectoral and pelvic fins, a rayed fan tail, and one long thin forehead stalk ending in a single orange lure bulb. Only small motions: the tail fan sways, the fins paddle gently, the lure stalk sways softly and the lure bulb pulses slightly. Head, eye, toothed jaw, gill disc and every fin stay attached in place. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7294
+      },
+      "input_image": "RGB upload of morphology/anglerfish-trench-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/anglerfish-trench-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "viperfish-base-rich",
+      "form": "viperfish",
+      "stage": "base-rich",
+      "index": 3,
+      "depths": [
+        "sunlight",
+        "twilight"
+      ],
+      "source_id": "viperfish-base-rich",
+      "source_file": "morphology/viperfish-base-rich-128.png",
+      "source_sha256": "2bb9f666bb9af7a2ffedbbae8d3155060fa6afa748ea7e7525d61768a2bf4fc7",
+      "upload_pixels_sha256": "7eadc9658dc7955db8d65b08d824863b6aed68e5b39c3dde595f40f663b3b061",
+      "seed": 7391,
+      "prompt": "Slender left-facing viperfish with a wide open jaw of long needle teeth, one white-ringed eye, a tall rayed dorsal fin, small pectoral and pelvic fins, a row of small glowing photophore dots along the flank, and a forked tail. No lure. Only small motions: a gentle wave travels along the slender body into the forked tail and the fins paddle slightly. The jaw stays open with the same teeth; eye, fins and tail stay attached. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "9380523c2fbc77fbb3461e995ec2778b0b576c38be533961682cb9ca8fd7df67",
+      "request": {
+        "prompt": "Slender left-facing viperfish with a wide open jaw of long needle teeth, one white-ringed eye, a tall rayed dorsal fin, small pectoral and pelvic fins, a row of small glowing photophore dots along the flank, and a forked tail. No lure. Only small motions: a gentle wave travels along the slender body into the forked tail and the fins paddle slightly. The jaw stays open with the same teeth; eye, fins and tail stay attached. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7391
+      },
+      "input_image": "RGB upload of morphology/viperfish-base-rich-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/viperfish-base-rich-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "viperfish-midnight-abyss",
+      "form": "viperfish",
+      "stage": "midnight-abyss",
+      "index": 4,
+      "depths": [
+        "midnight",
+        "abyss"
+      ],
+      "source_id": "viperfish-midnight-abyss",
+      "source_file": "morphology/viperfish-midnight-abyss-128.png",
+      "source_sha256": "1765295caacb1e869c5feec98c288aa0b4319cbf43e637ee13264263088672e5",
+      "upload_pixels_sha256": "b4bcb8af22b59882a3625829b5af50b6658e6dca8689cb3e019f973d28fbe15d",
+      "seed": 7488,
+      "prompt": "Slender left-facing viperfish with a wide open jaw of long needle teeth, one white-ringed eye, one thin curved lure stalk rising from behind the head, one hanging chin barbel, a tall rayed dorsal fin, small fins, rows of glowing photophore dots along the flank and underside, and a forked tail. Only small motions: a gentle wave travels along the slender body into the forked tail and the fins paddle slightly. The jaw stays open with the same teeth; eye, fins and tail stay attached. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "b2464196e91ea4ed6c5c3668c86ff66734069034b2caa886ec2a9a05f22d62b2",
+      "request": {
+        "prompt": "Slender left-facing viperfish with a wide open jaw of long needle teeth, one white-ringed eye, one thin curved lure stalk rising from behind the head, one hanging chin barbel, a tall rayed dorsal fin, small fins, rows of glowing photophore dots along the flank and underside, and a forked tail. Only small motions: a gentle wave travels along the slender body into the forked tail and the fins paddle slightly. The jaw stays open with the same teeth; eye, fins and tail stay attached. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7488
+      },
+      "input_image": "RGB upload of morphology/viperfish-midnight-abyss-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/viperfish-midnight-abyss-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "viperfish-trench",
+      "form": "viperfish",
+      "stage": "trench",
+      "index": 5,
+      "depths": [
+        "trench"
+      ],
+      "source_id": "viperfish-trench",
+      "source_file": "morphology/viperfish-trench-128.png",
+      "source_sha256": "71ef2fe5c2f34730a9899a9bfa447abd204c949437308c6debd63ff600275131",
+      "upload_pixels_sha256": "27d5597c6a71969e868ad9732b0e1ec63d0fe13a0f77046dccd4d917a017410e",
+      "seed": 7585,
+      "prompt": "Slender left-facing viperfish with a wide open jaw of long needle teeth, one white-ringed eye, one thin curved lure stalk rising from behind the head, one hanging chin barbel, a tall rayed dorsal fin, small fins, rows of glowing photophore dots along the flank and underside, and a frilled glowing forked tail. Only small motions: a gentle wave travels along the slender body into the forked tail and the fins paddle slightly. The jaw stays open with the same teeth; eye, fins and tail stay attached. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "39102b32979f1f2d729a99f4494466bfa6ea40bb076affd8d7bea7f548e70adf",
+      "request": {
+        "prompt": "Slender left-facing viperfish with a wide open jaw of long needle teeth, one white-ringed eye, one thin curved lure stalk rising from behind the head, one hanging chin barbel, a tall rayed dorsal fin, small fins, rows of glowing photophore dots along the flank and underside, and a frilled glowing forked tail. Only small motions: a gentle wave travels along the slender body into the forked tail and the fins paddle slightly. The jaw stays open with the same teeth; eye, fins and tail stay attached. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7585
+      },
+      "input_image": "RGB upload of morphology/viperfish-trench-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/viperfish-trench-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "siphonophore-base-rich",
+      "form": "siphonophore",
+      "stage": "base-rich",
+      "index": 6,
+      "depths": [
+        "sunlight",
+        "twilight"
+      ],
+      "source_id": "siphonophore-base-rich",
+      "source_file": "morphology/siphonophore-base-rich-128.png",
+      "source_sha256": "435ce2121af28731d2383e4fccc776f0e69999bec8ecd2801d97450ce912f3f1",
+      "upload_pixels_sha256": "11d4630ab17b4bed1722755edf0f5bdf7db809a72bcbc5d71a247819b7bcbaa3",
+      "seed": 7682,
+      "prompt": "One continuous diagonal siphonophore colony: a peach float bulb at the upper left, a thin purple stem running to the lower right, and a chain of teal zooid figures along it, each with a small head, one eye, an orange-tipped beak and short hanging tentacles with orange tips. Only small motions: a slow traveling wave runs along the one connected colony and the tentacles sway and trail softly. Every zooid stays attached to the same stem; none detaches, none is added or removed. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "6d9a983dc5c7ffa2a6e8ccb43c38c1062f3c90bf9d077eebaaf07b105058943a",
+      "request": {
+        "prompt": "One continuous diagonal siphonophore colony: a peach float bulb at the upper left, a thin purple stem running to the lower right, and a chain of teal zooid figures along it, each with a small head, one eye, an orange-tipped beak and short hanging tentacles with orange tips. Only small motions: a slow traveling wave runs along the one connected colony and the tentacles sway and trail softly. Every zooid stays attached to the same stem; none detaches, none is added or removed. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7682
+      },
+      "input_image": "RGB upload of morphology/siphonophore-base-rich-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/siphonophore-base-rich-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "siphonophore-midnight-abyss",
+      "form": "siphonophore",
+      "stage": "midnight-abyss",
+      "index": 7,
+      "depths": [
+        "midnight",
+        "abyss"
+      ],
+      "source_id": "siphonophore-midnight-abyss",
+      "source_file": "morphology/siphonophore-midnight-abyss-128.png",
+      "source_sha256": "5ab70ec5f57a56d3fe0b0aab5eee77df2d07eb1d833a1d4511cad412b4e3798a",
+      "upload_pixels_sha256": "60f894a0c7ee9fe1b22cdd003f76eb8459ec1a341a05e82707d6d8d793e67b1c",
+      "seed": 7779,
+      "prompt": "One continuous diagonal siphonophore colony: a coral-brown float bulb at the upper left, a thin purple stem running to the lower right, and a chain of teal zooid figures along it, each with a small head, one eye, an orange-tipped beak and hanging tentacles with orange tips. Only small motions: a slow traveling wave runs along the one connected colony and the tentacles sway and trail softly. Every zooid stays attached to the same stem; none detaches, none is added or removed. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "e874482b01acb22ea119035399a4b058215c421e18cc52cd367a187cbdb2db59",
+      "request": {
+        "prompt": "One continuous diagonal siphonophore colony: a coral-brown float bulb at the upper left, a thin purple stem running to the lower right, and a chain of teal zooid figures along it, each with a small head, one eye, an orange-tipped beak and hanging tentacles with orange tips. Only small motions: a slow traveling wave runs along the one connected colony and the tentacles sway and trail softly. Every zooid stays attached to the same stem; none detaches, none is added or removed. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7779
+      },
+      "input_image": "RGB upload of morphology/siphonophore-midnight-abyss-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/siphonophore-midnight-abyss-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "siphonophore-trench",
+      "form": "siphonophore",
+      "stage": "trench",
+      "index": 8,
+      "depths": [
+        "trench"
+      ],
+      "source_id": "siphonophore-trench",
+      "source_file": "morphology/siphonophore-trench-128.png",
+      "source_sha256": "964709964b0b90b340e864be55fc8f6f6d2b2dc3026d462bc6186a96da4aae17",
+      "upload_pixels_sha256": "1432a0e8ee1f445e0922f8986efc4868ab00218cdfab5d60f3292dd828324de1",
+      "seed": 7876,
+      "prompt": "One continuous diagonal siphonophore colony: a large lumpy coral-brown float cluster at the top, a purple stem running down to the lower right, and a short chain of larger teal zooids along it, each with one dark eye and long curling tentacles ending in pale tips. Only small motions: a slow traveling wave runs along the one connected colony and the tentacles sway and trail softly. Every zooid stays attached to the same stem; none detaches, none is added or removed. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "45662d4b4d28a6d61b9df55f23eca43f3ebe1106e9ee2a303047ee105c38193f",
+      "request": {
+        "prompt": "One continuous diagonal siphonophore colony: a large lumpy coral-brown float cluster at the top, a purple stem running down to the lower right, and a short chain of larger teal zooids along it, each with one dark eye and long curling tentacles ending in pale tips. Only small motions: a slow traveling wave runs along the one connected colony and the tentacles sway and trail softly. Every zooid stays attached to the same stem; none detaches, none is added or removed. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7876
+      },
+      "input_image": "RGB upload of morphology/siphonophore-trench-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/siphonophore-trench-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "isopod-host-base-rich",
+      "form": "isopod-host",
+      "stage": "base-rich",
+      "index": 9,
+      "depths": [
+        "sunlight",
+        "twilight"
+      ],
+      "source_id": "isopod-host-base-rich",
+      "source_file": "morphology/isopod-host-base-rich-128.png",
+      "source_sha256": "4f74389e210f9f30e5cffdb4dacded52f518e7ca4453c503c58835e536f96ad2",
+      "upload_pixels_sha256": "9134746b8f61e4d3b894bc3b8150f1bbaa4f0c610eaf193d71d738bc01c81386",
+      "seed": 7973,
+      "prompt": "Plump left-facing host fish with a smooth banded green and grey body, one white-ringed eye, a wide open toothed mouth holding one brown segmented isopod, small pectoral and pelvic fins, and a forked tail. Only small motions: the fins paddle gently and the tail swishes. The same single brown isopod stays nestled inside the open mouth; no chewing, no ejecting, no second animal. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "8ac18a32d3cc90a2e51ac3ea409cd254326b955c3557a0b1c5e7524806b46014",
+      "request": {
+        "prompt": "Plump left-facing host fish with a smooth banded green and grey body, one white-ringed eye, a wide open toothed mouth holding one brown segmented isopod, small pectoral and pelvic fins, and a forked tail. Only small motions: the fins paddle gently and the tail swishes. The same single brown isopod stays nestled inside the open mouth; no chewing, no ejecting, no second animal. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 7973
+      },
+      "input_image": "RGB upload of morphology/isopod-host-base-rich-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/isopod-host-base-rich-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "isopod-host-midnight-abyss",
+      "form": "isopod-host",
+      "stage": "midnight-abyss",
+      "index": 10,
+      "depths": [
+        "midnight",
+        "abyss"
+      ],
+      "source_id": "isopod-host-midnight-abyss",
+      "source_file": "morphology/isopod-host-midnight-abyss-128.png",
+      "source_sha256": "c78e8cfc2c3670d18ebbb475b425a58d262ce0e2a54c90043e10bad40dd317cd",
+      "upload_pixels_sha256": "c05a143d48168734fb1820a04cad5be6c638dc332508f3bc937dde356f66b9d3",
+      "seed": 8070,
+      "prompt": "Plump left-facing host fish with a scaled teal body, a spiny dorsal fin, one white-ringed eye, a wide open toothed mouth holding one brown segmented isopod, pale pectoral and pelvic fins, and a forked tail. Only small motions: the fins paddle gently and the tail swishes. The same single brown isopod stays nestled inside the open mouth; no chewing, no ejecting, no second animal. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "8eb371ee1838dd85cf7a13fa3eece3d1e2787b600b17dd8fd0b010ffe5fe1d76",
+      "request": {
+        "prompt": "Plump left-facing host fish with a scaled teal body, a spiny dorsal fin, one white-ringed eye, a wide open toothed mouth holding one brown segmented isopod, pale pectoral and pelvic fins, and a forked tail. Only small motions: the fins paddle gently and the tail swishes. The same single brown isopod stays nestled inside the open mouth; no chewing, no ejecting, no second animal. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8070
+      },
+      "input_image": "RGB upload of morphology/isopod-host-midnight-abyss-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/isopod-host-midnight-abyss-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "isopod-host-trench",
+      "form": "isopod-host",
+      "stage": "trench",
+      "index": 11,
+      "depths": [
+        "trench"
+      ],
+      "source_id": "isopod-host-trench",
+      "source_file": "morphology/isopod-host-trench-128.png",
+      "source_sha256": "fb619f40ef96e3806ad7188c5dbefb91d98057f254839a65cbca9d27b1ee95f8",
+      "upload_pixels_sha256": "5d2e6419662870525e2597886e04d0526f1b2d6eaedea6fd42318afd3662efac",
+      "seed": 8167,
+      "prompt": "Plump left-facing host fish with large overlapping teal scales, a spiny dorsal ridge, one white-ringed eye, a wide open toothed mouth holding one brown segmented isopod, pale pectoral and pelvic fins, and a forked tail. Only small motions: the fins paddle gently and the tail swishes. The same single brown isopod stays nestled inside the open mouth; no chewing, no ejecting, no second animal. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "01fe030c1f064c6743501d499ae7688d2a9355aca128c722ed2ece9df37f7091",
+      "request": {
+        "prompt": "Plump left-facing host fish with large overlapping teal scales, a spiny dorsal ridge, one white-ringed eye, a wide open toothed mouth holding one brown segmented isopod, pale pectoral and pelvic fins, and a forked tail. Only small motions: the fins paddle gently and the tail swishes. The same single brown isopod stays nestled inside the open mouth; no chewing, no ejecting, no second animal. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8167
+      },
+      "input_image": "RGB upload of morphology/isopod-host-trench-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/isopod-host-trench-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "cookiecutter-base-rich",
+      "form": "cookiecutter",
+      "stage": "base-rich",
+      "index": 12,
+      "depths": [
+        "sunlight",
+        "twilight"
+      ],
+      "source_id": "cookiecutter-base-rich",
+      "source_file": "morphology/cookiecutter-base-rich-128.png",
+      "source_sha256": "cdf3d0bc6931ffcc0b5b6346a79a7d106e1fdb6125a04123ad518f6f2289f75c",
+      "upload_pixels_sha256": "9895283d2ecb37f69d6216e1110697636473cd9b7da173e76237104a4de1796d",
+      "seed": 8264,
+      "prompt": "Compact left-facing cookiecutter shark swimming on a diagonal down to the right, with a blue-grey back, a pale belly, one white-ringed eye, a round orange-red ring-shaped suction mouth on the head, a red-brown collar band behind the head, a small pale dorsal fin, small pelvic fins and a forked tail. Only small motions: the tail swishes and the small fins paddle gently. The ring-shaped suction mouth and the collar band stay fixed on the head. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "5926eaf75075b693f7a548226ffd2c50be80c3b9a18a86d3b7609c30f30a41df",
+      "request": {
+        "prompt": "Compact left-facing cookiecutter shark swimming on a diagonal down to the right, with a blue-grey back, a pale belly, one white-ringed eye, a round orange-red ring-shaped suction mouth on the head, a red-brown collar band behind the head, a small pale dorsal fin, small pelvic fins and a forked tail. Only small motions: the tail swishes and the small fins paddle gently. The ring-shaped suction mouth and the collar band stay fixed on the head. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8264
+      },
+      "input_image": "RGB upload of morphology/cookiecutter-base-rich-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/cookiecutter-base-rich-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "cookiecutter-midnight-abyss",
+      "form": "cookiecutter",
+      "stage": "midnight-abyss",
+      "index": 13,
+      "depths": [
+        "midnight",
+        "abyss"
+      ],
+      "source_id": "cookiecutter-midnight-abyss",
+      "source_file": "morphology/cookiecutter-midnight-abyss-128.png",
+      "source_sha256": "afad115dadd0e781a597459fd25b677f3888cd1d15d1a1bb4774baff08073e35",
+      "upload_pixels_sha256": "8eeeb2eeb3f8753a6607e5e3600f853a3049aeb38ca7774255e9b2ab1a0f0ec5",
+      "seed": 8361,
+      "prompt": "Compact left-facing cookiecutter shark swimming on a diagonal down to the right, with a navy back, a pale belly, one white-ringed eye, a ring-shaped toothed suction mouth on the head, a red-orange collar band behind the head, one pale dorsal fin, small pelvic fins and a forked tail. Only small motions: the tail swishes and the small fins paddle gently. The ring-shaped suction mouth and the collar band stay fixed on the head. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "bf7a0e3dcfc08451e23cc20609cfd9e397eb399d28b483e93295d803b64c8649",
+      "request": {
+        "prompt": "Compact left-facing cookiecutter shark swimming on a diagonal down to the right, with a navy back, a pale belly, one white-ringed eye, a ring-shaped toothed suction mouth on the head, a red-orange collar band behind the head, one pale dorsal fin, small pelvic fins and a forked tail. Only small motions: the tail swishes and the small fins paddle gently. The ring-shaped suction mouth and the collar band stay fixed on the head. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8361
+      },
+      "input_image": "RGB upload of morphology/cookiecutter-midnight-abyss-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/cookiecutter-midnight-abyss-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "cookiecutter-trench",
+      "form": "cookiecutter",
+      "stage": "trench",
+      "index": 14,
+      "depths": [
+        "trench"
+      ],
+      "source_id": "cookiecutter-trench",
+      "source_file": "morphology/cookiecutter-trench-128.png",
+      "source_sha256": "e49bacb3efe6d36d5a604b7f81d5a3eccd44e0b58ec9ad4cea7e76cf8ac5840b",
+      "upload_pixels_sha256": "0b1cfce9ae5f0b2f61386e7533d1c4c90fb76ebab01c776adff0c0d9722ecf62",
+      "seed": 8458,
+      "prompt": "Compact left-facing cookiecutter shark swimming on a diagonal down to the right, with a near-black navy back, a pale belly, one white-ringed eye, a ring-shaped toothed suction mouth with an orange rim, an orange-red collar band behind the head, a tall dorsal fin with a small second dorsal fin, small pelvic fins and a forked tail. Only small motions: the tail swishes and the small fins paddle gently. The ring-shaped suction mouth and the collar band stay fixed on the head. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "3271fcaf23fe209682cc414660bfe64adc31f4037a99a052ad9bbb1ae8459fe9",
+      "request": {
+        "prompt": "Compact left-facing cookiecutter shark swimming on a diagonal down to the right, with a near-black navy back, a pale belly, one white-ringed eye, a ring-shaped toothed suction mouth with an orange rim, an orange-red collar band behind the head, a tall dorsal fin with a small second dorsal fin, small pelvic fins and a forked tail. Only small motions: the tail swishes and the small fins paddle gently. The ring-shaped suction mouth and the collar band stay fixed on the head. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8458
+      },
+      "input_image": "RGB upload of morphology/cookiecutter-trench-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/cookiecutter-trench-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "squid-base-rich",
+      "form": "squid",
+      "stage": "base-rich",
+      "index": 15,
+      "depths": [
+        "sunlight",
+        "twilight"
+      ],
+      "source_id": "squid-base-rich",
+      "source_file": "morphology/squid-base-rich-128.png",
+      "source_sha256": "25d709653a757beef743ec3a6dd1a0cef8c0fd10953e0357a48b8b74575536ea",
+      "upload_pixels_sha256": "01b46ce0583297269a6b7acc4601f75a76ac5784d231435fff533d307698e8e8",
+      "seed": 8555,
+      "prompt": "Squid with a torpedo-shaped red-brown mantle, a small olive-yellow fin at the pointed end, a large head with one round eye, a short ruffle of blue arms, and two longer yellow-tipped tentacles; the body is diagonal with the head at the lower left. Only small motions: the mantle breathes slightly, the terminal fin ripples, and the arms and the two long tentacles sway slowly in their own slots. Keep the same arms and both tentacles separate and attached; no added, removed or merged limbs. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "b790d64a34fb4629f4a3f511d5e19a19b4fc8924423200a04fa5009d96b1e893",
+      "request": {
+        "prompt": "Squid with a torpedo-shaped red-brown mantle, a small olive-yellow fin at the pointed end, a large head with one round eye, a short ruffle of blue arms, and two longer yellow-tipped tentacles; the body is diagonal with the head at the lower left. Only small motions: the mantle breathes slightly, the terminal fin ripples, and the arms and the two long tentacles sway slowly in their own slots. Keep the same arms and both tentacles separate and attached; no added, removed or merged limbs. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8555
+      },
+      "input_image": "RGB upload of morphology/squid-base-rich-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/squid-base-rich-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "squid-midnight-abyss",
+      "form": "squid",
+      "stage": "midnight-abyss",
+      "index": 16,
+      "depths": [
+        "midnight",
+        "abyss"
+      ],
+      "source_id": "squid-midnight-abyss",
+      "source_file": "morphology/squid-midnight-abyss-128.png",
+      "source_sha256": "750a6e85063a572daac49496ad7a8ba1390fab2792b25c4d91dc0b530aba5ba4",
+      "upload_pixels_sha256": "b1b7a874f33c4ff5f75e5b291cc6bf0664c32570d3ec08a73e46ac4289a9376c",
+      "seed": 8652,
+      "prompt": "Squid with a torpedo-shaped dusty-red mantle with light diagonal stripes, an olive-yellow terminal fin, a large head with one round eye, a ruffle of blue arms with yellow tips, and two longer yellow-clubbed tentacles; the body is diagonal with the head at the lower left. Only small motions: the mantle breathes slightly, the terminal fin ripples, and the arms and the two long tentacles sway slowly in their own slots. Keep the same arms and both tentacles separate and attached; no added, removed or merged limbs. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "274a5adbf4d6a5be5910d4db71824718cbeb99269a2e216997258e2b1caa033b",
+      "request": {
+        "prompt": "Squid with a torpedo-shaped dusty-red mantle with light diagonal stripes, an olive-yellow terminal fin, a large head with one round eye, a ruffle of blue arms with yellow tips, and two longer yellow-clubbed tentacles; the body is diagonal with the head at the lower left. Only small motions: the mantle breathes slightly, the terminal fin ripples, and the arms and the two long tentacles sway slowly in their own slots. Keep the same arms and both tentacles separate and attached; no added, removed or merged limbs. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8652
+      },
+      "input_image": "RGB upload of morphology/squid-midnight-abyss-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/squid-midnight-abyss-native.gif",
+      "estimate_microdollars": 250000
+    },
+    {
+      "id": "squid-trench",
+      "form": "squid",
+      "stage": "trench",
+      "index": 17,
+      "depths": [
+        "trench"
+      ],
+      "source_id": "squid-trench",
+      "source_file": "morphology/squid-trench-128.png",
+      "source_sha256": "03c50d60f25ca6e3e2782c20a23bf41f35f2aeef7965aa39c3cf876325c122e4",
+      "upload_pixels_sha256": "ef164bfe45eb0f6ae64f9bab459cd7db01e690eeed67827f42bd2b6028868c87",
+      "seed": 8749,
+      "prompt": "Squid with a long dark red-brown mantle marked with fine light lines, a large frilled olive-yellow terminal fin, one dark round eye, a ruffle of blue arms with yellow sucker tips, and two longer yellow-tipped tentacles; the body is diagonal with the head at the lower left. Only small motions: the mantle breathes slightly, the terminal fin ripples, and the arms and the two long tentacles sway slowly in their own slots. Keep the same arms and both tentacles separate and attached; no added, removed or merged limbs. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+      "prompt_sha256": "6f0a91c35421cd6f7b08ef53d43320e6d08e65536280949bf7ae733d186abbfa",
+      "request": {
+        "prompt": "Squid with a long dark red-brown mantle marked with fine light lines, a large frilled olive-yellow terminal fin, one dark round eye, a ruffle of blue arms with yellow sucker tips, and two longer yellow-tipped tentacles; the body is diagonal with the head at the lower left. Only small motions: the mantle breathes slightly, the terminal fin ripples, and the arms and the two long tentacles sway slowly in their own slots. Keep the same arms and both tentacles separate and attached; no added, removed or merged limbs. Gentle seamless underwater swimming-idle loop in place. Use the uploaded character's EXACT silhouette, proportions, facing direction, anatomy, colours and pixel-art style; no redesign, no species substitution, no limb or fin changes. Extremely small motion; the whole body stays centered inside generous margins. No camera movement, rotation, zoom, scene, text or particles. Return to the starting pose with no loop jump. Transparent background.",
+        "prompt_style": "rd_advanced_animation__custom_action",
+        "width": 128,
+        "height": 128,
+        "num_images": 1,
+        "frames_duration": 8,
+        "remove_bg": true,
+        "seed": 8749
+      },
+      "input_image": "RGB upload of morphology/squid-trench-128.png composited on #243b4b; built at call time, never stored",
+      "output_file": "masters/squid-trench-native.gif",
+      "estimate_microdollars": 250000
+    }
+  ],
+  "variants": [
+    {
+      "id": "anglerfish-sunlight",
+      "form": "anglerfish",
+      "depth": "sunlight",
+      "loop": "anglerfish-base-rich",
+      "variant_file": "anglerfish-sunlight-128.png",
+      "variant_sha256": "1bdc835521ce3db2eced833b28777ef14039d3ff4317e05b481a846d0fb29a47"
+    },
+    {
+      "id": "anglerfish-twilight",
+      "form": "anglerfish",
+      "depth": "twilight",
+      "loop": "anglerfish-base-rich",
+      "variant_file": "anglerfish-twilight-128.png",
+      "variant_sha256": "da76208711862066ed7d11e1518346346d2abae0e8e845e74df772f096dc5522"
+    },
+    {
+      "id": "anglerfish-midnight",
+      "form": "anglerfish",
+      "depth": "midnight",
+      "loop": "anglerfish-midnight-abyss",
+      "variant_file": "anglerfish-midnight-128.png",
+      "variant_sha256": "8eefc0be4af9c0b8ce67d9df14e93c7032f408a2a1ca6e59cf8f5d33a323a396"
+    },
+    {
+      "id": "anglerfish-abyss",
+      "form": "anglerfish",
+      "depth": "abyss",
+      "loop": "anglerfish-midnight-abyss",
+      "variant_file": "anglerfish-abyss-128.png",
+      "variant_sha256": "c290ed1ce6bbbf0ffeb266b0859f785b4c4ee0f54859c16824ee0ec5b8cf3afb"
+    },
+    {
+      "id": "anglerfish-trench",
+      "form": "anglerfish",
+      "depth": "trench",
+      "loop": "anglerfish-trench",
+      "variant_file": "anglerfish-trench-128.png",
+      "variant_sha256": "7303d5cbaa548835f582815b878e991f42fe287e12e0d4f402a1f8b904f915e4"
+    },
+    {
+      "id": "viperfish-sunlight",
+      "form": "viperfish",
+      "depth": "sunlight",
+      "loop": "viperfish-base-rich",
+      "variant_file": "viperfish-sunlight-128.png",
+      "variant_sha256": "2bb9f666bb9af7a2ffedbbae8d3155060fa6afa748ea7e7525d61768a2bf4fc7"
+    },
+    {
+      "id": "viperfish-twilight",
+      "form": "viperfish",
+      "depth": "twilight",
+      "loop": "viperfish-base-rich",
+      "variant_file": "viperfish-twilight-128.png",
+      "variant_sha256": "6acc06770f6dff77a42419fa88153f3813b96b7a42ca64780ca759f53a08999d"
+    },
+    {
+      "id": "viperfish-midnight",
+      "form": "viperfish",
+      "depth": "midnight",
+      "loop": "viperfish-midnight-abyss",
+      "variant_file": "viperfish-midnight-128.png",
+      "variant_sha256": "636c134ea74354f1934adecd87ad13200cfcf5f533b0c9e10da14312d3184cc4"
+    },
+    {
+      "id": "viperfish-abyss",
+      "form": "viperfish",
+      "depth": "abyss",
+      "loop": "viperfish-midnight-abyss",
+      "variant_file": "viperfish-abyss-128.png",
+      "variant_sha256": "af4d462ee225008a9e4df981e653687af07ff1b8844653f8e37abc2399f4d070"
+    },
+    {
+      "id": "viperfish-trench",
+      "form": "viperfish",
+      "depth": "trench",
+      "loop": "viperfish-trench",
+      "variant_file": "viperfish-trench-128.png",
+      "variant_sha256": "a3bd02bf6ae5f8a4f7803448a96a6ed7e4bb674cc8217fd231ce5e2a53749abc"
+    },
+    {
+      "id": "siphonophore-sunlight",
+      "form": "siphonophore",
+      "depth": "sunlight",
+      "loop": "siphonophore-base-rich",
+      "variant_file": "siphonophore-sunlight-128.png",
+      "variant_sha256": "435ce2121af28731d2383e4fccc776f0e69999bec8ecd2801d97450ce912f3f1"
+    },
+    {
+      "id": "siphonophore-twilight",
+      "form": "siphonophore",
+      "depth": "twilight",
+      "loop": "siphonophore-base-rich",
+      "variant_file": "siphonophore-twilight-128.png",
+      "variant_sha256": "f17080f082af6e59cea1982b8002f663e8105efdb7b972c512a0fb2d3fd5ea35"
+    },
+    {
+      "id": "siphonophore-midnight",
+      "form": "siphonophore",
+      "depth": "midnight",
+      "loop": "siphonophore-midnight-abyss",
+      "variant_file": "siphonophore-midnight-128.png",
+      "variant_sha256": "bd60a0ea585192c50163792359f1423f4f8b75d1dc577c51cf90c0c8edb6ad79"
+    },
+    {
+      "id": "siphonophore-abyss",
+      "form": "siphonophore",
+      "depth": "abyss",
+      "loop": "siphonophore-midnight-abyss",
+      "variant_file": "siphonophore-abyss-128.png",
+      "variant_sha256": "9980c68d47a4ea2d1fd4f621a7c9209c3e83d353f56e7fdac71454512acaef60"
+    },
+    {
+      "id": "siphonophore-trench",
+      "form": "siphonophore",
+      "depth": "trench",
+      "loop": "siphonophore-trench",
+      "variant_file": "siphonophore-trench-128.png",
+      "variant_sha256": "cbb612da546bfd83032d26d9eeaff872d605299e6f5f36f67d87ecbf62f8485f"
+    },
+    {
+      "id": "isopod-host-sunlight",
+      "form": "isopod-host",
+      "depth": "sunlight",
+      "loop": "isopod-host-base-rich",
+      "variant_file": "isopod-host-sunlight-128.png",
+      "variant_sha256": "4f74389e210f9f30e5cffdb4dacded52f518e7ca4453c503c58835e536f96ad2"
+    },
+    {
+      "id": "isopod-host-twilight",
+      "form": "isopod-host",
+      "depth": "twilight",
+      "loop": "isopod-host-base-rich",
+      "variant_file": "isopod-host-twilight-128.png",
+      "variant_sha256": "a05f742b3e27dba230db4eaacced2c25780d581f8683fe5f38f740f2d5f1e91e"
+    },
+    {
+      "id": "isopod-host-midnight",
+      "form": "isopod-host",
+      "depth": "midnight",
+      "loop": "isopod-host-midnight-abyss",
+      "variant_file": "isopod-host-midnight-128.png",
+      "variant_sha256": "1b50ef3e7a7b7493d0b20d3bf54cac5c8ed68b10038977813f69b5d342e19a36"
+    },
+    {
+      "id": "isopod-host-abyss",
+      "form": "isopod-host",
+      "depth": "abyss",
+      "loop": "isopod-host-midnight-abyss",
+      "variant_file": "isopod-host-abyss-128.png",
+      "variant_sha256": "f71c45957afe72a74569bb46fedc866cd980ea3a87c9a408fc674807b1b28889"
+    },
+    {
+      "id": "isopod-host-trench",
+      "form": "isopod-host",
+      "depth": "trench",
+      "loop": "isopod-host-trench",
+      "variant_file": "isopod-host-trench-128.png",
+      "variant_sha256": "37ac07d8964a4f759f6938bf2f91f211915a827c822c05cca3f4015ccdb93bea"
+    },
+    {
+      "id": "cookiecutter-sunlight",
+      "form": "cookiecutter",
+      "depth": "sunlight",
+      "loop": "cookiecutter-base-rich",
+      "variant_file": "cookiecutter-sunlight-128.png",
+      "variant_sha256": "cdf3d0bc6931ffcc0b5b6346a79a7d106e1fdb6125a04123ad518f6f2289f75c"
+    },
+    {
+      "id": "cookiecutter-twilight",
+      "form": "cookiecutter",
+      "depth": "twilight",
+      "loop": "cookiecutter-base-rich",
+      "variant_file": "cookiecutter-twilight-128.png",
+      "variant_sha256": "ad9f5e979f9a0cc7fa2eae227fd906511887ce5e17fcfd8e80cfcef007c064a9"
+    },
+    {
+      "id": "cookiecutter-midnight",
+      "form": "cookiecutter",
+      "depth": "midnight",
+      "loop": "cookiecutter-midnight-abyss",
+      "variant_file": "cookiecutter-midnight-128.png",
+      "variant_sha256": "e422e1716c686854f486e706a55b287159bf42f9c9d91d24c9ab3891a37bebfb"
+    },
+    {
+      "id": "cookiecutter-abyss",
+      "form": "cookiecutter",
+      "depth": "abyss",
+      "loop": "cookiecutter-midnight-abyss",
+      "variant_file": "cookiecutter-abyss-128.png",
+      "variant_sha256": "7f48f1ef9ff99cb98df008febc649a092a86e9a5c5601bd4b4f470bd38ec642c"
+    },
+    {
+      "id": "cookiecutter-trench",
+      "form": "cookiecutter",
+      "depth": "trench",
+      "loop": "cookiecutter-trench",
+      "variant_file": "cookiecutter-trench-128.png",
+      "variant_sha256": "26fcfd58c1e3c334d3228c747f3a55ff9a12295171038699b0b80da8ed8e7afe"
+    },
+    {
+      "id": "squid-sunlight",
+      "form": "squid",
+      "depth": "sunlight",
+      "loop": "squid-base-rich",
+      "variant_file": "squid-sunlight-128.png",
+      "variant_sha256": "25d709653a757beef743ec3a6dd1a0cef8c0fd10953e0357a48b8b74575536ea"
+    },
+    {
+      "id": "squid-twilight",
+      "form": "squid",
+      "depth": "twilight",
+      "loop": "squid-base-rich",
+      "variant_file": "squid-twilight-128.png",
+      "variant_sha256": "bc3995cb2150e04413724608c3c0ca96da346dde5c3834500cd0eed9f7e29d0e"
+    },
+    {
+      "id": "squid-midnight",
+      "form": "squid",
+      "depth": "midnight",
+      "loop": "squid-midnight-abyss",
+      "variant_file": "squid-midnight-128.png",
+      "variant_sha256": "f4e50be346783fc0791ea3d0ddb2feca458af1dc3a274bd1160999b215c03e30"
+    },
+    {
+      "id": "squid-abyss",
+      "form": "squid",
+      "depth": "abyss",
+      "loop": "squid-midnight-abyss",
+      "variant_file": "squid-abyss-128.png",
+      "variant_sha256": "0be9c4e95e74dda091ceab9982c0f6b3415ffd5a7d0b78e509cf0af9ebc13059"
+    },
+    {
+      "id": "squid-trench",
+      "form": "squid",
+      "depth": "trench",
+      "loop": "squid-trench",
+      "variant_file": "squid-trench-128.png",
+      "variant_sha256": "ac9a383120aea8c57e856be861e0b1ad133b269fe5b2c86d0d3ce54677c07274"
+    }
+  ],
+  "gates": {
+    "native_size": 128,
+    "frames_min": 6,
+    "frames_max": 16,
+    "unique_frames_min": 2,
+    "margin_min_px": 8,
+    "shift_max_px": 6,
+    "area_ratio": [
+      0.75,
+      1.3
+    ],
+    "iou_min": 0.6,
+    "mean_colour_distance_max": 36.0,
+    "far_colour_distance": 64.0,
+    "far_colour_fraction_max": 0.2
+  },
+  "gates_note": "Provisional exporter gates; a failing master is preserved and the export stops."
+}

@@ -1,0 +1,174 @@
+# detonation-ocean/detonate, M1 + M4 + M4b: Python 3, Node 22, PowerShell 7, Playwright Chromium, LibreOffice, oletools, pdfid and
+# pdf-parser, 7-Zip, Speakeasy, extract-msg, the runner, and the M4b compatibility tools (docs/SPEC.md 6.1, 6.6; deploy/detonation/TOOLS.md
+# "Decisions taken"): UPX, innoextract, osslsigncode, pefile/LIEF/dnfile, pyinstxtractor, @electron/asar, capa, YARA with signature-base
+# and binwalk v3. Wine is not here: it runs in detonation-ocean/wine (Dockerfile.wine) under runc.
+# Not here: Qiling, Detect It Easy, ILSpy, msitools, box-js, ViperMonkey (TOOLS.md "Decisions taken" 1, 2, 3, 10).
+# Build with deploy/detonation/build-images.sh. Bases are pinned by digest (resolved 2026-10-07):
+#   debian:bookworm-slim   -> Debian 12, python3 3.11 and LibreOffice 7.4.7 from apt
+#   node:22-bookworm-slim  -> Node v22.23.3 (only the node binary is copied to the final image)
+#   rust:1-slim-bookworm   -> cargo 1.99, builds binwalk only (the final image has the one binary)
+# Direct archive/file downloads below are checked by SHA-256 or pinned commit before use; this does not establish hash locks for Python,
+# APT, Cargo or Playwright's separate browser download. No ENV line is added: the AT-1 environment check pins the variable names, so
+# run.sh sets every tool path itself.
+FROM node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392 AS node
+
+# Playwright 1.64.0 (Apache-2.0) and its Chromium 1248 headless shell. The shell, not full Chromium: full Chromium peaks at 103-125
+# tasks under the nproc=128 cap (measured, pthread_create EAGAIN), the shell at about 70. The shell has no PDF viewer.
+FROM node AS playwright
+COPY runner/package.json runner/package-lock.json /opt/playwright/
+RUN cd /opt/playwright \
+ && npm ci --no-audit --no-fund --ignore-scripts \
+ && PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node node_modules/playwright-core/cli.js install chromium-headless-shell \
+ && rm -rf /opt/pw-browsers/ffmpeg-* /root/.npm
+
+# @electron/asar 4.3.1 (MIT; its eight packages are MIT or BlueOak-1.0.0) with the lock file's integrity hashes.
+FROM node AS asar
+COPY runner/asar/package.json runner/asar/package-lock.json /opt/asar/
+RUN cd /opt/asar && npm ci --no-audit --no-fund --ignore-scripts && rm -rf /root/.npm
+
+# binwalk 3.1.0 (MIT). The Debian package and PyPI carry the old v2; v3 is built from crates.io with the crate checksums of its lock file.
+FROM rust:1-slim-bookworm@sha256:2c3a22f0a5533ea2dd5a16627bc841228151faa2d4de2644ac9987e4a2f1f2fa AS binwalk
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends build-essential pkg-config libfontconfig1-dev libssl-dev cmake clang ca-certificates \
+ && cargo install binwalk --version 3.1.0 --locked --root /opt/binwalk \
+ && ldd /opt/binwalk/bin/binwalk
+
+# innoextract: Debian 12 ships 1.9, which reads Inno Setup only up to 6.0.5. The git master of 2025-02-06 (commit 6e9e34e, the last upstream
+# commit, "stale upstream" in TOOLS.md) reads up to 6.3.3. Neither reads Inno Setup 6.4 or later (tests/fixtures/detonation/exe/inno-inert.iss).
+FROM debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587 AS innoextract
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates curl cmake g++ make libboost-iostreams-dev libboost-program-options-dev \
+    libboost-filesystem-dev libboost-date-time-dev libboost-system-dev liblzma-dev \
+ && curl -fsSL -o /tmp/innoextract.tgz https://github.com/dscharrer/innoextract/archive/6e9e34ed0876014fdb46e684103ef8c3605e382e.tar.gz \
+ && echo "4d885b27e452dcb137a9d97736b19478447f172bcfed1aa98d80138e9a4c08ae  /tmp/innoextract.tgz" | sha256sum -c - \
+ && mkdir /tmp/src && tar -xzf /tmp/innoextract.tgz -C /tmp/src --strip-components=1 \
+ && cmake -S /tmp/src -B /tmp/build -DCMAKE_BUILD_TYPE=Release -DUSE_LTO=OFF >/dev/null && make -C /tmp/build -j4 \
+ && strip /tmp/build/innoextract && install -D /tmp/build/innoextract /opt/innoextract/innoextract && ldd /opt/innoextract/innoextract \
+ && curl -fsSL -o /opt/innoextract/LICENSE https://raw.githubusercontent.com/dscharrer/innoextract/6e9e34ed0876014fdb46e684103ef8c3605e382e/LICENSE \
+ && echo "7cd6f3bf0c83f2c3ce8438aab20a4827a5de934fb87dd7966f6f3f2651685127  /opt/innoextract/LICENSE" | sha256sum -c -
+
+# The static-analysis venv: capa 9.4.0 (Apache-2.0) with capa-rules 9.4.0, LIEF 1.0.0, dnfile 0.18.0, yara-python 4.5.4 and every
+# dependency pinned in runner/static-requirements.txt. capa runs without its FLIRT library signatures (/opt/capa/sigs stays empty): they took
+# its peak memory from 223 MB to 868 MB on a 14 KB program, over the 512 MB container limit. The capa rule cache is built here so that a
+# run does not parse nine hundred rules. signature-base (Detection Rule License 1.1, commit 94a1c48d, 2026-09-08) is compiled into one rule file; rules
+# that name another licence in their meta are dropped (yara_build.py). The licence and the build summary ship with it.
+FROM debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587 AS static
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates curl python3 python3-venv python3-pip \
+ && rm -rf /var/lib/apt/lists/*
+COPY runner/static-requirements.txt runner/yara_build.py runner/capa_warm.py /tmp/
+RUN python3 -m venv /opt/static-venv \
+ && /opt/static-venv/bin/pip install --no-cache-dir -r /tmp/static-requirements.txt \
+ && /opt/static-venv/bin/pip uninstall -y pip \
+ && find /opt/static-venv -name '__pycache__' -prune -exec rm -rf {} +
+RUN mkdir -p /opt/capa/rules /opt/capa/sigs /tmp/capa-src \
+ && curl -fsSL -o /tmp/capa-rules.tgz https://github.com/mandiant/capa-rules/archive/refs/tags/v9.4.0.tar.gz \
+ && echo "273591b11737181b3bdaac18964f23627cf10c21c2b143fc9be88e4a33217669  /tmp/capa-rules.tgz" | sha256sum -c - \
+ && tar -xzf /tmp/capa-rules.tgz -C /opt/capa/rules --strip-components=1 \
+ && curl -fsSL -o /tmp/capa-src.tgz https://github.com/mandiant/capa/archive/refs/tags/v9.4.0.tar.gz \
+ && echo "562edd9617b23286e74d06f0115d99217a4df178e43925375af0c35d5cae8d66  /tmp/capa-src.tgz" | sha256sum -c - \
+ && tar -xzf /tmp/capa-src.tgz -C /tmp/capa-src --strip-components=1 \
+ && cp /tmp/capa-src/LICENSE.txt /opt/capa/LICENSE.txt && cp /opt/capa/rules/LICENSE.txt /opt/capa/RULES-LICENSE.txt
+RUN mkdir -p /opt/yara /tmp/sigbase \
+ && curl -fsSL -o /tmp/signature-base.tgz https://github.com/Neo23x0/signature-base/archive/94a1c48d7ab499879287ff611dfe7f9c56376030.tar.gz \
+ && echo "13895e9219e844beeba1f5d7d3e3261a81e4e8f69cf18cc823d3abcc16e601a3  /tmp/signature-base.tgz" | sha256sum -c - \
+ && tar -xzf /tmp/signature-base.tgz -C /tmp/sigbase --strip-components=1 \
+ && /opt/static-venv/bin/python /tmp/yara_build.py /tmp/sigbase/yara /opt/yara/signature-base.yarc /opt/yara/signature-base-build.json \
+ && cp /tmp/sigbase/LICENSE /opt/yara/SIGNATURE-BASE-LICENSE \
+ && printf 'signature-base, commit 94a1c48d7ab499879287ff611dfe7f9c56376030, https://github.com/Neo23x0/signature-base, Detection Rule License 1.1 (https://github.com/Neo23x0/signature-base/blob/master/LICENSE). Rules whose meta names another licence are not included.\n' > /opt/yara/ATTRIBUTION.txt
+RUN /opt/static-venv/bin/python /tmp/capa_warm.py && ls -la /opt/capa-cache && du -sm /opt/static-venv /opt/capa /opt/yara
+
+FROM debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587 AS fetch
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates curl xz-utils python3 python3-venv python3-pip \
+ && rm -rf /var/lib/apt/lists/*
+# PowerShell 7.6.6 (MIT, github.com/PowerShell/PowerShell/releases/tag/v7.6.6)
+RUN curl -fsSL -o /tmp/pwsh.tgz https://github.com/PowerShell/PowerShell/releases/download/v7.6.6/powershell-7.6.6-linux-x64.tar.gz \
+ && echo "ddbc4a2d113bbd46d283cfedcbcd117a70caefd7673f41f2b4e0000badf103bc  /tmp/pwsh.tgz" | sha256sum -c - \
+ && mkdir -p /opt/microsoft/powershell/7 && tar -xzf /tmp/pwsh.tgz -C /opt/microsoft/powershell/7 && chmod 0755 /opt/microsoft/powershell/7/pwsh
+# 7-Zip 26.04 (LGPL with the unRAR restriction; the 7zz binary only, see /usr/share/doc/detonation-ocean/THIRD-PARTY.md)
+RUN curl -fsSL -o /tmp/7z.txz https://github.com/ip7z/7zip/releases/download/26.04/7z2604-linux-x64.tar.xz \
+ && echo "fc0327ba27e89bd086cf426dff17d77de582953cdbbc10a6576540a06853ffcd  /tmp/7z.txz" | sha256sum -c - \
+ && mkdir -p /opt/7zip && tar -xJf /tmp/7z.txz -C /opt/7zip 7zz License.txt readme.txt
+# UPX 5.2.1 (GPL-2.0 with the UPX special exception; the static upx binary and its licence texts)
+RUN curl -fsSL -o /tmp/upx.txz https://github.com/upx/upx/releases/download/v5.2.1/upx-5.2.1-amd64_linux.tar.xz \
+ && echo "402162aad30af47e60dbd767fb2e64ca394ace9727ba1f40283641f1d1b91657  /tmp/upx.txz" | sha256sum -c - \
+ && mkdir -p /opt/upx && tar -xJf /tmp/upx.txz -C /opt/upx --strip-components=1 upx-5.2.1-amd64_linux/upx upx-5.2.1-amd64_linux/LICENSE upx-5.2.1-amd64_linux/COPYING
+# pyinstxtractor 2026.07 at commit 815d31cf (GPL-3.0)
+RUN mkdir -p /opt/pyinstxtractor \
+ && curl -fsSL -o /opt/pyinstxtractor/pyinstxtractor.py https://raw.githubusercontent.com/extremecoders-re/pyinstxtractor/815d31cf26bc71e62f851b2e549452e7b7c9dd98/pyinstxtractor.py \
+ && curl -fsSL -o /opt/pyinstxtractor/LICENSE https://raw.githubusercontent.com/extremecoders-re/pyinstxtractor/815d31cf26bc71e62f851b2e549452e7b7c9dd98/LICENSE \
+ && echo "94e0b6c9d5151bbeefc7e7452e96e24b396c2dbfcb0348e5f12c4c0865fefe58  /opt/pyinstxtractor/pyinstxtractor.py" | sha256sum -c - \
+ && echo "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  /opt/pyinstxtractor/LICENSE" | sha256sum -c -
+# Didier Stevens' pdfid 0.2.10 and pdf-parser at commit b248e9aa (20260923a); public domain by the author's statement, pdf-parser keeps its MIT notice
+RUN mkdir -p /opt/pdftools \
+ && curl -fsSL -o /opt/pdftools/pdfid.py https://raw.githubusercontent.com/DidierStevens/DidierStevensSuite/b248e9aabac4dedc2619c986d07eb7a5f4c18d37/pdfid.py \
+ && curl -fsSL -o /opt/pdftools/pdf-parser.py https://raw.githubusercontent.com/DidierStevens/DidierStevensSuite/b248e9aabac4dedc2619c986d07eb7a5f4c18d37/pdf-parser.py \
+ && echo "e958a01f1c2596470f27d3c308061b85d7059ff476a58d74f1957a71b4f1248f  /opt/pdftools/pdfid.py" | sha256sum -c - \
+ && echo "a9fa2faa25e88ab0293543d14aa168ff21fc9fd25a0a8ad657b0dad3171214ac  /opt/pdftools/pdf-parser.py" | sha256sum -c -
+# Speakeasy 1.6.1 at commit 35b6600b (MIT, github.com/mandiant/speakeasy v1.6.1; the PyPI build is from 2022), oletools 0.60.2, extract-msg 0.56.1
+COPY runner/requirements.txt /tmp/requirements.txt
+RUN curl -fsSL -o /tmp/speakeasy.tgz https://github.com/mandiant/speakeasy/archive/35b6600b27d01191a28af58e3dcd29ac5bb7c338.tar.gz \
+ && echo "c311bcee9f2367c6f096bbf4b0d95d54e5435998a4f7643fd356c788c9d97e1e  /tmp/speakeasy.tgz" | sha256sum -c - \
+ && tar -xzf /tmp/speakeasy.tgz -C /tmp \
+ && python3 -m venv /opt/venv \
+ && /opt/venv/bin/pip install --no-cache-dir /tmp/speakeasy-35b6600b27d01191a28af58e3dcd29ac5bb7c338 -r /tmp/requirements.txt \
+ && /opt/venv/bin/pip uninstall -y pip wheel \
+ && find /opt/venv -name '__pycache__' -prune -exec rm -rf {} +
+
+FROM debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587
+
+# LibreOffice 7.4.7 headless without the GUI packages (Writer, Calc, Impress), Chromium's shared libraries and two fonts; osslsigncode 2.5
+# (GPL-3.0-or-later with the OpenSSL exception) and the Boost runtime libraries that innoextract links.
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+    python3 \
+    libreoffice-core-nogui=4:7.4.7-1+deb12u14 libreoffice-writer-nogui=4:7.4.7-1+deb12u14 \
+    libreoffice-calc-nogui=4:7.4.7-1+deb12u14 libreoffice-impress-nogui=4:7.4.7-1+deb12u14 \
+    libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcairo2 libcups2 libdbus-1-3 libdrm2 libgbm1 libglib2.0-0 \
+    libnspr4 libnss3 libpango-1.0-0 libx11-6 libxcb1 libxcomposite1 libxdamage1 libxext6 libxfixes3 libxkbcommon0 libxrandr2 \
+    fonts-dejavu-core fonts-liberation \
+    osslsigncode=2.5-4 ca-certificates \
+    libboost-iostreams1.74.0=1.74.0+ds1-21 libboost-program-options1.74.0=1.74.0+ds1-21 libboost-filesystem1.74.0=1.74.0+ds1-21 \
+    libfontconfig1 \
+ && rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/log/apt /var/log/dpkg.log \
+ && groupadd --gid 10001 dana \
+ && useradd --uid 10001 --gid 10001 --no-create-home --home-dir /home/dana --shell /bin/bash dana \
+ && install -d -o 10001 -g 10001 -m 0755 /home/dana
+
+COPY --from=node /usr/local/bin/node /usr/local/bin/node
+COPY --from=fetch /opt/microsoft /opt/microsoft
+COPY --from=fetch /opt/7zip /opt/7zip
+COPY --from=fetch /opt/upx /opt/upx
+COPY --from=fetch /opt/pyinstxtractor /opt/pyinstxtractor
+COPY --from=fetch /opt/pdftools /opt/pdftools
+COPY --from=fetch /opt/venv /opt/venv
+COPY --from=playwright /opt/playwright /opt/playwright
+COPY --from=playwright /opt/pw-browsers /opt/pw-browsers
+COPY --from=asar /opt/asar /opt/asar
+COPY --from=binwalk /opt/binwalk/bin/binwalk /usr/local/bin/binwalk
+COPY --from=innoextract /opt/innoextract /opt/innoextract
+COPY --from=static /opt/static-venv /opt/static-venv
+COPY --from=static /opt/capa /opt/capa
+COPY --from=static /opt/capa-cache /opt/capa-cache
+COPY --from=static /opt/yara /opt/yara
+COPY runner/ /opt/detonation/
+RUN ln -s /opt/microsoft/powershell/7/pwsh /usr/local/bin/pwsh \
+ && ln -s /opt/7zip/7zz /usr/local/bin/7zz \
+ && ln -s /opt/upx/upx /usr/local/bin/upx \
+ && ln -s /opt/innoextract/innoextract /usr/local/bin/innoextract \
+ && mkdir -p /usr/share/doc/detonation-ocean && cp /opt/7zip/License.txt /usr/share/doc/detonation-ocean/7zip-License.txt \
+ && cp /opt/upx/LICENSE /usr/share/doc/detonation-ocean/upx-LICENSE.txt && cp /opt/upx/COPYING /usr/share/doc/detonation-ocean/upx-COPYING.txt \
+ && cp /opt/pyinstxtractor/LICENSE /usr/share/doc/detonation-ocean/pyinstxtractor-LICENSE.txt \
+ && cp /opt/innoextract/LICENSE /usr/share/doc/detonation-ocean/innoextract-LICENSE.txt \
+ && cp /opt/capa/LICENSE.txt /usr/share/doc/detonation-ocean/capa-LICENSE.txt && cp /opt/capa/RULES-LICENSE.txt /usr/share/doc/detonation-ocean/capa-rules-LICENSE.txt \
+ && cp /opt/yara/SIGNATURE-BASE-LICENSE /usr/share/doc/detonation-ocean/signature-base-LICENSE.txt && cp /opt/yara/ATTRIBUTION.txt /usr/share/doc/detonation-ocean/signature-base-ATTRIBUTION.txt \
+ && rm -f /opt/detonation/package.json /opt/detonation/package-lock.json /opt/detonation/requirements.txt /opt/detonation/static-requirements.txt /opt/detonation/README.md \
+    /opt/detonation/wine_run.py /opt/detonation/wine_evidence.py /opt/detonation/wine_prefix.sh /opt/detonation/wine_NOTICE.txt /opt/detonation/yara_build.py /opt/detonation/capa_warm.py \
+ && rm -rf /opt/detonation/asar \
+ && sed -i 's/\r$//' /opt/detonation/run.sh && chmod 0755 /opt/detonation/run.sh
+
+ENV HOME=/home/dana DETONATION_SANDBOX=1 PYTHONDONTWRITEBYTECODE=1
+USER 10001:10001
+WORKDIR /home/dana
+ENTRYPOINT ["/opt/detonation/run.sh"]

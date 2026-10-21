@@ -1,0 +1,228 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Jamie Okafor",
+    "short": "jamie",
+    "email": "jamie.okafor@campus-mail.example",
+    "avatar": "likejacking"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img2.jpg",
+    "wifiNetwork": "Dorm-WiFi"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "jamie"
+      },
+      "f-likejacking-1": {
+        "id": "f-likejacking-1",
+        "parentId": "documents",
+        "name": "Exam-notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 43,
+        "modified": "2010-06-08T21:00:00Z",
+        "trashed": false,
+        "contentId": "c-likejacking-1"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Jamie",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2010-06-08T21:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-nest",
+          "folder": "inbox",
+          "from": "Friendnest <notify@friendnest.example>",
+          "to": "jamie.okafor@campus-mail.example",
+          "subject": "You have 3 new notifications",
+          "body": "Dana Reyes commented on your photo.\nTwo friends invited you to an event.\n\nFriendnest",
+          "time": "2010-06-08T21:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-prof",
+          "folder": "inbox",
+          "from": "Prof. Lindqvist <lindqvist@campus-mail.example>",
+          "to": "jamie.okafor@campus-mail.example",
+          "subject": "Exam reading list",
+          "body": "Jamie,\n\nThe reading list for the exam is on the course page.\n\nProf. Lindqvist",
+          "time": "2010-06-07T14:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Dana Reyes",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Dana Reyes",
+              "text": "Party Saturday?",
+              "time": "2010-06-09T19:40:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Jamie Okafor",
+              "text": "Yes! What should I bring?",
+              "time": "2010-06-09T19:45:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Exam plan",
+        "body": "Chapters 4 to 9\nPast papers\nSleep",
+        "modified": "2010-06-08T21:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Exam",
+        "start": "2010-06-14T09:00:00Z",
+        "end": "2010-06-14T10:00:00Z",
+        "location": "Hall A"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Dana Reyes",
+        "email": "dana.reyes@campus-mail.example",
+        "phone": "+1 555 0101",
+        "org": "Friends"
+      },
+      {
+        "id": "p-2",
+        "name": "Prof. Lindqvist",
+        "email": "lindqvist@campus-mail.example",
+        "phone": "+1 555 0102",
+        "org": "Campus"
+      },
+      {
+        "id": "p-3",
+        "name": "Friendnest",
+        "email": "notify@friendnest.example",
+        "phone": "+1 555 0103",
+        "org": "Friendnest"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-likejacking-1": {
+        "text": "Chapters 4 to 9. Key terms and past papers."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-friendnest-home": {
+          "title": "Friendnest",
+          "url": "friendnest.example/home",
+          "brand": "Friendnest",
+          "heading": "Friendnest",
+          "body": "See what your friends are up to. News feed, photos and events.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Friendnest",
+          "url": "scene:pg-friendnest-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-friendnest-home",
+          "title": "Friendnest"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Friendnest",
+          "url": "scene:pg-friendnest-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-friendnest-home",
+          "title": "Friendnest",
+          "time": "2010-06-08T21:00:00Z"
+        }
+      ]
+    }
+  }
+}

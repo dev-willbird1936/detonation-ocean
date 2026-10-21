@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10222c">
+  <title>Creature desktop · Training only</title>
+  <link rel="stylesheet" href="./desktop.css">
+  <script src="./desktop-model.js" defer></script>
+  <script src="./world-model.js" defer></script>
+  <script src="./ocean-scenes.js" defer></script>
+  <script src="./ocean-scenarios/sunlight.js" defer></script>
+  <script src="./ocean-scenarios/twilight.js" defer></script>
+  <script src="./ocean-scenarios/midnight.js" defer></script>
+  <script src="./ocean-scenarios/abyss.js" defer></script>
+  <script src="./ocean-scenarios/trench.js" defer></script>
+  <script src="./scenario-profile.js" defer></script>
+  <script src="./ocean-fx.js" defer></script>
+  <script src="./scene-world.js" defer></script>
+  <script src="./desktop.js" defer></script>
+</head>
+<body data-session-state="profile-loading" data-os="windows" data-depth="none">
+  <div id="ocean-stage" class="ocean-stage">
+    <div id="template-shell-host" class="template-shell-host" aria-label="Fictional Windows and macOS training desktops">
+      <iframe id="windows-shell-frame" title="Windows training desktop" sandbox="allow-scripts" allow="camera 'none'; microphone 'none'; geolocation 'none'; display-capture 'none'; clipboard-read 'none'; clipboard-write 'none'" referrerpolicy="no-referrer" data-active="true"></iframe>
+      <iframe id="macos-shell-frame" title="macOS training desktop" sandbox="allow-scripts" allow="camera 'none'; microphone 'none'; geolocation 'none'; display-capture 'none'; clipboard-read 'none'; clipboard-write 'none'" referrerpolicy="no-referrer" data-active="false" inert></iframe>
+    </div>
+    <div id="ocean-fx-layer" class="ocean-fx-layer" aria-hidden="true"></div>
+    <p id="ocean-fx-caption" class="ocean-fx-caption" role="status" hidden></p>
+    <p id="ocean-hint" class="ocean-hint" role="status" hidden></p>
+    <section id="ocean-debrief" class="ocean-debrief" role="dialog" aria-labelledby="debrief-title" hidden></section>
+    <section id="ocean-showed" class="ocean-showed" role="dialog" aria-labelledby="showed-title" hidden></section>
+    <section id="ocean-intro" class="ocean-intro" role="dialog" aria-labelledby="intro-title" aria-describedby="intro-line" hidden>
+      <p class="intro-eyebrow">BRIEF · FICTIONAL TRAINING</p>
+      <h2 id="intro-title" class="intro-title"></h2>
+      <p id="intro-line" class="intro-line"></p>
+      <p id="intro-next" class="intro-next"></p>
+      <button id="intro-dismiss" class="intro-button" type="button">Got it <span class="intro-key">Esc</span></button>
+    </section>
+
+    <p id="ocean-status" class="ocean-status" role="status">Loading the creature desktop…</p>
+
+    <section id="ocean-unavailable" class="ocean-card ocean-unavailable" role="alert" aria-labelledby="unavailable-title" hidden>
+      <p class="ocean-eyebrow">TRAINING ONLY · LOCAL SIMULATION</p>
+      <h1 id="unavailable-title">Desktop unavailable</h1>
+      <p id="unavailable-detail" class="ocean-lede"></p>
+      <div class="ocean-card-actions">
+        <a id="unavailable-proof" class="ocean-button" href="/chamber.html?demo=oauth-2023&amp;profile=deception-abyss" hidden>Open the separate OAuth exercise</a>
+        <a class="ocean-button ghost" href="/ocean-profiles.html">Back to the creature matrix</a>
+      </div>
+    </section>
+
+    <div id="ocean-gate" class="ocean-gate" hidden>
+      <section class="ocean-card" role="dialog" aria-modal="true" aria-labelledby="gate-title" aria-describedby="gate-summary">
+        <p class="ocean-eyebrow">TRAINING ONLY · BEFORE YOU ENTER</p>
+        <h1 id="gate-title">Enter the desktop</h1>
+        <p id="gate-summary" class="ocean-lede"></p>
+        <ul class="ocean-points">
+          <li><strong>What happens.</strong> You sit at a fictional Windows or macOS lock screen and sign in as a pretend user (nothing is typed). A short scripted scene plays a lure, your choice, and a creature animation that shows the attack on pretend files and accounts.</li>
+          <li><strong>You stay in control.</strong> Take the safe path, restart, or switch between Windows and macOS at any time; the desktop is the same, only its look changes.</li>
+          <li><strong>The camera is drawn.</strong> The creature bite is a visual effect only.</li>
+        </ul>
+        <p class="ocean-boundary">Fictional, local. No camera, no real accounts, no real files.</p>
+        <p id="gate-mode" class="ocean-fine"></p>
+        <label class="ocean-tick" for="gate-opt-in">
+          <input id="gate-opt-in" type="checkbox">
+          <span>I understand this is a fictional, local training simulation.</span>
+        </label>
+        <div class="ocean-card-actions">
+          <button id="gate-enter" class="ocean-button" type="button" disabled>Enter the desktop</button>
+          <a class="ocean-button ghost" href="/ocean-profiles.html">Back to the matrix</a>
+        </div>
+      </section>
+    </div>
+
+    <aside id="ocean-chrome" class="ocean-chrome" aria-label="Training controls" hidden>
+      <div class="os-switcher" role="group" aria-label="Desktop operating system">
+        <button id="os-windows" type="button" aria-pressed="true">Windows</button>
+        <button id="os-macos" type="button" aria-pressed="false">macOS</button>
+      </div>
+      <span id="ocean-chip" class="ocean-chip" role="note">
+        <img id="ocean-chip-creature" alt="" width="22" height="22">
+        <strong>Training only</strong>
+        <span id="ocean-chip-detail" class="ocean-chip-detail"></span>
+      </span>
+      <a id="ocean-proof-link" class="ocean-link" href="/chamber.html?demo=oauth-2023&amp;profile=deception-abyss" hidden>OAuth exercise</a>
+      <button id="ocean-brief" class="ocean-link" type="button" aria-controls="ocean-intro" title="Show the scenario brief again" hidden>Brief</button>
+      <button id="ocean-restart" class="ocean-link" type="button">Restart</button>
+      <a id="ocean-exit" class="ocean-link" href="/ocean-profiles.html">Exit</a>
+    </aside>
+  </div>
+
+  <div id="screen-reader-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

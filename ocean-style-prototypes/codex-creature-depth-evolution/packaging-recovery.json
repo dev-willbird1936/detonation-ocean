@@ -1,0 +1,1628 @@
+{
+  "recoveredAtUtc": "2026-10-06T21:28:06.830545+00:00",
+  "issue": "An early palette-mask loop used RGB tuples as tone labels and emitted empty, unreferenced shade-mask files. Correct role/shade masks are preserved at the paths referenced by variant-manifest.json.",
+  "handling": "All 162 zero-pixel failed-attempt masks were hash-checked and moved, not deleted, to an isolated recovery folder.",
+  "count": 162,
+  "files": [
+    {
+      "original": "masks/anglerfish-base-rich-primary-(11, 71, 82).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-primary-(11, 71, 82).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-primary-(22, 125, 136).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-primary-(22, 125, 136).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-primary-(85, 182, 173).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-primary-(85, 182, 173).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-secondary-(143, 173, 170).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-secondary-(143, 173, 170).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-secondary-(221, 213, 184).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-secondary-(221, 213, 184).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-secondary-(83, 106, 112).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-secondary-(83, 106, 112).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-tertiary-(169, 86, 47).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-tertiary-(169, 86, 47).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-tertiary-(215, 136, 62).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-tertiary-(215, 136, 62).png"
+    },
+    {
+      "original": "masks/anglerfish-base-rich-tertiary-(242, 198, 109).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-base-rich-tertiary-(242, 198, 109).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-primary-(11, 71, 82).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-primary-(11, 71, 82).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-primary-(22, 125, 136).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-primary-(22, 125, 136).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-primary-(85, 182, 173).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-primary-(85, 182, 173).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-secondary-(143, 173, 170).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-secondary-(143, 173, 170).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-secondary-(221, 213, 184).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-secondary-(221, 213, 184).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-secondary-(83, 106, 112).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-secondary-(83, 106, 112).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-tertiary-(169, 86, 47).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-tertiary-(169, 86, 47).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-tertiary-(215, 136, 62).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-tertiary-(215, 136, 62).png"
+    },
+    {
+      "original": "masks/anglerfish-midnight-abyss-tertiary-(242, 198, 109).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-midnight-abyss-tertiary-(242, 198, 109).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-primary-(11, 71, 82).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-primary-(11, 71, 82).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-primary-(22, 125, 136).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-primary-(22, 125, 136).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-primary-(85, 182, 173).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-primary-(85, 182, 173).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-secondary-(143, 173, 170).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-secondary-(143, 173, 170).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-secondary-(221, 213, 184).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-secondary-(221, 213, 184).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-secondary-(83, 106, 112).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-secondary-(83, 106, 112).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-tertiary-(169, 86, 47).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-tertiary-(169, 86, 47).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-tertiary-(215, 136, 62).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-tertiary-(215, 136, 62).png"
+    },
+    {
+      "original": "masks/anglerfish-trench-tertiary-(242, 198, 109).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/anglerfish-trench-tertiary-(242, 198, 109).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-primary-(128, 159, 164).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-primary-(128, 159, 164).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-primary-(30, 52, 69).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-primary-(30, 52, 69).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-primary-(63, 98, 119).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-primary-(63, 98, 119).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-secondary-(164, 149, 128).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-secondary-(164, 149, 128).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-secondary-(227, 214, 183).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-secondary-(227, 214, 183).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-secondary-(97, 87, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-secondary-(97, 87, 78).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-tertiary-(108, 47, 72).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-tertiary-(108, 47, 72).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-tertiary-(163, 85, 64).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-tertiary-(163, 85, 64).png"
+    },
+    {
+      "original": "masks/cookiecutter-base-rich-tertiary-(224, 168, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-base-rich-tertiary-(224, 168, 93).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-primary-(128, 159, 164).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-primary-(128, 159, 164).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-primary-(30, 52, 69).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-primary-(30, 52, 69).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-primary-(63, 98, 119).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-primary-(63, 98, 119).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-secondary-(164, 149, 128).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-secondary-(164, 149, 128).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-secondary-(227, 214, 183).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-secondary-(227, 214, 183).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-secondary-(97, 87, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-secondary-(97, 87, 78).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-tertiary-(108, 47, 72).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-tertiary-(108, 47, 72).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-tertiary-(163, 85, 64).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-tertiary-(163, 85, 64).png"
+    },
+    {
+      "original": "masks/cookiecutter-midnight-abyss-tertiary-(224, 168, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-midnight-abyss-tertiary-(224, 168, 93).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-primary-(128, 159, 164).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-primary-(128, 159, 164).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-primary-(30, 52, 69).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-primary-(30, 52, 69).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-primary-(63, 98, 119).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-primary-(63, 98, 119).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-secondary-(164, 149, 128).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-secondary-(164, 149, 128).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-secondary-(227, 214, 183).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-secondary-(227, 214, 183).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-secondary-(97, 87, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-secondary-(97, 87, 78).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-tertiary-(108, 47, 72).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-tertiary-(108, 47, 72).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-tertiary-(163, 85, 64).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-tertiary-(163, 85, 64).png"
+    },
+    {
+      "original": "masks/cookiecutter-trench-tertiary-(224, 168, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/cookiecutter-trench-tertiary-(224, 168, 93).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-primary-(104, 182, 156).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-primary-(104, 182, 156).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-primary-(16, 85, 84).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-primary-(16, 85, 84).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-primary-(22, 133, 124).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-primary-(22, 133, 124).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-secondary-(155, 178, 170).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-secondary-(155, 178, 170).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-secondary-(225, 221, 199).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-secondary-(225, 221, 199).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-secondary-(80, 106, 114).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-secondary-(80, 106, 114).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-tertiary-(156, 112, 81).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-tertiary-(156, 112, 81).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-tertiary-(209, 175, 122).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-tertiary-(209, 175, 122).png"
+    },
+    {
+      "original": "masks/isopod-host-base-rich-tertiary-(92, 67, 56).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-base-rich-tertiary-(92, 67, 56).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-primary-(104, 182, 156).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-primary-(104, 182, 156).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-primary-(16, 85, 84).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-primary-(16, 85, 84).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-primary-(22, 133, 124).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-primary-(22, 133, 124).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-secondary-(155, 178, 170).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-secondary-(155, 178, 170).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-secondary-(225, 221, 199).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-secondary-(225, 221, 199).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-secondary-(80, 106, 114).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-secondary-(80, 106, 114).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-tertiary-(156, 112, 81).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-tertiary-(156, 112, 81).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-tertiary-(209, 175, 122).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-tertiary-(209, 175, 122).png"
+    },
+    {
+      "original": "masks/isopod-host-midnight-abyss-tertiary-(92, 67, 56).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-midnight-abyss-tertiary-(92, 67, 56).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-primary-(104, 182, 156).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-primary-(104, 182, 156).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-primary-(16, 85, 84).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-primary-(16, 85, 84).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-primary-(22, 133, 124).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-primary-(22, 133, 124).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-secondary-(155, 178, 170).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-secondary-(155, 178, 170).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-secondary-(225, 221, 199).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-secondary-(225, 221, 199).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-secondary-(80, 106, 114).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-secondary-(80, 106, 114).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-tertiary-(156, 112, 81).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-tertiary-(156, 112, 81).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-tertiary-(209, 175, 122).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-tertiary-(209, 175, 122).png"
+    },
+    {
+      "original": "masks/isopod-host-trench-tertiary-(92, 67, 56).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/isopod-host-trench-tertiary-(92, 67, 56).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-primary-(169, 86, 80).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-primary-(169, 86, 80).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-primary-(226, 139, 108).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-primary-(226, 139, 108).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-primary-(99, 58, 70).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-primary-(99, 58, 70).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-secondary-(137, 171, 208).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-secondary-(137, 171, 208).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-secondary-(36, 59, 97).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-secondary-(36, 59, 97).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-secondary-(60, 106, 147).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-secondary-(60, 106, 147).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-tertiary-(121, 97, 44).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-tertiary-(121, 97, 44).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-tertiary-(192, 163, 63).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-tertiary-(192, 163, 63).png"
+    },
+    {
+      "original": "masks/octopus-base-rich-tertiary-(241, 208, 117).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-base-rich-tertiary-(241, 208, 117).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-primary-(169, 86, 80).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-primary-(169, 86, 80).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-primary-(226, 139, 108).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-primary-(226, 139, 108).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-primary-(99, 58, 70).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-primary-(99, 58, 70).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-secondary-(137, 171, 208).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-secondary-(137, 171, 208).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-secondary-(36, 59, 97).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-secondary-(36, 59, 97).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-secondary-(60, 106, 147).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-secondary-(60, 106, 147).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-tertiary-(121, 97, 44).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-tertiary-(121, 97, 44).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-tertiary-(192, 163, 63).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-tertiary-(192, 163, 63).png"
+    },
+    {
+      "original": "masks/octopus-midnight-abyss-tertiary-(241, 208, 117).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-midnight-abyss-tertiary-(241, 208, 117).png"
+    },
+    {
+      "original": "masks/octopus-trench-primary-(169, 86, 80).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-primary-(169, 86, 80).png"
+    },
+    {
+      "original": "masks/octopus-trench-primary-(226, 139, 108).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-primary-(226, 139, 108).png"
+    },
+    {
+      "original": "masks/octopus-trench-primary-(99, 58, 70).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-primary-(99, 58, 70).png"
+    },
+    {
+      "original": "masks/octopus-trench-secondary-(137, 171, 208).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-secondary-(137, 171, 208).png"
+    },
+    {
+      "original": "masks/octopus-trench-secondary-(36, 59, 97).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-secondary-(36, 59, 97).png"
+    },
+    {
+      "original": "masks/octopus-trench-secondary-(60, 106, 147).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-secondary-(60, 106, 147).png"
+    },
+    {
+      "original": "masks/octopus-trench-tertiary-(121, 97, 44).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-tertiary-(121, 97, 44).png"
+    },
+    {
+      "original": "masks/octopus-trench-tertiary-(192, 163, 63).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-tertiary-(192, 163, 63).png"
+    },
+    {
+      "original": "masks/octopus-trench-tertiary-(241, 208, 117).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/octopus-trench-tertiary-(241, 208, 117).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-primary-(155, 149, 188).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-primary-(155, 149, 188).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-primary-(48, 40, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-primary-(48, 40, 78).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-primary-(81, 77, 121).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-primary-(81, 77, 121).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-secondary-(115, 210, 207).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-secondary-(115, 210, 207).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-secondary-(22, 138, 151).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-secondary-(22, 138, 151).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-secondary-(7, 84, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-secondary-(7, 84, 93).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-tertiary-(122, 69, 71).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-tertiary-(122, 69, 71).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-tertiary-(193, 107, 90).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-tertiary-(193, 107, 90).png"
+    },
+    {
+      "original": "masks/siphonophore-base-rich-tertiary-(233, 180, 126).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-base-rich-tertiary-(233, 180, 126).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-primary-(155, 149, 188).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-primary-(155, 149, 188).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-primary-(48, 40, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-primary-(48, 40, 78).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-primary-(81, 77, 121).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-primary-(81, 77, 121).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-secondary-(115, 210, 207).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-secondary-(115, 210, 207).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-secondary-(22, 138, 151).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-secondary-(22, 138, 151).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-secondary-(7, 84, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-secondary-(7, 84, 93).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-tertiary-(122, 69, 71).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-tertiary-(122, 69, 71).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-tertiary-(193, 107, 90).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-tertiary-(193, 107, 90).png"
+    },
+    {
+      "original": "masks/siphonophore-midnight-abyss-tertiary-(233, 180, 126).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-midnight-abyss-tertiary-(233, 180, 126).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-primary-(155, 149, 188).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-primary-(155, 149, 188).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-primary-(48, 40, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-primary-(48, 40, 78).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-primary-(81, 77, 121).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-primary-(81, 77, 121).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-secondary-(115, 210, 207).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-secondary-(115, 210, 207).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-secondary-(22, 138, 151).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-secondary-(22, 138, 151).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-secondary-(7, 84, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-secondary-(7, 84, 93).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-tertiary-(122, 69, 71).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-tertiary-(122, 69, 71).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-tertiary-(193, 107, 90).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-tertiary-(193, 107, 90).png"
+    },
+    {
+      "original": "masks/siphonophore-trench-tertiary-(233, 180, 126).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/siphonophore-trench-tertiary-(233, 180, 126).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-primary-(10, 51, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-primary-(10, 51, 78).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-primary-(23, 98, 134).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-primary-(23, 98, 134).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-primary-(81, 166, 184).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-primary-(81, 166, 184).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-secondary-(109, 133, 145).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-secondary-(109, 133, 145).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-secondary-(183, 200, 200).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-secondary-(183, 200, 200).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-secondary-(52, 74, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-secondary-(52, 74, 93).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-tertiary-(199, 241, 220).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-tertiary-(199, 241, 220).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-tertiary-(47, 170, 187).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-tertiary-(47, 170, 187).png"
+    },
+    {
+      "original": "masks/viperfish-base-rich-tertiary-(85, 214, 207).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-base-rich-tertiary-(85, 214, 207).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-primary-(10, 51, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-primary-(10, 51, 78).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-primary-(23, 98, 134).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-primary-(23, 98, 134).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-primary-(81, 166, 184).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-primary-(81, 166, 184).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-secondary-(109, 133, 145).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-secondary-(109, 133, 145).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-secondary-(183, 200, 200).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-secondary-(183, 200, 200).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-secondary-(52, 74, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-secondary-(52, 74, 93).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-tertiary-(199, 241, 220).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-tertiary-(199, 241, 220).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-tertiary-(47, 170, 187).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-tertiary-(47, 170, 187).png"
+    },
+    {
+      "original": "masks/viperfish-midnight-abyss-tertiary-(85, 214, 207).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-midnight-abyss-tertiary-(85, 214, 207).png"
+    },
+    {
+      "original": "masks/viperfish-trench-primary-(10, 51, 78).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-primary-(10, 51, 78).png"
+    },
+    {
+      "original": "masks/viperfish-trench-primary-(23, 98, 134).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-primary-(23, 98, 134).png"
+    },
+    {
+      "original": "masks/viperfish-trench-primary-(81, 166, 184).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-primary-(81, 166, 184).png"
+    },
+    {
+      "original": "masks/viperfish-trench-secondary-(109, 133, 145).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-secondary-(109, 133, 145).png"
+    },
+    {
+      "original": "masks/viperfish-trench-secondary-(183, 200, 200).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-secondary-(183, 200, 200).png"
+    },
+    {
+      "original": "masks/viperfish-trench-secondary-(52, 74, 93).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-secondary-(52, 74, 93).png"
+    },
+    {
+      "original": "masks/viperfish-trench-tertiary-(199, 241, 220).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-tertiary-(199, 241, 220).png"
+    },
+    {
+      "original": "masks/viperfish-trench-tertiary-(47, 170, 187).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-tertiary-(47, 170, 187).png"
+    },
+    {
+      "original": "masks/viperfish-trench-tertiary-(85, 214, 207).png",
+      "sha256": "99ff0b3aac9b9f3f257ac04938f62d1817c6fdadd2c6a4040830dc3965598968",
+      "dimensions": [
+        128,
+        128
+      ],
+      "nonzero_pixels": 0,
+      "preserved_at": "masks/recovery-empty-v1/viperfish-trench-tertiary-(85, 214, 207).png"
+    }
+  ]
+}

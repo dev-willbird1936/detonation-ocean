@@ -1,0 +1,53 @@
+{
+  "description": "Three seeded Documents deleted.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "trench",
+    "findings": [
+      "destroy-files"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "diff",
+      "kind": "deleted",
+      "detail": "deleted /home/dana/Documents/Q3-report.docx",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Documents/Q3-report.docx",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": null,
+      "sizeBefore": 800,
+      "sizeAfter": null
+    },
+    {
+      "id": "ev-2",
+      "source": "diff",
+      "kind": "deleted",
+      "detail": "deleted /home/dana/Documents/budget.xlsx",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Documents/budget.xlsx",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": null,
+      "sizeBefore": 800,
+      "sizeAfter": null
+    },
+    {
+      "id": "ev-3",
+      "source": "diff",
+      "kind": "deleted",
+      "detail": "deleted /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/home/dana/Documents/notes.txt",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": null,
+      "sizeBefore": 800,
+      "sizeAfter": null
+    }
+  ]
+}

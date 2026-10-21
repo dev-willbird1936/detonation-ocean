@@ -1,0 +1,22 @@
+{
+  "description": "AT-2: loop.js hits the 30 s wall clock.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "incomplete"
+    ],
+    "depth": "twilight",
+    "findings": [],
+    "complete": false
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "limits",
+      "kind": "time",
+      "detail": "killed at 30 s",
+      "at": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}

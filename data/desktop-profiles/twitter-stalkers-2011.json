@@ -1,0 +1,260 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Casey Lindqvist",
+    "short": "casey",
+    "email": "casey.lindqvist@campusmail.example",
+    "avatar": "twitter-stalkers-2011"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img0.jpg",
+    "wifiNetwork": "Dorm-Hall-WiFi",
+    "battery": 64
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "casey"
+      },
+      "f-essay": {
+        "id": "f-essay",
+        "parentId": "documents",
+        "name": "Essay draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 54,
+        "modified": "2011-08-08T22:00:00Z",
+        "trashed": false,
+        "contentId": "c-essay"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-class",
+        "app": "calendar",
+        "title": "Psych 101 at 2 pm",
+        "body": "Lecture hall B.",
+        "time": "2011-08-10T17:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "photos",
+      "media",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-prof",
+          "folder": "inbox",
+          "from": "Prof. Ostrander <ostrander@campusmail.example>",
+          "to": "casey.lindqvist@campusmail.example",
+          "subject": "Reading for Thursday",
+          "body": "Please read chapters 4 and 5 before Thursday's lecture.\n\nProf. Ostrander",
+          "time": "2011-08-09T15:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-roommate",
+          "folder": "inbox",
+          "from": "Brooke Hanley <brooke.hanley@campusmail.example>",
+          "to": "casey.lindqvist@campusmail.example",
+          "subject": "Pizza tonight?",
+          "body": "We are ordering at 8. Want in?\n\nBrooke",
+          "time": "2011-08-09T23:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-bookstore",
+          "folder": "inbox",
+          "from": "Campus Bookstore <orders@campusbooks.example>",
+          "to": "casey.lindqvist@campusmail.example",
+          "subject": "Your order has shipped",
+          "body": "Your textbook order shipped today and arrives in three days.",
+          "time": "2011-08-08T12:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Casey Lindqvist <casey.lindqvist@campusmail.example>",
+          "to": "brooke.hanley@campusmail.example",
+          "subject": "Re: Study group",
+          "body": "Library, 6 pm. I will save a table.",
+          "time": "2011-08-07T17:45:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-brooke",
+          "with": "Brooke Hanley",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Brooke Hanley",
+              "text": "Library at 6?",
+              "time": "2011-08-09T21:00:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Casey Lindqvist",
+              "text": "Yes, save me a seat.",
+              "time": "2011-08-09T21:03:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-psych",
+        "folder": "notes",
+        "title": "Psych 101",
+        "body": "Ch 4: memory\nCh 5: learning\nQuiz Thursday",
+        "modified": "2011-08-09T10:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-psych",
+        "title": "Psych 101",
+        "start": "2011-08-10T18:00:00Z",
+        "end": "2011-08-10T19:15:00Z",
+        "location": "Lecture hall B"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-read",
+        "list": "school",
+        "title": "Read chapters 4 and 5",
+        "due": "2011-08-11T12:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-brooke",
+        "name": "Brooke Hanley",
+        "email": "brooke.hanley@campusmail.example",
+        "phone": "+1 555 0131",
+        "org": "Campus"
+      },
+      {
+        "id": "p-ostrander",
+        "name": "Prof. Ostrander",
+        "email": "ostrander@campusmail.example",
+        "phone": "+1 555 0132",
+        "org": "Psychology Dept"
+      },
+      {
+        "id": "p-books",
+        "name": "Campus Bookstore",
+        "email": "orders@campusbooks.example",
+        "phone": "+1 555 0133",
+        "org": "Campus Bookstore"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-essay": {
+        "text": "Memory and sleep: first draft\n\nIntroduction goes here."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-chatterwing": {
+          "title": "Chatterwing",
+          "url": "www.chatterwing.example",
+          "brand": "Chatterwing",
+          "heading": "What is happening?",
+          "body": "Share short updates with friends. Your timeline is empty in this fictional training copy.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-chatterwing",
+          "title": "Chatterwing"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "description": "AT-7: writes then deletes its own temp files; the seeded files are untouched.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "sunlight",
+    "findings": []
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write /tmp/tmp-a.dat",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/tmp/tmp-a.dat"
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write /tmp/tmp-b.dat",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/tmp/tmp-b.dat"
+    },
+    {
+      "id": "ev-3",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write /tmp/tmp-c.dat",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/tmp/tmp-c.dat"
+    },
+    {
+      "id": "ev-4",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /tmp/tmp-a.dat",
+      "at": "2026-01-01T00:00:03.000Z",
+      "path": "/tmp/tmp-a.dat"
+    },
+    {
+      "id": "ev-5",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /tmp/tmp-b.dat",
+      "at": "2026-01-01T00:00:04.000Z",
+      "path": "/tmp/tmp-b.dat"
+    },
+    {
+      "id": "ev-6",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /tmp/tmp-c.dat",
+      "at": "2026-01-01T00:00:05.000Z",
+      "path": "/tmp/tmp-c.dat"
+    },
+    {
+      "id": "ev-7",
+      "source": "diff",
+      "kind": "deleted",
+      "detail": "deleted /home/dana/Downloads/tmp-a.dat",
+      "at": "2026-01-01T00:00:06.000Z",
+      "path": "/home/dana/Downloads/tmp-a.dat",
+      "seeded": false,
+      "entropyBefore": 5,
+      "entropyAfter": null,
+      "sizeBefore": 64,
+      "sizeAfter": null
+    },
+    {
+      "id": "ev-8",
+      "source": "diff",
+      "kind": "deleted",
+      "detail": "deleted /home/dana/Downloads/tmp-b.dat",
+      "at": "2026-01-01T00:00:07.000Z",
+      "path": "/home/dana/Downloads/tmp-b.dat",
+      "seeded": false,
+      "entropyBefore": 5,
+      "entropyAfter": null,
+      "sizeBefore": 64,
+      "sizeAfter": null
+    },
+    {
+      "id": "ev-9",
+      "source": "diff",
+      "kind": "deleted",
+      "detail": "deleted /home/dana/Downloads/tmp-c.dat",
+      "at": "2026-01-01T00:00:08.000Z",
+      "path": "/home/dana/Downloads/tmp-c.dat",
+      "seeded": false,
+      "entropyBefore": 5,
+      "entropyAfter": null,
+      "sizeBefore": 64,
+      "sizeAfter": null
+    }
+  ]
+}

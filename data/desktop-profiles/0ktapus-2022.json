@@ -1,0 +1,330 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Mara Ellison",
+    "short": "mara",
+    "email": "mara.ellison@chatwell.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img1.jpg",
+    "wifiNetwork": "Chatwell-Support"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "mara"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Call script.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 89,
+        "modified": "2022-07-12T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Queue stats July.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 48,
+        "modified": "2022-08-01T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Mara",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-08-04T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-shift-swap-confi",
+          "folder": "inbox",
+          "from": "Dana Whitlock <dana.whitlock@chatwell.example>",
+          "to": "mara.ellison@chatwell.example",
+          "subject": "Shift swap confirmed for Friday",
+          "body": "Hi Mara,\n\nYour swap with Tobias is confirmed. You now cover the 14:00 to 22:00 queue on Friday.\n\nDana",
+          "time": "2022-08-03T17:40:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-reminder-sign-in",
+          "folder": "inbox",
+          "from": "Chatwell IT <it@chatwell.example>",
+          "to": "mara.ellison@chatwell.example",
+          "subject": "Reminder: sign in from the staff bookmark",
+          "body": "Please open staff sign-in from the bookmark in your browser. IT never sends a sign-in link in a text or an email.\n\nChatwell IT",
+          "time": "2022-08-01T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-your-july-call-r",
+          "folder": "inbox",
+          "from": "Support Quality <quality@chatwell.example>",
+          "to": "mara.ellison@chatwell.example",
+          "subject": "Your July call review",
+          "body": "Your July review is ready. Average handling time is on target and two calls were praised by customers.\n\nSupport Quality",
+          "time": "2022-07-29T15:05:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Mara Ellison <mara.ellison@chatwell.example>",
+          "to": "dana.whitlock@chatwell.example",
+          "subject": "Re: Queue coverage next week",
+          "body": "Happy to take the late queue on Friday. Thanks!",
+          "time": "2022-08-02T12:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-dana-whitlock",
+          "with": "Dana Whitlock",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Dana Whitlock",
+              "text": "Can you cover the late queue on Friday?",
+              "time": "2022-08-04T07:50:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Mara Ellison",
+              "text": "Yes, send me the swap.",
+              "time": "2022-08-04T07:55:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-support-team",
+          "with": "Support team",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Tobias Ng",
+              "text": "Queue is quiet this morning.",
+              "time": "2022-08-04T08:20:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-escalation-contacts",
+        "folder": "notes",
+        "title": "Escalation contacts",
+        "body": "Tier 2: Dana Whitlock\nBilling: Priya Menon\nAccount security: security desk",
+        "modified": "2022-07-28T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-shift-pattern",
+        "folder": "notes",
+        "title": "Shift pattern",
+        "body": "Mon-Wed early\nThu-Fri late",
+        "modified": "2022-07-20T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-team-stand-up",
+        "title": "Team stand-up",
+        "start": "2022-08-05T13:45:00Z",
+        "end": "2022-08-05T14:00:00Z",
+        "location": "Support floor"
+      },
+      {
+        "id": "e-2-call-review",
+        "title": "Call review",
+        "start": "2022-08-09T10:00:00Z",
+        "end": "2022-08-09T10:30:00Z",
+        "location": "Room 2"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-finish-wellbeing-survey",
+        "list": "work",
+        "title": "Finish wellbeing survey",
+        "due": "2022-08-05T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-dana-whitlock",
+        "name": "Dana Whitlock",
+        "email": "dana.whitlock@chatwell.example",
+        "phone": "+1 555 0201",
+        "org": "Chatwell"
+      },
+      {
+        "id": "p-2-tobias-ng",
+        "name": "Tobias Ng",
+        "email": "tobias.ng@chatwell.example",
+        "phone": "+1 555 0202",
+        "org": "Chatwell"
+      },
+      {
+        "id": "p-3-chatwell-it",
+        "name": "Chatwell IT",
+        "email": "it@chatwell.example",
+        "phone": "+1 555 0200",
+        "org": "Chatwell"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Greeting\nVerify the caller with the account questions\nNever ask for a password or a code."
+      },
+      "c-doc-2": {
+        "text": "Calls handled: 412\nAverage handling time: 6m 10s"
+      }
+    },
+    "web": {
+      "pages": {
+        "chatwell-sso": {
+          "title": "Chatwell SSO",
+          "url": "sso.chatwell.example",
+          "body": "Sign in to Chatwell\n\nYour password is valid for 41 more days. Nothing is waiting for you.",
+          "choices": []
+        },
+        "chatwell-wiki": {
+          "title": "Support wiki",
+          "url": "wiki.chatwell.example",
+          "body": "Support wiki\n\nCall script, escalation paths and the security reporting page.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-chatwell-sso",
+          "title": "Chatwell SSO",
+          "url": "scene:chatwell-sso"
+        },
+        {
+          "id": "bm-chatwell-wiki",
+          "title": "Support wiki",
+          "url": "scene:chatwell-wiki"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-chatwell-sso",
+          "url": "scene:chatwell-sso",
+          "title": "Chatwell SSO",
+          "time": "2022-08-04T07:45:00Z"
+        },
+        {
+          "id": "h-chatwell-wiki",
+          "url": "scene:chatwell-wiki",
+          "title": "Support wiki",
+          "time": "2022-08-03T14:10:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Report odd texts to the security desk",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

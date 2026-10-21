@@ -1,0 +1,3 @@
+Reading prompt from stdin...
+2026-10-07T13:39:36.995349Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.higgsfield.ai/.well-known/oauth-protected-resource/mcp\", scope=\"openid email offline_access\"" })
+2026-10-07T13:39:37.051559Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_request\", error_description=\"No access token was provided in this request\", resource_metadata=\"https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/\"" })

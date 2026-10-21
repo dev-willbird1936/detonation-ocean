@@ -1,0 +1,200 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Rebecca Lindqvist",
+    "short": "rebecca",
+    "email": "rebecca.lindqvist@harlow-accounts.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "green",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img0.jpg",
+    "wifiNetwork": "Harlow-Office"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "rebecca"
+      },
+      "f-clients": {
+        "id": "f-clients",
+        "parentId": "documents",
+        "name": "Clients-to-chase.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 450,
+        "modified": "2003-08-06T10:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-clients"
+      },
+      "f-receipts": {
+        "id": "f-receipts",
+        "parentId": "documents",
+        "name": "Rahman-receipts-June.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1900,
+        "modified": "2003-08-07T13:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-receipts"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Rebecca",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2003-08-08T09:10:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "notes",
+    "calendar",
+    "contacts",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-returns",
+          "folder": "inbox",
+          "from": "Martin Harlow <martin.harlow@harlow-accounts.example>",
+          "to": "rebecca.lindqvist@harlow-accounts.example",
+          "subject": "Tax returns due this month",
+          "body": "Rebecca, please chase the three clients who have not sent their papers.\n\nMartin",
+          "time": "2003-08-08T09:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-isp",
+          "folder": "inbox",
+          "from": "Pelican Broadband <service@pelican-broadband.example>",
+          "to": "rebecca.lindqvist@harlow-accounts.example",
+          "subject": "Your connection is always on",
+          "body": "Your always-on connection is active. Keep your account details safe.",
+          "time": "2003-08-01T07:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-client",
+          "folder": "inbox",
+          "from": "Ahmed Rahman <ahmed.rahman@rahman-print.example>",
+          "to": "rebecca.lindqvist@harlow-accounts.example",
+          "subject": "Receipts for June",
+          "body": "Hi Rebecca, my receipts for June are scanned and in the folder.\n\nAhmed",
+          "time": "2003-08-07T13:25:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Rebecca Lindqvist <rebecca.lindqvist@harlow-accounts.example>",
+          "to": "martin.harlow@harlow-accounts.example",
+          "subject": "Re: Tax returns due",
+          "body": "Will call them today.",
+          "time": "2003-08-08T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-clients",
+        "folder": "notes",
+        "title": "Clients to chase",
+        "body": "Rahman Print\nGreenleaf Dental\nStone and Daughter",
+        "modified": "2003-08-06T10:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-call",
+        "title": "Call clients about papers",
+        "start": "2003-08-11T10:00:00Z",
+        "end": "2003-08-11T11:00:00Z",
+        "location": "Front desk"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-martin",
+        "name": "Martin Harlow",
+        "email": "martin.harlow@harlow-accounts.example",
+        "phone": "+1 555 0271",
+        "org": "Harlow Accounts"
+      },
+      {
+        "id": "p-ahmed",
+        "name": "Ahmed Rahman",
+        "email": "ahmed.rahman@rahman-print.example",
+        "phone": "+1 555 0272",
+        "org": "Rahman Print"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-clients": {
+        "text": "Clients to chase. Fictional training file."
+      },
+      "c-f-receipts": {
+        "text": "Receipts for June. Fictional training file."
+      }
+    }
+  }
+}

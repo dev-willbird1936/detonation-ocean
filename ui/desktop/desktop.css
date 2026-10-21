@@ -1,0 +1,335 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #eff6f6;
+  --muted: #a8b8bc;
+  --line: rgb(216 242 239 / 14%);
+  --mint: #75e2c1;
+  --amber: #ffd38a;
+  --water: #172e36;
+  --water-glow: rgb(94 171 164 / 19%);
+}
+
+* { box-sizing: border-box; }
+
+/* Per-OS palette; switching data-os never reloads the scene. */
+body[data-os="macos"] {
+  --ink: #f1f3fa;
+  --muted: #bac2d1;
+  --line: rgb(220 230 255 / 16%);
+  --mint: #a9bcff;
+  --water: #202539;
+  --water-glow: rgb(131 121 216 / 22%);
+}
+body[data-depth="sunlight"] { --water: #174653; --water-glow: rgb(85 199 194 / 29%); --mint: #88e8d3; }
+body[data-depth="twilight"] { --water: #133b4c; --water-glow: rgb(56 163 181 / 24%); --mint: #71d6cf; }
+body[data-depth="midnight"] { --water: #102d43; --water-glow: rgb(42 125 171 / 19%); --mint: #71c4d7; }
+body[data-depth="abyss"] { --water: #0e273d; --water-glow: rgb(35 99 147 / 18%); --mint: #76b9dc; }
+body[data-depth="trench"] { --water: #101c33; --water-glow: rgb(31 68 119 / 17%); --mint: #8b9de1; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: #0d1e25;
+  color: var(--ink);
+}
+
+button { font: inherit; }
+button { color: inherit; }
+button:focus-visible, input:focus-visible, a:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 3px;
+}
+button:disabled { cursor: not-allowed; opacity: .5; }
+
+[hidden] { display: none !important; }
+.visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; clip-path: inset(50%) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* Creature desktop: the parent owns only the opt-in gate and one slim control; the OS lives in the iframes. */
+.ocean-stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% -10%, var(--water-glow), transparent 58%), linear-gradient(180deg, var(--water), #040c15);
+}
+.template-shell-host { position: absolute; inset: 0; overflow: hidden; background: #08131d; }
+.template-shell-host iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; background: transparent; }
+/* The inactive OS frame stays laid out (so it can render the shared state) but is invisible and inert. */
+.template-shell-host iframe[data-active="false"] { visibility: hidden; pointer-events: none; }
+/* One attack animation for both OS skins: above the frames, below the gate and the training controls. */
+.ocean-fx-layer { position: absolute; inset: 0; z-index: 10; overflow: hidden; pointer-events: none; }
+.ocean-fx-caption {
+  position: absolute;
+  z-index: 11;
+  bottom: 9%;
+  left: 50%;
+  max-width: min(720px, calc(100vw - 32px));
+  margin: 0;
+  padding: 8px 16px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 999px;
+  background: rgb(4 12 22 / 72%);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 650;
+  text-align: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+/* Scene guidance: one line, top centre, below the training controls. Never takes clicks. */
+.ocean-hint {
+  position: absolute;
+  z-index: 12;
+  top: 52px;
+  left: 50%;
+  max-width: min(520px, 38vw);
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 10px;
+  background: rgb(4 12 22 / 72%);
+  color: var(--ink);
+  font-size: 12.5px;
+  line-height: 1.35;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+body[data-os="macos"] .ocean-hint { top: 70px; }
+/* The debrief window: parent-drawn above the active shell (the shells have no debrief app). */
+.ocean-debrief {
+  position: absolute;
+  z-index: 25;
+  top: 7%;
+  left: 50%;
+  width: min(700px, calc(100vw - 32px));
+  max-height: 84%;
+  padding: 20px 24px 22px;
+  overflow: auto;
+  border: 1px solid rgb(180 240 230 / 24%);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgb(20 56 70 / 96%), rgb(6 20 32 / 98%));
+  box-shadow: 0 30px 90px rgb(0 0 0 / 55%);
+  transform: translateX(-50%);
+}
+/* "What the program showed": the sandbox replay's Wine screenshots, parent-drawn above the active shell. */
+.ocean-showed {
+  position: absolute;
+  z-index: 24;
+  right: 16px;
+  bottom: 64px;
+  width: min(420px, calc(100vw - 32px));
+  max-height: 70%;
+  padding: 14px 16px 16px;
+  overflow: auto;
+  border: 1px solid rgb(180 240 230 / 24%);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgb(20 56 70 / 96%), rgb(6 20 32 / 98%));
+  box-shadow: 0 20px 60px rgb(0 0 0 / 50%);
+}
+.ocean-showed h2 { margin: 0 0 4px; font-size: 16px; }
+.ocean-shot { margin: 8px 0; }
+.ocean-shot img { display: block; width: 100%; border-radius: 8px; background: #07202b; }
+.ocean-shot figcaption { margin-top: 4px; font-size: 12px; color: var(--muted); }
+.ocean-debrief-top { display: flex; gap: 14px; align-items: center; margin: 8px 0 10px; }
+.ocean-debrief-top img { width: 74px; height: 74px; object-fit: contain; image-rendering: pixelated; border-radius: 10px; background: #07202b; }
+.ocean-debrief h2 { margin: 2px 0 0; font-size: 19px; }
+/* The replay and exit buttons stay in view while a long debrief scrolls. */
+.ocean-debrief .ocean-card-actions { position: sticky; bottom: -22px; margin: 12px -24px -22px; padding: 12px 24px; border-top: 1px solid var(--line); background: rgb(6 20 32 / 97%); }
+.ocean-debrief h3 { margin: 12px 0 6px; font-size: 14px; }
+.ocean-debrief ul { margin: 6px 0 10px; padding-left: 20px; color: #d4e6e3; line-height: 1.45; }
+.ocean-outcome { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.ocean-outcome.safe { background: rgb(117 226 193 / 22%); color: var(--mint); }
+.ocean-outcome.fell { background: rgb(255 120 140 / 20%); color: #ff9aa9; }
+.ocean-stages { display: grid; gap: 6px; margin: 0 0 8px; padding: 0; list-style: none; }
+.ocean-stages li { display: grid; gap: 2px; padding: 7px 10px; border-left: 3px solid var(--mint); border-radius: 0 8px 8px 0; background: rgb(255 255 255 / 5%); font-size: 12.5px; }
+.ocean-stages li.skipped { opacity: .55; border-left-color: var(--line); }
+.ocean-stages li.stopped { border-left-color: var(--amber); }
+.ocean-stages em { color: var(--muted); font-style: normal; font-weight: 700; }
+.ocean-status {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  margin: 0;
+  place-items: center;
+  color: var(--muted);
+  letter-spacing: .04em;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% -10%, var(--water-glow), transparent 58%), linear-gradient(180deg, var(--water), #040c15);
+  animation: ocean-pulse 2.4s ease-in-out infinite;
+}
+@keyframes ocean-pulse { 50% { opacity: .6; } }
+
+.ocean-gate {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  padding: 20px;
+  overflow: auto;
+  place-items: center;
+  background: radial-gradient(ellipse at 50% 0%, var(--water-glow), transparent 62%), linear-gradient(180deg, rgb(4 18 30 / 72%), rgb(2 8 16 / 93%));
+  backdrop-filter: blur(10px);
+}
+.ocean-card {
+  position: relative;
+  width: min(560px, 100%);
+  padding: 30px 32px 28px;
+  border: 1px solid rgb(180 240 230 / 24%);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgb(20 56 70 / 92%), rgb(6 20 32 / 96%));
+  box-shadow: 0 30px 90px rgb(0 0 0 / 55%), inset 0 1px 0 rgb(255 255 255 / 10%);
+}
+.ocean-card::before { position: absolute; inset: 0 22px auto; height: 3px; border-radius: 0 0 4px 4px; background: var(--mint); content: ""; opacity: .85; }
+.ocean-card h1 { margin: 4px 0 8px; font-size: clamp(1.45rem, 3.4vw, 1.9rem); line-height: 1.12; }
+.ocean-eyebrow { margin: 0; color: var(--mint); font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.ocean-lede { margin: 0 0 16px; color: #d4e6e3; line-height: 1.5; }
+.ocean-points { display: grid; gap: 9px; margin: 0 0 14px; padding: 0; list-style: none; }
+.ocean-points li { padding: 10px 12px; border-left: 3px solid var(--mint); border-radius: 0 10px 10px 0; background: rgb(255 255 255 / 5%); color: #c9dcd9; font-size: 13.5px; line-height: 1.45; }
+.ocean-points strong { color: var(--ink); }
+.ocean-boundary { margin: 0 0 4px; color: var(--amber); font-size: 13px; font-weight: 800; letter-spacing: .02em; }
+.ocean-fine { min-height: 1.4em; margin: 0 0 14px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+.ocean-tick { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 18px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: rgb(0 0 0 / 20%); cursor: pointer; line-height: 1.4; }
+.ocean-tick input { flex: 0 0 auto; width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--mint); }
+.ocean-card-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.ocean-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 18px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: var(--mint);
+  color: #04222a;
+  font-weight: 850;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ocean-button:hover:not(:disabled) { filter: brightness(1.1); }
+.ocean-button.ghost { border-color: var(--line); background: transparent; color: var(--ink); font-weight: 700; }
+.ocean-button.ghost:hover { background: rgb(255 255 255 / 8%); }
+.ocean-unavailable { position: absolute; inset: 0; z-index: 20; height: fit-content; margin: auto; }
+
+.ocean-chrome {
+  position: absolute;
+  z-index: 40;
+  top: 10px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: calc(100vw - 24px);
+  padding: 3px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 999px;
+  background: rgb(6 18 29 / 58%);
+  box-shadow: 0 6px 22px rgb(0 0 0 / 35%);
+  backdrop-filter: blur(14px) saturate(1.3);
+  font-size: 12px;
+  opacity: .74;
+  transition: opacity .18s;
+}
+.ocean-chrome:hover, .ocean-chrome:focus-within { opacity: 1; }
+.ocean-chrome[hidden] { display: none; }
+/* macOS: below the menu bar and left of the notification banner column (top right). */
+body[data-os="macos"] .ocean-chrome { top: 29px; right: 380px; }
+.os-switcher { display: inline-flex; padding: 2px; border-radius: 999px; background: rgb(255 255 255 / 9%); }
+.os-switcher button { padding: 3px 11px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-weight: 750; cursor: pointer; }
+.os-switcher button[aria-pressed="true"] { background: var(--mint); color: #04222a; }
+.os-switcher button:not([aria-pressed="true"]):hover { color: var(--ink); }
+.ocean-chip { display: inline-flex; align-items: center; gap: 6px; min-width: 0; padding: 1px 11px 1px 4px; border-radius: 999px; background: rgb(255 255 255 / 7%); white-space: nowrap; }
+.ocean-chip img { width: 20px; height: 20px; object-fit: contain; image-rendering: pixelated; }
+.ocean-chip strong { color: var(--amber); font-size: 10px; letter-spacing: .09em; text-transform: uppercase; }
+.ocean-chip-detail { max-width: 34ch; overflow: hidden; color: var(--ink); text-overflow: ellipsis; }
+.ocean-link { padding: 4px 10px; border: 0; border-radius: 999px; background: transparent; color: var(--ink); font-size: 12px; font-weight: 650; text-decoration: none; cursor: pointer; }
+.ocean-link:hover { background: rgb(255 255 255 / 13%); }
+@media (max-width: 900px) {
+  .ocean-chip-detail { display: none; }
+}
+@media (max-width: 520px) {
+  .ocean-card { padding: 24px 20px; }
+  .ocean-chip { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ocean-status { animation: none; }
+}
+
+/* Depth accents match the matrix and entry pages. */
+body[data-depth="sunlight"] .ocean-stage { --mint: #5eead4; }
+body[data-depth="twilight"] .ocean-stage { --mint: #60a5fa; }
+body[data-depth="midnight"] .ocean-stage { --mint: #818cf8; }
+body[data-depth="abyss"] .ocean-stage { --mint: #c084fc; }
+body[data-depth="trench"] .ocean-stage { --mint: #f472b6; }
+
+/* The scenario intro card and the sandbox receipt: the abyss retro-pixel look (ui/abyss/retro-pixel.css palette, Jersey 10,
+   notched 1-unit frame, hard shadow, no blur or rounded corner). Non-modal: the desktop underneath stays clickable. */
+@font-face { font-family: "Jersey 10"; src: url(/ui/abyss/fonts/Jersey10-Regular.woff) format("woff"); font-weight: 400; font-display: block; }
+.ocean-intro, .ocean-receipt {
+  --u: 4px; --bd: #2f7690; --hi: #164a66; --lo: #030a14; --gold: #f4d06a; --p6: #6fe0d4; --p8: #effcf8;
+  font-family: "Jersey 10", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  -webkit-font-smoothing: none; text-rendering: optimizeSpeed; image-rendering: pixelated;
+}
+.ocean-intro {
+  position: absolute;
+  z-index: 35;
+  top: 12%;
+  left: 50%;
+  width: min(640px, calc(100vw - 48px));
+  padding: calc(var(--u) * 5) calc(var(--u) * 6) calc(var(--u) * 5);
+  background: repeating-conic-gradient(#ffffff0a 0 25%, #0000 0 50%) 0 0 / calc(var(--u) * 2) calc(var(--u) * 2), #07162a;
+  color: var(--p8);
+  font-size: 22px;
+  line-height: 1.25;
+  transform: translateX(-50%);
+  box-shadow:
+    0 calc(var(--u) * -1) 0 0 var(--bd), 0 var(--u) 0 0 var(--bd), calc(var(--u) * -1) 0 0 0 var(--bd), var(--u) 0 0 0 var(--bd),
+    inset var(--u) var(--u) 0 0 var(--hi), inset calc(var(--u) * -1) calc(var(--u) * -1) 0 0 var(--lo),
+    calc(var(--u) * 2) calc(var(--u) * 2) 0 0 #02060cb0;
+}
+.intro-eyebrow { margin: 0 0 calc(var(--u) * 2); color: var(--gold); font-size: 16px; letter-spacing: .12em; }
+.intro-title { margin: 0 0 calc(var(--u) * 2); color: var(--p6); font-size: 34px; font-weight: 400; line-height: 1.05; }
+.intro-line { margin: 0 0 calc(var(--u) * 2); color: var(--p8); }
+.intro-next { margin: 0 0 calc(var(--u) * 4); color: #bfe6e1; }
+.intro-button {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--u) * 2);
+  padding: var(--u) calc(var(--u) * 4);
+  border: 0;
+  border-radius: 0;
+  background: #1d6a82;
+  color: var(--p8);
+  font: inherit;
+  cursor: pointer;
+  box-shadow:
+    inset var(--u) var(--u) 0 0 #35a0ac, inset calc(var(--u) * -1) calc(var(--u) * -1) 0 0 #12405d, calc(var(--u) * 1) calc(var(--u) * 1) 0 0 #02060cb0;
+}
+.intro-button:hover { background: #35a0ac; color: #040a14; }
+.intro-button:active { translate: var(--u) var(--u); }
+.intro-button:focus-visible { outline: none; box-shadow: 0 0 0 var(--u) #040a14, 0 0 0 calc(var(--u) * 2) var(--gold); }
+.intro-key { padding: 0 var(--u); background: #07162a; color: var(--gold); font-size: 16px; }
+body[data-os="macos"] .ocean-intro { top: 14%; }
+/* Sandbox receipt in the debrief. */
+.ocean-receipt {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px calc(var(--u) * 4);
+  margin: 0 0 10px;
+  padding: calc(var(--u) * 2) calc(var(--u) * 3);
+  background: #07162a;
+  color: var(--p8);
+  font-size: 18px;
+  box-shadow: 0 calc(var(--u) * -1) 0 0 var(--bd), 0 var(--u) 0 0 var(--bd), calc(var(--u) * -1) 0 0 0 var(--bd), var(--u) 0 0 0 var(--bd);
+}
+.ocean-receipt dt { color: #93c4c6; }
+.ocean-receipt dd { margin: 0; overflow-wrap: anywhere; }

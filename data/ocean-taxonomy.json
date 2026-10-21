@@ -1,0 +1,1470 @@
+{
+  "version": 1,
+  "source": "data/attacks.json",
+  "sourceSha256": "a5caa38a0097fecb8d434c7fe875c467298f29a83e8353118ebe3eb01edb4bd8",
+  "policy": {
+    "depthIsSeverity": false,
+    "categoriesAre": "Visual browsing families, not mutually exclusive CWE classes",
+    "boundary": "Required victim interaction at the documented scenario boundary: initial access for intrusion cases; authorisation/transaction for fraud-only techniques",
+    "actorRule": "Never transfer an upstream supplier or carrier employee action to the displayed downstream victim",
+    "unknownRule": "Missing or mixed entry evidence is unplaced, not Trench",
+    "subtypeRule": "Keep original subtype, technique and outcome facts as secondary tags",
+    "scopeRule": "Selected malware/technique variants are explicit; a whole multi-route campaign may remain unplaced",
+    "applicability": "Disclosures and standalone display-risk references stay outside the five-depth placement",
+    "evidenceScope": "Curated catalogue descriptions and inherited citations, with focused source checks for SIM swapping, Anthem, Ukraine 2015, VPNFilter and LastPass; not a new independent historical audit of every source",
+    "integration": "Projection only: original root/local-ocean catalogues, embedded renderers and sandbox scenarios are unchanged"
+  },
+  "families": [
+    {
+      "id": "deception",
+      "name": "Deception & Impersonation",
+      "creature": "Anglerfish"
+    },
+    {
+      "id": "intrusion",
+      "name": "Intrusion & Weaknesses",
+      "creature": "Viperfish"
+    },
+    {
+      "id": "network-abuse",
+      "name": "Coordinated & Automated Abuse",
+      "creature": "Siphonophore"
+    },
+    {
+      "id": "trusted-source",
+      "name": "Trusted-Source Compromise",
+      "creature": "Isopod host fish"
+    },
+    {
+      "id": "theft-surveillance",
+      "name": "Theft & Surveillance",
+      "creature": "Cookiecutter shark"
+    },
+    {
+      "id": "extortion-destruction",
+      "name": "Extortion & Destruction",
+      "creature": "Octopus / kraken"
+    }
+  ],
+  "depths": [
+    {
+      "id": "sunlight",
+      "name": "Sunlight",
+      "action": "Clean",
+      "legacySev": 5
+    },
+    {
+      "id": "twilight",
+      "name": "Twilight",
+      "action": "Risky or inconclusive",
+      "legacySev": 4
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight",
+      "action": "Steals",
+      "legacySev": 3
+    },
+    {
+      "id": "abyss",
+      "name": "Abyss",
+      "action": "Takes control",
+      "legacySev": 2
+    },
+    {
+      "id": "trench",
+      "name": "Trench",
+      "action": "Destroys",
+      "legacySev": 1
+    }
+  ],
+  "matrix": [
+    {
+      "family": "deception",
+      "counts": {
+        "sunlight": 0,
+        "twilight": 0,
+        "midnight": 2,
+        "abyss": 4,
+        "trench": 1
+      },
+      "unknown": 1,
+      "notApplicable": 1,
+      "total": 9
+    },
+    {
+      "family": "intrusion",
+      "counts": {
+        "sunlight": 0,
+        "twilight": 0,
+        "midnight": 0,
+        "abyss": 0,
+        "trench": 6
+      },
+      "unknown": 0,
+      "notApplicable": 0,
+      "total": 6
+    },
+    {
+      "family": "network-abuse",
+      "counts": {
+        "sunlight": 4,
+        "twilight": 0,
+        "midnight": 0,
+        "abyss": 0,
+        "trench": 5
+      },
+      "unknown": 1,
+      "notApplicable": 0,
+      "total": 10
+    },
+    {
+      "family": "trusted-source",
+      "counts": {
+        "sunlight": 1,
+        "twilight": 0,
+        "midnight": 0,
+        "abyss": 0,
+        "trench": 2
+      },
+      "unknown": 1,
+      "notApplicable": 0,
+      "total": 4
+    },
+    {
+      "family": "theft-surveillance",
+      "counts": {
+        "sunlight": 1,
+        "twilight": 0,
+        "midnight": 0,
+        "abyss": 0,
+        "trench": 2
+      },
+      "unknown": 7,
+      "notApplicable": 2,
+      "total": 12
+    },
+    {
+      "family": "extortion-destruction",
+      "counts": {
+        "sunlight": 1,
+        "twilight": 0,
+        "midnight": 0,
+        "abyss": 0,
+        "trench": 2
+      },
+      "unknown": 6,
+      "notApplicable": 0,
+      "total": 9
+    }
+  ],
+  "counts": {
+    "total": 50,
+    "placed": 31,
+    "unknown": 16,
+    "notApplicable": 3,
+    "occupiedFamilyDepthSlots": 12,
+    "possibleFamilyDepthSlots": 30
+  },
+  "entries": [
+    {
+      "id": "melissa-1999",
+      "name": "Melissa",
+      "year": 1999,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Employee opening the infected Word document",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Attachment-driven macro execution enables automated mass mailing; propagation is the dominant lesson.",
+      "secondaryTags": [
+        "phishing",
+        "phishing delivery",
+        "macro worm",
+        "email disruption"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519",
+        "https://news.microsoft.com/source/1999/03/30/alert-on-macro-virus-issues/",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Virus%3AW97M%2FMelissa.A",
+        "https://www.sei.cmu.edu/documents/2648/1999_102_001_413932.pdf",
+        "https://commdocs.house.gov/committees/science/hsy131170.000/hsy131170_1.HTM",
+        "https://www.justice.gov/archive/criminal/cybercrime/press-releases/2002/melissaSent.htm",
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf"
+      ]
+    },
+    {
+      "id": "iloveyou-2000",
+      "name": "ILOVEYOU (Love Bug)",
+      "year": 2000,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Recipient opening the script attachment",
+      "classificationScope": "Catalogue entry",
+      "rationale": "User execution starts the mass-mailing worm; overwriting and credential theft remain secondary consequences.",
+      "secondaryTags": [
+        "phishing",
+        "phishing delivery",
+        "script execution",
+        "destructive malware"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Virus%3AVBS%2FLoveLetter&threatId=-2147428236",
+        "https://web.archive.org/web/20001204063700/http://www.cert.org/advisories/CA-2000-04.html",
+        "https://www.virusbulletin.com/virusbulletin/2015/05/throwback-thursday-when-love-came-town-june-2000",
+        "https://commdocs.house.gov/committees/science/hsy131170.000/hsy131170_1.HTM",
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf"
+      ]
+    },
+    {
+      "id": "mydoom-2004",
+      "name": "Mydoom",
+      "year": 2004,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Recipient executing the email-delivered worm",
+      "classificationScope": "Email-attachment variant",
+      "rationale": "Classified on the documented email-attachment execution route, not every peer-to-peer variant.",
+      "secondaryTags": [
+        "phishing",
+        "phishing delivery",
+        "mass mailing",
+        "denial of service"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Win32%2FMydoom",
+        "https://www.f-secure.com/v-descs/mydoom-m",
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf"
+      ]
+    },
+    {
+      "id": "emotet-2014",
+      "name": "Emotet",
+      "year": 2014,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Recipient opening a malicious attachment",
+      "classificationScope": "Malicious-attachment variant",
+      "rationale": "Classified on the sourced malicious-file execution variant. Its coordinated delivery platform is primary; do not imply every Emotet link causes one-click execution.",
+      "secondaryTags": [
+        "phishing",
+        "phishing delivery",
+        "botnet",
+        "malware delivery"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-280a",
+        "https://www.cisa.gov/news-events/alerts/2018/07/20/emotet-malware",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Win32%2FEmotet"
+      ]
+    },
+    {
+      "id": "rsa-2011",
+      "name": "RSA SecurID",
+      "year": 2011,
+      "entryType": "Incident",
+      "family": "trusted-source",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "RSA employee targeted at the authentication supplier",
+      "classificationScope": "Reported RSA employee attachment route",
+      "rationale": "Reporting describes an Excel attachment with an embedded exploit. The supplier-trust lesson is primary; do not claim a precise token-seed scope or every downstream customer compromised.",
+      "secondaryTags": [
+        "phishing",
+        "spearphishing",
+        "document exploitation",
+        "authentication-supplier compromise"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://arstechnica.com/information-technology/2011/04/spearphishing-0-day-rsa-hack-not-extremely-sophisticated/",
+        "https://www.sec.gov/Archives/edgar/data/790070/000119312511070159/dex991.htm",
+        "https://www.sec.gov/Archives/edgar/data/790070/000119312511070159/dex992.htm"
+      ]
+    },
+    {
+      "id": "carbanak-2015",
+      "name": "Carbanak (Anunak)",
+      "year": 2015,
+      "entryType": "Malware",
+      "family": "theft-surveillance",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Bank employee targeted by a malicious attachment",
+      "classificationScope": "Catalogue entry",
+      "rationale": "The described attachment route enables later banking and ATM theft; the theft operation is the dominant story.",
+      "secondaryTags": [
+        "phishing",
+        "spearphishing",
+        "malware",
+        "financial theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://securelist.com/the-great-bank-robbery-the-carbanak-apt/68732/"
+      ]
+    },
+    {
+      "id": "pccyborg-1989",
+      "name": "PC Cyborg (AIDS Trojan)",
+      "year": 1989,
+      "entryType": "Malware",
+      "family": "extortion-destruction",
+      "depth": "sunlight",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Recipient running the AIDS-information disk program",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Running the delivered program is required; later reboot counting and ransom demands are consequences.",
+      "secondaryTags": [
+        "ransomware",
+        "mailed media"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "ransomware",
+      "legacySev": 5,
+      "sourceUrls": [
+        "https://www.watchguard.com/wgrd-security-hub/ransomware-tracker/aids-trojan"
+      ]
+    },
+    {
+      "id": "smishing-2016",
+      "name": "Smishing / parcel lure (2010s)",
+      "year": 2016,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": "midnight",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "SMS recipient entering credentials at the spoofed site",
+      "classificationScope": "Credential-entry variant, not malware-download variants",
+      "rationale": "For the credential-page variant described in the entry, following the link alone does not disclose credentials; submission is the decisive action.",
+      "secondaryTags": [
+        "phishing",
+        "SMS phishing",
+        "credential capture"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season"
+      ]
+    },
+    {
+      "id": "quishing-2024",
+      "name": "Quishing (QR-code phishing)",
+      "year": 2024,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": "midnight",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "QR-code recipient submitting credentials to the spoofed site",
+      "classificationScope": "Credential-entry variant, not malware-download variants",
+      "rationale": "For the described credential-stealing-site variant, scanning/navigation alone is not credential theft. Classify credential submission, not the preliminary QR scan.",
+      "secondaryTags": [
+        "phishing",
+        "QR phishing",
+        "credential capture"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
+      ]
+    },
+    {
+      "id": "drainer-2022",
+      "name": "Crypto drainer kits (wallet-approval phishing)",
+      "year": 2022,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": "abyss",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Wallet holder signing the malicious approval",
+      "classificationScope": "Approval-only wallet-drainer variant",
+      "rationale": "The described gate is a wallet authorisation/signature, not supplying an OTP or recovery secret. Keep the high financial impact separate from depth.",
+      "secondaryTags": [
+        "phishing",
+        "wallet-approval phishing",
+        "financial theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 4,
+      "sourceUrls": [
+        "https://www.chainalysis.com/blog/crypto-drainers/"
+      ]
+    },
+    {
+      "id": "oauth-2023",
+      "name": "OAuth consent phishing (AiTM precursor, category)",
+      "year": 2023,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": "abyss",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "User granting the malicious connected app access",
+      "classificationScope": "Consent-only variant",
+      "rationale": "The consent-only variant grants access without a fake login, password capture, extra authentication-factor disclosure or downloaded-file execution.",
+      "secondaryTags": [
+        "phishing",
+        "OAuth consent",
+        "permission abuse"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/protect-against-consent-phishing"
+      ]
+    },
+    {
+      "id": "bec-2024",
+      "name": "Business Email Compromise (invoice thread)",
+      "year": 2024,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": "abyss",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "Finance recipient persuaded to authorise a fraudulent payment",
+      "classificationScope": "Finance-victim transaction boundary, not mailbox initial access",
+      "rationale": "Classify the entry's invoice/payment authorisation boundary, not an invented initial compromise of the existing email thread. No attacker-directed credential disclosure or file execution is specified.",
+      "secondaryTags": [
+        "bec",
+        "invoice-thread impersonation",
+        "payment-authorisation fraud"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "bec",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://www.fbi.gov/news/stories/business-e-mail-compromise-on-the-rise",
+        "https://www.ic3.gov/PSA/2024/PSA240911",
+        "https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/"
+      ]
+    },
+    {
+      "id": "salesforce-2025",
+      "name": "Salesforce / UNC6040 vishing",
+      "year": 2025,
+      "entryType": "Campaign",
+      "family": "deception",
+      "depth": "abyss",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Employee approving the malicious connected app",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Voice persuasion leads to application authorisation without password theft; data export follows the consent boundary.",
+      "secondaryTags": [
+        "social",
+        "vishing",
+        "connected-app consent",
+        "data theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "social",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://cloud.google.com/blog/topics/threat-intelligence/voice-phishing-data-extortion"
+      ]
+    },
+    {
+      "id": "simswap-2020",
+      "name": "SIM swap / SMS OTP interception",
+      "year": 2020,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Subscriber whose number is reassigned",
+      "classificationScope": "Subscriber perspective; carrier-social-engineering variant",
+      "rationale": "In the selected carrier-impersonation variant, the attacker persuades carrier staff and receives redirected codes. The subscriber does not provide the code or approve MFA. Carrier employees are a different perspective.",
+      "secondaryTags": [
+        "social",
+        "carrier impersonation",
+        "account recovery abuse",
+        "OTP interception"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "social",
+      "legacySev": 4,
+      "sourceUrls": [
+        "https://www.ic3.gov/PSA/2022/PSA220208"
+      ]
+    },
+    {
+      "id": "heartbleed-2014",
+      "name": "Heartbleed",
+      "year": 2014,
+      "entryType": "Vulnerability",
+      "family": "intrusion",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of the vulnerable TLS service",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Remote heartbeat handling can expose process memory without a victim response.",
+      "secondaryTags": [
+        "vulnerability",
+        "software vulnerability",
+        "memory disclosure"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "vulnerability",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/alerts/2014/04/08/openssl-heartbleed-vulnerability-cve-2014-0160",
+        "https://www.netcraft.com/blog/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug"
+      ]
+    },
+    {
+      "id": "yahoo-cookies-2016",
+      "name": "Yahoo forged cookies 2015–16",
+      "year": 2016,
+      "entryType": "Incident",
+      "family": "intrusion",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Yahoo account holder targeted by a forged session",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Forged cookies allow attacker access without the account holder supplying a password or responding.",
+      "secondaryTags": [
+        "exploit",
+        "session forgery",
+        "authentication bypass"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1011006/000119312517065791/d293630d10k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1011006/000119312516793106/d305610dex991.htm",
+        "https://ca.finance.yahoo.com/news/yahoo-says-32-million-accounts-233322849.html"
+      ]
+    },
+    {
+      "id": "equifax-2017",
+      "name": "Equifax",
+      "year": 2017,
+      "entryType": "Incident",
+      "family": "intrusion",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of the exposed Equifax web application",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Server-side exploitation of the unpatched application needs no victim response; data theft is a secondary outcome.",
+      "secondaryTags": [
+        "exploit",
+        "unpatched application",
+        "data theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.gao.gov/products/gao-18-559",
+        "https://www.ftc.gov/system/files/documents/cases/172_3203_equifax_complaint_7-22-19.pdf"
+      ]
+    },
+    {
+      "id": "capitalone-2019",
+      "name": "Capital One (WAF misconfiguration, SSRF)",
+      "year": 2019,
+      "entryType": "Incident",
+      "family": "intrusion",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Capital One cloud-environment operator",
+      "classificationScope": "Catalogue entry",
+      "rationale": "The documented server-side request/misconfiguration route needs no victim response; exposed credentials are obtained by the attacker, not typed by the victim.",
+      "secondaryTags": [
+        "exploit",
+        "misconfiguration",
+        "SSRF",
+        "cloud-data theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.justice.gov/usao-wdwa/united-states-v-paige-thompson",
+        "https://www.justice.gov/usao-wdwa/press-release/file/1188626/dl"
+      ]
+    },
+    {
+      "id": "log4shell-2021",
+      "name": "Log4Shell (CVE-2021-44228)",
+      "year": 2021,
+      "entryType": "Vulnerability",
+      "family": "intrusion",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of an application evaluating attacker-controlled logged input",
+      "classificationScope": "Catalogue entry",
+      "rationale": "The server-side lookup flaw can be triggered by attacker input without a victim response.",
+      "secondaryTags": [
+        "vulnerability",
+        "software vulnerability",
+        "unsafe lookup",
+        "remote code execution"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "vulnerability",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a"
+      ]
+    },
+    {
+      "id": "sharepoint-2025",
+      "name": "SharePoint ToolShell (CVE-2025-53770)",
+      "year": 2025,
+      "entryType": "Vulnerability",
+      "family": "intrusion",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of the exposed on-premises SharePoint server",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Unauthenticated requests trigger server-side exploitation without a victim response; key theft is a consequence, not a user credential submission.",
+      "secondaryTags": [
+        "exploit",
+        "deserialisation",
+        "unauthenticated exploitation",
+        "signing-key theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53770",
+        "https://www.microsoft.com/en-us/msrc/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770"
+      ]
+    },
+    {
+      "id": "blaster-2003",
+      "name": "Blaster (MSBlast)",
+      "year": 2003,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Owner of an exposed Windows host",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Remote service exploitation propagates without a victim click or file execution.",
+      "secondaryTags": [
+        "botnet",
+        "network worm",
+        "remote service exploitation"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "botnet",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2003/ms03-026",
+        "https://learn.microsoft.com/en-us/troubleshoot/windows-server/security-and-malware/blaster-worm-virus-alert"
+      ]
+    },
+    {
+      "id": "slammer-2003",
+      "name": "SQL Slammer",
+      "year": 2003,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of a vulnerable SQL Server",
+      "classificationScope": "Catalogue entry",
+      "rationale": "The network-service worm needs no victim response; scanning congestion is the outcome.",
+      "secondaryTags": [
+        "botnet",
+        "network worm",
+        "service disruption"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "botnet",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.caida.org/archive/sapphire/",
+        "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-039"
+      ]
+    },
+    {
+      "id": "sasser-2004",
+      "name": "Sasser worm",
+      "year": 2004,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Owner of an exposed Windows host",
+      "classificationScope": "Catalogue entry",
+      "rationale": "LSASS exploitation and network scanning do not require a victim response.",
+      "secondaryTags": [
+        "botnet",
+        "network worm",
+        "remote service exploitation"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "botnet",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=Win32%2FSasser",
+        "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf",
+        "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2004/ms04-011"
+      ]
+    },
+    {
+      "id": "conficker-2008",
+      "name": "Conficker",
+      "year": 2008,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Owner of a vulnerable Windows network host",
+      "classificationScope": "MS08-067 network-service variant",
+      "rationale": "The selected MS08-067 network-service propagation route requires no victim response; removable-media and share variants are not silently assigned this depth.",
+      "secondaryTags": [
+        "botnet",
+        "network worm",
+        "unpatched service",
+        "removable-media alternatives"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "botnet",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/alerts/2009/03/29/conficker-worm-targets-microsoft-windows-systems",
+        "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067",
+        "https://www.usenix.org/event/leet09/tech/full_papers/porras/porras_html"
+      ]
+    },
+    {
+      "id": "mirai-2016",
+      "name": "Mirai",
+      "year": 2016,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Owner of an internet-connected device",
+      "classificationScope": "Catalogue entry",
+      "rationale": "The selected self-propagating IoT botnet route does not require its owner to submit a password or respond to a lure.",
+      "secondaryTags": [
+        "botnet",
+        "IoT botnet",
+        "denial of service"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "botnet",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets"
+      ]
+    },
+    {
+      "id": "notpetya-2017",
+      "name": "NotPetya (M.E.Doc updater)",
+      "year": 2017,
+      "entryType": "Malware",
+      "family": "trusted-source",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "Organisation receiving the compromised M.E.Doc updater payload",
+      "classificationScope": "Compromised updater mechanism",
+      "rationale": "Classified on the updater-delivery mechanism, not a fictitious tax-document lure. It does not generalise no-action entry to every manually installed package.",
+      "secondaryTags": [
+        "supply-chain",
+        "compromised update",
+        "wiper",
+        "network propagation"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "supply-chain",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/",
+        "https://blog.talosintelligence.com/the-medoc-connection/"
+      ]
+    },
+    {
+      "id": "solarwinds-2020",
+      "name": "SolarWinds / SUNBURST",
+      "year": 2020,
+      "entryType": "Incident",
+      "family": "trusted-source",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "Downstream Orion customer organisation",
+      "classificationScope": "Downstream signed-update mechanism",
+      "rationale": "The signed build/update channel carries the payload. Classify the downstream updater/runtime compromise, not an invented human deception step at the supplier.",
+      "secondaryTags": [
+        "supply-chain",
+        "build-process compromise",
+        "signed update",
+        "espionage"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "supply-chain",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/analysis-reports/ar21-039a",
+        "https://www.solarwinds.com/blog/an-investigative-update-of-the-cyberattack",
+        "https://www.cisa.gov/sites/default/files/publications/Supply_Chain_Compromise_Detecting_APT_Activity_from_known_TTPs.pdf"
+      ]
+    },
+    {
+      "id": "tjx-2007",
+      "name": "TJX (T.J. Maxx / Marshalls)",
+      "year": 2007,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "medium",
+      "victimPerspective": "TJX store and corporate-network operators",
+      "classificationScope": "Reported wireless-entry route",
+      "rationale": "Classified on the reported external wireless-entry route; no employee response is required by that route. Reporting describes the route cautiously.",
+      "secondaryTags": [
+        "card-fraud",
+        "payment-card theft",
+        "wireless access"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "card-fraud",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2007/tjx_rep_070925/"
+      ]
+    },
+    {
+      "id": "moveit-2023",
+      "name": "MOVEit / Cl0p (CVE-2023-34362)",
+      "year": 2023,
+      "entryType": "Campaign",
+      "family": "theft-surveillance",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of the exposed MOVEit Transfer application",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Unauthenticated application exploitation enables bulk data theft. Retain SQL injection as a technique badge rather than losing the exfiltration lesson.",
+      "secondaryTags": [
+        "exploit",
+        "SQL injection",
+        "web shell",
+        "bulk-data theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2023-34362",
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a",
+        "https://www.emsisoft.com/en/blog/44123/unpacking-the-moveit-breach-statistics-and-analysis/"
+      ]
+    },
+    {
+      "id": "wannacry-2017",
+      "name": "WannaCry (WanaCrypt0r)",
+      "year": 2017,
+      "entryType": "Malware",
+      "family": "extortion-destruction",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Operator of a vulnerable SMB service",
+      "classificationScope": "Catalogue entry",
+      "rationale": "Wormable service exploitation enables encryption without a victim click, password submission or file launch.",
+      "secondaryTags": [
+        "ransomware",
+        "network worm",
+        "unpatched service"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "ransomware",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.england.nhs.uk/wp-content/uploads/2018/02/lessons-learned-review-wannacry-ransomware-cyber-attack-cio-review.pdf",
+        "https://www.cisa.gov/news-events/alerts/2017/05/12/indicators-associated-wannacry-ransomware",
+        "https://www.microsoft.com/en-us/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/"
+      ]
+    },
+    {
+      "id": "ukraine-2022",
+      "name": "Viasat KA-SAT disruption (2022)",
+      "year": 2022,
+      "entryType": "Incident",
+      "family": "extortion-destruction",
+      "depth": "trench",
+      "placement": "placed",
+      "placementConfidence": "high",
+      "victimPerspective": "Viasat KA-SAT network operator",
+      "classificationScope": "Catalogue entry",
+      "rationale": "The documented VPN-appliance misconfiguration enables entry into the trusted management segment without victim response; subsequent modem disruption is the outcome.",
+      "secondaryTags": [
+        "exploit",
+        "network misconfiguration",
+        "management-plane abuse",
+        "service disruption"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.viasat.com/perspectives/corporate/2022/ka-sat-network-cyber-attack-overview/"
+      ]
+    },
+    {
+      "id": "lapsus-2022",
+      "name": "LAPSUS$ (Okta / Microsoft / T-Mobile / Uber)",
+      "year": 2022,
+      "entryType": "Campaign",
+      "family": "deception",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "mixed",
+      "victimPerspective": "Victims across the named LAPSUS$ campaign",
+      "classificationScope": "Whole multi-route campaign; no single variant selected",
+      "rationale": "The entry combines MFA fatigue, help-desk deception, SIM swapping and purchased credentials. No single required action is established for the whole combined campaign.",
+      "secondaryTags": [
+        "social",
+        "MFA fatigue",
+        "help-desk impersonation",
+        "SIM swapping",
+        "purchased credentials"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "social",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://www.microsoft.com/en-us/security/blog/2022/03/22/dev-0537-criminal-actor-targeting-organizations-for-data-exfiltration-and-destruction/"
+      ]
+    },
+    {
+      "id": "vpnfilter-2018",
+      "name": "VPNFilter",
+      "year": 2018,
+      "entryType": "Malware",
+      "family": "network-abuse",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Owner of the compromised router or NAS",
+      "classificationScope": "Whole implant campaign",
+      "rationale": "Talos states it was unsure of the particular exploit used in any given case. Known exploits and default credentials are possibilities, not a proven interaction classification.",
+      "secondaryTags": [
+        "botnet",
+        "router implant",
+        "coordinated infrastructure",
+        "traffic surveillance"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "botnet",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://blog.talosintelligence.com/vpnfilter/",
+        "https://www.cisa.gov/news-events/alerts/2018/05/25/cyber-actors-target-home-and-office-routers-and-networked-devices-worldwide"
+      ]
+    },
+    {
+      "id": "target-2013",
+      "name": "Target",
+      "year": 2013,
+      "entryType": "Incident",
+      "family": "trusted-source",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Target as downstream customer of Fazio Mechanical",
+      "classificationScope": "Target downstream compromise, not supplier phishing",
+      "rationale": "Vendor credential theft and downstream POS theft are established; the curated record leaves the access path partly unresolved. Do not assign the vendor employee's email action to Target.",
+      "secondaryTags": [
+        "supply-chain",
+        "supplier credentials",
+        "POS malware",
+        "payment-card theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "supply-chain",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/",
+        "https://krebsonsecurity.com/2014/02/email-attack-on-vendor-set-up-breach-at-target/",
+        "https://krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/"
+      ]
+    },
+    {
+      "id": "zeus-2007",
+      "name": "Zeus (Zbot)",
+      "year": 2007,
+      "entryType": "Malware",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Banking user whose endpoint or browser becomes infected",
+      "classificationScope": "Whole malware-family entry",
+      "rationale": "Typing a banking password after infection is not initial access. The broad malware entry does not establish one required installation route.",
+      "secondaryTags": [
+        "phishing",
+        "banking Trojan",
+        "form grabbing",
+        "keylogging"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 3,
+      "sourceUrls": [
+        "https://digital.nhs.uk/cyber-alerts/2017/cc-1138",
+        "https://www.sophos.com/en-us/threat-detection-library/mal/zbot",
+        "https://securelist.com/zeus-on-the-hunt/36289/"
+      ]
+    },
+    {
+      "id": "anthem-2015",
+      "name": "Anthem",
+      "year": 2015,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Employee of the affected Anthem subsidiary",
+      "classificationScope": "Indictment paragraph 14(a) initial delivery",
+      "rationale": "The indictment distinguishes clicking a hyperlink, downloading a file and executing it. It does not establish whether the victim separately ran the file; one-click-only and manual-file execution are both unproven.",
+      "secondaryTags": [
+        "espionage",
+        "spearphishing",
+        "backdoor",
+        "data exfiltration"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "espionage",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://www.justice.gov/d9/press-releases/attachments/2019/05/09/anthem_indictment_0.pdf",
+        "https://www.justice.gov/archives/opa/pr/member-sophisticated-china-based-hacking-group-indicted-series-computer-intrusions-including"
+      ]
+    },
+    {
+      "id": "opm-2015",
+      "name": "US Office of Personnel Management",
+      "year": 2015,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "OPM organisation and the compromised delegated identity",
+      "classificationScope": "Initial compromised-identity provenance",
+      "rationale": "The KeyPoint credential was compromised, but how it was obtained was not determined. A compromised credential is neither proof of victim password submission nor proof of no victim action.",
+      "secondaryTags": [
+        "espionage",
+        "contractor identity",
+        "sensitive-record theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "espionage",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://oversight.house.gov/report/opm-data-breach-government-jeopardized-national-security-generation/",
+        "https://docs.house.gov/meetings/GO/GO00/20150624/103684/HHRG-114-GO00-Transcript-20150624.pdf",
+        "https://oversight.house.gov/wp-content/uploads/2015/06/2015-06-24-FC-OPM-DATA-BREACH-PART-II.GO175001.pdf",
+        "https://www.gao.gov/products/gao-17-614"
+      ]
+    },
+    {
+      "id": "marriott-2018",
+      "name": "Marriott / Starwood",
+      "year": 2018,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Marriott/Starwood organisation",
+      "classificationScope": "Initial web-shell placement",
+      "rationale": "The source explicitly leaves installation of the initial web shell undetermined; later tools and stolen data do not establish the entry interaction.",
+      "secondaryTags": [
+        "theft",
+        "web shell",
+        "credential harvesting",
+        "long dwell"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "theft",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2022/pipeda-2022-005/"
+      ]
+    },
+    {
+      "id": "lastpass-2022",
+      "name": "LastPass (2022)",
+      "year": 2022,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "mixed",
+      "victimPerspective": "LastPass staff and backup environments across two incidents",
+      "classificationScope": "Combined two-incident entry",
+      "rationale": "The entry combines two compromises. Third-party exploitation and later secret access are documented, but this combined record does not establish one decisive victim-action gate. Do not place later authentication at initial access.",
+      "secondaryTags": [
+        "exploit",
+        "third-party vulnerability",
+        "privileged endpoint",
+        "backup-data theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "exploit",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://blog.lastpass.com/posts/security-incident-update-recommended-actions"
+      ]
+    },
+    {
+      "id": "att-2024",
+      "name": "AT&T (third-party cloud workspace)",
+      "year": 2024,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "AT&T cloud-workspace victim",
+      "classificationScope": "Initial workspace entry",
+      "rationale": "Exfiltration from the workspace is documented, but the cited record does not establish how initial access was obtained.",
+      "secondaryTags": [
+        "theft",
+        "third-party cloud workspace",
+        "metadata theft"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "theft",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.reuters.com/technology/cybersecurity/att-says-data-around-109-mln-us-customer-accounts-illegally-downloaded-2024-07-12/",
+        "https://www.sec.gov/Archives/edgar/data/732717/000073271724000046/t-20240506.htm",
+        "https://www.blumenthal.senate.gov/imo/media/doc/2024-07-16_snowflake_breach_att.pdf"
+      ]
+    },
+    {
+      "id": "npd-2024",
+      "name": "National Public Data / Infobroker",
+      "year": 2024,
+      "entryType": "Incident",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "National Public Data organisation",
+      "classificationScope": "Initial organisation compromise",
+      "rationale": "The public record cited in the catalogue does not establish a specific entry mechanism; do not equate an alleged data release with no-action access.",
+      "secondaryTags": [
+        "theft",
+        "data broker",
+        "alleged data release"
+      ],
+      "historicalConfidence": "medium",
+      "legacyVector": "theft",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.nytimes.com/2024/08/15/business/social-security-numbers-stolen-hack.html",
+        "https://oversight.house.gov/wp-content/uploads/2024/08/NPD-Breach-Letter-08222024.pdf",
+        "https://oag.maryland.gov/resources-info/SBN%20Documents/2024/ITU-375412.pdf"
+      ]
+    },
+    {
+      "id": "stuxnet-2010",
+      "name": "Stuxnet",
+      "year": 2010,
+      "entryType": "Malware",
+      "family": "extortion-destruction",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Operator of the targeted industrial-control environment",
+      "classificationScope": "Initial industrial-victim compromise",
+      "rationale": "Industrial process manipulation is the dominant lesson. USB/network propagation does not establish the initial compromise path into the selected industrial victim.",
+      "secondaryTags": [
+        "supply-chain",
+        "industrial sabotage",
+        "USB propagation",
+        "network propagation",
+        "signed malware"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "supply-chain",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-10-272-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-10-201-01c",
+        "https://www.enisa.europa.eu/news/enisa-news/stuxnet-analysis",
+        "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB424/docs/Cyber-044.pdf"
+      ]
+    },
+    {
+      "id": "shamoon-2012",
+      "name": "Shamoon (Disttrack)",
+      "year": 2012,
+      "entryType": "Incident",
+      "family": "extortion-destruction",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Saudi Aramco corporate-network victim",
+      "classificationScope": "2012 incident entry",
+      "rationale": "The cited description establishes wiping and disruption, not the decisive initial-access interaction. Destruction is not proof of no-action entry.",
+      "secondaryTags": [
+        "wiper",
+        "service disruption"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "wiper",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.nytimes.com/2012/10/24/business/global/cyberattack-on-saudi-oil-firm-disquiets-us.html",
+        "https://archive.nytimes.com/bits.blogs.nytimes.com/2012/08/27/connecting-the-dots-after-cyberattack-on-saudi-aramco/",
+        "https://www.cisa.gov/sites/default/files/Monitors/ICS-CERT_Monitor_Sep2012.pdf"
+      ]
+    },
+    {
+      "id": "sony-2014",
+      "name": "Sony Pictures",
+      "year": 2014,
+      "entryType": "Incident",
+      "family": "extortion-destruction",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Sony Pictures organisation",
+      "classificationScope": "Organisation incident entry",
+      "rationale": "Observed destruction, theft and threats make destructive/extortion impact primary. The FBI statement does not establish initial access.",
+      "secondaryTags": [
+        "espionage",
+        "data theft",
+        "destructive malware",
+        "threats"
+      ],
+      "historicalConfidence": "medium",
+      "legacyVector": "espionage",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.fbi.gov/news/press-releases/update-on-sony-investigation",
+        "https://www.cisa.gov/news-events/alerts/2014/12/19/targeted-destructive-malware"
+      ]
+    },
+    {
+      "id": "ukraine-2015",
+      "name": "Ukrainian power grid",
+      "year": 2015,
+      "entryType": "Incident",
+      "family": "extortion-destruction",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Affected Ukrainian power-grid operator",
+      "classificationScope": "Initial entry leading to the grid incident",
+      "rationale": "CISA confirms remote breaker operation and disruption but says BlackEnergy's initial-access role was still under evaluation. Do not convert a reported attachment infection into a proven outage-entry gate.",
+      "secondaryTags": [
+        "phishing",
+        "industrial disruption",
+        "remote administration",
+        "reported spearphishing",
+        "KillDisk"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://attack.mitre.org/campaigns/C0028/",
+        "https://www.cisa.gov/news-events/ics-alerts/ir-alert-h-16-056-01",
+        "https://cdn.selinc.com/assets/Literature/Publications/Technical%20Papers/6774_UkraineCyber_DEW_20170130_Web7.pdf?v=20181015-210831"
+      ]
+    },
+    {
+      "id": "colonial-2021",
+      "name": "Colonial Pipeline",
+      "year": 2021,
+      "entryType": "Incident",
+      "family": "extortion-destruction",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Colonial organisation and the compromised VPN identity",
+      "classificationScope": "Compromised-identity provenance",
+      "rationale": "Use of the legacy single-factor VPN account is known; credential acquisition was still under investigation. No-MFA does not prove how the victim identity was first compromised.",
+      "secondaryTags": [
+        "ransomware",
+        "valid-account abuse",
+        "no MFA"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "ransomware",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/Testimony-Blount-2021-06-08.pdf",
+        "https://www.govinfo.gov/content/pkg/CHRG-117shrg46569/html/CHRG-117shrg46569.htm",
+        "https://www.hsgac.senate.gov/media/reps/portman-presses-president-and-ceo-of-colonial-pipeline-on-gaps-in-cybersecurity-practices/",
+        "https://www.energy.gov/ceser/articles/ceser-2021-emergency-response-recap",
+        "https://www.colpipe.com/news-insights/media-resources/post/media-statement-update-colonial-pipeline-system-disruption/",
+        "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2022-05/32022026_Colonial_Pipeline_NOPV_PCP_PCO_05052022.pdf"
+      ]
+    },
+    {
+      "id": "changehealth-2024",
+      "name": "Change Healthcare (Citrix portal, no MFA)",
+      "year": 2024,
+      "entryType": "Incident",
+      "family": "extortion-destruction",
+      "depth": null,
+      "placement": "unknown",
+      "placementConfidence": "unknown",
+      "victimPerspective": "Change Healthcare organisation and the compromised Citrix identity",
+      "classificationScope": "Compromised-identity provenance",
+      "rationale": "Ransomware, extortion and service disruption are primary. Use of compromised credentials without MFA does not establish how those credentials were acquired.",
+      "secondaryTags": [
+        "theft",
+        "ransomware",
+        "data theft",
+        "valid-account abuse",
+        "no MFA"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "theft",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.reuters.com/technology/cybersecurity/unitedhealth-hackers-took-advantage-citrix-vulnerabilty-break-ceo-says-2024-04-29/",
+        "https://www.finance.senate.gov/imo/media/doc/0501_witty_testimony.pdf",
+        "https://www.finance.senate.gov/hearings/hacking-americas-health-care-assessing-the-change-healthcare-cyber-attack-and-whats-next",
+        "https://www.congress.gov/118/meeting/house/117242/witnesses/HHRG-118-IF02-Wstate-WittyS-20240501-U5.pdf",
+        "https://nationalcioreview.com/articles-insights/extra-bytes/unitedhealth-ceo-testifies-before-congress-regarding-massive-security-breach/"
+      ]
+    },
+    {
+      "id": "lookalike-2005",
+      "name": "Lookalike / IDN homograph domains",
+      "year": 2005,
+      "entryType": "Technique",
+      "family": "deception",
+      "depth": null,
+      "placement": "not-applicable",
+      "placementConfidence": "high",
+      "victimPerspective": "Browser user inspecting an apparent origin",
+      "classificationScope": "Standalone display-risk technique",
+      "rationale": "This standalone record describes an address-bar spoofing risk, not a completed credential leak or a single compromise gate. Keep it in reference material rather than inventing a breach depth.",
+      "secondaryTags": [
+        "phishing",
+        "IDN homograph",
+        "origin-display spoofing"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "phishing",
+      "legacySev": 2,
+      "sourceUrls": [
+        "https://www.mozilla.org/en-US/security/advisories/mfsa2005-29/",
+        "https://bugzilla.mozilla.org/show_bug.cgi?id=281831"
+      ]
+    },
+    {
+      "id": "vault7-2017",
+      "name": "Vault 7",
+      "year": 2017,
+      "entryType": "Disclosure",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "not-applicable",
+      "placementConfidence": "high",
+      "victimPerspective": "No conventional victim compromise represented by this entry",
+      "classificationScope": "Catalogue entry",
+      "rationale": "A published inventory/disclosure is not a documented initial-access event. Its historical placement must not become a no-action attack.",
+      "secondaryTags": [
+        "espionage",
+        "disclosure",
+        "capability inventory"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "espionage",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.washingtonpost.com/world/national-security/wikileaks-says-it-has-obtained-trove-of-cia-hacking-tools/2017/03/07/c8c50c5c-0345-11e7-b1e9-a05d3c21f7cf_story.html",
+        "https://www.bbc.com/news/technology-39193008"
+      ]
+    },
+    {
+      "id": "collection1-2019",
+      "name": "Collection #1 (credential compilation)",
+      "year": 2019,
+      "entryType": "Disclosure",
+      "family": "theft-surveillance",
+      "depth": null,
+      "placement": "not-applicable",
+      "placementConfidence": "high",
+      "victimPerspective": "No single newly compromised victim represented by the compilation",
+      "classificationScope": "Catalogue entry",
+      "rationale": "A compilation of previously exposed credentials is a disclosure, not a fresh intrusion with an established interaction gate.",
+      "secondaryTags": [
+        "theft",
+        "credential compilation",
+        "disclosure",
+        "credential-reuse risk"
+      ],
+      "historicalConfidence": "high",
+      "legacyVector": "theft",
+      "legacySev": 1,
+      "sourceUrls": [
+        "https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "budget_microdollars": 1500000,
+  "estimated_microdollars": 1500000,
+  "previous_reserved_microdollars": 5260000,
+  "jobs": [
+    {
+      "id": "motion-octopus",
+      "cost_microdollars": 250000,
+      "source_file": "ocean-style-prototypes\\codex-creature-refinement\\exports\\octopus-sunlight-128.png",
+      "source_sha256": "601f45952d1f8ece56970653f70ef88c47f3e3979026e92bdc6697501684ad71",
+      "upload_sha256": "1644cda13e2e337d07b8e0a3feacba55a520074880b86af995e98baaf44f1987"
+    },
+    {
+      "id": "motion-anglerfish",
+      "cost_microdollars": 250000,
+      "source_file": "ocean-style-prototypes\\codex-creature-refinement\\exports\\anglerfish-sunlight-128.png",
+      "source_sha256": "e3b7b830f15025aead4b112546efbbfa844d48354e075826671998c92cb20d6a",
+      "upload_sha256": "93f5f59b5fb13fabecf0ed474eddabf45fde57785eaf248efe5b66e2b618ae3f"
+    },
+    {
+      "id": "motion-viperfish",
+      "cost_microdollars": 250000,
+      "source_file": "ocean-style-prototypes\\codex-creature-refinement\\exports\\viperfish-sunlight-128.png",
+      "source_sha256": "8b0ecdd8010dd087281dc0a162b7cd48d7e8bff8499c0a73a4abe3aaf600f115",
+      "upload_sha256": "26343298e5a089a211076d33d275928fbe10da034c95da1e77653047f77906fb"
+    },
+    {
+      "id": "motion-siphonophore",
+      "cost_microdollars": 250000,
+      "source_file": "ocean-style-prototypes\\codex-creature-refinement\\exports\\siphonophore-sunlight-128.png",
+      "source_sha256": "a8aa37077e7bb322b6c126f9dbf3b2fc16249f8f9ff309016c3e35a47def69e3",
+      "upload_sha256": "776ed661d93113c797c24ee7cf86cc9d091ce5b34b6ead7804921c4ff1b1c43d"
+    },
+    {
+      "id": "motion-isopod-host",
+      "cost_microdollars": 250000,
+      "source_file": "ocean-style-prototypes\\codex-creature-refinement\\exports\\isopod-host-sunlight-128.png",
+      "source_sha256": "32a860b7c044f7f5cf4b2247910f9ce16940abb5e58c29e8a60ee9f1ed096ee1",
+      "upload_sha256": "7a3745fa855ae8946c6814890b0c32aa0d7209e23911ef9f7ecc91e9582e0d3a"
+    },
+    {
+      "id": "motion-cookiecutter",
+      "cost_microdollars": 250000,
+      "source_file": "ocean-style-prototypes\\codex-creature-refinement\\exports\\cookiecutter-sunlight-128.png",
+      "source_sha256": "7ec56bf501dba48e21ef8a66004e9ac3f2dd763be3c3cbfbc07c181f99252285",
+      "upload_sha256": "f407e372ae35aad59866f50613e3201210f396cd6ac04ca35068091280090646"
+    }
+  ],
+  "user_authorization": "User said yea to new $1.50 cap for six custom loops, octopus pilot included; no automatic retries or purchases."
+}

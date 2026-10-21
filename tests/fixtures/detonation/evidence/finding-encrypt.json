@@ -1,0 +1,66 @@
+{
+  "description": "Three seeded Documents change to high entropy and a ransom note appears.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "trench",
+    "findings": [
+      "encrypt"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/Q3-report.docx",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Documents/Q3-report.docx",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-2",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/budget.xlsx",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Documents/budget.xlsx",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-3",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/home/dana/Documents/notes.txt",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 7.9,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-4",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Documents/README_DECRYPT.txt",
+      "at": "2026-01-01T00:00:03.000Z",
+      "path": "/home/dana/Documents/README_DECRYPT.txt",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 4.4,
+      "sizeBefore": null,
+      "sizeAfter": 300
+    }
+  ]
+}

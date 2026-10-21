@@ -1,0 +1,39 @@
+{
+  "description": "HTML page submits the synthetic typed credential; the post is blocked.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "unknown-hosts"
+    ],
+    "depth": "midnight",
+    "family": "deception",
+    "findings": [
+      "fake-login"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "browser",
+      "kind": "form-submit",
+      "detail": "form-submit",
+      "at": "2026-01-01T00:00:00.000Z",
+      "url": "https://login.example.test/post",
+      "fields": {
+        "user": "dana@example.test",
+        "pass": "synthetic-typed-pass"
+      },
+      "typedCredential": true
+    },
+    {
+      "id": "ev-2",
+      "source": "browser",
+      "kind": "request-blocked",
+      "detail": "request-blocked",
+      "at": "2026-01-01T00:00:01.000Z",
+      "url": "https://login.example.test/post",
+      "body": "user=dana%40example.test"
+    }
+  ]
+}

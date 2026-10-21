@@ -1,0 +1,379 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Marisol Quade",
+    "short": "marisol",
+    "email": "marisol.quade@harborpost.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-aurora.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "HomeNet",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "marisol"
+      },
+      "f-glossary": {
+        "id": "f-glossary",
+        "parentId": "documents",
+        "name": "Batch-14-glossary.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1400,
+        "modified": "2011-05-21T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-glossary"
+      },
+      "f-invoice": {
+        "id": "f-invoice",
+        "parentId": "documents",
+        "name": "Invoice-batch-13.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 640,
+        "modified": "2011-05-15T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-invoice"
+      },
+      "f-todo": {
+        "id": "f-todo",
+        "parentId": "desktop",
+        "name": "To-do.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 120,
+        "modified": "2011-05-22T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-todo",
+        "desktopPos": {
+          "x": 900,
+          "y": 20
+        }
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Marisol",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2011-05-24T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "store",
+    "terminal",
+    "settings",
+    "updates",
+    "texteditor",
+    "calculator",
+    "taskmanager",
+    "stickies"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "photos",
+      "media",
+      "store",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-contract-batch-14-",
+          "folder": "inbox",
+          "from": "Ines Wrenfield <ines.wrenfield@wrenpike.example>",
+          "to": "marisol.quade@harborpost.example",
+          "subject": "Contract batch 14: Portuguese to English",
+          "body": "Hi Marisol,\n\nBatch 14 is ready: 22 pages, due Friday. The glossary is the same as last time.\n\nInes",
+          "time": "2011-05-23T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-photos-from-sunday",
+          "folder": "inbox",
+          "from": "Lena Quade <lena.quade@harborpost.example>",
+          "to": "marisol.quade@harborpost.example",
+          "subject": "Photos from Sunday",
+          "body": "The ones from the lake came out well. I will print the good ones for mum.\n\nLena",
+          "time": "2011-05-21T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-your-may-statement",
+          "folder": "inbox",
+          "from": "HarborPost Billing <harborpost.billing@harborpost.example>",
+          "to": "marisol.quade@harborpost.example",
+          "subject": "Your May statement is ready",
+          "body": "Your broadband statement for May is available in your account. No action is needed.",
+          "time": "2011-05-19T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Marisol Quade <marisol.quade@harborpost.example>",
+          "to": "ines.wrenfield@wrenpike.example",
+          "subject": "Re: Batch 13 delivered",
+          "body": "Delivered this morning, 18 pages. Invoice to follow.\n\nMarisol",
+          "time": "2011-05-15T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-lena-quade",
+          "with": "Lena Quade",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Lena Quade",
+              "text": "Lemon tart on Sunday? Do you have the recipe?",
+              "time": "2011-05-23T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Marisol Quade",
+              "text": "Still looking for the one with the thin crust.",
+              "time": "2011-05-23T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-lemon-tart-for",
+        "folder": "notes",
+        "title": "Lemon tart for Sunday",
+        "body": "Thin crust\n6 lemons\nSugar, butter, cream\nFind the photo recipe online",
+        "modified": "2011-05-23T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-glossary-batch",
+        "folder": "notes",
+        "title": "Glossary: batch 14",
+        "body": "tributario = tax-related\nalvara = licence",
+        "modified": "2011-05-20T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Batch 14 due",
+        "start": "2011-05-27T17:00:00Z",
+        "end": "2011-05-27T17:30:00Z",
+        "location": "Home office"
+      },
+      {
+        "id": "e-2",
+        "title": "Lunch with Lena",
+        "start": "2011-05-28T12:30:00Z",
+        "end": "2011-05-28T14:00:00Z",
+        "location": "Lakeside cafe"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Send invoice for batch 13",
+        "due": "2011-05-25T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "home",
+        "title": "Buy lemons",
+        "due": "2011-05-26T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-lena-quade",
+        "name": "Lena Quade",
+        "email": "lena.quade@harborpost.example",
+        "phone": "+1 555 0141",
+        "org": "Family"
+      },
+      {
+        "id": "p-2-ines-wrenfield",
+        "name": "Ines Wrenfield",
+        "email": "ines.wrenfield@wrenpike.example",
+        "phone": "+1 555 0142",
+        "org": "Wren & Pike Translations"
+      },
+      {
+        "id": "p-3-oskar-tull",
+        "name": "Oskar Tull",
+        "email": "oskar.tull@harborpost.example",
+        "phone": "+1 555 0143",
+        "org": "Neighbour"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-glossary": {
+        "text": "Batch 14 glossary\ntributario = tax-related\nalvara = licence"
+      },
+      "c-f-invoice": {
+        "text": "Invoice batch 13\n18 pages\nTotal due: see statement"
+      },
+      "c-f-todo": {
+        "text": "Batch 14\nPrint photos for Lena\nLemon tart"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2011-05-12T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2011-04-30T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2011-04-18T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2011-04-06T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Batch 14\nDue Friday",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 160,
+        "collapsed": false
+      }
+    ],
+    "web": {
+      "pages": {
+        "bakers-notebook": {
+          "title": "Baker's Notebook: lemon tart",
+          "url": "bakers-notebook.example/lemon-tart",
+          "brand": "Baker's Notebook",
+          "heading": "Thin-crust lemon tart",
+          "body": "A bright lemon tart with a crisp thin crust. Bake the case first, then add the filling and cool it before slicing.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Baker's Notebook: lemon tart",
+          "url": "scene:bakers-notebook"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:bakers-notebook",
+          "title": "Baker's Notebook: lemon tart",
+          "time": "2011-05-23T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

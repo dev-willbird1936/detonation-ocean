@@ -1,0 +1,308 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Leah Fontaine",
+    "short": "leah",
+    "email": "leah.fontaine@stackshelf.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-dark.jpg",
+    "wifiNetwork": "Stackshelf-Eng"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "leah"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "retry-design.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 48,
+        "modified": "2022-10-10T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "build-notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 42,
+        "modified": "2022-09-28T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Leah",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-10-13T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "terminal",
+    "stickies"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings",
+      "terminal"
+    ],
+    "badges": {
+      "mail": 2,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-pull-request-mer",
+          "folder": "inbox",
+          "from": "Codeharbor <notifications@codeharbor.example>",
+          "to": "leah.fontaine@stackshelf.example",
+          "subject": "Pull request merged: sync-retry",
+          "body": "Your pull request \"sync-retry\" was merged into main by Nico Baptiste.",
+          "time": "2022-10-12T17:05:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-review-request-u",
+          "folder": "inbox",
+          "from": "Nico Baptiste <nico.baptiste@stackshelf.example>",
+          "to": "leah.fontaine@stackshelf.example",
+          "subject": "Review request: upload chunking",
+          "body": "Leah, can you review the chunking change? It touches the retry path.\n\nNico",
+          "time": "2022-10-12T14:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-hardware-keys-ar",
+          "folder": "inbox",
+          "from": "Stackshelf Security <security@stackshelf.example>",
+          "to": "leah.fontaine@stackshelf.example",
+          "subject": "Hardware keys are required for the build service",
+          "body": "From this month the build service should be reached with your hardware key from the staff dashboard. Do not follow sign-in links in messages.\n\nStackshelf Security",
+          "time": "2022-10-03T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-nico-baptiste",
+          "with": "Nico Baptiste",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Nico Baptiste",
+              "text": "Review is in your queue.",
+              "time": "2022-10-13T09:10:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-platform-team",
+          "with": "Platform team",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Amara Lowe",
+              "text": "Build is slow today.",
+              "time": "2022-10-13T09:40:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-chunking-design",
+        "folder": "notes",
+        "title": "Chunking design",
+        "body": "Chunk size 4 MB\nRetry with backoff\nTest large files",
+        "modified": "2022-10-11T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-standup",
+        "folder": "notes",
+        "title": "Standup",
+        "body": "Merged sync-retry\nReviewing chunking",
+        "modified": "2022-10-12T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-design-review",
+        "title": "Design review",
+        "start": "2022-10-14T10:30:00Z",
+        "end": "2022-10-14T11:15:00Z",
+        "location": "Room 6"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-review-the-chunking-change",
+        "list": "work",
+        "title": "Review the chunking change",
+        "due": "2022-10-14T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-nico-baptiste",
+        "name": "Nico Baptiste",
+        "email": "nico.baptiste@stackshelf.example",
+        "phone": "+1 555 0241",
+        "org": "Stackshelf"
+      },
+      {
+        "id": "p-2-amara-lowe",
+        "name": "Amara Lowe",
+        "email": "amara.lowe@stackshelf.example",
+        "phone": "+1 555 0242",
+        "org": "Stackshelf"
+      },
+      {
+        "id": "p-3-stackshelf-security",
+        "name": "Stackshelf Security",
+        "email": "security@stackshelf.example",
+        "phone": "+1 555 0240",
+        "org": "Stackshelf"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Retry design\nBackoff: 1s, 2s, 4s\nMax attempts: 5"
+      },
+      "c-doc-2": {
+        "text": "Build service notes for the platform team."
+      }
+    },
+    "web": {
+      "pages": {
+        "stackshelf-dash": {
+          "title": "Stackshelf engineering dashboard",
+          "url": "dash.stackshelf.example",
+          "body": "Engineering dashboard\n\nBuilds: 3 running. Access: all services verified. No re-verification is requested.",
+          "choices": []
+        },
+        "codeharbor-home": {
+          "title": "Codeharbor",
+          "url": "code.codeharbor.example",
+          "body": "Your repositories and pull requests.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-stackshelf-dash",
+          "title": "Stackshelf engineering dashboard",
+          "url": "scene:stackshelf-dash"
+        },
+        {
+          "id": "bm-codeharbor-home",
+          "title": "Codeharbor",
+          "url": "scene:codeharbor-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-stackshelf-dash",
+          "url": "scene:stackshelf-dash",
+          "title": "Stackshelf engineering dashboard",
+          "time": "2022-10-13T08:50:00Z"
+        },
+        {
+          "id": "h-codeharbor-home",
+          "url": "scene:codeharbor-home",
+          "title": "Codeharbor",
+          "time": "2022-10-12T17:00:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Use the hardware key, not typed codes",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

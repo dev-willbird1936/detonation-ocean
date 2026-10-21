@@ -1,0 +1,189 @@
+/* Job view (R-UI3) in the retro pixel theme of ui/abyss/retro-pixel.css, which supplies --u, the palette, Jersey 10
+   and the pixel arrows. Rules here: no blur, no rounded corners, no soft shadows, stepped transitions.
+   --k scales every animation time (main.mjs sets it from ?speed= in mock mode and to ~0 for "Skip animation"). */
+
+[hidden] { display: none !important; }
+:root { --k: 1; }
+.jv { margin: 0; min-height: 100vh; color: var(--ink); background: var(--p1); font: 400 var(--t)/1.25 var(--serif); }
+.jv *, .jv *::before, .jv *::after { box-sizing: border-box; }
+.jv h2, .jv h3 { margin: 0 0 calc(var(--u) * 3); font-weight: 400; letter-spacing: .06em; text-transform: uppercase; color: var(--p7); }
+.jv h2 { font-size: calc(var(--t) * 1.25); }
+.jv h3 { font-size: var(--t); }
+.jv a { color: var(--p6); }
+.jv pre { margin: 0; font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.jv small { font-size: var(--t); color: var(--faint); letter-spacing: 0; text-transform: none; }
+
+/* ---------- Chrome ---------- */
+.jv-bar { display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--u) * 4); padding: calc(var(--u) * 3) calc(var(--u) * 5); background: var(--p0); border-bottom: calc(var(--u) * 2) solid var(--p3); }
+.jv-brand { font-size: calc(var(--t) * 1.5); color: var(--p8) !important; text-decoration: none; }
+.jv-jobid { margin-right: auto; color: var(--faint); overflow-wrap: anywhere; }
+.jv-button {
+  display: inline-block; padding: calc(var(--u) * 2) calc(var(--u) * 4); font: 400 var(--t) var(--serif); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--p8) !important; background: var(--p2); border: 0; border-radius: 0; text-decoration: none; cursor: pointer;
+  box-shadow: 0 calc(var(--u) * -1) 0 0 var(--p4), 0 var(--u) 0 0 var(--p4), calc(var(--u) * -1) 0 0 0 var(--p4), var(--u) 0 0 0 var(--p4), calc(var(--u) * 2) calc(var(--u) * 2) 0 0 #02060cb0;
+}
+.jv-button[aria-pressed="true"] { background: var(--p4); }
+.jv-button:hover { background: var(--p3); }
+.jv-notice { margin: calc(var(--u) * 4) calc(var(--u) * 5) 0; padding: calc(var(--u) * 3) calc(var(--u) * 4); color: var(--p0); background: var(--gold); }
+.jv-box {
+  padding: calc(var(--u) * 4); min-width: 0; background: var(--dither), var(--p1);
+  box-shadow: 0 calc(var(--u) * -1) 0 0 var(--p4), 0 var(--u) 0 0 var(--p4), calc(var(--u) * -1) 0 0 0 var(--p4), var(--u) 0 0 0 var(--p4),
+    inset var(--u) var(--u) 0 0 var(--p3), inset calc(var(--u) * -1) calc(var(--u) * -1) 0 0 var(--p0), calc(var(--u) * 2) calc(var(--u) * 2) 0 0 #02060cb0;
+}
+.jv-grid { display: grid; grid-template-columns: minmax(0, 22rem) minmax(0, 1fr) minmax(0, 26rem); gap: calc(var(--u) * 6); padding: calc(var(--u) * 6) calc(var(--u) * 6) calc(var(--u) * 4); align-items: start; }
+.jv-report { margin: calc(var(--u) * 4) calc(var(--u) * 6) calc(var(--u) * 10); }
+.jv-muted { color: var(--faint); }
+.jv-warn { color: var(--gold); }
+
+/* ---------- Sonar stage list ---------- */
+.jv-stages { margin: 0 0 calc(var(--u) * 4); padding: 0; list-style: none; }
+.jv-stage-row { display: grid; grid-template-columns: calc(var(--u) * 5) 1fr auto; align-items: center; gap: calc(var(--u) * 3); padding: calc(var(--u) * 2) 0; color: var(--faint); border-bottom: var(--u) solid var(--p2); }
+.jv-ping { width: calc(var(--u) * 4); height: calc(var(--u) * 4); border: var(--u) solid var(--p4); }
+.jv-stage-mark { font-style: normal; font-size: calc(var(--t) * .8); letter-spacing: .08em; text-transform: uppercase; }
+.jv-stage-row[data-status="done"] { color: var(--p7); }
+.jv-stage-row[data-status="done"] .jv-ping { background: var(--p6); border-color: var(--p6); }
+.jv-stage-row[data-status="active"] { color: var(--p8); }
+.jv-stage-row[data-status="active"] .jv-ping { background: var(--gold); border-color: var(--gold); animation: jv-ping 1.2s steps(4, end) infinite; }
+.jv-stage-row[data-status="failed"] { color: var(--coral); }
+.jv-stage-row[data-status="failed"] .jv-ping { background: var(--coral); border-color: var(--coral); }
+@keyframes jv-ping { from { box-shadow: 0 0 0 0 var(--gold); } to { box-shadow: 0 0 0 calc(var(--u) * 4) transparent; } }
+.jv-status { min-height: calc(var(--t) * 2.5); margin: 0 0 calc(var(--u) * 4); color: var(--dim); }
+.jv-log { max-height: calc(var(--u) * 70); margin: 0; padding: calc(var(--u) * 2); overflow: auto; list-style: none; background: var(--p0); }
+.jv-log-row { display: grid; grid-template-columns: auto 1fr; gap: calc(var(--u) * 3); padding: var(--u) 0; border-bottom: var(--u) solid var(--p1); }
+.jv-log-row:target { background: var(--p3); }
+.jv-log-src { color: var(--p6); }
+.jv-log-text { overflow-wrap: anywhere; }
+
+/* ---------- Ocean scene ---------- */
+.jv-tabs { display: flex; gap: calc(var(--u) * 4); margin-bottom: calc(var(--u) * 4); }
+.jv-scene { position: relative; height: calc(130 * var(--u)); overflow: hidden; background: var(--p0); image-rendering: pixelated; }
+.jv-water { position: absolute; inset: 0; background: linear-gradient(var(--p4) 0 20%, var(--p3) 20% 40%, var(--p2) 40% 60%, var(--p1) 60% 80%, var(--p0) 80%); }
+.jv-water::after { content: ""; position: absolute; inset: 0; background: var(--dither); mix-blend-mode: overlay; }
+.jv-gauge { position: absolute; z-index: 4; top: 0; right: calc(var(--u) * 2); bottom: 0; width: calc(34 * var(--u)); border-left: var(--u) dashed var(--p7); }
+.jv-zone { position: absolute; left: calc(var(--u) * 3); right: 0; height: 20%; padding-top: calc(var(--u) * 2); font-size: calc(var(--t) * .8); line-height: 1.1; text-shadow: var(--u) var(--u) 0 var(--p0); }
+.jv-zone b { display: block; font-weight: 400; font-size: var(--t); color: var(--p8); }
+.jv-zone span { color: var(--dim); }
+.jv-zone:nth-child(1) { top: 0; } .jv-zone:nth-child(2) { top: 20%; } .jv-zone:nth-child(3) { top: 40%; } .jv-zone:nth-child(4) { top: 60%; } .jv-zone:nth-child(5) { top: 80%; }
+.jv-gauge-dot { position: absolute; left: calc(var(--u) * -3); width: calc(var(--u) * 5); height: calc(var(--u) * 5); background: var(--gold); box-shadow: 0 0 0 var(--u) var(--p0); top: calc((100% - 58 * var(--u)) * var(--pod-y) + 26.5 * var(--u)); transition: top calc(1.2s * var(--k)) steps(10, end); }
+.jv-readout { position: absolute; right: 0; bottom: calc(var(--u) * 2); margin: 0; padding: var(--u) calc(var(--u) * 2); background: var(--p0); color: var(--gold); }
+.jv-caption { position: absolute; z-index: 4; left: calc(var(--u) * 2); bottom: calc(var(--u) * 2); max-width: 55%; margin: 0; padding: var(--u) calc(var(--u) * 2); background: var(--p0); }
+.jv-caption:empty { display: none; }
+
+.jv-pod { position: absolute; z-index: 2; left: max(34%, calc(44 * var(--u))); width: calc(56 * var(--u)); height: calc(58 * var(--u)); top: calc((100% - 58 * var(--u)) * var(--pod-y)); transition: top calc(1.2s * var(--k)) steps(10, end); }
+.jv-scene[data-ready="false"] .jv-pod { visibility: hidden; }
+.jv-pocket { position: absolute; z-index: 2; left: calc(16 * var(--u)); top: calc(23 * var(--u)); width: calc(24 * var(--u)); height: calc(12 * var(--u)); }
+.jv-fish, .jv-clam, .jv-silhouette { display: block; image-rendering: pixelated; }
+.jv-fish { width: 100%; height: 100%; }
+.jv-swim { position: absolute; left: calc(-9 * var(--u)); top: calc(-1 * var(--u)); width: calc(28 * var(--u)); height: calc(28 * var(--u)); }
+.jv-clam { position: absolute; z-index: 1; left: 0; top: var(--u); width: calc(56 * var(--u)); height: calc(56 * var(--u)); background: no-repeat 0 0 / calc(14 * 56 * var(--u)) calc(56 * var(--u)); }
+/* Frame 0 is open, frame 7 closed. The animation holds frame 7 through shut and sunk; reduced motion removes it, leaving frame 0. */
+.jv-scene[data-clam="closed"] .jv-clam, .jv-scene[data-clam="shut"] .jv-clam, .jv-scene[data-clam="sunk"] .jv-clam { animation: jv-clam-close calc(.6s * var(--k)) steps(7) forwards; }
+.jv-scene[data-clam="shut"] .jv-fish, .jv-scene[data-clam="sunk"] .jv-fish { visibility: hidden; }
+@keyframes jv-clam-close { to { background-position-x: calc(-7 * 56 * var(--u)); } }
+.jv-scene[data-clam="sunk"] .jv-pod { top: calc(100% + 4 * var(--u)); transition: top calc(1s * var(--k)) steps(8, end); }
+.jv-fish-tag { position: absolute; z-index: 3; right: calc(100% + var(--u) * 2); top: calc(19 * var(--u)); width: calc(40 * var(--u)); padding: var(--u) calc(var(--u) * 2); font-size: calc(var(--t) * .85); line-height: 1.1; text-align: right; background: var(--p0); }
+.jv-fish-tag b { display: block; font-weight: 400; font-size: var(--t); color: var(--gold); }
+.jv-fish-tag span { display: block; color: var(--dim); overflow-wrap: anywhere; }
+
+.jv-creature {
+  --flip: 1; position: absolute; z-index: 3; left: calc(100% - 8 * var(--u)); top: calc(50% - 16 * var(--u)); width: calc(32 * var(--u)); height: calc(32 * var(--u));
+  background: no-repeat 0 0 / calc(14 * 32 * var(--u)) calc(32 * var(--u)); image-rendering: pixelated;
+  animation: jv-frames 2.1s steps(14) infinite; transition: transform calc(.7s * var(--k)) steps(7, end);
+  transform: translate(calc(70 * var(--u)), calc(40 * var(--u))) scaleX(var(--flip));
+}
+.jv-creature.flip { --flip: -1; }
+.jv-creature[data-phase="near"] { transform: translate(0, 0) scaleX(var(--flip)); }
+.jv-creature[data-phase="bite"] { transform: translate(calc(-10 * var(--u)), 0) scaleX(var(--flip)); transition-duration: calc(.25s * var(--k)); }
+.jv-creature[data-phase="eat"] { transform: translate(calc(-26 * var(--u)), 0) scale(calc(1.25 * var(--flip)), 1.25); transition-duration: calc(.5s * var(--k)); }
+.jv-silhouette { width: 100%; height: 100%; }
+.jv-creature-name { position: absolute; left: 0; top: calc(var(--u) * -6); padding: 0 var(--u); white-space: nowrap; background: var(--p0); color: var(--p8); transform: scaleX(var(--flip)); }
+@keyframes jv-frames { to { background-position-x: calc(-14 * 32 * var(--u)); } }
+
+.jv-receipt { position: absolute; z-index: 5; left: calc(var(--u) * 2); right: calc(var(--u) * 2); bottom: calc(var(--u) * 2); padding: calc(var(--u) * 3) calc(var(--u) * 4); background: var(--p0); border: calc(var(--u) * 2) solid var(--p6); transform: translateY(130%); transition: transform calc(.8s * var(--k)) steps(8, end); }
+.jv-receipt[data-ok="false"] { border-color: var(--coral); }
+.jv-receipt[data-shown] { transform: none; }
+.jv-receipt h3 { color: var(--p8); margin-bottom: calc(var(--u) * 2); }
+.jv-receipt-lines { margin: 0; padding: 0; list-style: none; color: var(--dim); }
+
+/* Camera-bite overlay: the keyframes of ui/desktop/ocean-entry.css, restyled square. Visual only; no camera is used. */
+.jv-bite { --d: var(--p6); position: fixed; z-index: 50; inset: 0; display: grid; place-items: center; background: var(--p0); opacity: 0; pointer-events: none; }
+.jv-bite[data-depth="midnight"] { --d: #818cf8; } .jv-bite[data-depth="abyss"] { --d: #c084fc; } .jv-bite[data-depth="trench"] { --d: #f472b6; }
+.jv-bite[data-active] { opacity: 1; }
+.jv-bite-camera { position: absolute; display: grid; width: min(62vw, 560px); aspect-ratio: 16/10; place-items: center; border: calc(var(--u) * 2) solid var(--p5); background: var(--p2); animation: jv-camera-consumed calc(3.2s * var(--k)) cubic-bezier(.5, 0, .8, .25) both; }
+.jv-bite-lens { width: clamp(54px, 12vw, 138px); aspect-ratio: 1; border: calc(var(--u) * 2) solid var(--p5); background: var(--p0); }
+.jv-bite-label { position: absolute; top: 7%; color: var(--faint); font-size: calc(var(--t) * .8); letter-spacing: .1em; }
+.jv-bite-ring { position: absolute; width: min(46vw, 380px); aspect-ratio: 1; border: calc(var(--u) * 2) solid var(--d); opacity: 0; animation: jv-ring-burst calc(3.2s * var(--k)) ease-out both; }
+.jv-bite-creature { --flip: 1; position: absolute; width: calc(64 * var(--u)); height: calc(64 * var(--u)); background: no-repeat 0 0 / calc(14 * 64 * var(--u)) calc(64 * var(--u)); image-rendering: pixelated; opacity: 0; animation: jv-creature-bite calc(3.2s * var(--k)) steps(16, end) both; }
+.jv-bite-creature.flip { --flip: -1; }
+.jv-bite::after { content: ""; position: absolute; inset: 0; background: var(--d); opacity: 0; animation: jv-bite-fade calc(3.2s * var(--k)) steps(8, end) both; }
+@keyframes jv-camera-consumed { 0% { opacity: 1; transform: scale(1); } 76% { opacity: .85; transform: scale(.95); } 100% { opacity: 0; transform: scale(.55); } }
+@keyframes jv-creature-bite {
+  0% { opacity: 0; transform: translate(-55vw, 20vh) scale(.35) scaleX(var(--flip)); }
+  38% { opacity: 1; transform: translate(-20vw, 3vh) scale(.8) scaleX(var(--flip)); }
+  72% { opacity: 1; transform: translate(0, 0) scale(1.55) scaleX(var(--flip)); }
+  100% { opacity: 0; transform: translate(0, 0) scale(2.8) scaleX(var(--flip)); }
+}
+@keyframes jv-ring-burst { 0%, 68% { opacity: 0; transform: scale(.4); } 74% { opacity: .9; } 100% { opacity: 0; transform: scale(2.1); } }
+@keyframes jv-bite-fade { 0%, 74% { opacity: 0; } 100% { opacity: .96; } }
+
+/* ---------- Desktop replay ---------- */
+.jv-replay-label { margin: 0 0 calc(var(--u) * 3); color: var(--dim); }
+.jv-replay-body { position: relative; height: max(calc(130 * var(--u)), 70vh); background: var(--p0); }
+.jv-frame { display: block; width: 100%; height: 100%; border: 0; }
+.jv-tint { position: absolute; z-index: 2; inset: 0; pointer-events: none; background: var(--tint, transparent); opacity: .16; }
+.jv-replay[data-depth="twilight"] { --tint: #60a5fa; } .jv-replay[data-depth="midnight"] { --tint: #818cf8; }
+.jv-replay[data-depth="abyss"] { --tint: #c084fc; } .jv-replay[data-depth="trench"] { --tint: #f472b6; }
+
+/* ---------- Octopus terminal ---------- */
+.jv-octopus h2 { display: flex; align-items: center; gap: calc(var(--u) * 3); }
+.jv-octopus-art { width: calc(16 * var(--u)); height: calc(16 * var(--u)); flex: none; background: no-repeat 0 0 / calc(14 * 16 * var(--u)) calc(16 * var(--u)); image-rendering: pixelated; animation: jv-octopus 2.1s steps(14) infinite; }
+@keyframes jv-octopus { to { background-position-x: calc(-14 * 16 * var(--u)); } }
+.jv-terminal { max-height: 80vh; overflow: auto; padding: calc(var(--u) * 3); background: var(--p0); border: var(--u) solid var(--p3); }
+.jv-attempt { margin-bottom: calc(var(--u) * 4); padding-bottom: calc(var(--u) * 3); border-bottom: var(--u) dashed var(--p3); }
+.jv-attempt[data-state="failed"] h3 { color: var(--coral); }
+.jv-attempt[data-state="ok"] h3 { color: var(--p6); }
+.jv-code { max-height: calc(var(--u) * 60); overflow: auto; padding: calc(var(--u) * 2); background: var(--p1); color: var(--p7); }
+.jv-stderr { margin-top: calc(var(--u) * 2); padding: calc(var(--u) * 2); color: #ff9c8f; background: #2a0f12; border-left: calc(var(--u) * 2) solid var(--coral); }
+.jv-retry { color: var(--gold); }
+.jv-pass { color: var(--p6); }
+.jv-idle { margin: 0; color: var(--faint); }
+
+/* ---------- Report ---------- */
+.jv-badge { display: inline-block; margin: 0 0 calc(var(--u) * 3); padding: calc(var(--u) * 2) calc(var(--u) * 4); font-size: calc(var(--t) * 1.5); color: var(--p0); background: var(--p6); }
+.jv-badge[data-depth="twilight"] { background: #8bb8f0; } .jv-badge[data-depth="midnight"] { background: #a5acf8; }
+.jv-badge[data-depth="abyss"] { background: #cfa3fb; } .jv-badge[data-depth="trench"] { background: #f08aba; }
+.jv-statement { font-size: calc(var(--t) * 1.25); }
+.jv-report-part { margin-top: calc(var(--u) * 6); }
+.jv-findings, .jv-signals, .jv-coverage, .jv-evidence-list { margin: 0; padding: 0; list-style: none; }
+.jv-finding, .jv-cover { padding: calc(var(--u) * 2) 0; border-bottom: var(--u) solid var(--p2); }
+.jv-evlink { margin-left: calc(var(--u) * 2); }
+.jv-artifact { margin: 0 0 calc(var(--u) * 4); }
+.jv-artifact figcaption { color: var(--faint); }
+.jv-chart { display: block; max-width: 100%; height: auto; image-rendering: pixelated; background: var(--p0); }
+.jv-diff { border-collapse: collapse; max-width: 100%; }
+.jv-diff th, .jv-diff td { padding: var(--u) calc(var(--u) * 3); text-align: left; border: var(--u) solid var(--p3); overflow-wrap: anywhere; }
+.jv-details summary { cursor: pointer; color: var(--p7); }
+.jv-receipt-headline { font-size: calc(var(--t) * 1.25); color: var(--p8); }
+.jv-report-part[data-ok="false"] .jv-receipt-headline { color: var(--coral); }
+.jv-report .jv-button { margin-top: calc(var(--u) * 8); }
+
+/* ---------- Layout ---------- */
+@media (max-width: 1199px) {
+  .jv-grid { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); }
+  .jv-octopus { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .jv-grid { grid-template-columns: minmax(0, 1fr); padding: calc(var(--u) * 4) calc(var(--u) * 4) calc(var(--u) * 3); gap: calc(var(--u) * 5); }
+  .jv-report { margin: calc(var(--u) * 4) calc(var(--u) * 4) calc(var(--u) * 10); }
+  .jv-scene { height: calc(150 * var(--u)); }
+  .jv-gauge { width: calc(26 * var(--u)); }
+  .jv-zone span { display: none; }
+  .jv-fish-tag { font-size: calc(var(--t) * .7); }
+  .jv-caption { max-width: 60%; }
+}
+
+/* ---------- Reduced motion: stills only ---------- */
+html[data-rm="true"] .jv *, html[data-rm="true"] .jv *::before, html[data-rm="true"] .jv *::after { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .jv *, .jv *::before, .jv *::after { animation: none !important; transition: none !important; }
+}

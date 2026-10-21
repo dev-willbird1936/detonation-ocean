@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "revision": "squid-kraken-v1",
+  "kind": "replacement-generation-report",
+  "tool": "Codex native image_gen.imagegen",
+  "execution_note": "Launched via `codex exec --json --skip-git-repo-check -s workspace-write -C <revision folder> -i <reference...> - < requests/<target>.txt`; the stdin prompt asks for exactly one image_gen call and no scripts, other providers or retries.",
+  "quota_and_price": "Unknown; native Codex usage price/quota was not estimated. No payment, subscription, credit purchase, RetroDiffusion or external provider was used.",
+  "authorization": "User explicitly confirmed four native image_gen requests after generation-action-review.json (CONFIRM); not asked again.",
+  "summary": {
+    "authorized_image_gen_requests": 4,
+    "actual_image_gen_requests": 4,
+    "completed": 4,
+    "failed_or_no_image": 0,
+    "unattempted": 0,
+    "launcher_failures_before_image_gen": 1,
+    "retries": 0,
+    "note": "Two Codex final messages (midnight-abyss, viperfish-v2) claimed no image/path was returned, but each thread staging folder held one PNG; those PNGs were used with no re-request. viperfish-trench-v2 completed with an image but fails the true-RGBA requirement."
+  },
+  "palette_profile": "palette-profile.json",
+  "generation_brief": "generation-brief.txt",
+  "entries": [
+    {
+      "target_id": "squid-base-native.png",
+      "stage": "base",
+      "target_depths": [
+        "Sunlight",
+        "Twilight"
+      ],
+      "tool": "image_gen.imagegen",
+      "image_gen_request_count": 1,
+      "request_file": "requests/squid-base.txt",
+      "request_file_sha256": "3ef928392142b80c53cd575dac51f8e8e793562c4c3a43ad029be4055e5ccdbc",
+      "prompt": "Use case: stylized-concept\nAsset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.\nInput images: Image 1 is a cropped cephalopod anatomy cue. Use only its elongated mantle, side view, and compact forward arm cluster; reinterpret it as a squid, not a cuttlefish. Ignore its flat style and colors.\nScene/backdrop: none; genuinely transparent background.\nSubject: one readable base-form squid, left-facing in side view. Give it a smooth tapered mantle with two small lateral fins, one large visible eye, and exactly one attached bundle of eight short arms plus two longer feeding tentacles. Keep every appendage together in one tight fan/bouquet below and just behind the head, trailing in the same direction. Do not spread the arms around the mantle, make a radial star or ring, or create a separate tail. The silhouette must read as a squid with a compact tentacle cluster, not the previous front-facing octopus. The base form is alert but not monstrous.\nStyle/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.\nComposition/framing: square canvas; one complete centered creature at readable scale, generous transparent margin on every side, no crop.\nColor palette: keep each semantic region contiguous. Primary mantle/head/body shadow/base/highlight: #633A46, #A95650, #E28B6C. Secondary single bundled arm/tentacle mass shadow/base/highlight: #243B61, #3C6A93, #89ABD0. Tertiary mantle fins, sucker rows and tentacle tips shadow/base/highlight: #79612C, #C0A33F, #F1D075. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these role colors and neutral details only, plus transparent pixels; no magenta/cyan/lime placeholders.\nConstraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, or gore. Return one complete transparent PNG.",
+      "references": [
+        {
+          "path": "inputs/squid-mantle-tentacle-reference.png",
+          "sha256": "22085a7b40386fb3ba5e3500fd6a5eb86e4e59957a58b7ca7f57b6bf6dd7ce4d",
+          "role": "cropped cuttlefish-derived mantle/compact arm-cluster anatomy cue only"
+        }
+      ],
+      "logs": [
+        {
+          "path": "logs/squid-base-launch2.jsonl",
+          "sha256": "af56e876f2f2ce4df3d8f6696de5ddd6d048e24e0643d4e3b1161bd677a69396"
+        },
+        {
+          "path": "logs/squid-base-launch2.stderr.log",
+          "sha256": "c1f38a88bdb47c265974bfcba7e0fec1d5e94fffa655cb2ddf60bb89913a27e5"
+        }
+      ],
+      "native_staging": {
+        "path": "C:/Users/warcr/.codex/generated_images/01a1146e-5d3f-7be3-aa08-6b2574057c48/exec-32cda01d-3d47-4d95-a215-c6635cf5c84c.png",
+        "sha256": "c0b15ddcae19d0afb1c0d70c53a74cd3d958064292f959d7c203b95a68a4e3f5",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "png_color_type_name": "RGBA",
+        "has_alpha_channel": true,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "fully_transparent_pixels": 1189560,
+        "partial_alpha_pixels": 381604,
+        "opaque_pixels": 1352,
+        "unique_rgba_colors": 81477
+      },
+      "local_copy": {
+        "path": "squid-base-native.png",
+        "sha256": "c0b15ddcae19d0afb1c0d70c53a74cd3d958064292f959d7c203b95a68a4e3f5",
+        "byte_identical_to_native_staging": true
+      },
+      "alpha_bbox_any_alpha": [
+        17,
+        53,
+        1229,
+        1228
+      ],
+      "alpha_bbox_alpha128": [
+        31,
+        282,
+        1225,
+        997
+      ],
+      "launcher_or_recovery_errors": [
+        {
+          "attempt": 1,
+          "logs": [
+            "logs/squid-base.jsonl",
+            "logs/squid-base.stderr.log"
+          ],
+          "error": "Not inside a trusted directory and --skip-git-repo-check was not specified.",
+          "image_gen_called": false,
+          "note": "Failed before image_gen; stdout log is 0 bytes; preserved unchanged. Not counted as an image_gen request. Second launch added --skip-git-repo-check and succeeded (completed by the earlier run, copied here)."
+        }
+      ],
+      "visual_findings": "One left-facing squid with a long tapered mantle, diamond-shaped lateral fin pair, one large eye and clear squid identity. Eight arms plus two clubbed feeding tentacles trail down-left from the head as one blue mass, not a ring or octopus star. The bundle is fairly fan-shaped: the two club tentacles and outer arms splay noticeably to the left and curl at the tips, so it is less tight than 'one tight bouquet'.",
+      "scores_out_of_10": {
+        "overall": 7.5,
+        "grouped_tentacles": 7.0,
+        "squid_identity": 8.5,
+        "pixel_style": 7.0,
+        "palette_fidelity_native": 7.0,
+        "framing_alpha": 7.0
+      },
+      "defects_and_scores_below_8": [
+        "Score below 8 overall (7.5) and for grouping (7.0): outer arms and both feeding-tentacle clubs splay wider than a tight bundle.",
+        "Hard horizontal red/blue split across the head/arm junction looks like a pasted colour block, not an anatomical join.",
+        "Edges are anti-aliased/soft (~382k partial-alpha pixels, ~81k unique colours); native art is not hard-edged or palette-exact, so the offline palette pass is mandatory.",
+        "Margins are thin on left/bottom/right (~17-30 px of 1254) rather than generous; faint stray low-alpha pixels extend the alpha>0 bbox to y=53 while solid pixels start near y=283.",
+        "Fins read as flat khaki triangles; mantle is very large relative to the head."
+      ]
+    },
+    {
+      "target_id": "squid-midnight-abyss-native.png",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "tool": "image_gen.imagegen",
+      "image_gen_request_count": 1,
+      "request_file": "requests/squid-midnight-abyss.txt",
+      "request_file_sha256": "250dc357c4eb4a61ed59a670c9ec1dcabbb44aa438b7292fb479f2d079166842",
+      "prompt": "Use case: stylized-concept\nAsset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.\nInput images: Image 1 is a cropped cephalopod anatomy cue. Use only its elongated mantle, side view, and compact forward arm cluster; reinterpret it as a squid. Ignore its flat style and colors.\nScene/backdrop: none; genuinely transparent background.\nSubject: one moderately evolved, more intimidating adult of the same squid family and left-facing pose. Give it a smooth tapered, broader and more muscular mantle with two small lateral fins and one large pronounced visible eye. Make the sucker rows more pronounced. Keep exactly one attached bundle of eight arms plus two feeding tentacles, thicker and longer than the base, overlapping in one compact directionally grouped cluster below and just behind the head. At most a few distal tips curl inward inside that same cluster. Do not spread limbs around the body, make a radial star, add an extra head or squid, or create a generic octopus silhouette. Do not make this the colossal Trench form.\nStyle/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.\nComposition/framing: square canvas; one complete centered creature at a scale comparable to the other squid forms, generous transparent margin on every side, no crop.\nColor palette: keep each semantic region contiguous. Primary mantle/head/body shadow/base/highlight: #633A46, #A95650, #E28B6C. Secondary single bundled arm/tentacle mass shadow/base/highlight: #243B61, #3C6A93, #89ABD0. Tertiary mantle fins, sucker rows and tentacle tips shadow/base/highlight: #79612C, #C0A33F, #F1D075. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these exact role colors and neutral details only, plus transparent pixels; no magenta/cyan/lime placeholders.\nConstraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, gore, or limbs surrounding the body. Return one complete transparent PNG.",
+      "references": [
+        {
+          "path": "inputs/squid-mantle-tentacle-reference.png",
+          "sha256": "22085a7b40386fb3ba5e3500fd6a5eb86e4e59957a58b7ca7f57b6bf6dd7ce4d",
+          "role": "cropped cuttlefish-derived mantle/compact arm-cluster anatomy cue only"
+        }
+      ],
+      "logs": [
+        {
+          "path": "logs/squid-midnight-abyss.jsonl",
+          "sha256": "ab4fb582ef7488040ec5e91e5a6dfc74f199f5e527d364045e5b1d90d683b038"
+        },
+        {
+          "path": "logs/squid-midnight-abyss.stderr.log",
+          "sha256": "02b5ea641a284be7e1f3f18c936865475657d6b55144cc6a0a239465ad16e4f3"
+        }
+      ],
+      "native_staging": {
+        "path": "C:/Users/warcr/.codex/generated_images/01a1147d-693d-7df1-9314-0b06d39f82f9/exec-05a6daf2-c6b7-4b8c-9166-9b30e59b1125.png",
+        "sha256": "8a32cdfd64c18bc58ef4185ecbc1b9e32f51a1a1132df65ff151c3b47a8999b4",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "png_color_type_name": "RGBA",
+        "has_alpha_channel": true,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "fully_transparent_pixels": 1127132,
+        "partial_alpha_pixels": 443750,
+        "opaque_pixels": 1634,
+        "unique_rgba_colors": 95743
+      },
+      "local_copy": {
+        "path": "squid-midnight-abyss-native.png",
+        "sha256": "8a32cdfd64c18bc58ef4185ecbc1b9e32f51a1a1132df65ff151c3b47a8999b4",
+        "byte_identical_to_native_staging": true
+      },
+      "alpha_bbox_any_alpha": [
+        0,
+        52,
+        1237,
+        1213
+      ],
+      "alpha_bbox_alpha128": [
+        19,
+        279,
+        1235,
+        1012
+      ],
+      "launcher_or_recovery_errors": [
+        {
+          "attempt": 1,
+          "error": "Codex final message reported 'The image call returned an image result, but no local PNG path was exposed.' (no PNG path returned).",
+          "image_gen_called": true,
+          "recovery": "Located the PNG by the thread-id directory in Codex staging (01a1147d-693d-7df1-9314-0b06d39f82f9 held exactly one PNG). No second image_gen call was made."
+        }
+      ],
+      "visual_findings": "Same left-facing squid family: broader, more muscular mantle with rust bands, stronger brow/eye ring, thicker and longer blue arm stream with larger gold sucker rows, and two clubbed feeding tentacles. Arms trail down-left in one overlapping stream with a few tip curls. Clearly more intimidating than base but not colossal.",
+      "scores_out_of_10": {
+        "overall": 7.5,
+        "grouped_tentacles": 7.5,
+        "squid_identity": 8.5,
+        "progression_vs_base": 7.0,
+        "pixel_style": 7.0,
+        "palette_fidelity_native": 7.0,
+        "framing_alpha": 6.5
+      },
+      "defects_and_scores_below_8": [
+        "Score below 8 for overall (7.5), framing_alpha (6.5), progression (7.0) and grouping (7.5).",
+        "Left feeding-tentacle tip nearly reaches the canvas edge: alpha>0 bbox starts at x=0 (solid pixels at x=19); right solid margin 18 px; margins are not generous.",
+        "Feeding-tentacle clubs flare apart from the main stream, widening the lower silhouette into a loose fan.",
+        "Mantle bands are the main evolution cue; the mantle/fin silhouette is similar to base, so the gain over base is modest.",
+        "Soft anti-aliased edges (~444k partial-alpha pixels, ~96k colours) and faint stray low-alpha halo pixels (alpha>0 bbox top y=52 vs solid ~279); native is not palette-exact; offline palette pass is mandatory.",
+        "Head blends into blue arms with a jagged red/blue seam."
+      ]
+    },
+    {
+      "target_id": "squid-trench-native.png",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "tool": "image_gen.imagegen",
+      "image_gen_request_count": 1,
+      "request_file": "requests/squid-trench.txt",
+      "request_file_sha256": "990fb1fedafdb2b9dedb17d580ddc9667d658a5658d8c70246eeb056edfbc22a",
+      "prompt": "Use case: stylized-concept\nAsset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.\nInput images: Image 1 is a cropped cephalopod anatomy cue. Use only its elongated mantle, side view, and compact forward arm cluster; reinterpret it as a squid. Ignore its flat style and colors.\nScene/backdrop: none; genuinely transparent background.\nSubject: one giant, advanced Kraken-like squid, clearly the same left-facing squid family but unmistakably more formidable than the midpoint. Enlarge and deepen the mantle, strengthen the brow/jaw, and make the attached bundle of eight arms plus two feeding tentacles substantially longer, thicker, and more powerful, with layered suckers and a few inward curls. The bundle remains ONE dense, unified stream trailing below/behind the mantle. Do not radiate arms around the head or surround the body. Do not create an octopus star, separate tentacle wreath, shark, or multiple organisms. Preserve a readable squid mantle, lateral fins, and grouped appendages.\nStyle/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.\nComposition/framing: square canvas; one complete centered creature at a scale comparable to the other squid forms, generous transparent margin on every side, no crop.\nColor palette: keep each semantic region contiguous. Primary mantle/head/body shadow/base/highlight: #633A46, #A95650, #E28B6C. Secondary single bundled arm/tentacle mass shadow/base/highlight: #243B61, #3C6A93, #89ABD0. Tertiary mantle fins, sucker rows and tentacle tips shadow/base/highlight: #79612C, #C0A33F, #F1D075. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these exact role colors and neutral details only, plus transparent pixels; no magenta/cyan/lime placeholders.\nConstraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, gore, detached/wreath-like limbs, or radial arrangement. Return one complete transparent PNG.",
+      "references": [
+        {
+          "path": "inputs/squid-mantle-tentacle-reference.png",
+          "sha256": "22085a7b40386fb3ba5e3500fd6a5eb86e4e59957a58b7ca7f57b6bf6dd7ce4d",
+          "role": "cropped cuttlefish-derived mantle/compact arm-cluster anatomy cue only"
+        }
+      ],
+      "logs": [
+        {
+          "path": "logs/squid-trench.jsonl",
+          "sha256": "bc1c65710ce3ff69e5f82c4e735fd4a23c336731df64981c67f393e4c1b63ab2"
+        },
+        {
+          "path": "logs/squid-trench.stderr.log",
+          "sha256": "e8e9c2444f8fa7416df296d011bbf837d048e860b77b4bf43109f630db16d3c3"
+        }
+      ],
+      "native_staging": {
+        "path": "C:/Users/warcr/.codex/generated_images/01a1147e-a79c-79d3-9dca-0a9aeed0fa18/exec-3c81ad77-91c8-49cd-b4d6-bc0a40d464b6.png",
+        "sha256": "7a5bbab3442152501a0c25fbefbb05e4d6821082c3eafa2990cdb8270443e903",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "png_color_type_name": "RGBA",
+        "has_alpha_channel": true,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "fully_transparent_pixels": 963460,
+        "partial_alpha_pixels": 607693,
+        "opaque_pixels": 1363,
+        "unique_rgba_colors": 147188
+      },
+      "local_copy": {
+        "path": "squid-trench-native.png",
+        "sha256": "7a5bbab3442152501a0c25fbefbb05e4d6821082c3eafa2990cdb8270443e903",
+        "byte_identical_to_native_staging": true
+      },
+      "alpha_bbox_any_alpha": [
+        13,
+        19,
+        1235,
+        1228
+      ],
+      "alpha_bbox_alpha128": [
+        23,
+        159,
+        1231,
+        1174
+      ],
+      "launcher_or_recovery_errors": [],
+      "visual_findings": "Clearly the most advanced form: much larger banded mantle, strong brow/eye, a very long, thick, dense blue arm mass with large layered gold suckers, several inward curls and two big sucker-club feeding tentacles. Trench-vs-Midnight progression is obvious and Kraken-like. Arms hang from the head as one stream below/behind the mantle, not as a ring.",
+      "scores_out_of_10": {
+        "overall": 7.5,
+        "grouped_tentacles": 7.0,
+        "squid_identity": 7.0,
+        "progression_vs_midnight": 8.5,
+        "pixel_style": 7.5,
+        "palette_fidelity_native": 7.0,
+        "framing_alpha": 7.0
+      },
+      "defects_and_scores_below_8": [
+        "Score below 8 overall (7.5), grouped tentacles (7.0), squid identity (7.0), framing (7.0).",
+        "The 'one dense unified stream' is partly broken: the two feeding tentacles are thrown out to the lower-left and several arms swing out to the lower-right, giving a spread drape about two thirds of the canvas wide; this drifts toward the splayed look the brief forbids.",
+        "The huge wavy yellow fin skirt wraps most of the mantle outline and reads as a cuttlefish/skirted mantle more than small lateral squid fins.",
+        "Mantle is rendered in a three-quarter/perspective view with the head lower-left; less consistently left-facing side view than base/midnight, and the mantle looks small relative to the tentacle mass.",
+        "Margins are thin (~13-25 px solid-to-edge on left/right/bottom).",
+        "Anti-aliased soft edges (~608k partial-alpha pixels, ~147k unique colours), not palette-exact; offline palette pass is mandatory."
+      ]
+    },
+    {
+      "target_id": "viperfish-trench-v2-native.png",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "tool": "image_gen.imagegen",
+      "image_gen_request_count": 1,
+      "request_file": "requests/viperfish-trench-v2.txt",
+      "request_file_sha256": "5c79cf026c9c4b31d383033fb61fe6fa8f475f094b8ea1cb18b45434a4f7c64f",
+      "prompt": "Use case: stylized-concept\nAsset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.\nInput images: Image 1 controls viperfish identity, anatomy, left-facing side view, long body, forked tail and fin layout. Image 2 controls primary/secondary/tertiary role-region placement only; ignore its magenta/cyan/lime placeholder colors. Image 3 is the existing Midnight/Abyss viperfish for visual comparison; make this Trench form visibly more advanced than Image 3.\nScene/backdrop: none; genuinely transparent background.\nSubject: one distinctly advanced Trench viperfish, still unmistakably the same long, narrow species and left-facing side-view family as the references. Make the skull/shoulder section clearly larger and the jaw wider, with a pair of very long needle fangs that extend well past the mouth, a taller blade-like dorsal fin, and a stronger row of lateral photophores. Increase body mass enough to read as a mature deep predator, but preserve the long streamlined flank, forked tail and Viperfish identity; never make a generic shark. The differences from the supplied Midnight/Abyss comparison must remain obvious at 256px display size. Keep exactly one fish, one head and one tail; add no limbs or armor.\nStyle/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.\nComposition/framing: square canvas; one complete centered fish, all parts in frame with generous transparent margin; no crop.\nColor palette: keep role clusters clean, contiguous and readable. Primary long upper flank/back shadow/base/highlight: #0A334E, #176286, #51A6B8. Secondary belly/fins/forked tail shadow/base/highlight: #344A5D, #6D8591, #B7C8C8. Tertiary sparse lateral photophores shadow/base/highlight: #2FAABB, #55D6CF, #C7F1DC. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these exact role colors and neutral details only, plus transparent pixels; no magenta/cyan/lime placeholders.\nConstraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, gore, extra head, random limb additions, scattered role colors or speckles. Return one complete transparent PNG.",
+      "references": [
+        {
+          "path": "../../inputs/viperfish-anatomy-reference.png",
+          "sha256": "8b0ecdd8010dd087281dc0a162b7cd48d7e8bff8499c0a73a4abe3aaf600f115",
+          "role": "anatomy/identity (Image 1)"
+        },
+        {
+          "path": "../../inputs/viperfish-role-map-reference.png",
+          "sha256": "ab8771d2e47359347cfec67e77336e8775b0db378c66521fa027419def78882e",
+          "role": "role-region placement only (Image 2)"
+        },
+        {
+          "path": "../../viperfish-midnight-abyss-native.png",
+          "sha256": "cef0799c377492c120f2120394dc5b1491845bc75622d6fe7efd47ec5270d165",
+          "role": "comparison only (Image 3)"
+        }
+      ],
+      "logs": [
+        {
+          "path": "logs/viperfish-trench-v2.jsonl",
+          "sha256": "1913ce603654f6bfa6d5b6a2d320da1a9ddc31a6d591dd003877a317c83f3e98"
+        },
+        {
+          "path": "logs/viperfish-trench-v2.stderr.log",
+          "sha256": "054e1944430937fc23e1e16399f17287de8e597bc121c688c70908f6e2988174"
+        }
+      ],
+      "native_staging": {
+        "path": "C:/Users/warcr/.codex/generated_images/01a1147f-f173-76e2-a195-7c87d77b2dd0/exec-a291d56a-6fce-4076-905a-0a364710b432.png",
+        "sha256": "3f736016fb9826d429c038fb86ecc3c86c5658fbe82d43860f6be27148fb5901",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 2,
+        "png_color_type_name": "RGB",
+        "has_alpha_channel": false,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "fully_transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "opaque_pixels": 1572516,
+        "unique_rgba_colors": 89045
+      },
+      "local_copy": {
+        "path": "viperfish-trench-v2-native.png",
+        "sha256": "3f736016fb9826d429c038fb86ecc3c86c5658fbe82d43860f6be27148fb5901",
+        "byte_identical_to_native_staging": true
+      },
+      "alpha_bbox_any_alpha": [
+        0,
+        0,
+        1253,
+        1253
+      ],
+      "alpha_bbox_alpha128": [
+        0,
+        0,
+        1253,
+        1253
+      ],
+      "launcher_or_recovery_errors": [
+        {
+          "attempt": 1,
+          "error": "Codex final message reported 'The image generation call completed without returning an image or local path.'",
+          "image_gen_called": true,
+          "recovery": "Thread-id staging directory 01a1147f-f173-76e2-a195-7c87d77b2dd0 held exactly one PNG, so an image was produced. No second image_gen call was made."
+        }
+      ],
+      "visual_findings": "Left-facing long, narrow viperfish with a large open jaw lined with long fangs, tall segmented dorsal fin, forked tail, pale belly/fins and a row of teal photophores. Identity is preserved and it is not shark-like. Head/jaw are larger and photophores brighter than the Midnight/Abyss comparison, but the file is not a transparent sprite.",
+      "scores_out_of_10": {
+        "overall": 4.0,
+        "true_alpha": 1.0,
+        "viperfish_identity": 8.0,
+        "trench_vs_midnight_progression": 6.0,
+        "pixel_style": 7.5,
+        "palette_fidelity_native": 7.0,
+        "framing": 7.0
+      },
+      "defects_and_scores_below_8": [
+        "BLOCKING: the PNG is colour type 2 (RGB), 8-bit, with no alpha channel; every pixel is opaque. The 'transparent' background is a baked-in grey/white checkerboard (~RGB 194-197) with texture noise across the whole 1254x1254 canvas, violating the true-RGBA requirement. Overall score 4/10.",
+        "A cut-out would need careful matting: the baked checkerboard has soft noise/halo pixels around the sprite and touches the dark outline edges.",
+        "Trench-vs-Midnight difference is moderate (6/10), not 'obvious at 256px': dorsal fin height/shape similar to the comparison, body depth only slightly larger, and the fangs are a dense tooth row rather than a clear pair of very long needle fangs extending well past the mouth.",
+        "The fish spans only ~35% of canvas height (coloured bbox x 40-1214, y 415-846); scale is small.",
+        "Soft anti-aliased edges (~89k unique colours); native colours are not palette-exact; an offline palette pass would still be required."
+      ]
+    }
+  ],
+  "parent_next_steps": [
+    "Independently inspect all four native PNGs at full resolution.",
+    "Do not use viperfish-trench-v2-native.png as a sprite (opaque checkerboard, no alpha); decide between offline matting of this file or a new action-reviewed request.",
+    "Apply the palette offline to the squid PNGs; none of the four targets reaches 8.0 natively, so any further generation needs its own action review.",
+    "No gallery, index, manifest or main-menu file was touched."
+  ],
+  "preservation": "Original octopus sources, prior exports, existing viperfish-trench-native.png, gallery/index and manifests were untouched. No file was overwritten (noclobber / cp -n; report written with exclusive create)."
+}

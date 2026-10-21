@@ -1,0 +1,22 @@
+{
+  "description": "Reads the honey Chromium Login Data.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "midnight",
+    "findings": [
+      "steal-browser"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/.config/chromium/Default/Login Data",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/.config/chromium/Default/Login Data"
+    }
+  ]
+}

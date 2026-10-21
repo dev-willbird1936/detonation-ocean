@@ -1,0 +1,231 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Kofi Mensah",
+    "short": "kofi",
+    "email": "kofi.mensah@mensah-home.example",
+    "avatar": "ledger-connect-kit-2023"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img0.jpg",
+    "wifiNetwork": "Home-5G"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "kofi"
+      },
+      "f-ledger-conne-1": {
+        "id": "f-ledger-conne-1",
+        "parentId": "documents",
+        "name": "Staking-log.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 66,
+        "modified": "2023-12-10T10:00:00Z",
+        "trashed": false,
+        "contentId": "c-ledger-conne-1"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Kofi",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-12-10T10:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "updates",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "notes",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-hw",
+          "folder": "inbox",
+          "from": "Anchorstone <support@anchorstone-wallet.example>",
+          "to": "kofi.mensah@mensah-home.example",
+          "subject": "Your device firmware is up to date",
+          "body": "Your Anchorstone wallet device is on the latest firmware. Always check addresses on the device screen.\n\nAnchorstone",
+          "time": "2023-12-10T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-friend",
+          "folder": "inbox",
+          "from": "Zainab Adeyemi <zainab.adeyemi@mensah-home.example>",
+          "to": "kofi.mensah@mensah-home.example",
+          "subject": "Staking tips?",
+          "body": "Kofi,\n\nAre you staking anything this month? I want to compare notes.\n\nZainab",
+          "time": "2023-12-13T20:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Zainab Adeyemi",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Zainab Adeyemi",
+              "text": "Always read the screen on the device.",
+              "time": "2023-12-13T20:10:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Kofi Mensah",
+              "text": "Always do.",
+              "time": "2023-12-13T20:12:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Staking notes",
+        "body": "Check rewards monthly\nRead every transaction on the device\nKeep the recovery card offline",
+        "modified": "2023-12-10T10:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Rewards check",
+        "start": "2023-12-15T09:00:00Z",
+        "end": "2023-12-15T10:00:00Z",
+        "location": "Online"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Zainab Adeyemi",
+        "email": "zainab.adeyemi@mensah-home.example",
+        "phone": "+1 555 0101",
+        "org": "Friends"
+      },
+      {
+        "id": "p-2",
+        "name": "Anchorstone",
+        "email": "support@anchorstone-wallet.example",
+        "phone": "+1 555 0102",
+        "org": "Anchorstone"
+      },
+      {
+        "id": "p-3",
+        "name": "Tideswap Weekly",
+        "email": "digest@tideswap-weekly.example",
+        "phone": "+1 555 0103",
+        "org": "Tideswap"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-ledger-conne-1": {
+        "text": "Staking log. Rewards claimed monthly. Always verify on the device."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-defi-news": {
+          "title": "Tideswap Weekly",
+          "url": "tideswap-weekly.example/news",
+          "brand": "Tideswap Weekly",
+          "heading": "Tideswap Weekly",
+          "body": "Weekly protocol news. Staking updates, fee changes and security notes.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Tideswap Weekly",
+          "url": "scene:pg-defi-news"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-defi-news",
+          "title": "Tideswap Weekly"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Tideswap Weekly",
+          "url": "scene:pg-defi-news"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-defi-news",
+          "title": "Tideswap Weekly",
+          "time": "2023-12-10T10:00:00Z"
+        }
+      ]
+    }
+  }
+}

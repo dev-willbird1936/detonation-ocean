@@ -1,0 +1,262 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Mara Quill",
+    "short": "mara",
+    "email": "mara.quill@dailyparsnip.example",
+    "avatar": "the-onion-2013"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "orange",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-aurora.jpg",
+    "wifiNetwork": "Parsnip-Newsroom",
+    "battery": 78
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "mara"
+      },
+      "f-headlines": {
+        "id": "f-headlines",
+        "parentId": "documents",
+        "name": "Headline ideas.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 89,
+        "modified": "2013-05-05T15:00:00Z",
+        "trashed": false,
+        "contentId": "c-headlines"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-pitch",
+        "app": "calendar",
+        "title": "Pitch meeting at 4 pm",
+        "body": "Daily pitch meeting, big conference room.",
+        "time": "2013-05-06T19:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "media",
+    "calculator",
+    "clock",
+    "store"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "notes",
+      "calendar",
+      "contacts",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-budget",
+          "folder": "inbox",
+          "from": "Hal Brewster <hal.brewster@dailyparsnip.example>",
+          "to": "mara.quill@dailyparsnip.example",
+          "subject": "Front page budget for Tuesday",
+          "body": "Mara,\n\nTuesday front page is down to three stories. Social wants a headline for the mayor piece by noon.\n\nHal",
+          "time": "2013-05-06T16:10:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-corr",
+          "folder": "inbox",
+          "from": "Copy Desk <copy@dailyparsnip.example>",
+          "to": "mara.quill@dailyparsnip.example",
+          "subject": "Corrections for Monday",
+          "body": "Two corrections went in. Please do not repost the old headline on the social accounts.\n\nCopy desk",
+          "time": "2013-05-06T13:45:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-wendell",
+          "folder": "inbox",
+          "from": "Wendell Park <wendell.park@dailyparsnip.example>",
+          "to": "mara.quill@dailyparsnip.example",
+          "subject": "Lunch Thursday?",
+          "body": "The new noodle place near the office. Thursday at one?\n\nWendell",
+          "time": "2013-05-05T20:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Mara Quill <mara.quill@dailyparsnip.example>",
+          "to": "hal.brewster@dailyparsnip.example",
+          "subject": "Re: Weekend schedule",
+          "body": "I can cover Saturday. Swap me for the 14th.",
+          "time": "2013-05-03T11:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-social",
+          "with": "Social desk",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Wendell Park",
+              "text": "Scheduled the 3 pm post.",
+              "time": "2013-05-06T17:00:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Mara Quill",
+              "text": "Thanks, I will watch replies.",
+              "time": "2013-05-06T17:02:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-queue",
+        "folder": "notes",
+        "title": "Social queue",
+        "body": "Noon: mayor headline\n3 pm: quiz of the day\n6 pm: tomorrow's front page",
+        "modified": "2013-05-06T10:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-pitch",
+        "title": "Pitch meeting",
+        "start": "2013-05-06T20:00:00Z",
+        "end": "2013-05-06T21:00:00Z",
+        "location": "Big conference room"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-reply",
+        "list": "work",
+        "title": "Check reader replies",
+        "due": "2013-05-06T22:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-hal",
+        "name": "Hal Brewster",
+        "email": "hal.brewster@dailyparsnip.example",
+        "phone": "+1 555 0121",
+        "org": "The Daily Parsnip"
+      },
+      {
+        "id": "p-wendell",
+        "name": "Wendell Park",
+        "email": "wendell.park@dailyparsnip.example",
+        "phone": "+1 555 0122",
+        "org": "The Daily Parsnip"
+      },
+      {
+        "id": "p-copy",
+        "name": "Copy Desk",
+        "email": "copy@dailyparsnip.example",
+        "phone": "+1 555 0123",
+        "org": "The Daily Parsnip"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-headlines": {
+        "text": "Mayor cuts ribbon on empty building\nLocal man refreshes inbox hoping for different result"
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-parsnip": {
+          "title": "The Daily Parsnip",
+          "url": "www.dailyparsnip.example",
+          "brand": "The Daily Parsnip",
+          "heading": "America's finest vegetable-based news source",
+          "body": "Top stories, quizzes and the front page.\n\nThis is a fictional newsroom site.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-parsnip",
+          "title": "The Daily Parsnip"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

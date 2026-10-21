@@ -1,0 +1,232 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Jonah Pierce",
+    "short": "jonah",
+    "email": "jonah.pierce@pierce-home.example",
+    "avatar": "wallet-drainers"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-dark.jpg",
+    "wifiNetwork": "Pierce-Home"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "jonah"
+      },
+      "f-wallet-drain-1": {
+        "id": "f-wallet-drain-1",
+        "parentId": "documents",
+        "name": "Collection-list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 67,
+        "modified": "2022-11-06T11:00:00Z",
+        "trashed": false,
+        "contentId": "c-wallet-drain-1"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Jonah",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-11-06T11:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "reminders",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "notes",
+      "photos",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-art",
+          "folder": "inbox",
+          "from": "Salt Gallery <hello@salt-gallery.example>",
+          "to": "jonah.pierce@pierce-home.example",
+          "subject": "New drop next week",
+          "body": "Our next drop of digital prints is next week. No sign-up needed.\n\nSalt Gallery",
+          "time": "2022-11-06T11:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-friend",
+          "folder": "inbox",
+          "from": "Imran Qureshi <imran.qureshi@pierce-home.example>",
+          "to": "jonah.pierce@pierce-home.example",
+          "subject": "Seen the new mint?",
+          "body": "Jonah,\n\nSome of the art I like is minting soon. Keep an eye out.\n\nImran",
+          "time": "2022-11-07T19:20:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Imran Qureshi",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Imran Qureshi",
+              "text": "Remember: never share your recovery phrase.",
+              "time": "2022-11-07T19:30:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Jonah Pierce",
+              "text": "Of course. Hardware only.",
+              "time": "2022-11-07T19:32:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Wallet hygiene",
+        "body": "Never share the recovery phrase\nCheck what each approval allows\nRevoke old approvals monthly",
+        "modified": "2022-11-06T11:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Gallery drop",
+        "start": "2022-11-14T17:00:00Z",
+        "end": "2022-11-14T18:00:00Z",
+        "location": "Online"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Imran Qureshi",
+        "email": "imran.qureshi@pierce-home.example",
+        "phone": "+1 555 0101",
+        "org": "Friends"
+      },
+      {
+        "id": "p-2",
+        "name": "Salt Gallery",
+        "email": "hello@salt-gallery.example",
+        "phone": "+1 555 0102",
+        "org": "Salt Gallery"
+      },
+      {
+        "id": "p-3",
+        "name": "Reefmint",
+        "email": "team@reefmint-drop.example",
+        "phone": "+1 555 0103",
+        "org": "Reefmint"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-wallet-drain-1": {
+        "text": "Collection list: three prints from Salt Gallery, one from a friend."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-gallery-home": {
+          "title": "Salt Gallery",
+          "url": "salt-gallery.example/home",
+          "brand": "Salt Gallery",
+          "heading": "Salt Gallery",
+          "body": "Digital prints and limited drops. Browse the current collection.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Salt Gallery",
+          "url": "scene:pg-gallery-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-gallery-home",
+          "title": "Salt Gallery"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Salt Gallery",
+          "url": "scene:pg-gallery-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-gallery-home",
+          "title": "Salt Gallery",
+          "time": "2022-11-06T11:00:00Z"
+        }
+      ]
+    }
+  }
+}

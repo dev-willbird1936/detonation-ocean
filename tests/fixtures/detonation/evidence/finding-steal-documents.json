@@ -1,0 +1,46 @@
+{
+  "description": "Reads three seeded Documents and writes a zip to /tmp.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "midnight",
+    "findings": [
+      "steal-documents"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/Q3-report.docx",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Documents/Q3-report.docx"
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/budget.xlsx",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Documents/budget.xlsx"
+    },
+    {
+      "id": "ev-3",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/home/dana/Documents/notes.txt"
+    },
+    {
+      "id": "ev-4",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write /tmp/stage.zip",
+      "at": "2026-01-01T00:00:03.000Z",
+      "path": "/tmp/stage.zip"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "description": "Evidence that adds only the type-mismatch signal.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "type-mismatch"
+    ],
+    "depth": "twilight",
+    "findings": []
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "identify",
+      "kind": "type-mismatch",
+      "detail": "type-mismatch",
+      "at": "2026-01-01T00:00:00.000Z",
+      "detectedType": "html",
+      "claimedExtension": "pdf"
+    }
+  ]
+}

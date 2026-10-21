@@ -1,0 +1,25 @@
+{
+  "description": "Run key added in the Wine prefix.",
+  "path": "wine",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "persistence"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "registry",
+      "kind": "key-added",
+      "detail": "key-added Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "at": "2026-01-01T00:00:00.000Z",
+      "hive": "HKCU",
+      "key": "Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "value": "Updater",
+      "data": "C:\\Users\\Dana\\Downloads\\updater.exe"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "status": "succeeded",
+  "task_id": "bc33f6a4-6366-53bf-b38d-7e3358420d5d",
+  "operation": "generate",
+  "asset_id": "ed84fd23-bcc2-40c4-8b67-d79dfae93392",
+  "created_at": 1791209193,
+  "updated_at": 1791209278,
+  "result": {
+    "asset_id": "ed84fd23-bcc2-40c4-8b67-d79dfae93392",
+    "status": "ready",
+    "prompt": "PS1 anglerfish, squat dark teal faceted body, huge open mouth with ivory needle teeth, small eyes, curved forehead stalk with mint glowing bulb, paired fins and fan tail. Hand-painted pixel texture. Separate jaw, tail, fins and lure for animation.",
+    "style": "rd_lowpoly__detailed_lite",
+    "size": 64,
+    "size_source": "manual",
+    "mode": "quality",
+    "created_at": 1791209193,
+    "updated_at": 1791209278,
+    "inference_id": "inf_4KkM9n3eaxVZyQ2N5aKQv2JzP1dNrRmD",
+    "versions": [
+      {
+        "number": 1,
+        "kind": "generate",
+        "prompt": "PS1 anglerfish, squat dark teal faceted body, huge open mouth with ivory needle teeth, small eyes, curved forehead stalk with mint glowing bulb, paired fins and fan tail. Hand-painted pixel texture. Separate jaw, tail, fins and lure for animation.",
+        "created_at": 1791209278,
+        "render_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/render/d4815f8e3425d557f32bafa475ab32c54c8d17d0bd7b7ebaa939f49f4248afa1.png",
+        "turntable_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/turntable/b5909c687f91bb1671304f3df495640b0480f52024ff37eafaac4e1b466bcfac.png",
+        "scene_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/scene/863c1efdbb081a971a9dd49c512fb6bdc455d6c254d05b887aead796eb66c861.json",
+        "animations": [],
+        "rigged": false,
+        "stats": {
+          "size_px": [
+            37.1,
+            42.3,
+            61.9
+          ],
+          "triangles": 586,
+          "atlas_pages": [
+            "256x128"
+          ]
+        }
+      }
+    ]
+  }
+}

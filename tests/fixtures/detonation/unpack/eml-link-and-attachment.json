@@ -1,0 +1,1 @@
+{"detonationRunner":1,"kind":"eml","started":true,"file":"tmp/dt/sample.eml","exitCode":0,"unpack":{"format":"eml","entries":[{"index":0,"name":"note.txt","size":16,"path":"/home/dana/Downloads/.unpacked/0/0.dat","head":"aGVsbG8gYXR0YWNobWVudA=="}],"stopped":null,"listed":1,"links":[{"href":"http://evil.example.invalid/x","text":"http://good.example.invalid/"}]}}

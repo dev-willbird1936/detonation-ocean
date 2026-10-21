@@ -1,0 +1,33 @@
+From: Dana Demo <dana@example.invalid>
+To: Team <team@example.invalid>
+Subject: Notice: photo list attached
+Date: Thu, 01 Jan 2026 09:00:00 +0000
+Message-ID: <demo-notice@example.invalid>
+MIME-Version: 1.0
+X-Demo-Sample: Demo sample for Detonation Ocean. Refuses to run outside the sandbox.
+Content-Type: multipart/mixed; boundary="demo-boundary"
+
+--demo-boundary
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+The attached bundle holds the script that summarises the photo list.
+
+--demo-boundary
+Content-Type: application/zip; name="bundle.zip"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="bundle.zip"
+
+UEsDBBQAAAAIAAAAIVyR1LOIlQEAAIwCAAAOAAAAY2xlYW4tY2hhcnQucHldUc1u2zAMvuspOO1Q
+CXWd9lYE8KGFdxgGJEDXw4AiKBSbqbXZpCHKcbYge/ZBTrwNvVH8/kjqI5TYMYjr+hZhxwFKjEwu
+eiZYV+gohyfcDYICkSEMBDxE8TVCbBDEUb3lQ65813OIUMl+LlnmSn6KUn4HLDnS3gem/A2j0eWn
+5/Xq4fnzevX69WFVPq6/aQsfCtB3GjgAcTLJexeb3Evtg9GLhjtc1I7couRq6JCiaLtUAJBScjz4
+aG6tUkkExV/5d/Zk5gceekf1IBiM/q1tBvqfVwa6bziy3LReYl7JXls1+tgA90gm6TMgHFtPWGid
+AVLFtae3Qg9xd3OvLTiBxlHd4nmswKNAAcnOVLLPS1/FJ3Q1BnOmWauUa7dDl2jHk0p/EHgET5P2
+7HImvAQeX/RU680Gikt7uub/UAa3Fq7hTqk+eIpmd1lqCccWKVHFnrSdoiZJBhUPFFOmcIhYm4uz
+j9iJsZcTz27HCT0t4TjJktUMRY6uBfG/EL48LuEoQ2cSksa7Su3XH9urjYV3W07j/AFQSwECFAAU
+AAAACAAAACFckdSziJUBAACMAgAADgAAAAAAAAAAAAAAAAAAAAAAY2xlYW4tY2hhcnQucHlQSwUG
+AAAAAAEAAQA8AAAAwQEAAAAA
+--demo-boundary--

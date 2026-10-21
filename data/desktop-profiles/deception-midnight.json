@@ -1,0 +1,17 @@
+{
+  "user": { "id": "trainee", "name": "Sam Novak", "short": "sam", "email": "sam.novak@fabrikam.example", "avatar": "initials" },
+  "sys": { "theme": "light", "accent": "green", "wallpaper": "stock", "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img2.jpg" },
+  "fs": { "nodes": { "home": { "name": "sam" } } },
+  "notifications": { "history": [
+    { "id": "n-welcome", "app": "settings", "title": "Welcome, Sam", "body": "This is a fictional training desktop. Nothing here is real.", "time": "2026-11-02T09:00:00Z" }
+  ] },
+  "installed": ["files", "browser", "mail", "messages", "mfa", "settings", "notes", "texteditor", "calendar", "contacts", "calculator", "taskmanager"],
+  "dock": { "pins": ["files", "browser", "mail", "messages", "notes", "calendar", "settings"], "badges": { "mail": 1 } },
+  "data": {
+    "mail": {
+      "messages": [
+        { "id": "m-welcome", "folder": "inbox", "from": "Fabrikam IT <it@fabrikam.example>", "to": "sam.novak@fabrikam.example", "subject": "Your new laptop is ready", "body": "Hi Sam,\n\nYour laptop is set up. Reply here if anything is missing.\n\nFabrikam IT", "time": "2026-11-02T08:00:00Z", "read": false, "flagged": false, "attachments": [] }
+      ]
+    }
+  }
+}

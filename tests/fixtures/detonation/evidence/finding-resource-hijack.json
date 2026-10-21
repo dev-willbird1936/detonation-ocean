@@ -1,0 +1,22 @@
+{
+  "description": "Fork bomb: 130 clone calls fail with EAGAIN.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "resource-hijack"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "clone-eagain",
+      "detail": "clone-eagain",
+      "at": "2026-01-01T00:00:00.000Z",
+      "count": 130
+    }
+  ]
+}

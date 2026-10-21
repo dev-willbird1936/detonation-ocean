@@ -1,0 +1,265 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Joaquin Reyes",
+    "short": "joaquin",
+    "email": "joaquin.reyes@tamarind-ship.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img0.jpg",
+    "wifi": false,
+    "bluetooth": false,
+    "wifiNetwork": "Agency-LAN",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "joaquin"
+      },
+      "f-accruals": {
+        "id": "f-accruals",
+        "parentId": "documents",
+        "name": "April-accruals.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1700,
+        "modified": "2000-05-03T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-accruals"
+      },
+      "f-vessels": {
+        "id": "f-vessels",
+        "parentId": "documents",
+        "name": "Vessel-schedule.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1000,
+        "modified": "2000-04-25T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-vessels"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Joaquin",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2000-05-04T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "media",
+    "settings",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "notes",
+      "calendar",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-month-end-accruals",
+          "folder": "inbox",
+          "from": "Pieter Okonkwo <pieter.okonkwo@tamarind-ship.example>",
+          "to": "joaquin.reyes@tamarind-ship.example",
+          "subject": "Month-end accruals",
+          "body": "Joaquin, please have the April accruals ready by Friday morning.\n\nPieter",
+          "time": "2000-05-03T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-freight-invoice-22",
+          "folder": "inbox",
+          "from": "Lucia Brandao <lucia.brandao@seabridge-freight.example>",
+          "to": "joaquin.reyes@tamarind-ship.example",
+          "subject": "Freight invoice 2204",
+          "body": "Attached is the freight invoice 2204 as discussed. Payment terms are 30 days.\n\nLucia",
+          "time": "2000-05-02T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-team-lunch-friday",
+          "folder": "inbox",
+          "from": "Mara Lindqvist <mara.lindqvist@tamarind-ship.example>",
+          "to": "joaquin.reyes@tamarind-ship.example",
+          "subject": "Team lunch Friday",
+          "body": "Lunch Friday at the harbour cafe, 12:30. Let me know if you are in.\n\nMara",
+          "time": "2000-05-01T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Joaquin Reyes <joaquin.reyes@tamarind-ship.example>",
+          "to": "mara.lindqvist@tamarind-ship.example",
+          "subject": "Re: Team lunch Friday",
+          "body": "I am in. Thanks for organising.\n\nJoaquin",
+          "time": "2000-05-01T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-1-april-accruals",
+        "folder": "notes",
+        "title": "April accruals",
+        "body": "Port fees\nFuel surcharge\nAgent commissions",
+        "modified": "2000-05-03T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Accruals due",
+        "start": "2000-05-05T10:00:00Z",
+        "end": "2000-05-05T10:30:00Z",
+        "location": "Accounts office"
+      },
+      {
+        "id": "e-2",
+        "title": "Team lunch",
+        "start": "2000-05-05T12:30:00Z",
+        "end": "2000-05-05T14:00:00Z",
+        "location": "Harbour cafe"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Prepare April accruals",
+        "due": "2000-05-05T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-mara-lindqvist",
+        "name": "Mara Lindqvist",
+        "email": "mara.lindqvist@tamarind-ship.example",
+        "phone": "+1 555 0211",
+        "org": "Tamarind Shipping Agency"
+      },
+      {
+        "id": "p-2-pieter-okonkwo",
+        "name": "Pieter Okonkwo",
+        "email": "pieter.okonkwo@tamarind-ship.example",
+        "phone": "+1 555 0212",
+        "org": "Tamarind Shipping Agency"
+      },
+      {
+        "id": "p-3-lucia-brandao",
+        "name": "Lucia Brandao",
+        "email": "lucia.brandao@seabridge-freight.example",
+        "phone": "+1 555 0213",
+        "org": "Seabridge Freight"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-accruals": {
+        "text": "April accruals (draft)\nPort fees: 4,210\nFuel surcharge: 1,880\nCommissions: 960"
+      },
+      "c-f-vessels": {
+        "text": "Vessel schedule May\nWeek 18: Marigold\nWeek 20: Tern"
+      }
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "agency-news": {
+          "title": "Tamarind agency news",
+          "url": "www.tamarind-ship.example/news",
+          "brand": "Tamarind",
+          "heading": "Agency news",
+          "body": "New port call schedule starts this month. Staff lunch on Fridays at the harbour cafe.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Tamarind agency news",
+          "url": "scene:agency-news"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:agency-news",
+          "title": "Tamarind agency news",
+          "time": "2000-05-03T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

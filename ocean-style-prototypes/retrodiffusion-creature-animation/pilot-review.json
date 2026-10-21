@@ -1,0 +1,12 @@
+{
+  "status":"keep",
+  "native_sha256":"c6e0e386eee199dd1a8dee7233d90c98743cbadae3f8c143b249ff9fb775a0ac",
+  "overall":8.5,
+  "anatomy":8.8,
+  "pixel_style":8.8,
+  "native_frames_checked":8,
+  "visible_arm_tip_counts":[8,8,8,8,8,8,8,8],
+  "raw_loop_limit":"The native eighth pose does not directly match the starting pose; direct raw GIF playback has a noticeable pose reset.",
+  "game_loop_fix":"Use actual native frames 0..7 then 6..1 in reverse, 14 playback frames, no interpolation or invented poses. All five depth variants share the same masks and timing.",
+  "reason":"Parent viewed all eight native poses and game-frame sheet, counted eight separate curled tips in each unique pose, and checked the running HTML player's five synchronized palettes, motion advance and pause. Mantle/eyes/suckers remain stable, no merged or detached arms and no clipping. Game playback reuses adjacent native transitions at the wrap rather than jumping from pose 7 to 0. Game-export score, not a claim that the untouched native sequence is already seamless."
+}

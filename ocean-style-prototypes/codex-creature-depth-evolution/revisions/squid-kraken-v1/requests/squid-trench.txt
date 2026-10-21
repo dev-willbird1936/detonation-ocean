@@ -1,0 +1,13 @@
+Call the Codex-native `image_gen.imagegen` tool exactly once. Use the attached Image 1 reference only for squid mantle and compact arm-cluster anatomy. Ignore its flat style and colors. Do not use shell, scripts, another provider, an API fallback, or retries. Pass the following image prompt verbatim:
+
+Use case: stylized-concept
+Asset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.
+Input images: Image 1 is a cropped cephalopod anatomy cue. Use only its elongated mantle, side view, and compact forward arm cluster; reinterpret it as a squid. Ignore its flat style and colors.
+Scene/backdrop: none; genuinely transparent background.
+Subject: one giant, advanced Kraken-like squid, clearly the same left-facing squid family but unmistakably more formidable than the midpoint. Enlarge and deepen the mantle, strengthen the brow/jaw, and make the attached bundle of eight arms plus two feeding tentacles substantially longer, thicker, and more powerful, with layered suckers and a few inward curls. The bundle remains ONE dense, unified stream trailing below/behind the mantle. Do not radiate arms around the head or surround the body. Do not create an octopus star, separate tentacle wreath, shark, or multiple organisms. Preserve a readable squid mantle, lateral fins, and grouped appendages.
+Style/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.
+Composition/framing: square canvas; one complete centered creature at a scale comparable to the other squid forms, generous transparent margin on every side, no crop.
+Color palette: keep each semantic region contiguous. Primary mantle/head/body shadow/base/highlight: #633A46, #A95650, #E28B6C. Secondary single bundled arm/tentacle mass shadow/base/highlight: #243B61, #3C6A93, #89ABD0. Tertiary mantle fins, sucker rows and tentacle tips shadow/base/highlight: #79612C, #C0A33F, #F1D075. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these exact role colors and neutral details only, plus transparent pixels; no magenta/cyan/lime placeholders.
+Constraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, gore, detached/wreath-like limbs, or radial arrangement. Return one complete transparent PNG.
+
+After the one image call, return only the generated PNG's full local path. If the call fails or returns no image, report that and stop without retrying.

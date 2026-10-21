@@ -1,0 +1,47 @@
+{
+  "status": "succeeded",
+  "task_id": "0f4503e5-9d9b-5743-babe-7db137505220",
+  "operation": "animate",
+  "asset_id": "a1ec4355-79b6-434f-954b-0d73b2dd196a",
+  "created_at": 1791211313,
+  "updated_at": 1791211522,
+  "result": {
+    "asset_id": "a1ec4355-79b6-434f-954b-0d73b2dd196a",
+    "status": "ready",
+    "prompt": "A blue-ringed octopus for a PS1 ocean menu: golden ochre rounded mantle, electric blue ring markings, two dark eyes, exactly eight distinct curled arms with visible suckers. Hand-painted pixel textures, faceted silhouette, separate articulated arms.",
+    "style": "rd_lowpoly__detailed",
+    "size": 64,
+    "size_source": "manual",
+    "mode": "quality",
+    "created_at": 1791211191,
+    "updated_at": 1791211522,
+    "inference_id": "inf_be1OW29mXj4NYQn2PV8QvzBZ6gl5DyKR",
+    "versions": [
+      {
+        "number": 1,
+        "kind": "generate",
+        "prompt": "A blue-ringed octopus for a PS1 ocean menu: golden ochre rounded mantle, electric blue ring markings, two dark eyes, exactly eight distinct curled arms with visible suckers. Hand-painted pixel textures, faceted silhouette, separate articulated arms.",
+        "created_at": 1791211306,
+        "render_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/render/dd23912aa6c55a7e890845e8ae04c0ca747d1d72dfe75077859c1770fa42d4e2.png",
+        "turntable_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/turntable/3436908278410c609bc7138b572ffa9f5cacf719e3e000a8c4c1afc5c4236646.png",
+        "scene_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/scene/081ad62d35dde565d0eb5efbfd6dd0613d7669993eeba0e1d66a8704de9da4cc.json",
+        "animations": [
+          "idle_hover"
+        ],
+        "rigged": true,
+        "stats": {
+          "size_px": [
+            62.3,
+            39.6,
+            60.8
+          ],
+          "triangles": 2206,
+          "atlas_pages": [
+            "256x128"
+          ]
+        }
+      }
+    ]
+  },
+  "animation": "idle_hover"
+}

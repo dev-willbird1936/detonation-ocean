@@ -1,0 +1,793 @@
+{
+  "jobId": "j-mock-trench",
+  "events": [
+    {
+      "id": 1,
+      "event": "stage",
+      "data": {
+        "stage": "received",
+        "at": "2026-01-01T00:00:00.000Z"
+      },
+      "delay": 100
+    },
+    {
+      "id": 2,
+      "event": "typed",
+      "data": {
+        "detectedType": "py",
+        "claimedExtension": "py",
+        "path": "run",
+        "species": "snake-eel",
+        "label": "Executed on Linux",
+        "mismatch": false,
+        "sizeTier": "full"
+      },
+      "delay": 150
+    },
+    {
+      "id": 3,
+      "event": "stage",
+      "data": {
+        "stage": "typed",
+        "at": "2026-01-01T00:00:02.000Z"
+      },
+      "delay": 100
+    },
+    {
+      "id": 4,
+      "event": "stage",
+      "data": {
+        "stage": "queued",
+        "at": "2026-01-01T00:00:03.000Z"
+      },
+      "delay": 100
+    },
+    {
+      "id": 5,
+      "event": "stage",
+      "data": {
+        "stage": "detonating",
+        "at": "2026-01-01T00:00:04.000Z"
+      },
+      "delay": 300
+    },
+    {
+      "id": 6,
+      "event": "evidence",
+      "data": {
+        "id": "ev-1",
+        "source": "trace",
+        "kind": "file-read",
+        "detail": "Read .aws/credentials",
+        "at": "2026-01-01T00:00:01.000Z",
+        "path": "/home/dana/.aws/credentials"
+      },
+      "delay": 200
+    },
+    {
+      "id": 7,
+      "event": "finding",
+      "data": {
+        "id": "steal-credentials",
+        "depth": "midnight",
+        "family": "data-access",
+        "creature": "Cookiecutter shark",
+        "evidenceIds": [
+          "ev-1"
+        ]
+      },
+      "delay": 200
+    },
+    {
+      "id": 8,
+      "event": "evidence",
+      "data": {
+        "id": "ev-2",
+        "source": "trace",
+        "kind": "connect",
+        "detail": "Connection blocked: 203.0.113.7",
+        "at": "2026-01-01T00:00:02.000Z",
+        "host": "203.0.113.7",
+        "port": 443,
+        "payloadPreview": "POST /collect canary-7f3a9c1e"
+      },
+      "delay": 200
+    },
+    {
+      "id": 9,
+      "event": "signal",
+      "data": {
+        "id": "unknown-hosts",
+        "evidenceIds": [
+          "ev-2"
+        ]
+      },
+      "delay": 100
+    },
+    {
+      "id": 10,
+      "event": "finding",
+      "data": {
+        "id": "exfil-attempt",
+        "depth": "midnight",
+        "family": "network",
+        "creature": "Snipe eel",
+        "evidenceIds": [
+          "ev-2"
+        ]
+      },
+      "delay": 200
+    },
+    {
+      "id": 11,
+      "event": "stage",
+      "data": {
+        "stage": "collecting",
+        "at": "2026-01-01T00:00:10.000Z"
+      },
+      "delay": 250
+    },
+    {
+      "id": 12,
+      "event": "evidence",
+      "data": {
+        "id": "ev-3",
+        "source": "diff",
+        "kind": "changed",
+        "detail": "Encrypted Documents/budget-2025.xlsx",
+        "at": "2026-01-01T00:00:03.000Z",
+        "path": "/home/dana/Documents/budget-2025.xlsx",
+        "seeded": true,
+        "entropyBefore": 4.1,
+        "entropyAfter": 7.98
+      },
+      "delay": 200
+    },
+    {
+      "id": 13,
+      "event": "evidence",
+      "data": {
+        "id": "ev-4",
+        "source": "diff",
+        "kind": "changed",
+        "detail": "Encrypted Documents/passport-scan.pdf",
+        "at": "2026-01-01T00:00:04.000Z",
+        "path": "/home/dana/Documents/passport-scan.pdf",
+        "seeded": true,
+        "entropyBefore": 7.2,
+        "entropyAfter": 7.99
+      },
+      "delay": 200
+    },
+    {
+      "id": 14,
+      "event": "evidence",
+      "data": {
+        "id": "ev-5",
+        "source": "diff",
+        "kind": "changed",
+        "detail": "Encrypted Documents/notes.txt",
+        "at": "2026-01-01T00:00:05.000Z",
+        "path": "/home/dana/Documents/notes.txt",
+        "seeded": true,
+        "entropyBefore": 4.6,
+        "entropyAfter": 7.97
+      },
+      "delay": 200
+    },
+    {
+      "id": 15,
+      "event": "evidence",
+      "data": {
+        "id": "ev-6",
+        "source": "diff",
+        "kind": "added",
+        "detail": "Ransom note written: README_DECRYPT.txt",
+        "at": "2026-01-01T00:00:06.000Z",
+        "path": "/home/dana/Documents/README_DECRYPT.txt",
+        "seeded": false,
+        "entropyBefore": null,
+        "entropyAfter": 4.2
+      },
+      "delay": 200
+    },
+    {
+      "id": 16,
+      "event": "finding",
+      "data": {
+        "id": "encrypt",
+        "depth": "trench",
+        "family": "file-changes",
+        "creature": "Kraken",
+        "evidenceIds": [
+          "ev-3",
+          "ev-4",
+          "ev-5",
+          "ev-6"
+        ]
+      },
+      "delay": 200
+    },
+    {
+      "id": 17,
+      "event": "evidence",
+      "data": {
+        "id": "ev-7",
+        "source": "trace",
+        "kind": "clone-eagain",
+        "detail": "Process limit reached: 140 failed forks",
+        "at": "2026-01-01T00:00:07.000Z",
+        "count": 140
+      },
+      "delay": 200
+    },
+    {
+      "id": 18,
+      "event": "evidence",
+      "data": {
+        "id": "ev-8",
+        "source": "limits",
+        "kind": "pids",
+        "detail": "Limit hit: process count (pids-limit)",
+        "at": "2026-01-01T00:00:08.000Z"
+      },
+      "delay": 200
+    },
+    {
+      "id": 19,
+      "event": "finding",
+      "data": {
+        "id": "resource-hijack",
+        "depth": "abyss",
+        "family": "access",
+        "creature": "Vampire squid",
+        "evidenceIds": [
+          "ev-7"
+        ]
+      },
+      "delay": 200
+    },
+    {
+      "id": 20,
+      "event": "evidence",
+      "data": {
+        "id": "ev-9",
+        "source": "trace",
+        "kind": "unlink",
+        "detail": "Deleted /bin/ls",
+        "at": "2026-01-01T00:00:09.000Z",
+        "path": "/bin/ls"
+      },
+      "delay": 200
+    },
+    {
+      "id": 21,
+      "event": "finding",
+      "data": {
+        "id": "system-wipe",
+        "depth": "trench",
+        "family": "file-changes",
+        "creature": "Jörmungandr",
+        "evidenceIds": [
+          "ev-9"
+        ]
+      },
+      "delay": 200
+    },
+    {
+      "id": 22,
+      "event": "coverage",
+      "data": {
+        "steps": [
+          {
+            "step": "identify",
+            "status": "ok",
+            "detail": "Python 3 script"
+          },
+          {
+            "step": "run in gVisor container",
+            "status": "ok",
+            "detail": "Executed on Linux; stopped by the process limit"
+          },
+          {
+            "step": "collect file changes",
+            "status": "ok",
+            "detail": "4 files changed"
+          }
+        ]
+      },
+      "delay": 150
+    },
+    {
+      "id": 23,
+      "event": "stage",
+      "data": {
+        "stage": "analysing",
+        "at": "2026-01-01T00:00:22.000Z",
+        "attempt": 1
+      },
+      "delay": 250
+    },
+    {
+      "id": 24,
+      "event": "analysis-attempt",
+      "data": {
+        "n": 1,
+        "code": "import json, glob\nimport matplotlib\nmatplotlib.use(\"Agg\")\nimport matplotlib.pyplot as plt\n\nitems = []\nfor name in sorted(glob.glob(\"/in/*.json\")):\n    items += json.load(open(name))\nrows = [(i[\"path\"], i[\"entropyBefore\"], i[\"entropyAfter\"]) for i in items if i[\"source\"] == \"diff\"]\nplt.bar(range(len(rows)), [r[2] for r in rows])\nplt.savefig(\"/out/timeline.png\")\n",
+        "exitCode": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"/work/analyse.py\", line 9, in <module>\n    rows = [(i[\"path\"], i[\"entropyBefore\"], i[\"entropyAfter\"]) for i in items if i[\"source\"] == \"diff\"]\nKeyError: 'entropyBefore'"
+      },
+      "delay": 400
+    },
+    {
+      "id": 25,
+      "event": "stage",
+      "data": {
+        "stage": "analysing",
+        "at": "2026-01-01T00:00:24.000Z",
+        "attempt": 2
+      },
+      "delay": 250
+    },
+    {
+      "id": 26,
+      "event": "analysis-attempt",
+      "data": {
+        "n": 2,
+        "code": "import csv, json, glob\nimport matplotlib\nmatplotlib.use(\"Agg\")\nimport matplotlib.pyplot as plt\n\nitems = []\nfor name in sorted(glob.glob(\"/in/*.json\")):\n    items += json.load(open(name))\nrows = [(i[\"path\"], i.get(\"entropyBefore\"), i.get(\"entropyAfter\")) for i in items if i.get(\"source\") == \"diff\"]\nwith open(\"/out/diff.csv\", \"w\", newline=\"\") as handle:\n    writer = csv.writer(handle)\n    writer.writerow([\"path\", \"entropy before\", \"entropy after\"])\n    writer.writerows(rows)\nplt.bar(range(len(rows)), [r[2] or 0 for r in rows])\nplt.savefig(\"/out/timeline.png\")\n",
+        "exitCode": 0,
+        "stderr": ""
+      },
+      "delay": 400
+    },
+    {
+      "id": 27,
+      "event": "stage",
+      "data": {
+        "stage": "explaining",
+        "at": "2026-01-01T00:00:26.000Z"
+      },
+      "delay": 250
+    },
+    {
+      "id": 28,
+      "event": "verdict",
+      "data": {
+        "depth": "trench",
+        "family": "file-changes",
+        "signals": [
+          "unknown-hosts"
+        ],
+        "findings": [
+          {
+            "id": "steal-credentials",
+            "depth": "midnight",
+            "family": "data-access",
+            "creature": "Cookiecutter shark",
+            "evidenceIds": [
+              "ev-1"
+            ]
+          },
+          {
+            "id": "exfil-attempt",
+            "depth": "midnight",
+            "family": "network",
+            "creature": "Snipe eel",
+            "evidenceIds": [
+              "ev-2"
+            ]
+          },
+          {
+            "id": "encrypt",
+            "depth": "trench",
+            "family": "file-changes",
+            "creature": "Kraken",
+            "evidenceIds": [
+              "ev-3",
+              "ev-4",
+              "ev-5",
+              "ev-6"
+            ]
+          },
+          {
+            "id": "resource-hijack",
+            "depth": "abyss",
+            "family": "access",
+            "creature": "Vampire squid",
+            "evidenceIds": [
+              "ev-7"
+            ]
+          },
+          {
+            "id": "system-wipe",
+            "depth": "trench",
+            "family": "file-changes",
+            "creature": "Jörmungandr",
+            "evidenceIds": [
+              "ev-9"
+            ]
+          }
+        ],
+        "statement": "Harmful behaviour proven in the sandbox: the file read planted credentials, tried to send them out, encrypted seeded documents, hit the process limit and tried to wipe system files.",
+        "complete": true
+      },
+      "delay": 200
+    },
+    {
+      "id": 29,
+      "event": "explanation",
+      "data": {
+        "text": "This script behaves like ransomware with a system wiper attached. It read a planted credentials file, tried to send it to 203.0.113.7 (blocked), encrypted three seeded documents and left a ransom note. The sandbox stopped it when it forked too many processes.",
+        "modelAvailable": true
+      },
+      "delay": 200
+    },
+    {
+      "id": 30,
+      "event": "stage",
+      "data": {
+        "stage": "tearing_down",
+        "at": "2026-01-01T00:00:29.000Z"
+      },
+      "delay": 250
+    },
+    {
+      "id": 31,
+      "event": "receipt",
+      "data": {
+        "jobId": "j-mock-trench",
+        "containers": [
+          {
+            "role": "detonate",
+            "runtime": "runsc",
+            "network": "none",
+            "readOnlyRoot": true,
+            "capDrop": [
+              "ALL"
+            ],
+            "user": "10001:10001",
+            "memoryBytes": 536870912,
+            "pidsLimit": 512,
+            "nanoCpus": 1000000000,
+            "secretEnvVars": 0,
+            "createdAt": "2026-01-01T00:00:05.000Z",
+            "exit": {
+              "code": 137,
+              "reason": "pids-limit"
+            },
+            "removedAt": "2026-01-01T00:00:40.000Z"
+          },
+          {
+            "role": "collect",
+            "runtime": "runsc",
+            "network": "none",
+            "readOnlyRoot": true,
+            "capDrop": [
+              "ALL"
+            ],
+            "user": "10001:10001",
+            "memoryBytes": 536870912,
+            "pidsLimit": 512,
+            "nanoCpus": 1000000000,
+            "secretEnvVars": 0,
+            "createdAt": "2026-01-01T00:00:06.000Z",
+            "exit": {
+              "code": 0,
+              "reason": "exited"
+            },
+            "removedAt": "2026-01-01T00:00:41.000Z"
+          },
+          {
+            "role": "analyse",
+            "runtime": "runsc",
+            "network": "none",
+            "readOnlyRoot": true,
+            "capDrop": [
+              "ALL"
+            ],
+            "user": "10001:10001",
+            "memoryBytes": 536870912,
+            "pidsLimit": 512,
+            "nanoCpus": 1000000000,
+            "secretEnvVars": 0,
+            "createdAt": "2026-01-01T00:00:07.000Z",
+            "exit": {
+              "code": 0,
+              "reason": "exited"
+            },
+            "removedAt": "2026-01-01T00:00:42.000Z"
+          }
+        ],
+        "limitsHit": [
+          "pids-limit"
+        ],
+        "volumesRemoved": true,
+        "uploadDeleted": true,
+        "hostCanary": "unchanged",
+        "teardownConfirmed": true,
+        "inference": {
+          "provider": "vultr-serverless-inference",
+          "calls": 3,
+          "model": "mock-code-model"
+        }
+      },
+      "delay": 300
+    },
+    {
+      "id": 32,
+      "event": "stage",
+      "data": {
+        "stage": "done",
+        "at": "2026-01-01T00:00:31.000Z"
+      },
+      "delay": 150
+    },
+    {
+      "id": 33,
+      "event": "report",
+      "data": {
+        "jobId": "j-mock-trench",
+        "file": {
+          "detectedType": "py",
+          "claimedExtension": "py",
+          "path": "run",
+          "sizeBytes": 2113
+        },
+        "verdict": {
+          "depth": "trench",
+          "family": "file-changes",
+          "signals": [
+            "unknown-hosts"
+          ],
+          "findings": [
+            {
+              "id": "steal-credentials",
+              "depth": "midnight",
+              "family": "data-access",
+              "creature": "Cookiecutter shark",
+              "evidenceIds": [
+                "ev-1"
+              ]
+            },
+            {
+              "id": "exfil-attempt",
+              "depth": "midnight",
+              "family": "network",
+              "creature": "Snipe eel",
+              "evidenceIds": [
+                "ev-2"
+              ]
+            },
+            {
+              "id": "encrypt",
+              "depth": "trench",
+              "family": "file-changes",
+              "creature": "Kraken",
+              "evidenceIds": [
+                "ev-3",
+                "ev-4",
+                "ev-5",
+                "ev-6"
+              ]
+            },
+            {
+              "id": "resource-hijack",
+              "depth": "abyss",
+              "family": "access",
+              "creature": "Vampire squid",
+              "evidenceIds": [
+                "ev-7"
+              ]
+            },
+            {
+              "id": "system-wipe",
+              "depth": "trench",
+              "family": "file-changes",
+              "creature": "Jörmungandr",
+              "evidenceIds": [
+                "ev-9"
+              ]
+            }
+          ],
+          "statement": "Harmful behaviour proven in the sandbox: the file read planted credentials, tried to send them out, encrypted seeded documents, hit the process limit and tried to wipe system files.",
+          "complete": true
+        },
+        "evidence": [
+          {
+            "id": "ev-1",
+            "source": "trace",
+            "kind": "file-read",
+            "detail": "Read .aws/credentials",
+            "at": "2026-01-01T00:00:01.000Z",
+            "path": "/home/dana/.aws/credentials"
+          },
+          {
+            "id": "ev-2",
+            "source": "trace",
+            "kind": "connect",
+            "detail": "Connection blocked: 203.0.113.7",
+            "at": "2026-01-01T00:00:02.000Z",
+            "host": "203.0.113.7",
+            "port": 443,
+            "payloadPreview": "POST /collect canary-7f3a9c1e"
+          },
+          {
+            "id": "ev-3",
+            "source": "diff",
+            "kind": "changed",
+            "detail": "Encrypted Documents/budget-2025.xlsx",
+            "at": "2026-01-01T00:00:03.000Z",
+            "path": "/home/dana/Documents/budget-2025.xlsx",
+            "seeded": true,
+            "entropyBefore": 4.1,
+            "entropyAfter": 7.98
+          },
+          {
+            "id": "ev-4",
+            "source": "diff",
+            "kind": "changed",
+            "detail": "Encrypted Documents/passport-scan.pdf",
+            "at": "2026-01-01T00:00:04.000Z",
+            "path": "/home/dana/Documents/passport-scan.pdf",
+            "seeded": true,
+            "entropyBefore": 7.2,
+            "entropyAfter": 7.99
+          },
+          {
+            "id": "ev-5",
+            "source": "diff",
+            "kind": "changed",
+            "detail": "Encrypted Documents/notes.txt",
+            "at": "2026-01-01T00:00:05.000Z",
+            "path": "/home/dana/Documents/notes.txt",
+            "seeded": true,
+            "entropyBefore": 4.6,
+            "entropyAfter": 7.97
+          },
+          {
+            "id": "ev-6",
+            "source": "diff",
+            "kind": "added",
+            "detail": "Ransom note written: README_DECRYPT.txt",
+            "at": "2026-01-01T00:00:06.000Z",
+            "path": "/home/dana/Documents/README_DECRYPT.txt",
+            "seeded": false,
+            "entropyBefore": null,
+            "entropyAfter": 4.2
+          },
+          {
+            "id": "ev-7",
+            "source": "trace",
+            "kind": "clone-eagain",
+            "detail": "Process limit reached: 140 failed forks",
+            "at": "2026-01-01T00:00:07.000Z",
+            "count": 140
+          },
+          {
+            "id": "ev-8",
+            "source": "limits",
+            "kind": "pids",
+            "detail": "Limit hit: process count (pids-limit)",
+            "at": "2026-01-01T00:00:08.000Z"
+          },
+          {
+            "id": "ev-9",
+            "source": "trace",
+            "kind": "unlink",
+            "detail": "Deleted /bin/ls",
+            "at": "2026-01-01T00:00:09.000Z",
+            "path": "/bin/ls"
+          }
+        ],
+        "analysis": {
+          "attempts": [
+            {
+              "n": 1,
+              "code": "import json, glob\nimport matplotlib\nmatplotlib.use(\"Agg\")\nimport matplotlib.pyplot as plt\n\nitems = []\nfor name in sorted(glob.glob(\"/in/*.json\")):\n    items += json.load(open(name))\nrows = [(i[\"path\"], i[\"entropyBefore\"], i[\"entropyAfter\"]) for i in items if i[\"source\"] == \"diff\"]\nplt.bar(range(len(rows)), [r[2] for r in rows])\nplt.savefig(\"/out/timeline.png\")\n",
+              "exitCode": 1,
+              "stderr": "Traceback (most recent call last):\n  File \"/work/analyse.py\", line 9, in <module>\n    rows = [(i[\"path\"], i[\"entropyBefore\"], i[\"entropyAfter\"]) for i in items if i[\"source\"] == \"diff\"]\nKeyError: 'entropyBefore'"
+            },
+            {
+              "n": 2,
+              "code": "import csv, json, glob\nimport matplotlib\nmatplotlib.use(\"Agg\")\nimport matplotlib.pyplot as plt\n\nitems = []\nfor name in sorted(glob.glob(\"/in/*.json\")):\n    items += json.load(open(name))\nrows = [(i[\"path\"], i.get(\"entropyBefore\"), i.get(\"entropyAfter\")) for i in items if i.get(\"source\") == \"diff\"]\nwith open(\"/out/diff.csv\", \"w\", newline=\"\") as handle:\n    writer = csv.writer(handle)\n    writer.writerow([\"path\", \"entropy before\", \"entropy after\"])\n    writer.writerows(rows)\nplt.bar(range(len(rows)), [r[2] or 0 for r in rows])\nplt.savefig(\"/out/timeline.png\")\n",
+              "exitCode": 0,
+              "artifacts": [
+                "timeline.png",
+                "diff.csv"
+              ]
+            }
+          ]
+        },
+        "explanation": "This script behaves like ransomware with a system wiper attached. It read a planted credentials file, tried to send it to 203.0.113.7 (blocked), encrypted three seeded documents and left a ransom note. The sandbox stopped it when it forked too many processes.",
+        "receipt": {
+          "jobId": "j-mock-trench",
+          "containers": [
+            {
+              "role": "detonate",
+              "runtime": "runsc",
+              "network": "none",
+              "readOnlyRoot": true,
+              "capDrop": [
+                "ALL"
+              ],
+              "user": "10001:10001",
+              "memoryBytes": 536870912,
+              "pidsLimit": 512,
+              "nanoCpus": 1000000000,
+              "secretEnvVars": 0,
+              "createdAt": "2026-01-01T00:00:05.000Z",
+              "exit": {
+                "code": 137,
+                "reason": "pids-limit"
+              },
+              "removedAt": "2026-01-01T00:00:40.000Z"
+            },
+            {
+              "role": "collect",
+              "runtime": "runsc",
+              "network": "none",
+              "readOnlyRoot": true,
+              "capDrop": [
+                "ALL"
+              ],
+              "user": "10001:10001",
+              "memoryBytes": 536870912,
+              "pidsLimit": 512,
+              "nanoCpus": 1000000000,
+              "secretEnvVars": 0,
+              "createdAt": "2026-01-01T00:00:06.000Z",
+              "exit": {
+                "code": 0,
+                "reason": "exited"
+              },
+              "removedAt": "2026-01-01T00:00:41.000Z"
+            },
+            {
+              "role": "analyse",
+              "runtime": "runsc",
+              "network": "none",
+              "readOnlyRoot": true,
+              "capDrop": [
+                "ALL"
+              ],
+              "user": "10001:10001",
+              "memoryBytes": 536870912,
+              "pidsLimit": 512,
+              "nanoCpus": 1000000000,
+              "secretEnvVars": 0,
+              "createdAt": "2026-01-01T00:00:07.000Z",
+              "exit": {
+                "code": 0,
+                "reason": "exited"
+              },
+              "removedAt": "2026-01-01T00:00:42.000Z"
+            }
+          ],
+          "limitsHit": [
+            "pids-limit"
+          ],
+          "volumesRemoved": true,
+          "uploadDeleted": true,
+          "hostCanary": "unchanged",
+          "teardownConfirmed": true,
+          "inference": {
+            "provider": "vultr-serverless-inference",
+            "calls": 3,
+            "model": "mock-code-model"
+          }
+        }
+      },
+      "delay": 100
+    }
+  ],
+  "artifacts": {
+    "timeline.png": {
+      "type": "image/png",
+      "base64": "iVBORw0KGgoAAAANSUhEUgAAAHAAAAA8CAYAAAC+ej5cAAAA3ElEQVR4nO3RsQkCURRFwc3swCJszmYtwA5MDRZWzEUEkf3HP8EJb/DeLLf1vj07HE8KtgBsBzAewHgAd+p8vXwcwAEDGA9gPIDxAMYDGA9gPICDPRIgQIAAJwxgPIDxAMYDGA9gvG8eudcW4AAIAAECBPgHAYwHcIBHAgQIECBAgAABAgQIECDAuQBn2wKMbwHGtwDjW4DxLcD4FmB8CzC+/Rlg8RnFLcD4FmB8CzC+BRjfAoxv3wIWD5ptCzC+BRjfAoxvAca3AONbgPEtwPj2JaCaAYwHMB7AeA8JhZtSOi1W5QAAAABJRU5ErkJggg=="
+    },
+    "diff.csv": {
+      "type": "text/csv",
+      "text": "path,entropy before,entropy after\n/home/dana/Documents/budget-2025.xlsx,4.1,7.98\n/home/dana/Documents/passport-scan.pdf,7.2,7.99\n/home/dana/Documents/notes.txt,4.6,7.97\n\"/home/dana/Documents/README_DECRYPT.txt\",,4.2\n"
+    }
+  }
+}

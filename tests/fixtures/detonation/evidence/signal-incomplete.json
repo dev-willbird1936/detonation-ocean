@@ -1,0 +1,23 @@
+{
+  "description": "Emulation stopped early.",
+  "path": "emulate",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "incomplete"
+    ],
+    "depth": "twilight",
+    "findings": [],
+    "complete": false
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "emulator",
+      "kind": "emulation-stopped",
+      "detail": "emulation-stopped",
+      "at": "2026-01-01T00:00:00.000Z",
+      "reason": "unsupported API"
+    }
+  ]
+}

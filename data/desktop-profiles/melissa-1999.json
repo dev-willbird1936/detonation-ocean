@@ -1,0 +1,276 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Dolores Keane",
+    "short": "dolores",
+    "email": "dolores.keane@pryce-hartwell.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img1.jpg",
+    "wifi": false,
+    "bluetooth": false,
+    "wifiNetwork": "Firm-LAN",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "dolores"
+      },
+      "f-exhibits": {
+        "id": "f-exhibits",
+        "parentId": "documents",
+        "name": "Hargrove-exhibits.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2600,
+        "modified": "1999-03-24T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-exhibits"
+      },
+      "f-firm-letter": {
+        "id": "f-firm-letter",
+        "parentId": "documents",
+        "name": "Letterhead-template.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 900,
+        "modified": "1999-03-06T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-firm-letter"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Dolores",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "1999-03-26T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "settings",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "notes",
+      "calendar",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-filing-deadline-mo",
+          "folder": "inbox",
+          "from": "Winifred Pryce <winifred.pryce@pryce-hartwell.example>",
+          "to": "dolores.keane@pryce-hartwell.example",
+          "subject": "Filing deadline Monday",
+          "body": "Dolores, the Hargrove filing is due Monday at noon. Please check the exhibits are in order.\n\nWinifred",
+          "time": "1999-03-25T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-conference-room-tu",
+          "folder": "inbox",
+          "from": "Aldo Bensen <aldo.bensen@pryce-hartwell.example>",
+          "to": "dolores.keane@pryce-hartwell.example",
+          "subject": "Conference room Tuesday",
+          "body": "I booked the conference room Tuesday at 10 for the client meeting.\n\nAldo",
+          "time": "1999-03-24T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-docket-received",
+          "folder": "inbox",
+          "from": "Rosa Delacroix <rosa.delacroix@courthouse-clerk.example>",
+          "to": "dolores.keane@pryce-hartwell.example",
+          "subject": "Docket received",
+          "body": "We received the docket for the Hargrove matter. Stamped copies will be ready Friday.\n\nRosa",
+          "time": "1999-03-23T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Dolores Keane <dolores.keane@pryce-hartwell.example>",
+          "to": "winifred.pryce@pryce-hartwell.example",
+          "subject": "Exhibit list",
+          "body": "The exhibit list is in the shared folder. All six are in order.\n\nDolores",
+          "time": "1999-03-24T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-1-hargrove-filin",
+        "folder": "notes",
+        "title": "Hargrove filing",
+        "body": "Check exhibits 1-6\nCopy for the client\nCourier to the courthouse Monday",
+        "modified": "1999-03-25T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Hargrove filing due",
+        "start": "1999-03-29T12:00:00Z",
+        "end": "1999-03-29T12:30:00Z",
+        "location": "Courthouse"
+      },
+      {
+        "id": "e-2",
+        "title": "Client meeting",
+        "start": "1999-03-30T10:00:00Z",
+        "end": "1999-03-30T11:00:00Z",
+        "location": "Conference room"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Copy the exhibits",
+        "due": "1999-03-27T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-hollis-carr",
+        "name": "Hollis Carr",
+        "email": "hollis.carr@pryce-hartwell.example",
+        "phone": "+1 555 0201",
+        "org": "Pryce Hartwell Legal"
+      },
+      {
+        "id": "p-2-winifred-pryce",
+        "name": "Winifred Pryce",
+        "email": "winifred.pryce@pryce-hartwell.example",
+        "phone": "+1 555 0202",
+        "org": "Pryce Hartwell Legal"
+      },
+      {
+        "id": "p-3-aldo-bensen",
+        "name": "Aldo Bensen",
+        "email": "aldo.bensen@pryce-hartwell.example",
+        "phone": "+1 555 0203",
+        "org": "Pryce Hartwell Legal"
+      },
+      {
+        "id": "p-4-rosa-delacroix",
+        "name": "Rosa Delacroix",
+        "email": "rosa.delacroix@courthouse-clerk.example",
+        "phone": "+1 555 0204",
+        "org": "County clerk"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-exhibits": {
+        "text": "Hargrove matter: exhibit list\n1 Contract\n2 Letter of 3 March\n3 Invoice\n4 Statement\n5 Photographs\n6 Site plan"
+      },
+      "c-f-firm-letter": {
+        "text": "Pryce Hartwell Legal\nLetterhead template"
+      }
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "firm-home": {
+          "title": "Pryce Hartwell Legal",
+          "url": "www.pryce-hartwell.example/home",
+          "brand": "Pryce Hartwell",
+          "heading": "Pryce Hartwell Legal",
+          "body": "Our offices are open Monday to Friday from 8 to 5. Call the front desk to book a consultation.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Pryce Hartwell Legal",
+          "url": "scene:firm-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:firm-home",
+          "title": "Pryce Hartwell Legal",
+          "time": "1999-03-25T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

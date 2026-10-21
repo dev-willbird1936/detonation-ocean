@@ -1,0 +1,36 @@
+{
+  "description": "Emulated PE writes into another process and starts a remote thread.",
+  "path": "emulate",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "injection"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "emulator",
+      "kind": "api-call",
+      "detail": "WriteProcessMemory called",
+      "at": "2026-01-01T00:00:00.000Z",
+      "api": "WriteProcessMemory",
+      "args": {
+        "pid": 612
+      }
+    },
+    {
+      "id": "ev-2",
+      "source": "emulator",
+      "kind": "api-call",
+      "detail": "CreateRemoteThread called",
+      "at": "2026-01-01T00:00:01.000Z",
+      "api": "CreateRemoteThread",
+      "args": {
+        "pid": 612
+      }
+    }
+  ]
+}

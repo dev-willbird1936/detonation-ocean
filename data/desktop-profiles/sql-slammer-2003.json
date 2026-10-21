@@ -1,0 +1,200 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Daniel Osei",
+    "short": "daniel",
+    "email": "daniel.osei@lakeshore-cu.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img0.jpg",
+    "wifiNetwork": "Lakeshore-Branch"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "daniel"
+      },
+      "f-morning": {
+        "id": "f-morning",
+        "parentId": "documents",
+        "name": "Morning-checks.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 500,
+        "modified": "2002-11-04T08:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-morning"
+      },
+      "f-log": {
+        "id": "f-log",
+        "parentId": "documents",
+        "name": "Systems-log-January.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2400,
+        "modified": "2003-01-22T17:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-log"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Daniel",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2003-01-23T16:20:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "notes",
+    "calendar",
+    "contacts",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-weekend",
+          "folder": "inbox",
+          "from": "Carol Whitfield <carol.whitfield@lakeshore-cu.example>",
+          "to": "daniel.osei@lakeshore-cu.example",
+          "subject": "Weekend branch cover",
+          "body": "Daniel, can you cover branch systems this weekend? Thanks.\n\nCarol",
+          "time": "2003-01-23T16:20:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-vendor",
+          "folder": "inbox",
+          "from": "Delta Systems Support <support@deltasystems.example>",
+          "to": "daniel.osei@lakeshore-cu.example",
+          "subject": "Monthly maintenance notes",
+          "body": "Our monthly notes for the database service are attached to the support site.",
+          "time": "2003-01-20T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-branch",
+          "folder": "inbox",
+          "from": "Lakeshore Branch Ops <branchops@lakeshore-cu.example>",
+          "to": "daniel.osei@lakeshore-cu.example",
+          "subject": "Cash machine reload times",
+          "body": "Reload runs are moved to 07:30 starting Monday.",
+          "time": "2003-01-21T08:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Daniel Osei <daniel.osei@lakeshore-cu.example>",
+          "to": "carol.whitfield@lakeshore-cu.example",
+          "subject": "Re: Weekend branch cover",
+          "body": "Yes, I can cover Saturday.",
+          "time": "2003-01-23T16:45:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-morning",
+        "folder": "notes",
+        "title": "Morning checks",
+        "body": "Teller terminals up\nDatabase service running\nCash machine link up\nSign the log sheet",
+        "modified": "2002-11-04T08:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-check",
+        "title": "Weekly systems check",
+        "start": "2003-01-27T08:30:00Z",
+        "end": "2003-01-27T09:00:00Z",
+        "location": "Server room"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-carol",
+        "name": "Carol Whitfield",
+        "email": "carol.whitfield@lakeshore-cu.example",
+        "phone": "+1 555 0261",
+        "org": "Lakeshore Credit Union"
+      },
+      {
+        "id": "p-delta",
+        "name": "Delta Systems Support",
+        "email": "support@deltasystems.example",
+        "phone": "+1 555 0262",
+        "org": "Delta Systems"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-morning": {
+        "text": "Morning checks. Fictional training file."
+      },
+      "c-f-log": {
+        "text": "Systems log for January. Fictional training file."
+      }
+    }
+  }
+}

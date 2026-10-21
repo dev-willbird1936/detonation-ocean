@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="1200" height="960" role="img" aria-labelledby="t d" shape-rendering="crispEdges">
+  <title id="t">Detonation Ocean architecture</title>
+  <desc id="d">A browser reaches Caddy on one Vultr VM. Caddy proxies to the controller, which holds the job pipeline, rule engine, receipts and ocean state. The controller calls Vultr Serverless Inference, drives Docker with the runsc gVisor runtime for the detonate, collect and analyse containers, optionally runs a Wine step on runc with seccomp (pending decision), and writes to the data directory that holds the host canary. Four trust boundaries are marked.</desc>
+  <defs>
+    <pattern id="dither" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#07162a"/>
+      <rect width="4" height="4" fill="#0b2540" opacity="0.55"/>
+      <rect x="4" y="4" width="4" height="4" fill="#0b2540" opacity="0.55"/>
+    </pattern>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <polygon points="0,1 13,7 0,13" fill="#6fe0d4"/>
+    </marker>
+    <marker id="arrow-gold" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <polygon points="0,1 13,7 0,13" fill="#f4d06a"/>
+    </marker>
+    <marker id="arrow-coral" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <polygon points="0,1 13,7 0,13" fill="#f08a63"/>
+    </marker>
+    <style>
+      text { font-family: "Jersey 10", "Cascadia Mono", Consolas, "DejaVu Sans Mono", monospace; fill: #effcf8; }
+      .title { font-size: 30px; }
+      .h { font-size: 16px; }
+      .s { font-size: 13px; fill: #bfe6e1; }
+      .gold { fill: #f4d06a; }
+      .coral { fill: #f08a63; }
+      .flow { stroke: #6fe0d4; stroke-width: 3; fill: none; }
+      .flow-gold { stroke: #f4d06a; stroke-width: 3; fill: none; }
+      .flow-pending { stroke: #f08a63; stroke-width: 3; stroke-dasharray: 8 6; fill: none; }
+      .vm { fill: url(#dither); stroke: #35a0ac; stroke-width: 4; }
+      .ext { fill: #12405d; stroke: #f4d06a; stroke-width: 4; }
+      .box { fill: #0b2540; stroke: #35a0ac; stroke-width: 4; }
+      .sub { fill: #12405d; stroke: #1d6a82; stroke-width: 3; }
+      .docker { fill: #07162a; stroke: #6fe0d4; stroke-width: 4; }
+      .ctr { fill: #12405d; stroke: #6fe0d4; stroke-width: 3; }
+      .pending { fill: #0b2540; stroke: #f08a63; stroke-width: 4; stroke-dasharray: 10 6; }
+      .data { fill: #040a14; stroke: #f4d06a; stroke-width: 4; }
+      .chip { fill: #0b2540; stroke: #35a0ac; stroke-width: 3; }
+      .badge { fill: #f4d06a; stroke: #040a14; stroke-width: 3; }
+      .badge-n { fill: #040a14; font-size: 15px; text-anchor: middle; }
+      .tab { fill: #07162a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="960" fill="#040a14"/>
+  <text x="30" y="38" class="title">Detonation Ocean: architecture</text>
+  <text x="30" y="58" class="s">One VM, one controller, a fresh gVisor container set per job. Design: docs/SPEC.md section 3.</text>
+
+  <!-- Outside the VM -->
+  <rect x="30" y="76" width="220" height="74" class="ext"/>
+  <text x="46" y="102" class="h">Browser</text>
+  <text x="46" y="122" class="s">uploads one file,</text>
+  <text x="46" y="138" class="s">watches the replay</text>
+
+  <rect x="880" y="76" width="290" height="74" class="ext"/>
+  <text x="896" y="102" class="h">Vultr Serverless Inference</text>
+  <text x="896" y="122" class="s">writes analysis code,</text>
+  <text x="896" y="138" class="s">explains the result</text>
+
+  <!-- VM -->
+  <rect x="30" y="190" width="1140" height="625" class="vm"/>
+  <rect x="318" y="178" width="684" height="24" class="tab"/>
+  <text x="330" y="196" class="s">Vultr Cloud Compute VM · Ubuntu 24.04 · ufw: 80/443 open, 22 from operator IP only</text>
+
+  <!-- Caddy -->
+  <rect x="60" y="240" width="210" height="110" class="box"/>
+  <text x="76" y="268" class="h">Caddy</text>
+  <text x="76" y="290" class="s">TLS, HSTS, only public</text>
+  <text x="76" y="306" class="s">listener (80 and 443)</text>
+  <text x="76" y="326" class="s">proxy to 127.0.0.1:4173</text>
+
+  <!-- Controller -->
+  <rect x="340" y="240" width="500" height="210" class="box"/>
+  <text x="356" y="266" class="h">Controller · node server.mjs</text>
+  <rect x="356" y="280" width="228" height="68" class="sub"/>
+  <text x="368" y="304" class="h">Job pipeline</text>
+  <text x="368" y="324" class="s">type detect, queue, timers</text>
+  <rect x="596" y="280" width="228" height="68" class="sub"/>
+  <text x="608" y="304" class="h">Rule engine</text>
+  <text x="608" y="324" class="s">evidence → findings, depth</text>
+  <rect x="356" y="360" width="228" height="68" class="sub"/>
+  <text x="368" y="384" class="h">Receipts</text>
+  <text x="368" y="404" class="s">flags, teardown, canary</text>
+  <rect x="596" y="360" width="228" height="68" class="sub"/>
+  <text x="608" y="384" class="h">Ocean state</text>
+  <text x="608" y="404" class="s">batched counts, no names</text>
+
+  <!-- Flows: browser to controller, controller to model -->
+  <path d="M140 150 V240" class="flow" marker-end="url(#arrow)"/>
+  <path d="M270 295 H340" class="flow" marker-end="url(#arrow)"/>
+  <text x="156" y="176" class="s">HTTPS</text>
+  <path d="M840 295 H1040 V150" class="flow" marker-end="url(#arrow)"/>
+  <text x="1030" y="258" class="s" text-anchor="end">HTTPS · the only holder</text>
+  <text x="1030" y="274" class="s" text-anchor="end">of the inference key</text>
+
+  <!-- Docker -->
+  <rect x="60" y="500" width="780" height="170" class="docker"/>
+  <text x="76" y="526" class="h">Docker · runtime runsc (gVisor)</text>
+  <text x="76" y="546" class="s">network none · read-only root · caps dropped · non-root · resource caps</text>
+  <rect x="80" y="565" width="215" height="90" class="ctr"/>
+  <text x="94" y="591" class="h">detonate</text>
+  <text x="94" y="611" class="s">runs or emulates sample</text>
+  <text x="94" y="627" class="s">trace via runsc-trace</text>
+  <rect x="335" y="565" width="215" height="90" class="ctr"/>
+  <text x="349" y="591" class="h">collect</text>
+  <text x="349" y="611" class="s">reads the detonate volume</text>
+  <text x="349" y="627" class="s">writes the file diff</text>
+  <rect x="590" y="565" width="215" height="90" class="ctr"/>
+  <text x="604" y="591" class="h">analyse</text>
+  <text x="604" y="611" class="s">runs the model's Python</text>
+  <text x="604" y="627" class="s">timeline, chart, diff</text>
+  <path d="M299 610 H331" class="flow" marker-end="url(#arrow)"/>
+  <path d="M554 610 H586" class="flow" marker-end="url(#arrow)"/>
+
+  <!-- Controller to Docker, both ways -->
+  <path d="M420 450 V500" class="flow" marker-end="url(#arrow)"/>
+  <text x="440" y="480" class="s">files read-only, env allowlist</text>
+  <path d="M700 500 V450" class="flow" marker-end="url(#arrow)"/>
+  <text x="720" y="480" class="s">capped output</text>
+
+  <!-- Wine step, pending -->
+  <rect x="870" y="500" width="290" height="170" class="pending"/>
+  <text x="886" y="526" class="h coral">Wine step · pending decision</text>
+  <text x="886" y="548" class="s">runc + tight seccomp profile, every</text>
+  <text x="886" y="564" class="s">other container flag kept</text>
+  <text x="886" y="586" class="s">Windows files only. Off unless</text>
+  <text x="886" y="602" class="s">DETONATION_WINE_RUNC=true</text>
+  <text x="886" y="624" class="s">Receipt: "Ran under Wine</text>
+  <text x="886" y="640" class="s">without gVisor"</text>
+  <path d="M840 380 H1015 V500" class="flow-pending" marker-end="url(#arrow-coral)"/>
+  <text x="1027" y="440" class="s coral">only if enabled</text>
+
+  <!-- Data directory -->
+  <rect x="60" y="700" width="1100" height="100" class="data"/>
+  <text x="76" y="726" class="h gold">/var/lib/detonation-ocean · mode 0700 · not visible to any container</text>
+  <rect x="76" y="738" width="345" height="48" class="chip"/>
+  <text x="90" y="757" class="h">job temp</text>
+  <text x="90" y="777" class="s">encrypted at rest, deleted at teardown</text>
+  <rect x="437" y="738" width="345" height="48" class="chip"/>
+  <text x="451" y="757" class="h">ocean-state.json</text>
+  <text x="451" y="777" class="s">batched counts, no names or hashes</text>
+  <rect x="798" y="738" width="345" height="48" class="chip"/>
+  <text x="812" y="757" class="h">host-canary</text>
+  <text x="812" y="777" class="s">random bytes, hashed around each job</text>
+  <path d="M840 420 H855 V700" class="flow-gold" marker-end="url(#arrow-gold)"/>
+  <text x="867" y="692" class="s gold">state, canary check</text>
+
+  <!-- Trust boundary badges -->
+  <circle cx="140" cy="190" r="12" class="badge"/><text x="140" y="196" class="badge-n">1</text>
+  <circle cx="420" cy="475" r="12" class="badge"/><text x="420" y="481" class="badge-n">2</text>
+  <circle cx="700" cy="475" r="12" class="badge"/><text x="700" y="481" class="badge-n">3</text>
+  <circle cx="1040" cy="190" r="12" class="badge"/><text x="1040" y="196" class="badge-n">4</text>
+
+  <!-- Legend -->
+  <rect x="30" y="835" width="1140" height="105" class="box"/>
+  <path d="M50 862 H110" class="flow" marker-end="url(#arrow)"/>
+  <text x="124" y="867" class="s">data flow</text>
+  <path d="M50 886 H110" class="flow-pending" marker-end="url(#arrow-coral)"/>
+  <text x="124" y="891" class="s">pending user decision</text>
+  <circle cx="80" cy="913" r="12" class="badge"/><text x="80" y="919" class="badge-n">n</text>
+  <text x="124" y="917" class="s">trust boundary</text>
+  <text x="330" y="858" class="s"><tspan class="gold">1</tspan> Browser → controller: untrusted. Size, type, rate and origin checks.</text>
+  <text x="330" y="876" class="s"><tspan class="gold">2</tspan> Controller → containers: read-only mounts, allowlisted environment, no network, no Docker socket.</text>
+  <text x="330" y="894" class="s"><tspan class="gold">3</tspan> Containers → controller: untrusted. Output parsed under size caps and schema checks.</text>
+  <text x="330" y="912" class="s"><tspan class="gold">4</tspan> Controller ↔ model: file content goes out quoted and truncated. Model output is only a script for the</text>
+  <text x="348" y="928" class="s">analyse container or escaped display text. It never sets the verdict, flags, mounts or network.</text>
+</svg>

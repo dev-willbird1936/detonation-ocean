@@ -1,0 +1,260 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Anselm Reyes",
+    "short": "anselm",
+    "email": "anselm.reyes@copperledger.example",
+    "avatar": "ft-2013"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "yellow",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img3.jpg",
+    "wifiNetwork": "CopperLedger-Staff",
+    "battery": 78
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "anselm"
+      },
+      "f-bond": {
+        "id": "f-bond",
+        "parentId": "documents",
+        "name": "Bond piece draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 52,
+        "modified": "2013-05-13T10:00:00Z",
+        "trashed": false,
+        "contentId": "c-bond"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-markets",
+        "app": "calendar",
+        "title": "Markets briefing",
+        "body": "Markets briefing before the open.",
+        "time": "2013-05-14T07:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "contacts",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-edit",
+          "folder": "inbox",
+          "from": "Greta Olsen <greta.olsen@copperledger.example>",
+          "to": "anselm.reyes@copperledger.example",
+          "subject": "Bond market piece",
+          "body": "Anselm,\n\nThe bond market piece goes online at four. Please check the chart captions once more.\n\nGreta",
+          "time": "2013-05-13T14:20:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-blog",
+          "folder": "inbox",
+          "from": "Blogs Desk <blogs@copperledger.example>",
+          "to": "anselm.reyes@copperledger.example",
+          "subject": "Blog posting window",
+          "body": "Blog posts for the evening round go live at six. Draft links are in the shared folder.",
+          "time": "2013-05-13T11:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-it",
+          "folder": "inbox",
+          "from": "IT Support <itsupport@copperledger.example>",
+          "to": "anselm.reyes@copperledger.example",
+          "subject": "Printer on the fourth floor",
+          "body": "The fourth-floor printer is back in service.",
+          "time": "2013-05-10T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Anselm Reyes <anselm.reyes@copperledger.example>",
+          "to": "greta.olsen@copperledger.example",
+          "subject": "Re: Chart captions",
+          "body": "Captions fixed. Sending the final text now.",
+          "time": "2013-05-09T16:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-markets",
+          "with": "Markets desk",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Greta Olsen",
+              "text": "Futures are flat this morning.",
+              "time": "2013-05-14T06:50:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Anselm Reyes",
+              "text": "I will lead with the bond move.",
+              "time": "2013-05-14T06:55:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-bond",
+        "folder": "notes",
+        "title": "Bond piece",
+        "body": "Check yield figures\nQuote: strategist\nChart captions",
+        "modified": "2013-05-13T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-brief",
+        "title": "Markets briefing",
+        "start": "2013-05-14T07:30:00Z",
+        "end": "2013-05-14T08:00:00Z",
+        "location": "Floor 3"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-chart",
+        "list": "work",
+        "title": "Recheck chart captions",
+        "due": "2013-05-14T15:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-greta",
+        "name": "Greta Olsen",
+        "email": "greta.olsen@copperledger.example",
+        "phone": "+44 555 0191",
+        "org": "The Copper Ledger"
+      },
+      {
+        "id": "p-blogs",
+        "name": "Blogs Desk",
+        "email": "blogs@copperledger.example",
+        "phone": "+44 555 0192",
+        "org": "The Copper Ledger"
+      },
+      {
+        "id": "p-itsup",
+        "name": "IT Support",
+        "email": "itsupport@copperledger.example",
+        "phone": "+44 555 0193",
+        "org": "The Copper Ledger"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-bond": {
+        "text": "Yields moved sharply.\n\nStrategist quote to be added."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-ledger": {
+          "title": "The Copper Ledger",
+          "url": "www.copperledger.example",
+          "brand": "The Copper Ledger",
+          "heading": "Markets and business news",
+          "body": "Latest market reports. This is a fictional financial newspaper site.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-ledger",
+          "title": "The Copper Ledger"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

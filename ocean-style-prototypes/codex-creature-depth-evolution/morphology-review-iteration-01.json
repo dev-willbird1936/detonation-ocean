@@ -1,0 +1,36 @@
+{
+  "reviewType": "QualVerLoop parent visual review before iteration 1",
+  "target": "Six-family, three-form creature-evolution gallery; pixel-art morphology, palette-role coherence, complete framing and stage differentiation.",
+  "acceptanceThreshold": "Overall gallery >7.5/10 and targeted forms >8.0/10; no scientific-validation claim.",
+  "independentReviewReference": "../independent-creature-visual-review.json",
+  "beforeIteration": {
+    "galleryPresentation": {
+      "score": 5.5,
+      "finding": "The full-page capture clips lower anatomy in four families because each image element rendered at 439x439 inside a 290px artboard. The actual 256x256 exports are complete.",
+      "decision": "Fixed in index.html by constraining displayed images to 256x256 with contain sizing. Chrome recheck confirmed all 18 image boxes fit their artboards."
+    },
+    "families": [
+      {"family":"anglerfish","familyIdentity":9.2,"stageDifferentiation":8.3,"paletteAndPixelCraft":8.6,"overall":8.7,"decision":"keep; all three forms show a progressively broader jaw/lure while retaining the same fish."},
+      {"family":"viperfish","familyIdentity":9.0,"stageDifferentiation":7.6,"paletteAndPixelCraft":8.5,"overall":7.9,"decision":"replace Trench only; the existing advanced form differs too little from the Midnight/Abyss form."},
+      {"family":"siphonophore","familyIdentity":8.8,"stageDifferentiation":8.1,"paletteAndPixelCraft":8.5,"overall":8.4,"decision":"keep; the same colony identity remains connected while bell count, density and colony length increase."},
+      {"family":"isopod-host","familyIdentity":8.3,"parasiteReadability":7.8,"stageDifferentiation":8.4,"paletteAndPixelCraft":8.5,"overall":8.2,"decision":"keep with caveat; the segmented mouth occupant is visible as a parasite, but not scientifically validated as an isopod."},
+      {"family":"cookiecutter","familyIdentity":8.8,"stageDifferentiation":8.3,"paletteAndPixelCraft":8.6,"overall":8.6,"decision":"keep; compact shark, circular toothed mouth and collar persist with clear Trench growth."},
+      {"family":"octopus","familyIdentity":8.7,"stageDifferentiation":7.2,"paletteAndPixelCraft":8.5,"overall":7.9,"decision":"replace the entire family with the user-requested Squid → Kraken line; preserve all original octopus inputs, native outputs, exports and reports."}
+    ],
+    "galleryOverall": 8.1,
+    "residual": "The old octopus family violates the user's updated tentacle-grouping direction; Viperfish Trench fails the stage-difference target. The other four non-octopus families meet the target with the stated isopod caveat."
+  },
+  "approvedIterationTargets": [
+    {"family":"squid","stage":"base-rich","targetDepths":["Sunlight","Twilight"],"reason":"New family identity and gathered-tentacle silhouette; preserve the old octopus base unchanged."},
+    {"family":"squid","stage":"midnight-abyss","targetDepths":["Midnight","Abyss"],"reason":"Make the intermediate squid form more intimidating while keeping all arms in one trailing cluster."},
+    {"family":"squid","stage":"trench","targetDepths":["Trench"],"reason":"Replace radial octopus Kraken with a giant squid-like Kraken whose tentacles stay grouped."},
+    {"family":"viperfish","stage":"trench-v2","targetDepths":["Trench"],"reason":"Create a clearly more advanced but still long, slender viperfish than the existing midpoint."}
+  ],
+  "generationPolicy": "One native image_gen.imagegen call per listed target in this iteration. Preserve old files. Inspect all outputs before packaging; if any target remains below 8.0, create a separately reviewed targeted follow-up rather than retrying blindly.",
+  "palettePolicy": "Keep the existing three-region, nine-shade octopus profile colors for the new squid line, but define roles as mantle/body, bundled tentacles and fin/sucker accents in a new profile file. Keep palette-profiles.json and all old octopus assets unchanged.",
+  "notes": [
+    "The user explicitly changed the octopus family to Squid → Kraken and requested the legs/tentacles be grouped rather than spread radially.",
+    "The existing browser gallery CSS was corrected; current Chrome DOM verification reports all 18 cards decoded and every 256x256 image box fits within its artboard.",
+    "Native generation price/quota remains unknown. A fresh action review returned CONFIRM for four Codex imagegen calls; no image-generation request has been sent. Awaiting the user's explicit confirmation of this account-resource use; see revisions/squid-kraken-v1/generation-action-review.json."
+  ]
+}

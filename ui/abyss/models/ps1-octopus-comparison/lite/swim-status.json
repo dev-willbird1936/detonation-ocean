@@ -1,0 +1,48 @@
+{
+  "status": "succeeded",
+  "task_id": "ee6a8941-1667-5639-b324-4d1a59bd1546",
+  "operation": "animate",
+  "asset_id": "72fd515c-e439-4aba-9e77-415b9617a37f",
+  "created_at": 1791211889,
+  "updated_at": 1791211922,
+  "result": {
+    "asset_id": "72fd515c-e439-4aba-9e77-415b9617a37f",
+    "status": "ready",
+    "prompt": "A blue-ringed octopus for a PS1 ocean menu: golden ochre rounded mantle, electric blue ring markings, two dark eyes, exactly eight distinct curled arms with visible suckers. Hand-painted pixel textures, faceted silhouette, separate articulated arms.",
+    "style": "rd_lowpoly__detailed_lite",
+    "size": 64,
+    "size_source": "manual",
+    "mode": "quality",
+    "created_at": 1791211629,
+    "updated_at": 1791211922,
+    "inference_id": "inf_KaBmJAb6EDrz8QVpoX7GRvoV7M4P3jdL",
+    "versions": [
+      {
+        "number": 1,
+        "kind": "generate",
+        "prompt": "A blue-ringed octopus for a PS1 ocean menu: golden ochre rounded mantle, electric blue ring markings, two dark eyes, exactly eight distinct curled arms with visible suckers. Hand-painted pixel textures, faceted silhouette, separate articulated arms.",
+        "created_at": 1791211707,
+        "render_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/render/3f2ac62fc2ae008d9fba8fbaaf669a8c34c0615b7bf4c73cc67099a14b514898.png",
+        "turntable_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/turntable/61c000f7314ed87aabb0a6c033bd143bd4ed8d230e1186b6da725459af3a0901.png",
+        "scene_url": "https://da8ztllw6by0f.cloudfront.net/lowpoly/v1/users/177803/scene/2aeac56efae6b796f58cefd73791173192d635271dbb8844cb5fcfa3b114804c.json",
+        "animations": [
+          "idle_hover",
+          "swim_idle"
+        ],
+        "rigged": true,
+        "stats": {
+          "size_px": [
+            62.0,
+            19.5,
+            54.5
+          ],
+          "triangles": 1634,
+          "atlas_pages": [
+            "256x128"
+          ]
+        }
+      }
+    ]
+  },
+  "animation": "swim_idle"
+}

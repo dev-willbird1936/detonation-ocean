@@ -1,0 +1,307 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Jonas Whitfield",
+    "short": "jonas",
+    "email": "jonas.whitfield@ridgeline-staffing.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "orange",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img2.jpg",
+    "wifiNetwork": "Home-5G"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "jonas"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Findings log.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 36,
+        "modified": "2022-09-14T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Scripts notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 62,
+        "modified": "2022-09-05T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Jonas",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-09-15T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings",
+      "terminal"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-timesheet-remind",
+          "folder": "inbox",
+          "from": "Ridgeline Staffing <payroll@ridgeline-staffing.example>",
+          "to": "jonas.whitfield@ridgeline-staffing.example",
+          "subject": "Timesheet reminder",
+          "body": "Please submit your timesheet by Friday noon so payroll runs on time.\n\nRidgeline Staffing",
+          "time": "2022-09-14T09:15:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-contractor-onboa",
+          "folder": "inbox",
+          "from": "Roamly Contractor Office <contractors@roamly.example>",
+          "to": "jonas.whitfield@ridgeline-staffing.example",
+          "subject": "Contractor onboarding: week 3",
+          "body": "Welcome to week 3. Access questions go to the contractor office, never to a chat message from someone you do not know.\n\nContractor Office",
+          "time": "2022-09-12T08:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-your-assignment-",
+          "folder": "inbox",
+          "from": "Rowan Pryce <rowan.pryce@ridgeline-staffing.example>",
+          "to": "jonas.whitfield@ridgeline-staffing.example",
+          "subject": "Your assignment extension",
+          "body": "Your assignment with Roamly is extended to the end of the quarter. Thanks for the good feedback.\n\nRowan",
+          "time": "2022-09-09T16:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-rowan-pryce",
+          "with": "Rowan Pryce",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Rowan Pryce",
+              "text": "Extension confirmed, congratulations.",
+              "time": "2022-09-15T08:05:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-contractor-group",
+          "with": "Contractor group",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Ines Alvarado",
+              "text": "Anyone seen the build dashboard move?",
+              "time": "2022-09-15T08:40:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-assignment-checklist",
+        "folder": "notes",
+        "title": "Assignment checklist",
+        "body": "Timesheet Friday\nRotate password at month end\nAsk the contractor office, not chat, about access",
+        "modified": "2022-09-10T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-test-plan",
+        "folder": "notes",
+        "title": "Test plan",
+        "body": "Check the dashboards\nLog findings in the tracker",
+        "modified": "2022-09-08T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-weekly-sync",
+        "title": "Weekly sync",
+        "start": "2022-09-16T10:00:00Z",
+        "end": "2022-09-16T10:30:00Z",
+        "location": "Video call"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-submit-timesheet",
+        "list": "work",
+        "title": "Submit timesheet",
+        "due": "2022-09-16T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-rowan-pryce",
+        "name": "Rowan Pryce",
+        "email": "rowan.pryce@ridgeline-staffing.example",
+        "phone": "+1 555 0211",
+        "org": "Ridgeline Staffing"
+      },
+      {
+        "id": "p-2-ines-alvarado",
+        "name": "Ines Alvarado",
+        "email": "ines.alvarado@ridgeline-staffing.example",
+        "phone": "+1 555 0212",
+        "org": "Ridgeline Staffing"
+      },
+      {
+        "id": "p-3-contractor-office",
+        "name": "Contractor Office",
+        "email": "contractors@roamly.example",
+        "phone": "+1 555 0210",
+        "org": "Roamly"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Open findings: 3\nClosed this week: 5"
+      },
+      "c-doc-2": {
+        "text": "Notes on the reporting scripts used in the contractor tracker."
+      }
+    },
+    "web": {
+      "pages": {
+        "roamly-contractors": {
+          "title": "Roamly contractor access",
+          "url": "access.roamly.example",
+          "body": "Contractor access\n\nNo sign-in problems are reported. The contractor office never asks you to approve a prompt.",
+          "choices": []
+        },
+        "roamly-status": {
+          "title": "Roamly status page",
+          "url": "status.roamly.example",
+          "body": "All contractor systems operational.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-roamly-contractors",
+          "title": "Roamly contractor access",
+          "url": "scene:roamly-contractors"
+        },
+        {
+          "id": "bm-roamly-status",
+          "title": "Roamly status page",
+          "url": "scene:roamly-status"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-roamly-contractors",
+          "url": "scene:roamly-contractors",
+          "title": "Roamly contractor access",
+          "time": "2022-09-15T08:30:00Z"
+        },
+        {
+          "id": "h-roamly-status",
+          "url": "scene:roamly-status",
+          "title": "Roamly status page",
+          "time": "2022-09-14T12:00:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Never approve a prompt you did not start",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

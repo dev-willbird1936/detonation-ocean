@@ -1,0 +1,39 @@
+{
+  "description": "Script drops an executable into Downloads and runs it.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "second-stage"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "execve",
+      "detail": "execve /home/dana/Downloads/update.bin",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Downloads/update.bin",
+      "argv": [
+        "update.bin"
+      ]
+    },
+    {
+      "id": "ev-2",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Downloads/update.bin",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Downloads/update.bin",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 6.2,
+      "sizeBefore": null,
+      "sizeAfter": 9000,
+      "executable": true
+    }
+  ]
+}

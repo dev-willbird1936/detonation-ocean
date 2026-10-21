@@ -1,0 +1,42 @@
+# Text files are LF in the working tree on every OS, so hashes recorded in manifests match a Linux clone.
+* text=auto eol=lf
+
+# Windows launchers and mail need CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.eml text eol=crlf
+
+# Renderer licence texts: ui/abyss/manifest.json hashes the upstream CRLF bytes, and tools/refresh-abyss-manifest.mjs leaves those entries alone.
+ui/abyss/LICENSE-dioramas.txt text eol=crlf
+ui/abyss/LICENSE-lenis.txt text eol=crlf
+
+# Binary types: never converted.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.glb binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.mp4 binary
+*.zip binary
+*.7z binary
+*.gz binary
+*.exe binary
+*.dll binary
+*.msi binary
+*.docx binary
+*.docm binary
+*.xlsx binary
+*.pdf binary
+*.blend binary
+*.blend1 binary
+Cookies binary
+"Login Data" binary

@@ -1,0 +1,56 @@
+{
+  "description": "Copies itself to three locations.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "trench",
+    "findings": [
+      "spread"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Desktop/a.py",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Desktop/a.py",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 4.8,
+      "sizeBefore": null,
+      "sizeAfter": 1200,
+      "copyOfSample": true
+    },
+    {
+      "id": "ev-2",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Downloads/b.py",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Downloads/b.py",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 4.8,
+      "sizeBefore": null,
+      "sizeAfter": 1200,
+      "copyOfSample": true
+    },
+    {
+      "id": "ev-3",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Pictures/c.py",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/home/dana/Pictures/c.py",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 4.8,
+      "sizeBefore": null,
+      "sizeAfter": 1200,
+      "copyOfSample": true
+    }
+  ]
+}

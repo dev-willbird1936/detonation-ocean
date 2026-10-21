@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "provider": "Codex built-in image_gen.imagegen",
+  "quota_and_price": "Unknown; no quota or price estimate was available in this session.",
+  "scope": {
+    "families": [
+      "anglerfish",
+      "viperfish",
+      "siphonophore",
+      "isopod-host",
+      "cookiecutter",
+      "octopus"
+    ],
+    "morphology_profiles": [
+      {
+        "id": "base",
+        "depths": [
+          "Sunlight",
+          "Twilight"
+        ],
+        "source": "existing native base; shared by both depths"
+      },
+      {
+        "id": "midnight-abyss",
+        "depths": [
+          "Midnight",
+          "Abyss"
+        ],
+        "source": "one new shared midpoint morphology per family"
+      },
+      {
+        "id": "trench",
+        "depths": [
+          "Trench"
+        ],
+        "source": "one separate advanced morphology per family"
+      }
+    ],
+    "expected_final_profile_assets": 18,
+    "existing_native_bases": 6,
+    "new_native_outputs_requested": 12,
+    "separate_composition_work": "ocean-style-prototypes/creature-assets, six styles by five depths; unchanged and separately evidenced."
+  },
+  "requests_completed": 12,
+  "native_outputs_saved": 12,
+  "entries": [
+    {
+      "family": "anglerfish",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected anglerfish anatomy reference. Preserve its distinctive compact deep-sea body plan, left-facing side view, raised lure orientation, fins, face, and overall recognizable silhouette. Image 2 is the anglerfish role-map reference. Use it only for primary/secondary/tertiary body-region placement; ignore its placeholder magenta, cyan, and lime colors.\nPrimary request: create one moderately evolved and more intimidating Midnight/Abyss anglerfish, clearly the same individual family and orientation as Image 1. Strengthen the broad head and jaw modestly with a slightly larger open jaw and a few longer, readable fangs; make the raised lure bulb more prominent. Keep one head, one lure, and the existing fins and tail. Do not add limbs or extra creatures.\nStyle/medium: crisp SNES/PC98-era game sprite pixel art, hard-edged pixels, visible dark stepped outline, flat stepped light and shadow clusters, coherent pixel scale, no smoothing.\nComposition: square transparent canvas; one complete centered creature at a similar relative scale to Image 1, generous clear margin on every side; no crop.\nRole regions and palette: keep exactly three distinct, anatomically contiguous role groups, using stepped shadow/base/highlight tones within each group: primary broad head and body = #0B4752, #167D88, #55B6AD; secondary belly, fins, and fan tail = #536A70, #8FADAA, #DDD5B8; tertiary forehead lure bulb and small dorsal accents = #A9562F, #D7883E, #F2C66D. Keep role groups vivid and readable. Neutral outline = #17232D; mouth and pupil = #0B1118; eye and teeth = #E9E3D3. Use only these colors and transparent pixels.\nConstraints: solid true alpha transparency outside the sprite, no background, no gradient, no soft paint, no 3D, no checkerboard, no text, no labels, no frame, no detached props, no gore, no extra head, no random limb additions, no detached or speckled role colors, no visible fear or strength statistics. Return one complete creature PNG only.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/anglerfish-anatomy-reference.png",
+          "sha256": "e3b7b830f15025aead4b112546efbbfa844d48354e075826671998c92cb20d6a",
+          "role": "shape, pose, family identity"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/anglerfish-role-map-reference.png",
+          "sha256": "f9a9d2b5e12bd99eeaa8a43d33e02507f5a6c2905b789937ce11574ae9418d9d",
+          "role": "primary/secondary/tertiary body-region placement only; placeholder colors ignored"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-1eb8b400-c536-40b1-9fd3-47ace3fec232.png",
+        "sha256": "ceff711d650a76e78b5ec7ae50daf629e06936713af07d170a75d5311a473c11",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "anglerfish-midnight-abyss-native.png",
+        "sha256": "ceff711d650a76e78b5ec7ae50daf629e06936713af07d170a75d5311a473c11",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "One recognizable left-facing anglerfish with a single raised lure and stronger jaw/fangs. The three role groups remain contiguous and distinguishable. The sprite fills most of the canvas and appears to have a tight lower margin, so review framing during parent integration; native output is preserved unchanged.",
+      "recovery_errors": []
+    },
+    {
+      "family": "anglerfish",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected anglerfish anatomy reference. Image 2 is the anglerfish role-map reference. Image 1 controls family identity, anatomy, pose, orientation, and silhouette. Image 2 controls primary/secondary/tertiary body-region placement only; ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: Use the selected anglerfish family anatomy reference to preserve its recognizable identity, side-view orientation, raised lure, fins, and face. Use the role-map reference only for the placement of the three body color regions; ignore its placeholder colors. Create one distinctly advanced Trench evolution: keep the same single anglerfish, but give it a broader giant jaw, longer cleanly stepped fangs, and a more extended raised lure with one larger bulb. Preserve the recognizable body plan and one head, one lure, and the existing fins and tail.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered creature on a square transparent canvas, in the same side-view orientation and approximate family view scale as Image 1. Keep all parts in frame with at least 10% clear transparent margin; the silhouette must not touch canvas edges.\nRole regions and palette: preserve three distinct anatomically contiguous semantic regions. Use only these exact species-specific swatches, clustered as shadow/base/highlight tones within each body region: primary broad head and body: shadow #0B4752, base #167D88, highlight #55B6AD; secondary belly, fins, fan tail: shadow #536A70, base #8FADAA, highlight #DDD5B8; tertiary forehead lure bulb and small dorsal accents: shadow #A9562F, base #D7883E, highlight #F2C66D. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, random limb additions, detached parts, or scattered speckles. Return exactly one complete creature PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/anglerfish-anatomy-reference.png",
+          "sha256": "e3b7b830f15025aead4b112546efbbfa844d48354e075826671998c92cb20d6a",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/anglerfish-role-map-reference.png",
+          "sha256": "f9a9d2b5e12bd99eeaa8a43d33e02507f5a6c2905b789937ce11574ae9418d9d",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-a5979f60-9a5a-4655-aada-431d969e52c5.png",
+        "sha256": "68cd57d45e5d244023a42886102b60244868c6ae491e113030a66046d2e7c3e4",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "anglerfish-trench-native.png",
+        "sha256": "68cd57d45e5d244023a42886102b60244868c6ae491e113030a66046d2e7c3e4",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "viperfish",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected viperfish anatomy reference; preserve its long narrow body, left-facing side view, tall dorsal fin, forked tail, huge toothed jaw, and recognizable silhouette. Image 2 is the viperfish role-map reference; use only for primary/secondary/tertiary body-region placement and ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one moderately evolved, more intimidating Midnight/Abyss viperfish that remains clearly the same species and body plan. Modestly lengthen and sharpen the needle fangs, strengthen the jaw, and make a few existing lateral photophores more pronounced. Keep the fish streamlined and elongated; add no new heads, limbs, or unrelated shark traits.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered creature on a square transparent canvas, preserving Image 1 orientation and approximate family view scale. Keep every fin and tail tip in frame with at least 10% clear transparent margin; do not touch canvas edges.\nRole regions and palette: keep exactly three distinct anatomically contiguous semantic regions. Use only these exact species-specific shadow/base/highlight swatches in coherent clusters: primary long upper flank and back: shadow #0A334E, base #176286, highlight #51A6B8; secondary belly, fins, forked tail: shadow #344A5D, base #6D8591, highlight #B7C8C8; tertiary sparse lateral photophores: shadow #2FAABB, base #55D6CF, highlight #C7F1DC. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, random limb additions, detached role regions, or scattered speckles. Return exactly one complete creature PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/viperfish-anatomy-reference.png",
+          "sha256": "8b0ecdd8010dd087281dc0a162b7cd48d7e8bff8499c0a73a4abe3aaf600f115",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/viperfish-role-map-reference.png",
+          "sha256": "ab8771d2e47359347cfec67e77336e8775b0db378c66521fa027419def78882e",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-3c591d0c-2d9e-49c9-8d45-b9bc7162dddc.png",
+        "sha256": "cef0799c377492c120f2120394dc5b1491845bc75622d6fe7efd47ec5270d165",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "viperfish-midnight-abyss-native.png",
+        "sha256": "cef0799c377492c120f2120394dc5b1491845bc75622d6fe7efd47ec5270d165",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "viperfish",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected viperfish anatomy reference; preserve its long narrow body, left-facing side view, tall dorsal fin, forked tail, and viperfish head. Image 2 is the viperfish role-map reference; use only for primary/secondary/tertiary body-region placement and ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one distinctly advanced Trench viperfish. Give it a larger deep-predator body and longer needle fangs, with a stronger but still recognizably viperfish jaw and a few visible lateral photophores. Keep its long streamlined viperfish silhouette, fin layout, and forked tail. It must not become a generic shark. Do not add heads, limbs, or unrelated traits.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered creature on a square transparent canvas, preserving Image 1 orientation and approximate family view scale. Keep every fin, tooth, and tail tip in frame with at least 10% clear transparent margin; the silhouette must not touch canvas edges.\nRole regions and palette: preserve exactly three distinct anatomically contiguous semantic regions. Use only these exact species-specific shadow/base/highlight swatches, clustered within their body regions: primary long upper flank and back: shadow #0A334E, base #176286, highlight #51A6B8; secondary belly, fins, forked tail: shadow #344A5D, base #6D8591, highlight #B7C8C8; tertiary sparse lateral photophores: shadow #2FAABB, base #55D6CF, highlight #C7F1DC. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, random limb additions, detached role regions, or scattered speckles. Return exactly one complete creature PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/viperfish-anatomy-reference.png",
+          "sha256": "8b0ecdd8010dd087281dc0a162b7cd48d7e8bff8499c0a73a4abe3aaf600f115",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/viperfish-role-map-reference.png",
+          "sha256": "ab8771d2e47359347cfec67e77336e8775b0db378c66521fa027419def78882e",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-bc00c63d-47f3-43f7-a408-1d08b3a6eb43.png",
+        "sha256": "7a12e9bd5434f2fa90425785ce6a2b0d6f516322a42b1828bd368c7aea1497a4",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "viperfish-trench-native.png",
+        "sha256": "7a12e9bd5434f2fa90425785ce6a2b0d6f516322a42b1828bd368c7aea1497a4",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "siphonophore",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected siphonophore anatomy reference; preserve its diagonal orientation and identity as one connected colony with a continuous stem, attached zooids, and terminal float. Image 2 is the siphonophore role-map reference; use only for primary/secondary/tertiary body-region placement and ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one moderately evolved, more intimidating Midnight/Abyss siphonophore that remains one connected colony. Make the shared stem slightly more substantial and strengthen the attached feeding zooids and tentacles while retaining the recognizable diagonal colony form. Keep all bells and feeding filaments physically connected to the same colony; add no second colony or detached organism.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete diagonal colony centered on a square transparent canvas, matching Image 1 orientation and approximate family view scale. Keep every attached float, bell, and filament in frame with at least 10% clear transparent margin; no edge contact.\nRole regions and palette: keep exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches in coherent clusters: primary one continuous shared stem: shadow #30284E, base #514D79, highlight #9B95BC; secondary attached zooids, bells and feeding filaments: shadow #07545D, base #168A97, highlight #73D2CF; tertiary terminal float and small filament tips: shadow #7A4547, base #C16B5A, highlight #E9B47E. Neutral outline #17232D; eye and anatomy details #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra colony, unrelated organisms, severed parts, or scattered color speckles. Return exactly one complete connected colony PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/siphonophore-anatomy-reference.png",
+          "sha256": "a8aa37077e7bb322b6c126f9dbf3b2fc16249f8f9ff309016c3e35a47def69e3",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/siphonophore-role-map-reference.png",
+          "sha256": "4702dc8806d81829da5ba2474a33f9573ff5e19c27c6112c1199125bcc52e09b",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-bc6b73f9-3ee5-49ce-a33b-ec3840ec2f3b.png",
+        "sha256": "61efb46198c2d5aec2e61d54fcf50b2ad62fd2536b2b4430d878e07b015c1a06",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "siphonophore-midnight-abyss-native.png",
+        "sha256": "61efb46198c2d5aec2e61d54fcf50b2ad62fd2536b2b4430d878e07b015c1a06",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "siphonophore",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected siphonophore anatomy reference; preserve its diagonal orientation and identity as one connected colony. Image 2 is the siphonophore role-map reference; use only for primary/secondary/tertiary body-region placement and ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one distinctly advanced Trench siphonophore as a larger, more imposing version of the same family. Extend and thicken the single continuous shared stem, with a larger sequence of attached bells/zooids and stronger feeding filaments. Every zooid, bell, and filament must visibly connect to this one continuous colony. Keep one terminal float, one colony, and the recognizable diagonal body plan; create no separate organisms.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete connected diagonal colony centered on a square transparent canvas, matching Image 1 orientation and approximate family view scale. Keep all colony ends and attached filaments in frame with at least 10% clear transparent margin; no edge contact.\nRole regions and palette: keep exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches in coherent clusters: primary one continuous shared stem: shadow #30284E, base #514D79, highlight #9B95BC; secondary attached zooids, bells and feeding filaments: shadow #07545D, base #168A97, highlight #73D2CF; tertiary terminal float and small filament tips: shadow #7A4547, base #C16B5A, highlight #E9B47E. Neutral outline #17232D; anatomy details #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra colonies, unrelated organisms, severed parts, or scattered speckles. Return exactly one complete connected colony PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/siphonophore-anatomy-reference.png",
+          "sha256": "a8aa37077e7bb322b6c126f9dbf3b2fc16249f8f9ff309016c3e35a47def69e3",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/siphonophore-role-map-reference.png",
+          "sha256": "4702dc8806d81829da5ba2474a33f9573ff5e19c27c6112c1199125bcc52e09b",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-452af3da-584e-4c31-b8ce-21530491d9f7.png",
+        "sha256": "48a6348da3de5770f5dc9db85ba66a98e3b6f5b66bfa9fd43cf4d5e1f2766e8c",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "siphonophore-trench-native.png",
+        "sha256": "48a6348da3de5770f5dc9db85ba66a98e3b6f5b66bfa9fd43cf4d5e1f2766e8c",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "isopod-host",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected isopod-host anatomy reference; preserve its recognizable fish body and left-facing side view. Image 2 is the isopod-host role-map reference; use only for primary host-body, secondary belly/fins/tail, and tertiary parasite placement. Ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one moderately evolved and more intimidating Midnight/Abyss isopod-host fish. Modestly broaden and armor the host fish with a few coherent stepped plates and strengthen its open jaw. Keep the isopod parasite visibly attached inside the host's mouth, in the same position as the role map; it remains part of this single host-creature design and must not become a separate nearby organism. Preserve the fish's head, fins, and tail layout.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered left-facing fish on a square transparent canvas, matching Image 1 approximate family view scale. Keep the host, parasite, fins, and tail fully in frame with at least 10% clear transparent margin; no edge contact.\nRole regions and palette: exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches: primary host fish body: shadow #105554, base #16857C, highlight #68B69C; secondary belly, fins and tail: shadow #506A72, base #9BB2AA, highlight #E1DDC7; tertiary segmented isopod inside the open mouth: shadow #5C4338, base #9C7051, highlight #D1AF7A. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, separate parasite, extra organism, extra head, random limb additions, detached role regions, or scattered speckles. Return exactly one complete creature PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/isopod-host-anatomy-reference.png",
+          "sha256": "32a860b7c044f7f5cf4b2247910f9ce16940abb5e58c29e8a60ee9f1ed096ee1",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/isopod-host-role-map-reference.png",
+          "sha256": "9c8cea3972ffb88db7e731f0624997f0a9c1c25c245dde9dcd80f4970a5aaa99",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-70142541-a9cd-46e5-a10b-8677132c5379.png",
+        "sha256": "1b31b7a085d4fe2d99c2a1924a9f7b51f44cdc58ebfb3d4a5155435568165f01",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "isopod-host-midnight-abyss-native.png",
+        "sha256": "1b31b7a085d4fe2d99c2a1924a9f7b51f44cdc58ebfb3d4a5155435568165f01",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "isopod-host",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected isopod-host anatomy reference; preserve its recognizable fish family and left-facing orientation. Image 2 is the isopod-host role-map reference; use only for primary host-body, secondary belly/fins/tail, and tertiary parasite placement. Ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one distinctly advanced Trench isopod-host fish: an armored giant host with a much broader, heavy fish body, thick protective plates, and a strong open jaw. Keep the isopod parasite clearly attached inside the mouth, visible between the jaws; it must remain with this single host creature and never float nearby. Preserve the original fish face, fin arrangement, and tail so it remains the same family.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered left-facing creature on a square transparent canvas. The giant host may be larger than its base but must fit fully in frame, at a similar family view scale, with at least 10% transparent margin around all parts; no edge contact.\nRole regions and palette: preserve exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches: primary host fish body: shadow #105554, base #16857C, highlight #68B69C; secondary belly, fins and tail: shadow #506A72, base #9BB2AA, highlight #E1DDC7; tertiary segmented isopod inside the open mouth: shadow #5C4338, base #9C7051, highlight #D1AF7A. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, separate parasite, extra organism, extra head, random limb additions, detached role regions, or scattered speckles. Return exactly one complete host-creature PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/isopod-host-anatomy-reference.png",
+          "sha256": "32a860b7c044f7f5cf4b2247910f9ce16940abb5e58c29e8a60ee9f1ed096ee1",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/isopod-host-role-map-reference.png",
+          "sha256": "9c8cea3972ffb88db7e731f0624997f0a9c1c25c245dde9dcd80f4970a5aaa99",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-cabb7c88-e25e-428f-acb2-f5479ac4223a.png",
+        "sha256": "8890a65ce1811307543963d2f3246006d256d24a39dfa7fac993baba02695c2b",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "isopod-host-trench-native.png",
+        "sha256": "8890a65ce1811307543963d2f3246006d256d24a39dfa7fac993baba02695c2b",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected cookiecutter anatomy reference; preserve its left-facing small deep-shark family identity and side-view orientation. Image 2 is the cookiecutter role-map reference; use only for primary body, secondary belly/fins/tail, and tertiary collar/circular mouth-rim placement. Ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one moderately evolved, more intimidating Midnight/Abyss cookiecutter shark. Strengthen its jaw and teeth slightly and make the distinctive dark collar band and circular bite-rim motif clearer while keeping the same recognizable compact shark body plan. Do not turn it into an unrelated shark or add extra animals.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered left-facing creature on a square transparent canvas, matching Image 1 approximate family view scale. Keep the full snout, collar, fins, and tail in frame with at least 10% clear transparent margin; no edge contact.\nRole regions and palette: exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches: primary compact dorsal cigar body: shadow #1E3445, base #3F6277, highlight #809FA4; secondary belly, fins and tail: shadow #61574E, base #A49580, highlight #E3D6B7; tertiary distinctive body collar and circular mouth rim: shadow #6C2F48, base #A35540, highlight #E0A85D. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, random limb additions, detached role regions, or scattered speckles. Return exactly one complete cookiecutter shark PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/cookiecutter-anatomy-reference.png",
+          "sha256": "7ec56bf501dba48e21ef8a66004e9ac3f2dd763be3c3cbfbc07c181f99252285",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/cookiecutter-role-map-reference.png",
+          "sha256": "b7f00d012c37c91b8a0385ea57fdc53cbad1bfb644aa0a9c83daae00ea08aa9d",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-cbb12e34-7bad-4965-9924-1f5754c186a7.png",
+        "sha256": "bfe2384b76abf7deca347cc644ee9b53c7ec572765e274beab753a32f05026af",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "cookiecutter-midnight-abyss-native.png",
+        "sha256": "bfe2384b76abf7deca347cc644ee9b53c7ec572765e274beab753a32f05026af",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected cookiecutter anatomy reference; preserve its left-facing side-view orientation and family-defining collar/ring-bite identity. Image 2 is the cookiecutter role-map reference; use only for primary body, secondary belly/fins/tail, and tertiary collar/circular mouth-rim placement. Ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one distinctly advanced Trench form: a huge, megalodon-inspired cookiecutter shark with a powerful deep-predator body and larger jaw. Keep the family unmistakable by preserving a clearly visible dark collar band and/or distinctive circular bite-rim motif around the mouth. Retain the same left-facing shark body plan with fins and tail; do not turn it into an unrelated generic shark.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered creature on a square transparent canvas, matching Image 1 orientation and approximate family view scale. Keep the full giant shark, collar, fins, mouth, and tail in frame with at least 10% clear transparent margin; no edge contact.\nRole regions and palette: exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches: primary compact dorsal cigar body: shadow #1E3445, base #3F6277, highlight #809FA4; secondary belly, fins and tail: shadow #61574E, base #A49580, highlight #E3D6B7; tertiary distinctive body collar and circular mouth rim: shadow #6C2F48, base #A35540, highlight #E0A85D. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, random limb additions, detached role regions, or scattered speckles. Return exactly one complete creature PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/cookiecutter-anatomy-reference.png",
+          "sha256": "7ec56bf501dba48e21ef8a66004e9ac3f2dd763be3c3cbfbc07c181f99252285",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/cookiecutter-role-map-reference.png",
+          "sha256": "b7f00d012c37c91b8a0385ea57fdc53cbad1bfb644aa0a9c83daae00ea08aa9d",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-e4c783b4-9429-4808-aa02-a14eb628d26f.png",
+        "sha256": "70be9e2f8c02e6e1c669c4cf0a00fb58fad387308a390b8ac75d4f3476ec7192",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "cookiecutter-trench-native.png",
+        "sha256": "70be9e2f8c02e6e1c669c4cf0a00fb58fad387308a390b8ac75d4f3476ec7192",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "octopus",
+      "stage": "midnight-abyss",
+      "target_depths": [
+        "Midnight",
+        "Abyss"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected octopus anatomy reference; preserve its front-facing orientation, rounded mantle, and eight-arm radial identity. Image 2 is the octopus role-map reference; use only for primary mantle, secondary eight-arm, and tertiary sucker/ring-accent placement. Ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one moderately evolved, more intimidating Midnight/Abyss octopus that remains clearly the same family. Make the mantle slightly larger and more imposing, with a fiercer but still stylized face; strengthen the existing eight arms and make their sucker rows more prominent. Preserve exactly eight distinct arms attached to the mantle. Keep each arm individually traceable and connected; do not add, split, or remove arms.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered front-facing octopus on a square transparent canvas, matching Image 1 approximate family view scale. Show exactly eight complete attached arms, each in frame, with at least 10% clear transparent margin; no arm touches the canvas edge.\nRole regions and palette: exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches: primary rounded mantle: shadow #633A46, base #A95650, highlight #E28B6C; secondary eight attached arms: shadow #243B61, base #3C6A93, highlight #89ABD0; tertiary suckers and compact ring accents: shadow #79612C, base #C0A33F, highlight #F1D075. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, ninth arm, fewer than eight arms, detached limbs, random additions, detached role regions, or scattered speckles. Return exactly one complete octopus PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/octopus-anatomy-reference.png",
+          "sha256": "601f45952d1f8ece56970653f70ef88c47f3e3979026e92bdc6697501684ad71",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/octopus-role-map-reference.png",
+          "sha256": "14bba5459fa54795eda77b94adb1f33d08b8303e0ead85dcbcf315c4383cfd91",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-7d740480-6125-4ade-9149-00b70ebb2088.png",
+        "sha256": "ddd697cff6486cb3d328659b633f8d8fd89be60568e93cc4dd0b9a6e18038c73",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "octopus-midnight-abyss-native.png",
+        "sha256": "ddd697cff6486cb3d328659b633f8d8fd89be60568e93cc4dd0b9a6e18038c73",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    },
+    {
+      "family": "octopus",
+      "stage": "trench",
+      "target_depths": [
+        "Trench"
+      ],
+      "prompt": "Use case: stylized-concept\nAsset type: one native transparent pixel-art game creature sprite.\nInput images: Image 1 is the selected octopus anatomy reference; preserve its front-facing orientation, rounded mantle, and exactly eight-arm radial identity. Image 2 is the octopus role-map reference; use only for primary mantle, secondary eight-arm, and tertiary sucker/ring-accent placement. Ignore its magenta, cyan, and lime placeholder colors.\nPrimary request: create one distinctly advanced Trench octopus as an enormous kraken-like member of the same family. Give it a larger imposing mantle and eight powerful long arms with clearly visible rows of suckers. It must have exactly eight distinct arms attached directly to the mantle; make every arm individually traceable from its root to its tip. Do not add any ninth tentacle, split arm, detached limb, or extra organism.\nStyle/medium: consistent crisp SNES/PC98-era game sprite pixel art; hard-edged pixels, visible dark stepped outline, flat stepped lighting with coherent clusters and no smoothing.\nComposition: one complete centered front-facing octopus on a square transparent canvas, matching Image 1 orientation and approximate family view scale. Keep the full mantle and all eight arms in frame with at least 10% clear transparent margin; no arm touches the canvas edge.\nRole regions and palette: exactly three distinct anatomically contiguous semantic groups. Use only these exact species-specific shadow/base/highlight swatches: primary rounded mantle: shadow #633A46, base #A95650, highlight #E28B6C; secondary eight attached arms: shadow #243B61, base #3C6A93, highlight #89ABD0; tertiary suckers and compact ring accents: shadow #79612C, base #C0A33F, highlight #F1D075. Neutral outline #17232D; mouth and pupil #0B1118; eye and teeth #E9E3D3. No magenta/cyan/lime placeholder palette.\nConstraints: true alpha transparency outside the sprite; no background, gradient, soft paint, 3D, checkerboard, text, labels, frame, detached props, gore, extra organism, extra head, more or fewer than eight arms, detached limbs, random additions, detached role regions, or scattered speckles. Return exactly one complete octopus PNG.",
+      "tool": "image_gen.imagegen",
+      "request_count": 1,
+      "references": [
+        {
+          "kind": "anatomy",
+          "path": "inputs/octopus-anatomy-reference.png",
+          "sha256": "601f45952d1f8ece56970653f70ef88c47f3e3979026e92bdc6697501684ad71",
+          "role": "shape/pose identity; existing high-quality selected sprite"
+        },
+        {
+          "kind": "role-map",
+          "path": "inputs/octopus-role-map-reference.png",
+          "sha256": "14bba5459fa54795eda77b94adb1f33d08b8303e0ead85dcbcf315c4383cfd91",
+          "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+        }
+      ],
+      "native_staging": {
+        "path": "C:\\Users\\warcr\\.codex\\generated_images\\01a112e7-1c0d-76e3-809c-4e3f2eb2cc9b\\exec-eb4dc371-64cc-44f0-89d8-2024df780be1.png",
+        "sha256": "0973bd471edb11c748cd2195080e5115d907d3ea9b3d5219d378e52f30f7a53e",
+        "width": 1254,
+        "height": 1254,
+        "bit_depth": 8,
+        "png_color_type": 6,
+        "alpha_channel": "RGBA"
+      },
+      "workspace_copy": {
+        "path": "octopus-trench-native.png",
+        "sha256": "0973bd471edb11c748cd2195080e5115d907d3ea9b3d5219d378e52f30f7a53e",
+        "byte_identical_to_native_staging": true
+      },
+      "visual_inspection": "Pending parent visual review.",
+      "recovery_errors": []
+    }
+  ]
+}

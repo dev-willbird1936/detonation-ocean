@@ -1,0 +1,75 @@
+{
+  "description": "Synthetic seed manifest and canary tokens shared by every fixture in this folder.",
+  "seedManifest": [
+    {
+      "path": "/home/dana/Documents/Q3-report.docx",
+      "size": 400,
+      "sha256": "a54f180d956daa1aeb5d4b653b450ea628e1eb4bc8dec88307b34d08e08e0b3a"
+    },
+    {
+      "path": "/home/dana/Documents/budget.xlsx",
+      "size": 437,
+      "sha256": "db7741f36c61be30f7f27bf40c4258d32423c8a6e607bc953d5de1aa429a785a"
+    },
+    {
+      "path": "/home/dana/Documents/notes.txt",
+      "size": 474,
+      "sha256": "be4a11fbd80842a4e2174aa7a3aebb894059ba262a23add14938bbf4b527a192"
+    },
+    {
+      "path": "/home/dana/Documents/photos-list.csv",
+      "size": 511,
+      "sha256": "9f456d588c5634c1547c398121ca06bdab41b3bd9d927171ab68df9afa83b7b3"
+    },
+    {
+      "path": "/home/dana/Desktop/todo.txt",
+      "size": 548,
+      "sha256": "7b588ae6eb52914f67b19297397a22cf96ce63547e257faa9c905fe151251cd7"
+    },
+    {
+      "path": "/home/dana/Pictures/photo-1.png",
+      "size": 585,
+      "sha256": "e233a6fe71e6328a0371bccdf4140092b9097e8320f897dd1b36c61920cb784d"
+    },
+    {
+      "path": "/home/dana/Pictures/photo-2.png",
+      "size": 622,
+      "sha256": "6ece3bf4db36a7487a9a17d1ce262e9b73d063306eafd9b4650c93a881451318"
+    },
+    {
+      "path": "/home/dana/.aws/credentials",
+      "size": 659,
+      "sha256": "6d4cb6116f9fc682c338e04f07ec860967ed69838f790a1d151fff70642513b7"
+    },
+    {
+      "path": "/home/dana/.ssh/id_ed25519",
+      "size": 696,
+      "sha256": "d434cd12a02a38a340328c49f8869553297ae5a0907f8c105b01c5777e6deda1"
+    },
+    {
+      "path": "/home/dana/.env",
+      "size": 733,
+      "sha256": "c6d7cd933b94f0ef79ab4f75f9aa862e7a4299441b66a171193c2c4b6026d07e"
+    },
+    {
+      "path": "/home/dana/.config/chromium/Default/Login Data",
+      "size": 770,
+      "sha256": "7baabf63ef7ef2866e73c88349dd05b11be279c400bcf36cbc4dcaf5ad5a4a7e"
+    },
+    {
+      "path": "/home/dana/.config/chromium/Default/Cookies",
+      "size": 807,
+      "sha256": "86ad5e60222101bdb899bfb3247ce621bd23caacd470420b632f3ba6980cfa5d"
+    },
+    {
+      "path": "/home/dana/.electrum/wallets/default_wallet",
+      "size": 844,
+      "sha256": "cfb7108a3f8c4c924d83702f90466a62eba2ce34461d8a9b3693ff6b70ab906f"
+    }
+  ],
+  "canaryTokens": [
+    "CANARY-AWS-7f3a9c",
+    "CANARY-SSH-51be20",
+    "CANARY-ENV-c04d88"
+  ]
+}

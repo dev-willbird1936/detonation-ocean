@@ -1,0 +1,6 @@
+Abyss renderer source: Dioramas (MIT), with local Detonation Timeline modifications.
+Bundled browser libraries: three.js, GSAP, Lenis and postprocessing; retain their upstream license terms.
+Anglerfish: existing Dioramas asset, CC BY 4.0, credited in the page footer.
+Other creatures: local signed-distance-field sculpts. Textures: ambientCG Leather037, Rock035, Ground054 (CC0).
+Flocking inspiration: tokachi269/wasm-boids (MIT). No new paid assets or live attack code.
+Retro pixel theme (main menu): Jersey 10 typeface (SIL OFL 1.1, fonts/OFL-Jersey10.txt); creature and fish sprites from the project's RetroDiffusion studies (provider terms apply, no CC0 claim; provenance in pixel/provenance.json); AbyssPixelArrows.woff and the pixel schooling-fish bitmaps are drawn for this project. assets/index-retro.js is the packaged renderer bundle with three hook calls added by tools/patch-abyss-sprites.mjs.

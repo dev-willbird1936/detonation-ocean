@@ -1,0 +1,309 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Noor Haddad",
+    "short": "noor",
+    "email": "noor.haddad@honeycrumb.example",
+    "avatar": "instagram-ransom-2021"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "orange",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img1.jpg",
+    "wifiNetwork": "Honeycrumb-Shop",
+    "battery": 90
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "noor"
+      },
+      "f-menu": {
+        "id": "f-menu",
+        "parentId": "documents",
+        "name": "Menu 2021.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 52,
+        "modified": "2021-05-02T10:00:00Z",
+        "trashed": false,
+        "contentId": "c-menu"
+      },
+      "f-prices": {
+        "id": "f-prices",
+        "parentId": "documents",
+        "name": "Price list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 28,
+        "modified": "2021-05-03T10:00:00Z",
+        "trashed": false,
+        "contentId": "c-prices"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-order",
+        "app": "calendar",
+        "title": "Wedding cake pickup",
+        "body": "Pickup at 3 pm today.",
+        "time": "2021-05-14T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "calculator",
+    "clock",
+    "store",
+    "updates"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "photos",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-order",
+          "folder": "inbox",
+          "from": "Priyanka Rao <priyanka.rao@riversidecatering.example>",
+          "to": "noor.haddad@honeycrumb.example",
+          "subject": "Dessert order for 60 guests",
+          "body": "Hi Noor,\n\nWe would like 60 mini lemon tarts for the 29th. Can you confirm the price?\n\nPriyanka",
+          "time": "2021-05-13T15:00:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-flour",
+          "folder": "inbox",
+          "from": "Millhouse Supply <orders@millhouse-supply.example>",
+          "to": "noor.haddad@honeycrumb.example",
+          "subject": "Delivery Tuesday",
+          "body": "Your flour and butter delivery arrives Tuesday between 7 and 9 am.",
+          "time": "2021-05-12T11:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-market",
+          "folder": "inbox",
+          "from": "Saturday Market <manager@riverfront-market.example>",
+          "to": "noor.haddad@honeycrumb.example",
+          "subject": "Stall booking confirmed",
+          "body": "Your stall is confirmed for the next four Saturdays.",
+          "time": "2021-05-10T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Noor Haddad <noor.haddad@honeycrumb.example>",
+          "to": "priyanka.rao@riversidecatering.example",
+          "subject": "Re: Tasting",
+          "body": "Thursday at 2 works. I will bring three flavours.",
+          "time": "2021-05-07T14:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-shop",
+          "with": "Shop team",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Omar Haddad",
+              "text": "Tarts are cooling. Photo coming.",
+              "time": "2021-05-13T07:20:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Noor Haddad",
+              "text": "Great, post it at nine.",
+              "time": "2021-05-13T07:22:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-posts",
+        "folder": "notes",
+        "title": "Posts this week",
+        "body": "Mon: lemon tart photo\nWed: behind the oven\nSat: market stall opening",
+        "modified": "2021-05-12T08:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-pickup",
+        "title": "Wedding cake pickup",
+        "start": "2021-05-14T19:00:00Z",
+        "end": "2021-05-14T19:30:00Z",
+        "location": "Honeycrumb Bakery"
+      },
+      {
+        "id": "e-market",
+        "title": "Saturday market",
+        "start": "2021-05-15T13:00:00Z",
+        "end": "2021-05-15T20:00:00Z",
+        "location": "Riverfront"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-tart",
+        "list": "work",
+        "title": "Price the 60 tarts",
+        "due": "2021-05-14T12:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-omar",
+        "name": "Omar Haddad",
+        "email": "omar.haddad@honeycrumb.example",
+        "phone": "+1 555 0161",
+        "org": "Honeycrumb Bakery"
+      },
+      {
+        "id": "p-priyanka",
+        "name": "Priyanka Rao",
+        "email": "priyanka.rao@riversidecatering.example",
+        "phone": "+1 555 0162",
+        "org": "Riverside Catering"
+      },
+      {
+        "id": "p-mill",
+        "name": "Millhouse Supply",
+        "email": "orders@millhouse-supply.example",
+        "phone": "+1 555 0163",
+        "org": "Millhouse Supply"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-menu": {
+        "text": "Honeycrumb Bakery\nLemon tart\nHoney loaf\nCardamom bun"
+      },
+      "c-prices": {
+        "text": "Tart 3.50\nLoaf 6.00\nBun 2.75"
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-glimmerly": {
+          "title": "Glimmerly",
+          "url": "www.glimmerly.example",
+          "brand": "Glimmerly",
+          "heading": "Share your moments",
+          "body": "Photos and stories from people you follow. This is a fictional photo-sharing site.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-glimmerly",
+          "title": "Glimmerly"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2021-05-09T17:42:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2021-05-02T09:15:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-posts",
+          "name": "Shop posts",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

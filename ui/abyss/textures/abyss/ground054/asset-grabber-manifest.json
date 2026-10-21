@@ -1,0 +1,141 @@
+{
+  "request": "ground mud beach sand",
+  "generatedAt": "2026-10-03T01:37:00.631Z",
+  "source": "ambientcg",
+  "asset": {
+    "source": "ambientcg",
+    "id": "Ground054",
+    "title": "Ground 054",
+    "url": "https://ambientcg.com/a/Ground054",
+    "category": "Textures",
+    "tags": [
+      "54",
+      "beach",
+      "dirt",
+      "ground",
+      "mud",
+      "sand"
+    ],
+    "series": [],
+    "license": "Creative Commons CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false,
+    "licenseSafety": 10,
+    "score": 31,
+    "reason": "ambientCG CC0 material result",
+    "previewUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Ground054.jpg",
+    "downloadUrl": "https://ambientcg.com/get?file=Ground054_1K-JPG.zip",
+    "downloadFileName": "Ground054_1K-JPG.zip",
+    "downloadMode": "direct",
+    "manualDownload": false
+  },
+  "paths": {
+    "root": "D:\\Projects\\Detonation-Dioramas\\.cache\\assets-grabbed\\ambientcg\\Ground054",
+    "pack": "D:\\Projects\\Detonation-Dioramas\\.cache\\assets-grabbed\\ambientcg\\Ground054\\pack",
+    "ready": "D:\\Projects\\Detonation-Dioramas\\.cache\\assets-grabbed\\ambientcg\\Ground054\\ready",
+    "archive": "D:\\Projects\\Detonation-Dioramas\\.cache\\assets-grabbed\\ambientcg\\Ground054\\source.zip",
+    "manifest": "D:\\Projects\\Detonation-Dioramas\\.cache\\assets-grabbed\\ambientcg\\Ground054\\asset-grabber-manifest.json"
+  },
+  "selectedFiles": [
+    "Ground054_1K-JPG_AmbientOcclusion.jpg",
+    "Ground054_1K-JPG_Color.jpg",
+    "Ground054_1K-JPG_Displacement.jpg",
+    "Ground054_1K-JPG_NormalDX.jpg",
+    "Ground054_1K-JPG_NormalGL.jpg",
+    "Ground054_1K-JPG_Roughness.jpg",
+    "Ground054.png",
+    "Ground054_1K-JPG.blend",
+    "Ground054_1K-JPG.mtlx",
+    "Ground054_1K-JPG.tres",
+    "Ground054_1K-JPG.usdc"
+  ],
+  "readyFiles": [
+    "Ground054_1K-JPG_AmbientOcclusion.jpg",
+    "Ground054_1K-JPG_Color.jpg",
+    "Ground054_1K-JPG_Displacement.jpg",
+    "Ground054_1K-JPG_NormalDX.jpg",
+    "Ground054_1K-JPG_NormalGL.jpg",
+    "Ground054_1K-JPG_Roughness.jpg",
+    "Ground054.png",
+    "Ground054_1K-JPG.blend",
+    "Ground054_1K-JPG.mtlx",
+    "Ground054_1K-JPG.tres",
+    "Ground054_1K-JPG.usdc"
+  ],
+  "allExtractedFileCount": 11,
+  "cacheKey": "{\"request\":\"ground mud beach sand\",\"category\":\"Textures\",\"source\":\"ambientcg\",\"formats\":[\"jpg\"],\"fullPack\":false,\"maxReadyFiles\":80,\"asset\":{\"source\":\"ambientcg\",\"id\":\"Ground054\",\"url\":\"https://ambientcg.com/a/Ground054\",\"downloadUrl\":\"https://ambientcg.com/get?file=Ground054_1K-JPG.zip\"}}",
+  "advisor": {
+    "provider": "none",
+    "used": false,
+    "originalRequest": "ground mud beach sand",
+    "request": "ground mud beach sand",
+    "category": "Textures",
+    "source": "ambientcg",
+    "formats": [
+      "jpg"
+    ]
+  },
+  "diagnostics": [
+    {
+      "source": "ambientcg",
+      "ok": true,
+      "count": 2,
+      "durationMs": 481
+    }
+  ],
+  "license": {
+    "name": "Creative Commons CC0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false,
+    "shipSafe": true
+  },
+  "engineReadiness": {
+    "recommendedFormats": [
+      "jpg"
+    ],
+    "selectedFormats": [
+      "blend",
+      "jpg",
+      "mtlx",
+      "png",
+      "tres",
+      "usdc"
+    ],
+    "warnings": [],
+    "notes": [
+      "Use files from ready/ first; full extracted pack remains in pack/."
+    ]
+  },
+  "importNotes": [
+    "Use files from ready/ first; full extracted pack remains in pack/."
+  ],
+  "alternatives": [
+    {
+      "source": "ambientcg",
+      "id": "Ground029",
+      "title": "Ground 029",
+      "url": "https://ambientcg.com/a/Ground029",
+      "category": "Textures",
+      "tags": [
+        "29",
+        "beach",
+        "dirt",
+        "ground",
+        "mud",
+        "sand"
+      ],
+      "series": [],
+      "license": "Creative Commons CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false,
+      "licenseSafety": 10,
+      "score": 31,
+      "reason": "ambientCG CC0 material result",
+      "previewUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Ground029.jpg",
+      "downloadUrl": "https://ambientcg.com/get?file=Ground029_1K-JPG.zip",
+      "downloadFileName": "Ground029_1K-JPG.zip",
+      "downloadMode": "direct",
+      "manualDownload": false
+    }
+  ]
+}

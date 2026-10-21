@@ -1,0 +1,246 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Rosa Tanaka",
+    "short": "rosa",
+    "email": "rosa.tanaka@tanaka-accounts.example",
+    "avatar": "lockbit-3-drive-by"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeD/img0.jpg",
+    "wifiNetwork": "Office-Net"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "rosa"
+      },
+      "f-lockbit-3-dr-1": {
+        "id": "f-lockbit-3-dr-1",
+        "parentId": "documents",
+        "name": "Birchwood-ledger.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 58,
+        "modified": "2022-09-19T16:30:00Z",
+        "trashed": false,
+        "contentId": "c-lockbit-3-dr-1"
+      },
+      "f-lockbit-3-dr-2": {
+        "id": "f-lockbit-3-dr-2",
+        "parentId": "documents",
+        "name": "Client-list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 29,
+        "modified": "2022-09-19T16:30:00Z",
+        "trashed": false,
+        "contentId": "c-lockbit-3-dr-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Rosa",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-09-19T16:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "updates",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-client",
+          "folder": "inbox",
+          "from": "Birchwood Cafe <owner@birchwood-cafe.example>",
+          "to": "rosa.tanaka@tanaka-accounts.example",
+          "subject": "Quarterly books",
+          "body": "Rosa,\n\nHere are the receipts for the quarter. Let me know if anything is missing.\n\nBirchwood Cafe",
+          "time": "2022-09-19T16:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-backup",
+          "folder": "inbox",
+          "from": "Backup Service <noreply@safecopy-backup.example>",
+          "to": "rosa.tanaka@tanaka-accounts.example",
+          "subject": "Nightly backup completed",
+          "body": "Your nightly offline backup completed. 2,418 files copied.\n\nSafeCopy Backup",
+          "time": "2022-09-20T02:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Office",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Hamid Tanaka",
+              "text": "Quarter-end is Friday.",
+              "time": "2022-09-20T08:30:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Rosa Tanaka",
+              "text": "Ledgers are almost done.",
+              "time": "2022-09-20T08:35:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Quarter-end",
+        "body": "Reconcile 4 clients\nSend VAT summaries\nCheck the offline backup",
+        "modified": "2022-09-19T16:30:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Quarter-end",
+        "start": "2022-09-23T17:00:00Z",
+        "end": "2022-09-23T18:00:00Z",
+        "location": "Office"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Hamid Tanaka",
+        "email": "hamid.tanaka@tanaka-accounts.example",
+        "phone": "+1 555 0101",
+        "org": "Tanaka Accounts"
+      },
+      {
+        "id": "p-2",
+        "name": "Birchwood Cafe",
+        "email": "owner@birchwood-cafe.example",
+        "phone": "+1 555 0102",
+        "org": "Birchwood Cafe"
+      },
+      {
+        "id": "p-3",
+        "name": "SafeCopy Backup",
+        "email": "noreply@safecopy-backup.example",
+        "phone": "+1 555 0103",
+        "org": "SafeCopy Backup"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-lockbit-3-dr-1": {
+        "text": "Birchwood Cafe ledger. Receipts matched. Two to follow up."
+      },
+      "c-lockbit-3-dr-2": {
+        "text": "Four clients for quarter-end."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-trade-news": {
+          "title": "Ledgerline Trade News",
+          "url": "ledgerline-news.example/home",
+          "brand": "Ledgerline Trade News",
+          "heading": "Ledgerline Trade News",
+          "body": "Accounting news for small firms. Tax updates and filing deadlines.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Ledgerline Trade News",
+          "url": "scene:pg-trade-news"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-trade-news",
+          "title": "Ledgerline Trade News"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Ledgerline Trade News",
+          "url": "scene:pg-trade-news"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-trade-news",
+          "title": "Ledgerline Trade News",
+          "time": "2022-09-19T16:30:00Z"
+        }
+      ]
+    }
+  }
+}

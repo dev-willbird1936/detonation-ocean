@@ -1,0 +1,11 @@
+{
+  "status": "accepted",
+  "task_id": "15a6f449-8efd-53f5-88d1-c293d8af2955",
+  "request_id": "15a6f449-8efd-53f5-88d1-c293d8af2955",
+  "asset_id": "ed84fd23-bcc2-40c4-8b67-d79dfae93392",
+  "operation": "animate",
+  "cost": 0.08,
+  "size": 64,
+  "size_source": null,
+  "message": "3D job accepted. Poll GET /lowpoly/tasks/{task_id}; jobs usually take 1-5 minutes and can take up to 15."
+}

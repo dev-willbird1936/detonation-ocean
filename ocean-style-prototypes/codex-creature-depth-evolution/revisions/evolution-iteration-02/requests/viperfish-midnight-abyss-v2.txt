@@ -1,0 +1,13 @@
+Call the Codex-native `image_gen.imagegen` tool exactly once. Input image 1 is the base-form viperfish and controls species identity. Do not use shell, scripts, another provider, an API fallback, or retries. Pass the following image prompt verbatim:
+
+Use case: stylized-concept
+Asset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.
+Input images: Image 1 is the base-form viperfish, the identity reference to evolve from.
+Scene/backdrop: none; genuinely transparent background.
+Subject: Keep an elongated slender viperfish, huge recognizable needle fangs, forked tail, clear eye and small fins. Add real morphology: longer thin dorsal ray with luminous tip, chin barbel, fangs protruding past the jaw, deeper-set eye, visible belly photophore row; subtly curve body to change silhouette. Keep established Viperfish role colors. One transparent-background pixel-art sprite; no extra species, scene or text.
+Style/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.
+Composition/framing: square canvas; one complete centered fish, all parts in frame with generous transparent margin; no crop.
+Color palette: keep role clusters clean, contiguous and readable. Primary long upper flank and back shadow/base/highlight: #0A334E, #176286, #51A6B8. Secondary belly/fins/forked tail shadow/base/highlight: #344A5D, #6D8591, #B7C8C8. Tertiary lateral photophores and dorsal-ray luminous tip shadow/base/highlight: #2FAABB, #55D6CF, #C7F1DC. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these role colors and neutral details only, plus transparent pixels.
+Constraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, scene or gore. Return one complete transparent PNG.
+
+After the one image call, return only the generated PNG's full local path. If the call fails or returns no image, report that and stop without retrying.

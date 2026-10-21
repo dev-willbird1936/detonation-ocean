@@ -1,0 +1,343 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Idris Calloway",
+    "short": "idris",
+    "email": "idris.calloway@loftlight.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-light.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Loftlight-Studio",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "idris"
+      },
+      "f-cut3-notes": {
+        "id": "f-cut3-notes",
+        "parentId": "documents",
+        "name": "Cut-3-notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1100,
+        "modified": "2016-03-04T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-cut3-notes"
+      },
+      "f-project-list": {
+        "id": "f-project-list",
+        "parentId": "documents",
+        "name": "Project-list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 700,
+        "modified": "2016-02-27T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-project-list"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Idris",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2016-03-05T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "reminders",
+    "contacts",
+    "photos",
+    "media",
+    "store",
+    "terminal",
+    "settings",
+    "updates",
+    "texteditor",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "reminders",
+      "photos",
+      "media",
+      "store",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-cut-3-notes-from-t",
+          "folder": "inbox",
+          "from": "Petra Loftus <petra.loftus@loftlight.example>",
+          "to": "idris.calloway@loftlight.example",
+          "subject": "Cut 3 notes from the client",
+          "body": "Idris, the client wants the opening trimmed by ten seconds. Version 3 by Monday please.\n\nPetra",
+          "time": "2016-03-04T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-footage-drive-arri",
+          "folder": "inbox",
+          "from": "Camila Reyes <camila.reyes@northshore-films.example>",
+          "to": "idris.calloway@loftlight.example",
+          "subject": "Footage drive arriving Tuesday",
+          "body": "The drive with the second-unit footage ships Monday and should reach you Tuesday.\n\nCamila",
+          "time": "2016-03-03T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-render-queue-tonig",
+          "folder": "inbox",
+          "from": "Joss Aberdeen <joss.aberdeen@loftlight.example>",
+          "to": "idris.calloway@loftlight.example",
+          "subject": "Render queue tonight",
+          "body": "I queued the trailer render for 9 pm. Please do not start another one.\n\nJoss",
+          "time": "2016-03-02T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Idris Calloway <idris.calloway@loftlight.example>",
+          "to": "petra.loftus@loftlight.example",
+          "subject": "Re: Cut 2",
+          "body": "Cut 2 is in the shared folder. Notes welcome.\n\nIdris",
+          "time": "2016-02-26T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-joss-aberdee",
+          "with": "Joss Aberdeen",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Joss Aberdeen",
+              "text": "Render is at 40%.",
+              "time": "2016-03-04T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Idris Calloway",
+              "text": "Great, I will check in the morning.",
+              "time": "2016-03-04T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-cut-3-notes",
+        "folder": "notes",
+        "title": "Cut 3 notes",
+        "body": "Trim opening by 10 s\nSwap the title card\nExport for the client review",
+        "modified": "2016-03-04T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Cut 3 due",
+        "start": "2016-03-07T12:00:00Z",
+        "end": "2016-03-07T13:00:00Z",
+        "location": "Edit suite"
+      },
+      {
+        "id": "e-2",
+        "title": "Footage drive arrives",
+        "start": "2016-03-08T10:00:00Z",
+        "end": "2016-03-08T10:30:00Z",
+        "location": "Front desk"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Back up project files",
+        "due": "2016-03-06T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "Update the file-sharing app",
+        "due": "2016-03-07T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-petra-loftus",
+        "name": "Petra Loftus",
+        "email": "petra.loftus@loftlight.example",
+        "phone": "+1 555 0171",
+        "org": "Loftlight Studio"
+      },
+      {
+        "id": "p-2-joss-aberdeen",
+        "name": "Joss Aberdeen",
+        "email": "joss.aberdeen@loftlight.example",
+        "phone": "+1 555 0172",
+        "org": "Loftlight Studio"
+      },
+      {
+        "id": "p-3-camila-reyes",
+        "name": "Camila Reyes",
+        "email": "camila.reyes@northshore-films.example",
+        "phone": "+1 555 0173",
+        "org": "Northshore Films"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-cut3-notes": {
+        "text": "Cut 3 notes\nTrim opening by 10 s\nSwap the title card"
+      },
+      "c-f-project-list": {
+        "text": "Current projects\nTrailer reel\nNorthshore second-unit selects"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2016-02-22T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2016-02-10T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2016-01-29T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2016-01-17T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "studio-wiki": {
+          "title": "Loftlight studio notes",
+          "url": "wiki.loftlight.example/tools",
+          "brand": "Loftlight",
+          "heading": "Studio tools",
+          "body": "Shared render queue, backup schedule and the list of approved apps. Ask Joss before adding new software.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Loftlight studio notes",
+          "url": "scene:studio-wiki"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:studio-wiki",
+          "title": "Loftlight studio notes",
+          "time": "2016-03-04T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

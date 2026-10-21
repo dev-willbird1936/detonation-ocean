@@ -1,0 +1,46 @@
+{
+  "description": "Three beacons to one host and port.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "unknown-hosts"
+    ],
+    "depth": "abyss",
+    "findings": [
+      "remote-control"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "connect",
+      "detail": "connect 198.51.100.7",
+      "at": "2026-01-01T00:00:00.000Z",
+      "host": "198.51.100.7",
+      "port": 4444,
+      "payloadPreview": "ping"
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "connect",
+      "detail": "connect 198.51.100.7",
+      "at": "2026-01-01T00:00:01.000Z",
+      "host": "198.51.100.7",
+      "port": 4444,
+      "payloadPreview": "ping"
+    },
+    {
+      "id": "ev-3",
+      "source": "trace",
+      "kind": "connect",
+      "detail": "connect 198.51.100.7",
+      "at": "2026-01-01T00:00:02.000Z",
+      "host": "198.51.100.7",
+      "port": 4444,
+      "payloadPreview": "ping"
+    }
+  ]
+}

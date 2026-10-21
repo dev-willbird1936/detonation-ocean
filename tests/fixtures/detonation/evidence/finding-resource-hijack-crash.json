@@ -1,0 +1,22 @@
+{
+  "description": "The sandbox crashed on process creation (createSysmsgThread: failed to get clone); the limits item carries crash: true.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "resource-hijack"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "limits",
+      "kind": "pids",
+      "detail": "The sample hit the process limit.",
+      "at": "2026-01-01T00:00:00.000Z",
+      "crash": true
+    }
+  ]
+}

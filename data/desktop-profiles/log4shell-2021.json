@@ -1,0 +1,229 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Sofia Reyes",
+    "short": "sofia",
+    "email": "sofia.reyes@tallis-tickets.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "green",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-aurora.jpg",
+    "wifiNetwork": "Tallis-Office"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "sofia"
+      },
+      "f-checklist": {
+        "id": "f-checklist",
+        "parentId": "documents",
+        "name": "Platform-checklist.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 700,
+        "modified": "2021-11-15T09:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-checklist"
+      },
+      "f-notes": {
+        "id": "f-notes",
+        "parentId": "documents",
+        "name": "Release-notes-draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1500,
+        "modified": "2021-12-07T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-f-notes"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Sofia",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2021-12-07T16:10:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal",
+    "mfa",
+    "store"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "terminal",
+      "messages",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-release",
+          "folder": "inbox",
+          "from": "Jun Takahashi <jun.takahashi@tallis-tickets.example>",
+          "to": "sofia.reyes@tallis-tickets.example",
+          "subject": "Release notes for Thursday",
+          "body": "Sofia, the release notes for Thursday are in the team folder. Please add the platform changes.\n\nJun",
+          "time": "2021-12-07T16:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-oncall",
+          "folder": "inbox",
+          "from": "Tallis On-call <oncall@tallis-tickets.example>",
+          "to": "sofia.reyes@tallis-tickets.example",
+          "subject": "On-call rota for December",
+          "body": "You are second on call for the week of 13 December.",
+          "time": "2021-12-06T09:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-vendor",
+          "folder": "inbox",
+          "from": "Pillar Cloud <billing@pillar-cloud.example>",
+          "to": "sofia.reyes@tallis-tickets.example",
+          "subject": "Your November invoice",
+          "body": "Your invoice for November is available in the billing console.",
+          "time": "2021-12-02T08:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Sofia Reyes <sofia.reyes@tallis-tickets.example>",
+          "to": "jun.takahashi@tallis-tickets.example",
+          "subject": "Re: Release notes",
+          "body": "Adding them this afternoon.",
+          "time": "2021-12-07T16:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-jun",
+          "with": "Jun Takahashi",
+          "items": [
+            {
+              "id": "i-jun-1",
+              "from": "Jun Takahashi",
+              "text": "Stand-up in five.",
+              "time": "2021-12-08T08:55:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-platform",
+        "folder": "notes",
+        "title": "Platform checklist",
+        "body": "Booking API healthy\nLog service healthy\nAdmin console reachable\nNote anything odd in the channel",
+        "modified": "2021-11-15T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-standup",
+        "title": "Stand-up",
+        "start": "2021-12-08T09:00:00Z",
+        "end": "2021-12-08T09:15:00Z",
+        "location": "Video call"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-release",
+        "list": "work",
+        "title": "Add platform changes to release notes",
+        "due": "2021-12-08T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-jun",
+        "name": "Jun Takahashi",
+        "email": "jun.takahashi@tallis-tickets.example",
+        "phone": "+1 555 0311",
+        "org": "Tallis Tickets"
+      },
+      {
+        "id": "p-oncall",
+        "name": "Tallis On-call",
+        "email": "oncall@tallis-tickets.example",
+        "phone": "+1 555 0312",
+        "org": "Tallis Tickets"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-checklist": {
+        "text": "Platform checklist. Fictional training file."
+      },
+      "c-f-notes": {
+        "text": "Release notes draft. Fictional training file."
+      }
+    }
+  }
+}

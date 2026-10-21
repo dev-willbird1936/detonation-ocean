@@ -1,0 +1,268 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Jordan Ellery",
+    "short": "jordan",
+    "email": "jordan.ellery@hollisforgov.example",
+    "avatar": "podesta-2016"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-bigsur.jpg",
+    "wifiNetwork": "Hollis-Campaign-HQ",
+    "battery": 78
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "jordan"
+      },
+      "f-runshow": {
+        "id": "f-runshow",
+        "parentId": "documents",
+        "name": "Rally run of show.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 61,
+        "modified": "2016-03-18T16:00:00Z",
+        "trashed": false,
+        "contentId": "c-runshow"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-sched",
+        "app": "calendar",
+        "title": "Field call at 8 am",
+        "body": "Weekly call with regional field directors.",
+        "time": "2016-03-19T19:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "texteditor",
+    "reminders",
+    "calculator",
+    "clock",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "contacts",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-rally",
+          "folder": "inbox",
+          "from": "Tess Aldous <tess.aldous@hollisforgov.example>",
+          "to": "jordan.ellery@hollisforgov.example",
+          "subject": "Saturday rally: run of show",
+          "body": "Jordan,\n\nRun of show for Saturday is in Documents. Doors at 10, remarks at 11:15. Please confirm the volunteer headcount with the county leads.\n\nTess",
+          "time": "2016-03-18T17:20:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-clips",
+          "folder": "inbox",
+          "from": "Press Desk <press@hollisforgov.example>",
+          "to": "jordan.ellery@hollisforgov.example",
+          "subject": "Press clips, Friday",
+          "body": "Today's clips are pasted below.\n\n- Hollis outlines rural broadband plan\n- County fair appearance draws large crowd\n\nPress desk",
+          "time": "2016-03-18T14:05:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-vol",
+          "folder": "inbox",
+          "from": "Dev Rao <dev.rao@hollisforgov.example>",
+          "to": "jordan.ellery@hollisforgov.example",
+          "subject": "Volunteer sign-up sheet",
+          "body": "Sheet is updated. Eleven new names from the college chapter.\n\nDev",
+          "time": "2016-03-17T21:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Jordan Ellery <jordan.ellery@hollisforgov.example>",
+          "to": "tess.aldous@hollisforgov.example",
+          "subject": "Re: Travel plan for the bus tour",
+          "body": "Looks fine. I will book the hotel block today.",
+          "time": "2016-03-16T12:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-field",
+          "with": "Field team",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Dev Rao",
+              "text": "Bus tour stop list is final.",
+              "time": "2016-03-18T18:00:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Jordan Ellery",
+              "text": "Got it, sending the schedule tonight.",
+              "time": "2016-03-18T18:04:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-todo",
+        "folder": "notes",
+        "title": "This week",
+        "body": "Confirm headcount\nBook hotel block\nDraft talking points for county call",
+        "modified": "2016-03-18T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-field",
+        "title": "Field directors call",
+        "start": "2016-03-19T08:00:00Z",
+        "end": "2016-03-19T08:45:00Z",
+        "location": "Conference line"
+      },
+      {
+        "id": "e-rally",
+        "title": "Saturday rally",
+        "start": "2016-03-19T15:00:00Z",
+        "end": "2016-03-19T18:00:00Z",
+        "location": "Civic Hall"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-head",
+        "list": "work",
+        "title": "Confirm rally headcount",
+        "due": "2016-03-19T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-tess",
+        "name": "Tess Aldous",
+        "email": "tess.aldous@hollisforgov.example",
+        "phone": "+1 555 0111",
+        "org": "Hollis for Governor"
+      },
+      {
+        "id": "p-dev",
+        "name": "Dev Rao",
+        "email": "dev.rao@hollisforgov.example",
+        "phone": "+1 555 0112",
+        "org": "Hollis for Governor"
+      },
+      {
+        "id": "p-press",
+        "name": "Press Desk",
+        "email": "press@hollisforgov.example",
+        "phone": "+1 555 0113",
+        "org": "Hollis for Governor"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-runshow": {
+        "text": "Saturday rally\n10:00 doors\n11:15 remarks\n12:00 meet and greet"
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-campaign": {
+          "title": "Hollis for Governor",
+          "url": "www.hollisforgov.example",
+          "brand": "Hollis for Governor",
+          "heading": "Rural broadband for every county",
+          "body": "Volunteer, donate and find an event near you.\n\nThis is a fictional campaign page.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-campaign",
+          "title": "Hollis for Governor"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

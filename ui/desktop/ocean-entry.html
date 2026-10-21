@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#061521">
+  <title>Creature entry · Abyss</title>
+  <link rel="stylesheet" href="/ocean-entry.css">
+  <script src="/scenario-profile.js" defer></script>
+  <script src="/ocean-scenarios/sunlight.js" defer></script>
+  <script src="/ocean-scenarios/twilight.js" defer></script>
+  <script src="/ocean-scenarios/midnight.js" defer></script>
+  <script src="/ocean-scenarios/abyss.js" defer></script>
+  <script src="/ocean-scenarios/trench.js" defer></script>
+  <script src="/ocean-entry.js" defer></script>
+</head>
+<body data-depth="none" data-stage="loading">
+  <div class="water" aria-hidden="true"><div class="rays"></div></div>
+  <a class="back-link" href="/ocean-profiles.html">← Back to creature matrix</a>
+  <main class="entry-scene" aria-labelledby="entry-title">
+    <div class="depth-glow" aria-hidden="true"></div>
+    <div id="camera-prop" class="camera-prop" aria-hidden="true">
+      <div class="camera-surface"><span class="camera-lens"></span><span class="camera-label">SIMULATED VIEW</span></div>
+      <span class="camera-caption">visual prop · no webcam</span>
+    </div>
+    <span class="bite-ring" aria-hidden="true"></span>
+    <img id="entry-creature" class="entry-creature" alt="" width="256" height="256" aria-hidden="true">
+
+    <section id="safety-card" class="safety-card" aria-describedby="entry-detail" hidden>
+      <p class="eyebrow">THE ABYSS · BEFORE YOU ENTER</p>
+      <h1 id="entry-title">Loading creature…</h1>
+      <p id="entry-detail" class="entry-detail" aria-live="polite">Preparing the visual-only camera-bite cinematic.</p>
+      <ul class="entry-points">
+        <li><strong>What happens.</strong> A creature bites a drawn camera, then you land on a fictional Windows or macOS desktop. A short scripted scene follows: a lure, your choice, then an animation of the attack on pretend files and accounts.</li>
+        <li><strong>You stay in control.</strong> Take the safe path, restart, or switch operating systems at any time.</li>
+      </ul>
+      <p class="boundary">Fictional, local. No camera, no real accounts, no real files.</p>
+      <p class="privacy-note">The camera is a drawn prop. This page does not request camera permission, read webcam video, or transmit a camera image.</p>
+      <label class="entry-tick" for="entry-opt-in">
+        <input id="entry-opt-in" type="checkbox">
+        <span>I understand this is a fictional, local training simulation.</span>
+      </label>
+      <button id="enter-desktop" class="enter-link" type="button" disabled>Enter the desktop</button>
+    </section>
+
+    <a id="skip-bite" class="skip-link" href="/desktop.html" hidden>Skip to the desktop</a>
+  </main>
+</body>
+</html>

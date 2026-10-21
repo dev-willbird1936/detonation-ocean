@@ -1,0 +1,38 @@
+{
+  "description": "Unlink attempts on system paths.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "trench",
+    "findings": [
+      "system-wipe"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /bin/ls",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/bin/ls"
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "unlink",
+      "detail": "unlink /usr/bin/env",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/usr/bin/env"
+    },
+    {
+      "id": "ev-3",
+      "source": "trace",
+      "kind": "rmdir",
+      "detail": "rmdir /etc/cron.d",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/etc/cron.d"
+    }
+  ]
+}

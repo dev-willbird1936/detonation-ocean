@@ -1,0 +1,1 @@
+{"_note":"Authored in the shape the runner prints; not recorded from a run.","detonationRunner":1,"kind":"exe","started":true,"file":"tmp/dt/sample.exe","exitCode":0,"emulation":{"entryPoints":[],"instructions":0,"seconds":0.1,"timeoutSeconds":30,"maxInstructions":5000000,"failure":"NotSupportedError: unsupported architecture"}}

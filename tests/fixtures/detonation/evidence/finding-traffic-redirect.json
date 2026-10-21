@@ -1,0 +1,22 @@
+{
+  "description": "Script writes /etc/hosts.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "traffic-redirect"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write /etc/hosts",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/etc/hosts"
+    }
+  ]
+}

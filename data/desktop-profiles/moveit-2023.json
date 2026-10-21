@@ -1,0 +1,229 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Grace Okonkwo",
+    "short": "grace",
+    "email": "grace.okonkwo@larkfield-benefits.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "green",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeD/img0.jpg",
+    "wifiNetwork": "Larkfield-Office"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "grace"
+      },
+      "f-register": {
+        "id": "f-register",
+        "parentId": "documents",
+        "name": "Payroll-register.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2600,
+        "modified": "2023-05-26T16:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-register"
+      },
+      "f-routine": {
+        "id": "f-routine",
+        "parentId": "documents",
+        "name": "Batch-routine.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 600,
+        "modified": "2023-04-18T14:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-routine"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Grace",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-05-30T08:15:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal",
+    "mfa",
+    "store"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "mfa",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-batch",
+          "folder": "inbox",
+          "from": "Dev Malhotra <dev.malhotra@larkfield-benefits.example>",
+          "to": "grace.okonkwo@larkfield-benefits.example",
+          "subject": "Friday payroll batch",
+          "body": "Grace, the Friday batches should land in File Transfers by noon. Shout if one is missing.\n\nDev",
+          "time": "2023-05-30T08:15:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-vendor",
+          "folder": "inbox",
+          "from": "Fernhill Payments <ops@fernhill-payments.example>",
+          "to": "grace.okonkwo@larkfield-benefits.example",
+          "subject": "Remittance schedule for June",
+          "body": "Our June remittance schedule is attached to the shared portal. No reply needed.",
+          "time": "2023-05-26T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-it",
+          "folder": "inbox",
+          "from": "Larkfield IT Desk <itdesk@larkfield-benefits.example>",
+          "to": "grace.okonkwo@larkfield-benefits.example",
+          "subject": "Multi-factor reminder",
+          "body": "Please keep your authenticator app up to date. IT will never ask for a code.",
+          "time": "2023-05-22T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Grace Okonkwo <grace.okonkwo@larkfield-benefits.example>",
+          "to": "dev.malhotra@larkfield-benefits.example",
+          "subject": "Re: Friday payroll batch",
+          "body": "Will check at noon.",
+          "time": "2023-05-30T08:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-dev",
+          "with": "Dev Malhotra",
+          "items": [
+            {
+              "id": "i-dev-1",
+              "from": "Dev Malhotra",
+              "text": "Batches are on their way, I think.",
+              "time": "2023-05-30T08:50:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-batches",
+        "folder": "notes",
+        "title": "Batch routine",
+        "body": "Collect enrolment batch\nCollect remittance zip\nLog totals in the register",
+        "modified": "2023-04-18T14:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-noon",
+        "title": "Payroll cut-off",
+        "start": "2023-06-02T12:00:00Z",
+        "end": "2023-06-02T12:30:00Z",
+        "location": "Benefits office"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-register",
+        "list": "work",
+        "title": "Update payroll register",
+        "due": "2023-06-02T15:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-dev",
+        "name": "Dev Malhotra",
+        "email": "dev.malhotra@larkfield-benefits.example",
+        "phone": "+1 555 0241",
+        "org": "Larkfield Benefits"
+      },
+      {
+        "id": "p-fern",
+        "name": "Fernhill Payments",
+        "email": "ops@fernhill-payments.example",
+        "phone": "+1 555 0242",
+        "org": "Fernhill Payments"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-register": {
+        "text": "Payroll register for May. Fictional training file."
+      },
+      "c-f-routine": {
+        "text": "Batch routine. Fictional training file."
+      }
+    }
+  }
+}

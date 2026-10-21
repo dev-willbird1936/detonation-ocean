@@ -1,0 +1,9 @@
+{"type":"thread.started","thread_id":"01a1146e-5d3f-7be3-aa08-6b2574057c48"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (C:\\Users\\warcr\\.codex\\config.toml): `ComputerUseAllowForbiddenTargets` is ignored.\n  user (C:\\Users\\warcr\\.codex\\config.toml): `computer_use.windows.always_allowed_app_ids` is ignored.\n  user (C:\\Users\\warcr\\.codex\\config.toml): `profiles.ollama-launch.openai_base_url` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (C:\\Users\\warcr\\.codex\\config.toml): `ComputerUseAllowForbiddenTargets` is ignored.\n  user (C:\\Users\\warcr\\.codex\\config.toml): `computer_use.windows.always_allowed_app_ids` is ignored.\n  user (C:\\Users\\warcr\\.codex\\config.toml): `profiles.ollama-launch.openai_base_url` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"reasoning","text":"**Planning single image generation call**\n**Configuring image generation call parameters**"}}
+{"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"I’m making the single image generation call with the attached reference and your prompt."}}
+{"type":"item.completed","item":{"id":"item_4","type":"reasoning","text":"**Extracting file path only**"}}
+{"type":"item.completed","item":{"id":"item_5","type":"agent_message","text":"C:\\Users\\warcr\\.codex\\generated_images\\01a1146e-5d3f-7be3-aa08-6b2574057c48\\exec-32cda01d-3d47-4d95-a215-c6635cf5c84c.png"}}
+{"type":"turn.completed","usage":{"input_tokens":75927,"cached_input_tokens":47744,"cache_write_input_tokens":0,"output_tokens":1267,"reasoning_output_tokens":536}}

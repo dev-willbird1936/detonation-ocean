@@ -1,0 +1,28 @@
+{
+  "description": "A seeded honey file changes in a way no rule matches.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "midnight",
+    "family": "theft-surveillance",
+    "findings": [
+      "other-harm"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/.env",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/.env",
+      "seeded": true,
+      "entropyBefore": 4.9,
+      "entropyAfter": 4.9,
+      "sizeBefore": 120,
+      "sizeAfter": 130
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "browser": "Chrome via chrome-devtools",
+  "url": "file:///C:/SyncedProjects/Websites/Vultr-Phishing-Sandbox/ocean-style-prototypes/codex-creature-depth-evolution/index.html",
+  "title": "Ocean Depth Forms — Creature Design Review",
+  "interaction": "Reloaded the gallery after changing image element sizing; measured all cards through the actual DOM and decoded each displayed PNG.",
+  "families": 6,
+  "formsPerFamily": 3,
+  "cards": 18,
+  "decodedImages": 18,
+  "imageDimensions": [256, 256],
+  "artboardDimensionsDesktop": [439, 290],
+  "cssImageBoxDesktop": [256, 256],
+  "allImageBoxesFitArtboards": true,
+  "noGalleryImageClipping": true,
+  "perFamily": [
+    { "family": "Anglerfish", "cards": 3, "decoded": 3, "allFit": true },
+    { "family": "Viperfish", "cards": 3, "decoded": 3, "allFit": true },
+    { "family": "Siphonophore", "cards": 3, "decoded": 3, "allFit": true },
+    { "family": "Isopod Host Fish", "cards": 3, "decoded": 3, "allFit": true },
+    { "family": "Cookiecutter Shark", "cards": 3, "decoded": 3, "allFit": true },
+    { "family": "Octopus → Kraken", "cards": 3, "decoded": 3, "allFit": true }
+  ],
+  "capture": {
+    "file": "browser-three-form-preview-layout-fix.png",
+    "sha256": "414a8c26d5bdba56ab0dd9139ab57e8f10536bbc915c3afd0f90b85ae3ef0afb",
+    "dimensions": [1796, 4078],
+    "note": "Full-page Chrome capture after the layout fix, before the requested Squid → Kraken asset replacement."
+  }
+}

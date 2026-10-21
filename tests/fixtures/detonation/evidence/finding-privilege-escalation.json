@@ -1,0 +1,25 @@
+{
+  "description": "Emulated PE writes a UAC-bypass key.",
+  "path": "emulate",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "privilege-escalation"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "emulator",
+      "kind": "key-added",
+      "detail": "key-added Software\\Classes\\ms-settings\\shell\\open\\command",
+      "at": "2026-01-01T00:00:00.000Z",
+      "hive": "HKCU",
+      "key": "Software\\Classes\\ms-settings\\shell\\open\\command",
+      "value": "(default)",
+      "data": "C:\\Users\\Dana\\payload.exe"
+    }
+  ]
+}

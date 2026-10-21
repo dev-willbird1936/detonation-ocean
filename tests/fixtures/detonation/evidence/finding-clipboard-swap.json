@@ -1,0 +1,36 @@
+{
+  "description": "Emulated PE reads then overwrites the clipboard.",
+  "path": "emulate",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "midnight",
+    "findings": [
+      "clipboard-swap"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "emulator",
+      "kind": "api-call",
+      "detail": "GetClipboardData called",
+      "at": "2026-01-01T00:00:00.000Z",
+      "api": "GetClipboardData",
+      "args": {
+        "format": "CF_TEXT"
+      }
+    },
+    {
+      "id": "ev-2",
+      "source": "emulator",
+      "kind": "api-call",
+      "detail": "SetClipboardData called",
+      "at": "2026-01-01T00:00:01.000Z",
+      "api": "SetClipboardData",
+      "args": {
+        "format": "CF_TEXT"
+      }
+    }
+  ]
+}

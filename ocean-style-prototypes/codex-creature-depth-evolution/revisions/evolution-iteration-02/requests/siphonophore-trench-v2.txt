@@ -1,0 +1,13 @@
+Call the Codex-native `image_gen.imagegen` tool exactly once. Input images are attached in this order: Image 1 is the Midnight/Abyss siphonophore and is the lineage; Image 2 is the base-form siphonophore and controls identity. Do not use shell, scripts, another provider, an API fallback, or retries. Pass the following image prompt verbatim:
+
+Use case: stylized-concept
+Asset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.
+Input images: Image 1 is the Midnight/Abyss siphonophore, the lineage to advance from. Image 2 is the base-form siphonophore, the species identity reference.
+Scene/backdrop: none; genuinely transparent background.
+Subject: Evolve the connected colony with a larger bell-shaped float, more varied/bigger attached zooids, long stinging tentacles with glowing tips and a second dangling layer, and a wider imposing S-curve or branching silhouette rather than the same thin diagonal. Preserve one connected continuous stem; match the established coarse pixel scale and Siphonophore role palette. Transparent background; no detached organism, scenery or text.
+Style/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.
+Composition/framing: square canvas; one complete centered colony, all parts connected and in frame with generous transparent margin; no crop.
+Color palette: keep role clusters clean, contiguous and readable. Primary one continuous shared stem shadow/base/highlight: #30284E, #514D79, #9B95BC. Secondary attached zooids, bells and feeding filaments shadow/base/highlight: #07545D, #168A97, #73D2CF. Tertiary terminal float and small filament tips shadow/base/highlight: #7A4547, #C16B5A, #E9B47E. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these role colors and neutral details only, plus transparent pixels.
+Constraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, detached organism, scene or gore. Return one complete transparent PNG.
+
+After the one image call, return only the generated PNG's full local path. If the call fails or returns no image, report that and stop without retrying.

@@ -1,0 +1,18 @@
+{
+  "reservations": {
+    "motion-octopus": 250000,
+    "motion-anglerfish": 250000,
+    "motion-viperfish": 250000,
+    "motion-siphonophore": 250000,
+    "motion-isopod-host": 250000,
+    "motion-cookiecutter": 250000
+  },
+  "actual_charges": {
+    "motion-octopus": 250000,
+    "motion-anglerfish": 250000,
+    "motion-viperfish": 250000,
+    "motion-siphonophore": 250000,
+    "motion-isopod-host": 250000,
+    "motion-cookiecutter": 250000
+  }
+}

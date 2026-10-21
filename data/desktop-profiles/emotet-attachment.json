@@ -1,0 +1,342 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Nadia Brandt",
+    "short": "nadia",
+    "email": "nadia.brandt@corvane-dist.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img3.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Corvane-Staff",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "nadia"
+      },
+      "f-payment-run": {
+        "id": "f-payment-run",
+        "parentId": "documents",
+        "name": "Payment-run-Dec.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1900,
+        "modified": "2020-12-08T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-payment-run"
+      },
+      "f-supplier-list": {
+        "id": "f-supplier-list",
+        "parentId": "documents",
+        "name": "Supplier-contacts.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 800,
+        "modified": "2020-11-10T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-supplier-list"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Nadia",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2020-12-10T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "updates",
+    "settings",
+    "terminal",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "clock",
+    "store",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "reminders",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-overdue-invoice-20",
+          "folder": "inbox",
+          "from": "Silvio Marchetti <silvio.marchetti@harrowgate-supply.example>",
+          "to": "nadia.brandt@corvane-dist.example",
+          "subject": "Overdue invoice 20-4471",
+          "body": "Hello Nadia, invoice 20-4471 for the pallet racking is now 15 days overdue. Please advise when payment will be made.\n\nSilvio",
+          "time": "2020-12-06T08:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-year-end-payment-r",
+          "folder": "inbox",
+          "from": "Tessa Quinlan <tessa.quinlan@corvane-dist.example>",
+          "to": "nadia.brandt@corvane-dist.example",
+          "subject": "Year-end payment run",
+          "body": "The last payment run of the year is on the 18th. Please send me any approved invoices by the 16th.\n\nTessa",
+          "time": "2020-12-09T09:17:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-remote-desktop-rem",
+          "folder": "inbox",
+          "from": "Dev Anand <dev.anand@corvane-dist.example>",
+          "to": "nadia.brandt@corvane-dist.example",
+          "subject": "Remote desktop reminder",
+          "body": "Reminder: use the staff portal, not personal email, for supplier documents.\n\nDev",
+          "time": "2020-12-07T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Nadia Brandt <nadia.brandt@corvane-dist.example>",
+          "to": "silvio.marchetti@harrowgate-supply.example",
+          "subject": "Re: Overdue invoice 20-4471",
+          "body": "Hello Silvio, the invoice is in the December payment run. I will confirm once it is released.\n\nNadia",
+          "time": "2020-12-07T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-tessa-quinla",
+          "with": "Tessa Quinlan",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Tessa Quinlan",
+              "text": "Are the Harrowgate invoices approved?",
+              "time": "2020-12-08T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Nadia Brandt",
+              "text": "Waiting on one signature.",
+              "time": "2020-12-08T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-payment-run-ch",
+        "folder": "notes",
+        "title": "Payment run checklist",
+        "body": "Approved invoices by the 16th\nHarrowgate 20-4471\nCheck bank details before release",
+        "modified": "2020-12-09T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Year-end payment run",
+        "start": "2020-12-18T10:00:00Z",
+        "end": "2020-12-18T11:00:00Z",
+        "location": "Finance office"
+      },
+      {
+        "id": "e-2",
+        "title": "Supplier call",
+        "start": "2020-12-11T15:00:00Z",
+        "end": "2020-12-11T15:30:00Z",
+        "location": "Video call"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Send approved invoices to Tessa",
+        "due": "2020-12-16T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "Confirm 20-4471 with Silvio",
+        "due": "2020-12-11T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-silvio-marchet",
+        "name": "Silvio Marchetti",
+        "email": "silvio.marchetti@harrowgate-supply.example",
+        "phone": "+1 555 0221",
+        "org": "Harrowgate Supply"
+      },
+      {
+        "id": "p-2-tessa-quinlan",
+        "name": "Tessa Quinlan",
+        "email": "tessa.quinlan@corvane-dist.example",
+        "phone": "+1 555 0222",
+        "org": "Corvane Distribution"
+      },
+      {
+        "id": "p-3-dev-anand",
+        "name": "Dev Anand",
+        "email": "dev.anand@corvane-dist.example",
+        "phone": "+1 555 0223",
+        "org": "Corvane Distribution"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-payment-run": {
+        "text": "Payment run December\nHarrowgate 20-4471: pending approval\nOther suppliers: 14 invoices"
+      },
+      "c-f-supplier-list": {
+        "text": "Supplier contacts\nHarrowgate Supply: Silvio Marchetti"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2020-11-28T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2020-11-16T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2020-11-04T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2020-10-23T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "corvane-portal": {
+          "title": "Corvane staff portal",
+          "url": "portal.corvane-dist.example/home",
+          "brand": "Corvane",
+          "heading": "Staff portal",
+          "body": "Supplier documents go through the portal. Report suspicious email with the Report button.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Corvane staff portal",
+          "url": "scene:corvane-portal"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:corvane-portal",
+          "title": "Corvane staff portal",
+          "time": "2020-12-09T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

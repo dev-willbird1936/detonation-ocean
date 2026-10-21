@@ -1,0 +1,295 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Ilse Brandvold",
+    "short": "ilse",
+    "email": "ilse.brandvold@brandvold-dev.example",
+    "avatar": "pypi-juiceledger-2022"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-dark.jpg",
+    "wifiNetwork": "Home-Office-5G",
+    "battery": 78
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "ilse"
+      },
+      "f-projects": {
+        "id": "f-projects",
+        "parentId": "home",
+        "name": "projects",
+        "kind": "folder",
+        "mime": null,
+        "size": 0,
+        "modified": "2022-08-20T09:00:00Z",
+        "trashed": false
+      },
+      "f-readme": {
+        "id": "f-readme",
+        "parentId": "f-projects",
+        "name": "README.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 72,
+        "modified": "2022-08-20T09:30:00Z",
+        "trashed": false,
+        "contentId": "c-readme"
+      },
+      "f-changelog": {
+        "id": "f-changelog",
+        "parentId": "f-projects",
+        "name": "CHANGELOG.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 66,
+        "modified": "2022-08-21T19:00:00Z",
+        "trashed": false,
+        "contentId": "c-changelog"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-release",
+        "app": "reminders",
+        "title": "Release checklist",
+        "body": "Tidy-csv 0.4.2: changelog still to write.",
+        "time": "2022-08-22T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "terminal",
+    "texteditor",
+    "reminders",
+    "calculator",
+    "clock",
+    "taskmanager",
+    "updates"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "terminal",
+      "texteditor",
+      "notes",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-issue",
+          "folder": "inbox",
+          "from": "Forge Notifications <notify@codeforge.example>",
+          "to": "ilse.brandvold@brandvold-dev.example",
+          "subject": "[tidy-csv] Issue 88: empty header row",
+          "body": "A user reports that an empty header row raises an error. Reproduction steps are in the issue.",
+          "time": "2022-08-21T18:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-pr",
+          "folder": "inbox",
+          "from": "Forge Notifications <notify@codeforge.example>",
+          "to": "ilse.brandvold@brandvold-dev.example",
+          "subject": "[tidy-csv] Pull request 91: add delimiter option",
+          "body": "A contributor opened a pull request that adds a delimiter option. Tests pass.",
+          "time": "2022-08-21T09:15:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-conf",
+          "folder": "inbox",
+          "from": "Pyday Organisers <team@pyday-conf.example>",
+          "to": "ilse.brandvold@brandvold-dev.example",
+          "subject": "Your talk is accepted",
+          "body": "Congratulations, your talk \"Small libraries, long lives\" is accepted. Please confirm your slot.",
+          "time": "2022-08-19T14:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Ilse Brandvold <ilse.brandvold@brandvold-dev.example>",
+          "to": "team@pyday-conf.example",
+          "subject": "Re: Speaker details",
+          "body": "Bio and photo attached to the form. Thanks!",
+          "time": "2022-08-18T10:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-maint",
+          "with": "Maintainers chat",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Ilse Brandvold",
+              "text": "Releasing 0.4.2 this week.",
+              "time": "2022-08-20T12:00:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Kofi Mensah",
+              "text": "I will review the delimiter pull request tonight.",
+              "time": "2022-08-20T12:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-roadmap",
+        "folder": "notes",
+        "title": "tidy-csv roadmap",
+        "body": "0.4.2: fix empty header\n0.5.0: delimiter option\nDocs: add examples",
+        "modified": "2022-08-20T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-talk",
+        "title": "Pyday talk slot",
+        "start": "2022-09-15T14:00:00Z",
+        "end": "2022-09-15T14:30:00Z",
+        "location": "Main hall"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-log",
+        "list": "work",
+        "title": "Write the 0.4.2 changelog",
+        "due": "2022-08-23T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-kofi",
+        "name": "Kofi Mensah",
+        "email": "kofi.mensah@brandvold-dev.example",
+        "phone": "+1 555 0141",
+        "org": "tidy-csv maintainers"
+      },
+      {
+        "id": "p-pyday",
+        "name": "Pyday Organisers",
+        "email": "team@pyday-conf.example",
+        "phone": "+1 555 0142",
+        "org": "Pyday"
+      },
+      {
+        "id": "p-forge",
+        "name": "Codeforge",
+        "email": "notify@codeforge.example",
+        "phone": "+1 555 0143",
+        "org": "Codeforge"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-readme": {
+        "text": "tidy-csv\nSmall helpers for tidying CSV files.\nMaintainer: Ilse Brandvold"
+      },
+      "c-changelog": {
+        "text": "0.4.1\n- Fix quoting bug\n\n0.4.2 (unreleased)\n- Fix empty header row"
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-codeforge": {
+          "title": "tidy-csv on Codeforge",
+          "url": "www.codeforge.example/tidy-csv",
+          "brand": "Codeforge",
+          "heading": "tidy-csv",
+          "body": "Small helpers for tidying CSV files.\n\n2 open issues, 1 open pull request.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-codeforge",
+          "title": "tidy-csv on Codeforge"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "terminal": {
+      "cwd": "f-projects",
+      "history": [
+        "cd projects",
+        "git status",
+        "git log --oneline"
+      ]
+    }
+  }
+}

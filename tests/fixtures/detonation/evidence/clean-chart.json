@@ -1,0 +1,42 @@
+{
+  "description": "AT-8: clean-chart.py reads one seeded CSV and prints a summary.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "sunlight",
+    "family": "drifter",
+    "findings": [],
+    "complete": true
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "execve",
+      "detail": "execve /usr/bin/python3",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/usr/bin/python3",
+      "argv": [
+        "python3",
+        "/in/sample"
+      ]
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /home/dana/Documents/photos-list.csv",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Documents/photos-list.csv"
+    },
+    {
+      "id": "ev-3",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /usr/lib/python3/dist-packages/pandas/__init__.py",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/usr/lib/python3/dist-packages/pandas/__init__.py"
+    }
+  ]
+}

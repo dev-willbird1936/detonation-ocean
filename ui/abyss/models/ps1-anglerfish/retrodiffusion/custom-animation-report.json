@@ -1,0 +1,32 @@
+{
+  "control_nodes": 15,
+  "mesh_parts": 32,
+  "skinned_armatures": 0,
+  "added": [
+    {
+      "name": "Hover_Idle",
+      "duration": 3.0,
+      "channels": 11,
+      "loop": true
+    },
+    {
+      "name": "Cruise_Swim",
+      "duration": 1.2,
+      "channels": 11,
+      "loop": true
+    },
+    {
+      "name": "Bite_Snap",
+      "duration": 0.85,
+      "channels": 11,
+      "loop": false
+    }
+  ],
+  "original_clips": [
+    "idle_swim"
+  ],
+  "fixed_lights": [
+    "light0"
+  ],
+  "glb_bytes": 197032
+}

@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Detonation Timeline — 50 attacks, 1989–2025</title>
+<!-- No remote font requests: the page runs without external assets. -->
+<style>
+/* ───────────────────────────────────────────────────────────
+   Tokens
+   Severity owns luminance. Nothing else is allowed to be bright.
+   ─────────────────────────────────────────────────────────── */
+:root{
+  --void:#08090b;
+  --void-2:#0d0f13;
+  --bone:#e9e5dc;
+  --dim:#767b85;
+  --dimmer:#484d56;
+  --line:#191d23;
+  --line-2:#23282f;
+  --accent:#e9e5dc;
+
+  /* vector buckets — muted on purpose so severity stays the loud channel */
+  --v-phishing:#e0a83c;
+  --v-supply-chain:#9a6ee0;
+  --v-ransomware:#e05252;
+  --v-espionage:#5b9ee0;
+  --v-botnet:#4fc0b0;
+  --v-door:#7ad6c8;
+  --v-none:#5a5f66;
+
+  --mono:'Cascadia Code',Consolas,ui-monospace,SFMono-Regular,Menlo,monospace;
+  --display:'Segoe UI Variable','Segoe UI',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --gut:clamp(16px,4vw,64px);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--void);
+  color:var(--bone);
+  font-family:var(--mono);
+  font-size:14px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--bone);color:var(--void)}
+a{color:inherit}
+
+/* ── Ghost year: giant display type, fixed, behind everything ── */
+.ghost{
+  position:fixed;
+  top:50%;
+  right:1vw;
+  transform:translateY(-50%);
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(90px,17vw,260px);
+  line-height:.8;
+  letter-spacing:-.05em;
+  color:var(--bone);
+  opacity:.021;
+  pointer-events:none;
+  z-index:0;
+  user-select:none;
+  transition:opacity .6s var(--ease);
+  font-variant-numeric:tabular-nums;
+}
+.ghost.hot{opacity:.042}
+
+/* ───────────────────────────────────────────────────────────
+   Header
+   ─────────────────────────────────────────────────────────── */
+.top{
+  position:sticky; top:0; z-index:60;
+  background:linear-gradient(180deg,rgba(8,9,11,.97) 60%,rgba(8,9,11,.82));
+  backdrop-filter:blur(14px) saturate(1.2);
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);
+  border-bottom:1px solid var(--line);
+}
+.hero{
+  padding:clamp(18px,3.4vw,34px) var(--gut) 14px;
+  display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  max-height:260px; overflow:hidden;
+  transition:max-height .46s var(--ease),opacity .3s var(--ease),padding .46s var(--ease);
+}
+/* the hero gets out of the way once you start reading history */
+.top.tucked .hero{max-height:0;opacity:0;padding-top:0;padding-bottom:0;pointer-events:none}
+.hero h1{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(21px,3.3vw,40px);
+  line-height:1.02;
+  letter-spacing:-.028em;
+  max-width:19ch;
+}
+.hero h1 em{font-style:normal;color:var(--dimmer);transition:color .4s var(--ease)}
+.hero h1 em:hover{color:var(--v-phishing)}
+.hero .sub{color:var(--dim);font-size:12.5px;max-width:46ch;margin-top:10px}
+.hero .sub b{color:var(--bone);font-weight:500}
+.tally{display:flex;gap:22px;font-size:11px;letter-spacing:.04em;white-space:nowrap}
+.tally div{display:flex;flex-direction:column;gap:1px}
+.tally b{font-family:var(--display);font-weight:700;font-size:23px;line-height:1;letter-spacing:-.02em}
+.tally span{color:var(--dimmer);text-transform:uppercase;font-size:9.5px;letter-spacing:.14em}
+
+/* ── Controls ── */
+.bar{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  padding:9px var(--gut);
+  border-top:1px solid var(--line);
+}
+.grp{display:flex;align-items:center;gap:5px;flex-wrap:wrap;min-width:0}
+.grp[hidden]{display:none}
+.grp + .grp{padding-left:10px;border-left:1px solid var(--line)}
+.lbl{color:var(--dimmer);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;margin-right:3px}
+#fstat{color:var(--dim);font-size:11px;align-items:center}
+#fstat b{color:var(--bone);font-weight:500}
+#fstat .chip{padding:4px 9px;font-size:10px}
+
+.chip{
+  appearance:none; cursor:pointer;
+  background:transparent;
+  border:1px solid var(--line-2);
+  border-radius:100px;
+  color:var(--dim);
+  font:500 11px/1 var(--mono);
+  letter-spacing:.02em;
+  padding:6px 11px;
+  transition:color .22s,border-color .22s,background .22s,transform .22s var(--ease);
+}
+.chip:hover{color:var(--bone);border-color:var(--dimmer);transform:translateY(-1px)}
+.chip[aria-pressed="true"]{color:var(--void);background:var(--bone);border-color:var(--bone)}
+.chip .swatch{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;vertical-align:1px;background:currentColor;opacity:.9}
+.chip[aria-pressed="true"] .swatch{opacity:1}
+
+.search{
+  appearance:none; background:transparent; border:1px solid var(--line-2);
+  border-radius:100px; color:var(--bone);
+  font:400 11.5px var(--mono); padding:6px 13px; width:158px;
+  transition:border-color .22s,width .32s var(--ease);
+}
+.search::placeholder{color:var(--dimmer)}
+.search:focus{outline:none;border-color:var(--dim);width:210px}
+
+/* ── SEV ladder: legend and filter in one control ── */
+.ladder{display:flex;gap:2px}
+.rung{
+  appearance:none; cursor:pointer;
+  position:relative;
+  background:transparent; border:1px solid var(--line-2); border-radius:3px;
+  padding:5px 9px 6px;
+  display:flex; flex-direction:column; gap:2px; align-items:flex-start;
+  transition:border-color .22s,background .22s,transform .22s var(--ease);
+}
+.rung:hover{transform:translateY(-2px);border-color:var(--dimmer)}
+.rung[aria-pressed="true"]{background:var(--bone);border-color:var(--bone)}
+.rung b{font:700 10.5px/1 var(--display);letter-spacing:.02em;color:var(--dim);transition:color .22s}
+.rung span{font-size:9.5px;color:var(--dimmer);white-space:nowrap;transition:color .22s}
+.rung[aria-pressed="true"] b,.rung[aria-pressed="true"] span{color:var(--void)}
+.rung[aria-pressed="true"] span{opacity:.7}
+.rung.s1 b{color:var(--bone)}
+.rung.s1 span{color:var(--dim)}
+
+/* ───────────────────────────────────────────────────────────
+   Timeline
+   ─────────────────────────────────────────────────────────── */
+.wrap{position:relative;z-index:1;padding:0 var(--gut) 22vh}
+.rail{position:relative;padding-top:44px}
+.rail::before{
+  content:''; position:absolute; top:0; bottom:0; left:75px; width:1px;
+  background:linear-gradient(180deg,transparent,var(--line-2) 6%,var(--line-2) 94%,transparent);
+}
+
+.year{display:grid;grid-template-columns:60px 1fr;gap:0;padding:26px 0 4px}
+.year-num{
+  font:500 11px/1 var(--mono); color:var(--dimmer);
+  letter-spacing:.1em; text-align:right; padding-right:15px; padding-top:3px;
+  position:sticky; top:132px; height:max-content;
+  transition:color .35s var(--ease);
+}
+.year.on .year-num{color:var(--bone)}
+.year-num em{display:block;font-style:normal;font-size:9px;color:var(--dimmer);opacity:.6;margin-top:4px}
+
+/* both the attack band and the DOOR sub-rail belong in column 2.
+   without grid-column:2 the doors band auto-places into column 1 of the
+   next row, which is the year gutter, and the two collide. */
+.band{list-style:none;position:relative;grid-column:2}
+.band.doors{margin-top:4px}
+/* inline, not absolutely positioned — the year gutter already belongs
+   to the sticky year number and the two were colliding */
+.band.doors::before{
+  content:'DOOR — a vulnerability, not an attack';
+  display:block; margin:2px 0 1px;
+  font-size:8.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--v-door); opacity:.6;
+}
+
+/* ── Row ── */
+.row{
+  position:relative; cursor:pointer;
+  display:grid; grid-template-columns:30px 1fr auto; align-items:center; gap:14px;
+  padding:7px 12px 7px 0; margin-left:0;
+  border-radius:4px;
+  transition:background .3s var(--ease);
+}
+.row::before{
+  content:''; position:absolute; inset:0; border-radius:4px;
+  background:linear-gradient(90deg,rgba(233,229,220,.07),rgba(233,229,220,0) 62%);
+  opacity:0; transition:opacity .3s var(--ease);
+}
+.row:hover::before,.row.pinned::before{opacity:1}
+.row.pinned{box-shadow:inset 2px 0 0 var(--bone)}
+
+/* node cell — the severity channel */
+.node{position:relative;display:grid;place-items:center;width:30px;height:26px}
+.dot{
+  position:relative; z-index:2;
+  width:var(--sz); height:var(--sz); border-radius:50%;
+  background:var(--hue);
+  opacity:var(--lit);
+  box-shadow:0 0 calc(var(--sz) * var(--bloom)) var(--hue);
+  transition:transform .34s var(--ease),opacity .3s,box-shadow .34s var(--ease);
+}
+/* hollow ring = no lure. the shape IS the lesson. */
+.dot.no-lure{background:transparent;border:1.5px solid var(--hue);box-shadow:none}
+.dot.door{background:transparent;border:1.5px solid var(--v-door);border-radius:2px;box-shadow:0 0 10px rgba(122,214,200,.4)}
+
+/* detonation rings — the product, named in the interaction */
+.dot::before,.dot::after{
+  content:''; position:absolute; inset:0; border-radius:inherit;
+  border:1px solid var(--hue); opacity:0;
+}
+.dot::after{animation-delay:.09s}
+.row:hover .dot{transform:scale(1.35)}
+.row:hover .dot::before{animation:detonate .78s var(--ease)}
+.row:hover .dot::after{animation:detonate .78s var(--ease)}
+@keyframes detonate{
+  0%{opacity:.85;transform:scale(1)}
+  100%{opacity:0;transform:scale(4.2)}
+}
+/* SEV1 breathes on its own. Animate only opacity/transform so many SEV1
+   nodes stay smooth; the node's bloom itself is static. */
+.dot .pulse{
+  position:absolute;inset:-5px;border:1px solid var(--hue);border-radius:inherit;
+  opacity:.12;transform:scale(.9);pointer-events:none;
+  animation:breathe 3.4s ease-in-out infinite;
+}
+@keyframes breathe{
+  0%,100%{opacity:.12;transform:scale(.9)}
+  50%{opacity:.58;transform:scale(1.55)}
+}
+/* a SEV1 hollow ring keeps both encodings: big + glowing, and unfilled. */
+.dot.sev1.no-lure{background:transparent}
+
+.name{
+  min-width:0;display:flex;flex-direction:column;align-items:stretch;gap:4px;
+  color:var(--bone);transition:transform .34s var(--ease),color .24s;
+}
+.row:hover .name{transform:translateX(7px)}
+.name-main{display:flex;align-items:baseline;gap:9px;min-width:0;width:100%}
+.name-main b{font:700 14.5px/1.35 var(--display);letter-spacing:-.012em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row-spec{display:flex;align-items:center;gap:7px;min-width:0;color:var(--dimmer);font:500 8.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.row-spec span{white-space:nowrap}
+.class-pill{display:inline-flex;align-items:center;justify-content:center;min-width:16px;padding:2px 4px;border:1px solid var(--line-2);border-radius:2px;color:var(--bone);font:700 8px/1 var(--mono);letter-spacing:.04em}
+.class-pill.cls-d{border-style:dashed;color:var(--dim)}
+.type-tag{color:var(--dim)}
+.stage-tag{color:var(--dimmer)}
+.row:hover .row-spec{color:var(--dim)}
+
+/* right column: the ladder label, then damage as a bar */
+.meta{display:flex;align-items:center;gap:14px}
+.sevmini{
+  font:600 9.5px/1 var(--mono); letter-spacing:.1em; color:var(--dimmer);
+  white-space:nowrap; transition:color .28s;
+}
+.row:hover .sevmini{color:var(--dim)}
+/* node size = what it cost the attacker. this bar = what it did to you.
+   the gap between the two is the thesis, visible without clicking. */
+.ibar{width:48px;height:3px;background:var(--line);border-radius:2px;overflow:hidden;flex:none}
+.ibar i{display:block;height:100%;background:var(--hue);opacity:.7;transform-origin:left;transition:opacity .28s,transform .5s var(--ease)}
+.row:hover .ibar i{opacity:1}
+
+/* ───────────────────────────────────────────────────────────
+   Drawer
+   ─────────────────────────────────────────────────────────── */
+.scrim{
+  position:fixed; inset:0; z-index:70;
+  background:rgba(4,5,6,.72); backdrop-filter:blur(3px);
+  opacity:0; pointer-events:none; transition:opacity .42s var(--ease);
+}
+.scrim.on{opacity:1;pointer-events:auto}
+
+.drawer{
+  position:fixed; top:0; right:0; z-index:80;
+  width:min(560px,100%); height:100dvh;
+  background:var(--void-2); border-left:1px solid var(--line-2);
+  padding:26px clamp(20px,3vw,34px) 44px;
+  overflow-y:auto; overscroll-behavior:contain;
+  transform:translateX(100%);
+  transition:transform .52s var(--ease);
+}
+.drawer.on{transform:none}
+.drawer.training-open{width:min(920px,100%)}
+.drawer::-webkit-scrollbar{width:8px}
+.drawer::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:4px}
+
+.close{
+  position:absolute; top:20px; right:22px;
+  appearance:none; cursor:pointer; background:transparent;
+  border:1px solid var(--line-2); border-radius:50%;
+  width:30px; height:30px; color:var(--dim);
+  font:400 15px/1 var(--mono);
+  transition:color .22s,border-color .22s,transform .3s var(--ease);
+}
+.close:hover{color:var(--bone);border-color:var(--dim);transform:rotate(90deg)}
+
+.kicker{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{
+  font:700 10px/1 var(--display); letter-spacing:.13em;
+  padding:6px 10px; border-radius:3px; color:var(--void); background:var(--hue);
+}
+.badge.nolure{background:transparent;border:1px solid var(--dim);color:var(--dim)}
+.badge.doorb{background:var(--v-door);color:var(--void)}
+.metal{font-size:10.5px;color:var(--dimmer);letter-spacing:.08em}
+
+.d-title{
+  font:800 clamp(26px,4vw,38px)/1.02 var(--display);
+  letter-spacing:-.032em;margin-bottom:6px;
+}
+.d-vec{font-size:11px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+
+.act{
+  display:flex;align-items:center;gap:11px;flex-wrap:wrap;
+  padding:14px 0;margin:0 0 24px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.act .what{font:700 12px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--bone)}
+.act .why{font-size:11.5px;color:var(--dim);flex-basis:100%}
+.classification{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:-8px 0 10px}
+.classification .class-pill{font-size:9px;min-width:24px;padding:4px 6px}
+.type-pill,.stage-pill{font:500 9px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line-2);border-radius:3px;padding:4px 7px}
+.class-desc,.type-desc{font-size:11px;line-height:1.55;color:var(--dim);margin:0 0 8px}
+.date-note{font-size:10.5px;line-height:1.55;color:var(--dimmer);border-left:1px solid var(--line-2);padding-left:10px;margin:0 0 20px}
+.scenario-split{display:grid;gap:10px;margin:0 0 25px}
+.split-card{border:1px solid var(--line);border-radius:4px;padding:12px 14px;background:rgba(255,255,255,.012)}
+.split-card .h{font:600 9px/1 var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--dimmer);margin-bottom:8px}
+.split-card p{font-size:12px;line-height:1.6;color:#c9c6bf}
+.training-panel{margin:0 0 26px;padding:15px;border:1px solid var(--line-2);border-radius:5px;background:rgba(255,255,255,.018)}
+.training-banner{font:700 9px/1 var(--mono);letter-spacing:.15em;color:var(--v-door);text-transform:uppercase;margin-bottom:12px}
+.training-title{font:700 17px/1.2 var(--display);letter-spacing:-.015em;margin-bottom:12px}
+.training-desktop{border:1px solid var(--line-2);border-radius:4px;overflow:hidden;margin-bottom:12px}
+.desktop-chrome{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:9px 11px;background:#101318;border-bottom:1px solid var(--line-2);font:600 8.5px/1.3 var(--mono);letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
+.desktop-mark{display:flex;align-items:center;gap:7px}
+.desktop-mark i{width:7px;height:7px;border:1px solid var(--v-door);border-radius:50%}
+.desktop-sequence{display:flex;gap:7px;flex-wrap:wrap;padding:9px 11px;border-bottom:1px solid var(--line);list-style:none}
+.desktop-sequence li{font:500 8.5px/1.4 var(--mono);letter-spacing:.06em;color:var(--dimmer)}
+.desktop-sequence b{color:var(--v-door);font-weight:500}
+.desktop-content{display:grid;gap:9px;padding:10px}
+.desktop-card{min-width:0;border:1px solid var(--line);border-radius:3px;padding:10px;background:rgba(255,255,255,.012)}
+.desktop-card small{display:block;font:500 8px/1.4 var(--mono);letter-spacing:.12em;color:var(--dimmer);text-transform:uppercase;margin-bottom:6px}
+.desktop-card strong{display:block;font:700 12px/1.4 var(--display);color:var(--bone)}
+.desktop-card p{font-size:10px;line-height:1.55;color:var(--dim);margin-top:5px}
+.desktop-next{margin:10px 0 0}
+.desktop-sequence [aria-current="step"]{color:var(--bone)}
+.desktop-mail-meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px;color:var(--dimmer);font:9px/1.45 var(--mono)}
+.desktop-app-meta{color:var(--dimmer);font-size:9.5px;line-height:1.5;margin-top:4px}
+.persona-card,.consent-card{border:1px solid var(--line);border-radius:4px;padding:11px 12px;margin-bottom:10px}
+.persona-card small,.consent-card small{display:block;font:500 8.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dimmer);margin-bottom:6px}
+.persona-card strong,.consent-card strong{display:block;font:700 13px/1.3 var(--display);color:var(--bone)}
+.persona-card span,.consent-card p{display:block;font-size:10.5px;line-height:1.55;color:var(--dim);margin-top:5px}
+.scope-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;list-style:none}
+.scope-list li{font:500 9px/1 var(--mono);color:var(--dim);border:1px solid var(--line-2);border-radius:3px;padding:5px 7px}
+.training-optin{display:flex;align-items:flex-start;gap:9px;font-size:10.5px;line-height:1.5;color:var(--dim);margin:12px 0}
+.training-optin input{accent-color:var(--bone);margin-top:2px;flex:none}
+.training-optin[hidden]{display:none}
+.training-optin:focus-within{color:var(--bone)}
+.training-runtime{border-left:2px solid var(--v-door);padding:7px 9px;margin-top:10px;background:rgba(122,214,200,.035);font-size:10px;line-height:1.55;color:var(--dim)}
+.training-actions{display:flex;gap:8px;flex-wrap:wrap}
+.training-actions .btn{margin-left:0}
+.training-actions .btn:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+#oauth-plan{border:1px solid var(--line);border-radius:4px;padding:11px 12px;margin:10px 0;font-size:10.5px;color:var(--dim)}
+#oauth-plan h4{font:700 9px/1.4 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--bone);margin-bottom:7px}
+#oauth-plan ol{padding-left:19px;line-height:1.55}
+#oauth-plan li{margin:3px 0}
+.training-hint{font-size:10.5px;line-height:1.5;color:var(--dimmer);margin-top:9px}
+.training-result{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--dim)}
+.training-result h4{font:700 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--bone);margin:12px 0 7px}
+.training-result ol,.training-result ul{padding-left:19px;line-height:1.65}
+.training-result li{margin:3px 0}
+.training-screenshots{display:grid;gap:10px;margin:8px 0 14px}
+.training-screenshots figure{min-width:0;border:1px solid var(--line-2);border-radius:4px;padding:7px}
+.training-screenshots img{display:block;width:100%;height:auto;border-radius:2px;background:var(--void)}
+.training-screenshots figcaption{font:500 9px/1.4 var(--mono);color:var(--dimmer);margin-top:5px}
+.receipt-stamp{color:var(--v-door);font:700 9px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase}
+.evidence-hash{overflow-wrap:anywhere;color:var(--dimmer);font:9px/1.5 var(--mono)}
+.btn:focus-visible,.training-optin input:focus-visible{outline:2px solid var(--v-door);outline-offset:3px}
+.btn{
+  appearance:none;cursor:pointer;margin-left:auto;
+  background:var(--bone);color:var(--void);border:0;border-radius:100px;
+  font:700 11.5px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;
+  padding:11px 20px;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(233,229,220,.2)}
+.btn.ghost,.btn.secondary{background:transparent;color:var(--bone);box-shadow:inset 0 0 0 1px var(--line-2)}
+.btn.ghost:hover,.btn.secondary:hover{box-shadow:inset 0 0 0 1px var(--dim)}
+
+.d-sum{font-size:14.5px;line-height:1.72;color:#c9c6bf;margin-bottom:26px}
+
+/* the payoff: the lesson is the biggest type on the card */
+.d-lesson{
+  border-left:2px solid var(--hue);
+  padding:2px 0 2px 17px;margin-bottom:28px;
+}
+.d-lesson .h{
+  font:700 9.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--dimmer);margin-bottom:9px;
+}
+.d-lesson p{font:600 17px/1.5 var(--display);letter-spacing:-.018em;color:var(--bone)}
+
+.axes{display:grid;gap:14px;margin-bottom:26px}
+.axis{display:grid;grid-template-columns:1fr auto;gap:5px 12px;align-items:baseline}
+.axis .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dimmer)}
+.axis .v{font:700 12px/1 var(--mono);color:var(--bone)}
+.axis .v i{font-style:normal;color:var(--dimmer)}
+.track{grid-column:1/-1;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.track i{display:block;height:100%;background:var(--hue);border-radius:2px;transform-origin:left;animation:grow .8s var(--ease) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.axis.hi .k,.axis.hi .v{color:var(--bone)}
+.divergence{
+  margin:-12px 0 26px;padding:11px 14px;
+  border:1px dashed var(--line-2);border-radius:4px;
+  font-size:11.5px;color:var(--dim);line-height:1.6;
+}
+.divergence b{color:var(--v-phishing);font-weight:500}
+
+.src{border-top:1px solid var(--line);padding-top:16px}
+.src .h{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dimmer);margin-bottom:7px}
+.src p{font-size:11.5px;color:var(--dim);line-height:1.65}
+.src-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.src-links a{font:500 9.5px/1 var(--mono);color:var(--dim);text-decoration:none;border:1px solid var(--line-2);border-radius:3px;padding:6px 8px;transition:color .2s,border-color .2s}
+.src-links a:hover{color:var(--bone);border-color:var(--dim)}
+
+.empty{padding:80px 0;text-align:center;color:var(--dimmer);font-size:12px;letter-spacing:.1em}
+
+.foot{
+  border-top:1px solid var(--line);padding:26px var(--gut) 60px;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-size:10.5px;color:var(--dimmer);letter-spacing:.06em;
+}
+.foot .lgd{display:flex;gap:18px;flex-wrap:wrap}
+.foot i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--hue);margin-right:6px;vertical-align:0}
+.foot i.ring{background:transparent;border:1.5px solid var(--dim)}
+.foot i.door{background:transparent;border:1.5px solid var(--v-door);border-radius:1px}
+
+/* ───────────────────────────────────────────────────────────
+   SEV mode — same 50 nodes, re-sorted. The second reading.
+   ─────────────────────────────────────────────────────────── */
+body[data-mode="sev"] .rail::before{display:none}
+body[data-mode="sev"] .year-num{color:var(--hue)}
+body[data-mode="sev"] .year{padding:20px 0 4px;border-top:1px solid var(--line);margin-top:8px;grid-template-columns:104px 1fr}
+body[data-mode="sev"] .year:first-child{border-top:0;margin-top:0}
+body[data-mode="sev"] .year-num{font-size:12px;padding-top:0}
+body[data-mode="sev"] .year-num em{font-size:9px;line-height:1.35;margin-top:3px}
+body[data-mode="sev"] .band.doors{padding-left:22px;border-left:1px dashed var(--v-door);margin-left:8px}
+
+@media (max-width:820px){
+  .rail::before{left:47px}
+  .year{grid-template-columns:32px 1fr}
+  .year-num{padding-right:15px;font-size:10px}
+  .row{grid-template-columns:26px 1fr;gap:10px}
+  .sevmini{display:none}
+  .name-main b{font-size:13.5px}
+  .row-spec{gap:5px;font-size:8px}
+  .meta{grid-column:2;justify-self:start;margin-top:0}
+  .tag{display:none}
+  .hero h1{max-width:none}
+  .tally{gap:16px}
+  .drawer{width:100%}
+}
+@media (max-width:480px){
+  .training-panel{padding:11px}
+  .desktop-content{padding:8px}
+  .desktop-card{padding:9px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="ghost" id="ghost" aria-hidden="true">1989</div>
+
+<header class="top">
+  <div class="hero">
+    <div>
+      <h1>We build a machine that looks like <em>yours</em>.</h1>
+          <p class="sub">Fifty historically grounded experiences. <b>Twenty</b> have a human-triggered moment, <b>twenty-seven</b> are machine verifiers, and <b>three</b> are analyst or uncertain reconstructions. Every consequence is synthetic.</p>
+    </div>
+    <div class="tally">
+      <div><b id="t-entries">50</b><span>Attacks</span></div>
+      <div><b id="t-human" style="color:var(--bone)">20</b><span>Human moment</span></div>
+      <div><b id="t-verifier" style="color:var(--v-botnet)">27</b><span>Verifier</span></div>
+      <div><b id="t-analyst" style="color:var(--dim)">3</b><span>Analyst / unknown</span></div>
+    </div>
+  </div>
+
+  <div class="bar">
+    <div class="grp" id="fstat" hidden>
+      <span class="lbl">Showing</span><span><b id="fcount">50</b> of 50</span>
+      <button class="chip" id="clear">clear</button>
+    </div>
+    <div class="grp">
+      <span class="lbl">Read as</span>
+      <button class="chip" id="m-year"  aria-pressed="true">Year</button>
+      <button class="chip" id="m-sev"   aria-pressed="false">Severity</button>
+    </div>
+    <div class="grp">
+      <span class="lbl">Severity</span>
+      <div class="ladder" id="ladder"></div>
+    </div>
+    <div class="grp" id="vecfilters">
+      <span class="lbl">Family</span>
+    </div>
+    <div class="grp" style="margin-left:auto">
+      <input class="search" id="q" type="search" placeholder="search 50 attacks…" autocomplete="off" spellcheck="false" aria-label="Search attacks">
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="rail" id="rail"></div>
+  <div class="empty" id="empty" hidden>no attack matches that</div>
+</main>
+
+<footer class="foot">
+  <div class="lgd">
+    <span><i style="--hue:var(--bone)"></i>A/B · human-triggered path</span>
+    <span><i class="ring" style="--hue:var(--dim)"></i>C/D · no human moment</span>
+    <span><i class="door" style="--hue:var(--v-door)"></i>vulnerability reference</span>
+  </div>
+  <div>Node size is what it cost the attacker. The bar is what it did to you.<br>All walkthrough consequences use synthetic data; no real account or target.</div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" tabindex="-1">
+  <button class="close" id="close" aria-label="Close">×</button>
+  <div id="d-body"></div>
+</aside>
+
+<script>
+const DATA = {"_meta":{"title":"Attack Timeline Dataset","version":"2.0","count":50,"built":"2025","purpose":"Historical attack reference for the Detonation Chamber. Every entry is reconstructed from published reporting: the technique, never the payload. Entries are classified by BUILD WEIGHT, not by whether a runnable technique exists - all 50 have one.","severity_ladder":{"1":{"name":"SEV1","action":"Nothing","desc":"Zero user action. The attack reaches the victim unaided."},"2":{"name":"SEV2","action":"One Click","desc":"One click. No credentials typed."},"3":{"name":"SEV3","action":"Your Password","desc":"Victim types a password into a hostile surface."},"4":{"name":"SEV4","action":"Your Code","desc":"Victim supplies a second factor or seed phrase."},"5":{"name":"SEV5","action":"Open a File","desc":"Victim downloads and executes a payload."},"note":"SEV counts DOWN in severity, following ITIL/SRE. SEV1 is worst. 'action' names the user action the attack required, and is the lesson.","null":{"name":"NO LURE","action":"No Human Moment","desc":"No human action is required. Class C can run a safe backend verifier; class D is a narrated or analyst-only reconstruction."}},"axes":{"sev":"Initial-access user action. SEV1 is worst and counts down. Corrected: worms that exploited network services directly (Slammer, Blaster, Sasser, Conficker, Mirai, Shamoon) are SEV1 Nothing, not SEV5 Open a File.","attacker_cost":"1-5. How much infrastructure and skill the attack required from the attacker. 1 = state-level or supply-chain operation, 5 = commodity kit.","impact":"1-5. Damage to the victim, independent of attacker cost. THIS AXIS DIVERGES FROM attacker_cost and the divergence is a talking point: the cheapest attack in this catalogue drains a wallet.","vector":"phishing | bec | supply-chain | ransomware | wiper | exploit | espionage | card-fraud | botnet | social | vulnerability | theft","vector_note":"Broad display family used for timeline hue, not necessarily a verified initial-access mechanism. Where the entry route is known, the summary identifies it.","lure":"true if the attack required a human to be persuaded by something. false if it did not.","simulatable":"true when an A/B human-triggered path can be played using synthetic data. False for C/D does not mean no backend exists: C runs a machine/config verifier; D is analyst or uncertain.","cls":"A | B | C | D. Build weight. Drives the SIMULATE affordance and the backend estimate.","type":"Incident | Campaign | Malware | Vulnerability | Technique | Disclosure. What kind of thing this entry is.","stages":"Number of backend stages the scenario runs. Drives the stage ladder in the timeline row.","fe":"What the front end draws. The user-facing moment, reconstructed accurately.","be":"What the Vultr backend genuinely does. Real consequence, synthetic primitive."},"confidence":"high = widely documented, figures corroborated. medium = figures reported by reputable outlets but not independently audited. estimated = single-source or contested figure, verify before publication.","revised":"2025","build_classes":{"note":"A and B are human-triggered: the user makes a decision. C and D have no meaningful human lure, so the backend experience IS the product. The counts deliberately do not match how many attacks are \"important\". They match what a container costs.","A":{"name":"Human-trigger, staged compromise","desc":"The user's decision matters and triggers multiple backend stages. Playable."},"B":{"name":"Human-trigger, immediate consequence","desc":"The deception, approval or submit is essentially the whole attack. Playable, and cheap."},"C":{"name":"Machine / config / supply-chain verifier","desc":"No meaningful human lure. The front end explains the historical event while a safe backend verifier performs a real synthetic consequence."},"D":{"name":"Analyst / uncertain reconstruction","desc":"The historical evidence does not support pretending a particular initial-access mechanism is established. Class D is the honest answer, and it is a feature."}},"types":{"note":"Not every entry is a discrete attack. Several are datasets, technique families or disclosures. The TYPE chip says which.","Incident":"A specific, datable breach at a specific organisation.","Campaign":"A coordinated abuse of many victims, often sharing infrastructure or tooling.","Malware":"A specific piece of malicious code or worm.","Vulnerability":"A flaw. A door, not a door being walked through.","Technique":"A reusable method, not a single event. Many incidents, one method.","Disclosure":"The publication of material rather than a compromise of a victim."},"backend_rule":{"principle":"Real consequence, synthetic primitive.","detail":"Actually issue the fake token, actually copy the synthetic object, actually encrypt the synthetic files, actually change the fake PLC state, actually install the benign update. Do NOT use actual historical malware or CVE execution as the proof that the backend is real.","safety":"Nothing runs against a real victim, a real credential, a real network or a real block chain."},"terminology":{"note":"Call these ephemeral Vultr sandboxes / Cloud Compute instances. Do not say \"Vultr microVM\" unless a microVM layer is actually deployed - Vultr's public product terminology is Cloud Compute virtual machines."},"safety":{"principle":"Real consequence, synthetic primitive. Never real samples, never real vulnerable software, never a real target.","hard_rules":["An intentionally vulnerable toy means a toy WE WROTE, never a real product left unpatched. No vulnerable Log4j, MOVEit, OpenSSL, Struts, SharePoint, Siemens or Windows build is ever installed.","No malware sample, exploit, or payload is ever downloaded, generated, or cloned from any source. Not for testing, not for reference, not temporarily.","Nothing leaves the sandbox. No real block chain, SMS, carrier, DNS, C2, or public deceptive domain. Every callback terminates inside our own network.","No real host is ever targeted. Scanning, flooding and propagation terminate at a private address, bounded by design, and fail closed on any unexpected resolution.","The sandbox is destroyed after every run, including on failure.","Simulated credential forms discard their input and record only that a synthetic credential was submitted."],"why":"The hackathon requires a public repository. A public repo reproducing a working historical credential harvester is a liability. A reconstruction with citations is what a detection engineer publishes anyway, and the lesson (the user decision) is entirely intact without a working payload.","doc":"docs/safety.md"},"source_policy":{"field":"source_urls","rule":"Each entry has one or more direct HTTPS references. Historical facts and the reconstruction boundary are separate: sources support the history; backend descriptions specify original synthetic behavior.","uncertain_method":"Where public reporting does not establish an initial-access mechanism, the entry says so and does not invent one."}},"attacks":[{"id":"pccyborg-1989","name":"PC Cyborg (AIDS Trojan)","year":1989,"vector":"ransomware","attacker_cost":5,"impact":2,"sev":5,"lure":true,"simulatable":true,"summary":"An early ransomware Trojan, distributed on mailed AIDS-information floppy disks. After roughly ninety boots it hid directories, scrambled file names rather than file contents, and demanded $189 or $378 for a license renewal to a P.O. Box in Panama.","lesson":"The files were hidden, not destroyed, but loss of access was enough to demand money. The extortion pattern was already there in 1989.","source":"WatchGuard, AIDS Trojan analysis; CIAC Information Bulletin A-10, 1989","confidence":"high","type":"Malware","cls":"A","stages":3,"fe":"DOS machine, a mailed AIDS-information floppy, a reboot counter climbing toward ninety.","be":"Increment an accelerated boot counter on a synthetic host, then rename and scramble synthetic filenames and directories, then show the ransom screen.","source_urls":["https://www.watchguard.com/wgrd-security-hub/ransomware-tracker/aids-trojan"]},{"id":"melissa-1999","name":"Melissa","year":1999,"vector":"phishing","attacker_cost":5,"impact":3,"sev":5,"lure":true,"simulatable":true,"summary":"An infected Word document triggered a macro worm that used Outlook to send infected copies to the first fifty addresses in the Outlook Address Book. The resulting wave overwhelmed enterprise email systems.","lesson":"Trusted contacts amplified an attachment-driven macro outbreak. The public record describes email disruption, not an attacker-directed data-exfiltration operation.","source":"FBI, Microsoft Security Intelligence Report, SEI/CERT, and House testimony on the 1999 Melissa outbreak","confidence":"high","type":"Malware","cls":"A","stages":3,"fe":"Period Outlook inbox and a \"here is the document you wanted\" attachment.","be":"A macro-equivalent event reads a synthetic address book, then mails the first fifty recipients to a sink, and the queue visibly explodes.","source_urls":["https://www.fbi.gov/news/stories/melissa-virus-20th-anniversary-032519","https://news.microsoft.com/source/1999/03/30/alert-on-macro-virus-issues/","https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Virus%3AW97M%2FMelissa.A","https://www.sei.cmu.edu/documents/2648/1999_102_001_413932.pdf","https://commdocs.house.gov/committees/science/hsy131170.000/hsy131170_1.HTM","https://www.justice.gov/archive/criminal/cybercrime/press-releases/2002/melissaSent.htm","https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf"]},{"id":"iloveyou-2000","name":"ILOVEYOU (Love Bug)","year":2000,"vector":"phishing","attacker_cost":5,"impact":4,"sev":5,"lure":true,"simulatable":true,"summary":"A VBScript mass-mailing worm spread as an email attachment and through IRC. Microsoft's retrospective says it infected millions of computers in 2000 and could download, overwrite, delete, infect, and run files.","lesson":"The payload was visible, the extension was shown, and it still spread worldwide. Curiosity plus a loving sender is enough.","source":"Microsoft Security Intelligence, CERT/CC CA-2000-04, Virus Bulletin, and House testimony, 2000","confidence":"high","type":"Malware","cls":"A","stages":3,"fe":"Outlook and LOVE-LETTER-FOR-YOU.TXT.vbs, extension visible in the attachment bar.","be":"Synthetic address book propagation into a sink, and real overwriting of disposable synthetic files.","source_urls":["https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Virus%3AVBS%2FLoveLetter&threatId=-2147428236","https://web.archive.org/web/20001204063700/http://www.cert.org/advisories/CA-2000-04.html","https://www.virusbulletin.com/virusbulletin/2015/05/throwback-thursday-when-love-came-town-june-2000","https://commdocs.house.gov/committees/science/hsy131170.000/hsy131170_1.HTM","https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf"]},{"id":"blaster-2003","name":"Blaster (MSBlast)","year":2003,"vector":"botnet","attacker_cost":5,"impact":3,"sev":1,"lure":false,"simulatable":false,"summary":"MSBlast exploited the Windows RPC/DCOM vulnerability addressed by MS03-026 and spread over open RPC ports without user action.","lesson":"An exposed, unpatched network service can propagate without anyone opening a file or clicking a link.","source":"Microsoft Security Bulletin MS03-026; Microsoft Blaster Worm alert","confidence":"high","type":"Malware","cls":"C","stages":3,"fe":"The actual-style RPC shutdown countdown dialog across a fleet.","be":"A fake vulnerable RPC endpoint raises a propagation event, serves copies over a private file-fetch path, and finally raises the shutdown state.","source_urls":["https://learn.microsoft.com/en-us/security-updates/securitybulletins/2003/ms03-026","https://learn.microsoft.com/en-us/troubleshoot/windows-server/security-and-malware/blaster-worm-virus-alert"]},{"id":"slammer-2003","name":"SQL Slammer","year":2003,"vector":"botnet","attacker_cost":5,"impact":3,"sev":1,"lure":false,"simulatable":false,"summary":"Memory-resident worm propagated over UDP port 1434 and spread worldwide in roughly ten minutes. It carried no destructive payload; the damage came from scanning congestion and resulting outages.","lesson":"No user click or attachment was needed. The worm's self-propagating traffic alone overwhelmed systems.","source":"Microsoft, SQL Slammer worm analysis, 2003; CAIDA traffic study","confidence":"high","type":"Malware","cls":"C","stages":2,"fe":"A world or cluster infection counter racing upwards with genuine timestamps.","be":"A propagation emulator across many lightweight private nodes, reporting real saturation metrics, with no additional payload at all.","source_urls":["https://www.caida.org/archive/sapphire/","https://learn.microsoft.com/en-us/security-updates/securitybulletins/2002/ms02-039"]},{"id":"mydoom-2004","name":"Mydoom","year":2004,"vector":"phishing","attacker_cost":5,"impact":4,"sev":5,"lure":true,"simulatable":true,"summary":"Mydoom was a mass-mailing worm; some variants spread through peer-to-peer networks, acted as backdoors, and could launch denial-of-service attacks. Its email lures varied by version.","lesson":"Volume was the whole strategy. One of the first worms to treat distribution volume as the primary weapon.","source":"Microsoft Security Intelligence Report, Microsoft malware profile, and F-Secure Mydoom.M analysis","confidence":"high","type":"Malware","cls":"A","stages":3,"fe":"A Mydoom.M-style returned-mail or error-themed email; make clear that this is one variant's lure, not the family's only template.","be":"Synthetic address harvesting into sink mailboxes, then a persistent backdoor state on the victim host.","source_urls":["https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Win32%2FMydoom","https://www.f-secure.com/v-descs/mydoom-m","https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf"]},{"id":"sasser-2004","name":"Sasser worm","year":2004,"vector":"botnet","attacker_cost":5,"impact":2,"sev":1,"lure":false,"simulatable":false,"summary":"Sasser was a network worm that exploited an LSASS vulnerability and spread by randomly scanning IP addresses for vulnerable machines.","lesson":"A vulnerable network service can become a propagation route without a user opening a file.","source":"Microsoft Security Intelligence Report and Microsoft Security Bulletin MS04-011","confidence":"high","type":"Malware","cls":"C","stages":3,"fe":"Windows XP crash and restart screens across a small office network.","be":"A toy LSASS-equivalent service, written from scratch, raises a propagation event, transfers a copy over a private file-transfer path, and infects the next host. No real unpatched Windows host is ever joined to anything.","source_urls":["https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=Win32%2FSasser","https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft_Security_Intelligence_Report_volume_7_Jan-Jun2009.pdf","https://learn.microsoft.com/en-us/security-updates/securitybulletins/2004/ms04-011"]},{"id":"zeus-2007","name":"Zeus (Zbot)","year":2007,"vector":"phishing","attacker_cost":2,"impact":5,"sev":3,"lure":true,"simulatable":true,"summary":"First identified in 2007 and designed primarily to steal banking data. Zeus became known for browser form grabbing, web injects that changed genuine bank pages, and keylogging; users could be on the real bank site while the browser altered what it displayed.","lesson":"The best credential theft does not imitate a login page. It stays on the real one and quietly adds fields.","source":"NHS England Digital, Sophos Zbot profile, and Securelist analysis","confidence":"high","type":"Malware","cls":"A","stages":4,"fe":"An infected user's browser, where a legitimate-looking bank page suddenly starts requesting additional fields.","be":"The browser and profile sandbox records synthetic form data, cookies and credentials, then forwards them to an internal C2 sink and produces a receipt. Zeus itself is never executed.","source_urls":["https://digital.nhs.uk/cyber-alerts/2017/cc-1138","https://www.sophos.com/en-us/threat-detection-library/mal/zbot","https://securelist.com/zeus-on-the-hunt/36289/"]},{"id":"tjx-2007","name":"TJX (T.J. Maxx / Marshalls)","year":2007,"vector":"card-fraud","attacker_cost":3,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"The Canadian Privacy Commissioner’s report records TJX’s view that intruders first accessed its system through wireless LANs at two U.S. stores. The breach exposed payment-card data; the source describes the initial wireless route cautiously.","lesson":"The building perimeter was the perimeter. A radio signal in a car park was the shortest path to forty million card numbers.","source":"Office of the Privacy Commissioner, TJX investigation report","confidence":"high","type":"Incident","cls":"C","stages":3,"fe":"A retail store, a parking-lot attacker, and a WEP or WPA configuration panel.","be":"A safe Wi-Fi authentication emulator grants a network foothold when legacy security is selected, leading to synthetic payment database exposure.","source_urls":["https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2007/tjx_rep_070925/"]},{"id":"conficker-2008","name":"Conficker","year":2008,"vector":"botnet","attacker_cost":3,"impact":3,"sev":1,"lure":false,"simulatable":false,"summary":"Worm that spread via the MS08-067 vulnerability, network shares, and removable media, then used domain generation to keep finding command and control. It proved that a patch existed and was not applied.","lesson":"The vulnerability was a year old and patched. The worm did not need a zero-day. It needed a network where the patch had not landed.","source":"CISA, Microsoft MS08-067, and SRI/USENIX Conficker analysis","confidence":"high","type":"Malware","cls":"C","stages":3,"fe":"A corporate fleet map with USB, share and domain-generation activity.","be":"An internal DGA resolver plus synthetic share and removable-drive state generates real callbacks and infection states. Behaviour emulation, not exploit code.","source_urls":["https://www.cisa.gov/news-events/alerts/2009/03/29/conficker-worm-targets-microsoft-windows-systems","https://learn.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067","https://www.usenix.org/event/leet09/tech/full_papers/porras/porras_html"]},{"id":"stuxnet-2010","name":"Stuxnet","year":2010,"vector":"supply-chain","attacker_cost":1,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"One of the first widely documented cyberweapons. It propagated through infected USB media and network shares, targeted Siemens STEP7 and WinCC environments, altered PLC logic, and concealed those changes from operators.","lesson":"It attacked a process, not a computer. The screen the humans watched was not the system the malware was changing.","source":"CISA and ENISA Stuxnet advisories; Symantec Stuxnet Dossier, 2010–2011","confidence":"high","type":"Malware","cls":"C","stages":4,"fe":"An engineering workstation, a USB stick, STEP7 and WinCC, and a centrifuge-style process display.","be":"A synthetic PLC and HMI state machine, written from scratch, receives a benign altered setpoint while the operator display briefly still reads normal. No real Siemens software is installed.","source_urls":["https://www.cisa.gov/news-events/ics-advisories/icsa-10-272-01","https://www.cisa.gov/news-events/ics-advisories/icsa-10-201-01c","https://www.enisa.europa.eu/news/enisa-news/stuxnet-analysis","https://nsarchive2.gwu.edu/NSAEBB/NSAEBB424/docs/Cyber-044.pdf"]},{"id":"rsa-2011","name":"RSA SecurID","year":2011,"vector":"phishing","attacker_cost":4,"impact":5,"sev":5,"lure":true,"simulatable":true,"summary":"RSA disclosed that attackers extracted information related to its SecurID products. Reporting described a spearphishing email with an Excel attachment containing an embedded Flash exploit. RSA warned the information could weaken affected token deployments; its cited company notice did not specify the exact token-seed scope.","lesson":"A targeted attack on an authentication supplier can weaken trust in a product without proving that every customer's token was compromised.","source":"RSA SEC filing and Ars Technica reporting, 2011","confidence":"high","type":"Incident","cls":"A","stages":4,"fe":"A junk folder containing a \"2011 Recruitment Plan\" spreadsheet, and a Flash zero-day in the same chain.","be":"Opening the document raises a harmless compromise event, establishes a synthetic corporate foothold, and puts SecurID-related synthetic material into the receipt.","source_urls":["https://arstechnica.com/information-technology/2011/04/spearphishing-0-day-rsa-hack-not-extremely-sophisticated/","https://www.sec.gov/Archives/edgar/data/790070/000119312511070159/dex991.htm","https://www.sec.gov/Archives/edgar/data/790070/000119312511070159/dex992.htm"]},{"id":"shamoon-2012","name":"Shamoon (Disttrack)","year":2012,"vector":"wiper","attacker_cost":3,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Contemporaneous reporting said a 2012 wiper replaced data on three-quarters of Saudi Aramco's corporate PCs with a burning U.S. flag image. The company said about 30,000 workstations were affected and its main internal network services had been restored.","lesson":"Destruction needs no ransom negotiation to be extortion. Shamoon had no business model — it was an argument.","source":"The New York Times, Saudi Aramco cyberattack reporting; ICS-CERT Monitor, 2012","confidence":"high","type":"Incident","cls":"C","stages":3,"fe":"Corporate PCs disappearing from a fleet map, then a corrupted boot screen.","be":"Overwrite and delete only a mounted synthetic data tree, mark a fake master-boot-record object as corrupted, and terminate the sandbox. An actual boot sector is never touched.","source_urls":["https://www.nytimes.com/2012/10/24/business/global/cyberattack-on-saudi-oil-firm-disquiets-us.html","https://archive.nytimes.com/bits.blogs.nytimes.com/2012/08/27/connecting-the-dots-after-cyberattack-on-saudi-aramco/","https://www.cisa.gov/sites/default/files/Monitors/ICS-CERT_Monitor_Sep2012.pdf"]},{"id":"target-2013","name":"Target","year":2013,"vector":"supply-chain","attacker_cost":2,"impact":5,"sev":2,"lure":true,"simulatable":true,"summary":"Investigative reporting attributed the intrusion to credentials stolen in an email malware attack at HVAC vendor Fazio Mechanical. Attackers reached Target point-of-sale systems and scraped card data; the precise path from vendor access to POS remained partly unresolved.","lesson":"The target was never contacted directly. The target was reached through a company they had contracted to change a boiler.","source":"Krebs on Security, Target breach reporting, 2014","confidence":"high","type":"Incident","cls":"A","stages":5,"fe":"An HVAC vendor employee receives a phishing email, gains vendor access, and the Target ecosystem opens around it.","be":"A safe vendor compromise yields a synthetic supplier credential, which is used to reach a segmented retail network, and point-of-sale memory data is gathered.","source_urls":["https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/","https://krebsonsecurity.com/2014/02/email-attack-on-vendor-set-up-breach-at-target/","https://krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/"]},{"id":"emotet-2014","name":"Emotet","year":2014,"vector":"phishing","attacker_cost":3,"impact":5,"sev":5,"lure":true,"simulatable":true,"summary":"CISA described Emotet as a modular banking Trojan that could download or drop other malware. It spread through malicious email attachments and links.","lesson":"It was never one attack. It was a platform that other people's attacks arrived inside.","source":"CISA Emotet alert and Microsoft malware profile","confidence":"high","type":"Malware","cls":"A","stages":4,"fe":"An invoice or document email thread, and the document itself.","be":"Opening it raises a harmless launcher signal, reaches an internal C2 that issues tasking, and a module collects synthetic browser passwords and mail.","source_urls":["https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-280a","https://www.cisa.gov/news-events/alerts/2018/07/20/emotet-malware","https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Win32%2FEmotet"]},{"id":"heartbleed-2014","name":"Heartbleed","year":2014,"vector":"vulnerability","attacker_cost":1,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"A flaw in OpenSSL's TLS heartbeat handling allowed a remote peer to expose sensitive process memory, potentially including authentication credentials and secret keys.","lesson":"A small bounds-check error in widely used cryptographic software can expose process memory without leaving obvious application logs.","source":"CISA and Netcraft, Heartbleed analysis, April 2014","confidence":"high","type":"Vulnerability","cls":"C","stages":2,"fe":"A server memory visualiser contrasting bytes requested against bytes returned.","be":"A deliberately flawed heartbeat emulator, written from scratch, leaks randomly positioned synthetic secrets. If a demo token happens to land in the leaked window, the agent uses it against a private service. No real vulnerable OpenSSL build is ever installed.","source_urls":["https://www.cisa.gov/news-events/alerts/2014/04/08/openssl-heartbleed-vulnerability-cve-2014-0160","https://www.netcraft.com/blog/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug"]},{"id":"sony-2014","name":"Sony Pictures","year":2014,"vector":"espionage","attacker_cost":3,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"The FBI described system destruction, large-scale theft of personal and commercial data, and threats by the Guardians of Peace; it attributed the intrusion to North Korea. The cited public statement does not establish the initial access route, so none is reconstructed here.","lesson":"The FBI's public attribution does not establish the initial access method. Keep attribution, entry hypotheses and observed consequences separate.","source":"FBI update and CISA targeted destructive malware analysis, December 2014","confidence":"medium","type":"Incident","cls":"D","stages":2,"fe":"Begin after the phrase \"initial foothold obtained\", then show the corporate network and the stolen-data and wiper consequences.","be":"A safe consequence replay: copy synthetic documents, wipe a disposable synthetic filesystem, and take the host offline. The initial route is not dramatised because the public evidence does not establish it.","source_urls":["https://www.fbi.gov/news/press-releases/update-on-sony-investigation","https://www.cisa.gov/news-events/alerts/2014/12/19/targeted-destructive-malware"]},{"id":"anthem-2015","name":"Anthem","year":2015,"vector":"espionage","attacker_cost":2,"impact":5,"sev":2,"lure":true,"simulatable":true,"summary":"The Department of Justice alleged that tailored spearphishing emails with hyperlinks downloaded a backdoor, followed by lateral movement and access to Anthem’s enterprise data warehouse. Intruders remained for months before January 2015 exfiltration affecting roughly 78.8 million people.","lesson":"The entry was a link in a plausible email, and the exfiltration was months later. The gap between the two is the whole detection problem.","source":"U.S. Department of Justice, Anthem indictment and 2019 indictment announcement","confidence":"high","type":"Incident","cls":"A","stages":4,"fe":"An employee spearphishing email with an embedded link.","be":"The click produces a safe backdoor marker, traversal across a synthetic enterprise, and export from a synthetic healthcare database.","source_urls":["https://www.justice.gov/d9/press-releases/attachments/2019/05/09/anthem_indictment_0.pdf","https://www.justice.gov/archives/opa/pr/member-sophisticated-china-based-hacking-group-indicted-series-computer-intrusions-including"]},{"id":"carbanak-2015","name":"Carbanak (Anunak)","year":2015,"vector":"phishing","attacker_cost":2,"impact":5,"sev":5,"lure":true,"simulatable":true,"summary":"Kaspersky reported spearphishing attachments against bank employees, followed by lateral movement and direct manipulation of banking and ATM systems to transfer funds over time.","lesson":"It removed the human from the cash. It was in the bank, logged in legitimately, and told the ATM what to dispense.","source":"Kaspersky Lab, Carbanak report, 2015","confidence":"high","type":"Malware","cls":"A","stages":5,"fe":"A bank employee opens a targeted attachment, then the view shifts to bank and ATM operator screens.","be":"The click gives a safe foothold on a synthetic corporate network, leading to a synthetic bank network and a fake ATM transaction state change.","source_urls":["https://securelist.com/the-great-bank-robbery-the-carbanak-apt/68732/"]},{"id":"lookalike-2005","name":"Lookalike / IDN homograph domains","year":2005,"vector":"phishing","attacker_cost":4,"impact":3,"sev":2,"lure":true,"simulatable":true,"summary":"Mozilla’s February 2005 advisory documented IDN spoofing: some internationalized domain names could resemble trusted names in the address bar. This was a browser-display risk, not a credential leak by itself.","lesson":"The address bar was the control everyone trusted, and it was defeated by a character set rather than by a firewall.","source":"Mozilla Security Advisory, IDN homograph attack, February 2005","confidence":"high","type":"Technique","cls":"B","stages":1,"fe":"Two browser address bars, with the homoglyph revealed only after the first one fails.","be":"A controlled internal hostname or subdomain renders the lookalike and records navigation and submit. No deceptive public domain is ever registered.","source_urls":["https://www.mozilla.org/en-US/security/advisories/mfsa2005-29/","https://bugzilla.mozilla.org/show_bug.cgi?id=281831"],"date_note":"2005 is the advisory's publication year; the IDN homograph technique predates it."},{"id":"opm-2015","name":"US Office of Personnel Management","year":2015,"vector":"espionage","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"The breach exposed personnel and security-clearance records, including background-investigation files. Congressional reporting identifies a compromised KeyPoint user credential, while OPM could not determine how it was initially obtained. No weak-password story is reconstructed here.","lesson":"The most sensitive data in government was often held in a place nobody thought of as government. The attack surface followed the contractor, not the agency.","source":"House Oversight Committee report, OPM Director testimony, and GAO, 2015–2017","confidence":"high","type":"Incident","cls":"C","stages":2,"fe":"A contractor and identity relationship diagram alongside government systems.","be":"Begin from an explicitly already-compromised contractor identity with a valid credential, then reach a synthetic federal portal and export synthetic personnel records.","source_urls":["https://oversight.house.gov/report/opm-data-breach-government-jeopardized-national-security-generation/","https://docs.house.gov/meetings/GO/GO00/20150624/103684/HHRG-114-GO00-Transcript-20150624.pdf","https://oversight.house.gov/wp-content/uploads/2015/06/2015-06-24-FC-OPM-DATA-BREACH-PART-II.GO175001.pdf","https://www.gao.gov/products/gao-17-614"]},{"id":"ukraine-2015","name":"Ukrainian power grid","year":2015,"vector":"phishing","attacker_cost":2,"impact":5,"sev":2,"lure":true,"simulatable":true,"summary":"CISA reported malicious Office attachments and said BlackEnergy’s possible role in obtaining legitimate credentials remained under evaluation. It attributed outages to remote cyber intrusions affecting about 225,000 customers; operators restored power manually.","lesson":"Remote access and trusted internal paths let an IT intrusion reach the grid. When remote controls failed, field crews had to restore service manually.","source":"CISA ICS-CERT, MITRE ATT&CK, and Schweitzer Engineering Laboratories analysis, 2015–2017","confidence":"high","type":"Incident","cls":"A","stages":5,"fe":"An operator receives a spearphish containing Office attachments, and the story moves to a control room and its HMI.","be":"The click gives a safe foothold, traversal of a synthetic corporate network, theft of a grid-operator session, and then a simulator whose breakers actually change state.","source_urls":["https://attack.mitre.org/campaigns/C0028/","https://www.cisa.gov/news-events/ics-alerts/ir-alert-h-16-056-01","https://cdn.selinc.com/assets/Literature/Publications/Technical%20Papers/6774_UkraineCyber_DEW_20170130_Web7.pdf?v=20181015-210831"],"date_note":"CISA says BlackEnergy’s role in the outages remained unknown and presents spearphishing as a reported—not confirmed—initial-access path."},{"id":"mirai-2016","name":"Mirai","year":2016,"vector":"botnet","attacker_cost":4,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"CISA described Mirai as part of a self-propagating botnet built from internet-connected IoT devices and reported that its source code was published online in September 2016, enabling wider use for DDoS attacks.","lesson":"Self-propagating botnets can turn poorly configured connected devices into DDoS infrastructure.","source":"CISA alert on Mirai and other botnets, 2016","confidence":"high","type":"Malware","cls":"C","stages":3,"fe":"A synthetic fleet of routers and cameras, with botnet propagation visualized without scanning real devices.","be":"A private IoT fleet with generated default credentials is enrolled by a scanner, and traffic is bounded to a private sink. No traffic ever leaves the sandbox.","source_urls":["https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets"]},{"id":"smishing-2016","name":"Smishing / parcel lure (2010s)","year":2016,"vector":"phishing","attacker_cost":4,"impact":3,"sev":2,"lure":true,"simulatable":true,"summary":"This is a technique family rather than one canonical 2016 incident. An SMS carrying a link to a spoofed credential page, delivered because parcel notifications are a real, expected text.","lesson":"The message arrived on the device people trust most, in the tone of a service they are already expecting, and there was no link text to inspect first.","source":"FTC Consumer Advice, smishing and QR code phishing guidance","confidence":"high","type":"Technique","cls":"B","stages":1,"fe":"A \"your package is waiting\" SMS on a phone.","be":"A private shortened URL redirects to a synthetic portal, and a submitted fake credential becomes a real artefact in the receipt.","source_urls":["https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season"],"date_note":"Technique family; “2010s” is the period, not a discrete 2016 incident."},{"id":"yahoo-cookies-2016","name":"Yahoo forged cookies 2015–16","year":2016,"vector":"exploit","attacker_cost":3,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"Yahoo disclosed that investigators were examining forged cookies that could let an intruder access accounts without a password. This activity was separate from the 2013 breach affecting more than one billion accounts; the cited notice did not say user passwords were stolen.","lesson":"Keep Yahoo’s 2013 account breach separate from the later forged-cookie disclosure.","source":"Yahoo SEC filings and Reuters reporting on forged-cookie accounts, 2016–2017","confidence":"high","type":"Incident","cls":"C","stages":2,"fe":"A browser session and cookie inspector.","be":"A synthetic session service accepts an intentionally weak signing mechanism, and a forged demonstration session reads a fake mailbox.","source_urls":["https://www.sec.gov/Archives/edgar/data/1011006/000119312517065791/d293630d10k.htm","https://www.sec.gov/Archives/edgar/data/1011006/000119312516793106/d305610dex991.htm","https://ca.finance.yahoo.com/news/yahoo-says-32-million-accounts-233322849.html"]},{"id":"equifax-2017","name":"Equifax","year":2017,"vector":"exploit","attacker_cost":3,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Exploitation of an unpatched Apache Struts vulnerability. The patch had been available since March 2017. The certificate on the exposed web service had been expired for nearly ten months.","lesson":"The vulnerability was a known, patched flaw and the exposure was a known, expired certificate. Neither control failed by accident.","source":"Equifax breach settlement filings; GAO and FTC reports, 2018","confidence":"high","type":"Incident","cls":"C","stages":2,"fe":"A patch-management dashboard reading \"Apache Struts update available\", with time advancing past it.","be":"A toy request handler of our own, not a real Struts deployment, models vulnerable-versus-patched state, a harmless canary event fires instead of code execution, and a synthetic database is exposed.","source_urls":["https://www.gao.gov/products/gao-18-559","https://www.ftc.gov/system/files/documents/cases/172_3203_equifax_complaint_7-22-19.pdf"]},{"id":"notpetya-2017","name":"NotPetya (M.E.Doc updater)","year":2017,"vector":"supply-chain","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Not the \"tax forms\" document lure. It was delivered through a compromised M.E.Doc software-update mechanism, initially reaching organizations that installed the tainted update; it then spread through affected networks. The update channel was the attack.","lesson":"A compromised software-update path can turn routine maintenance into a high-trust delivery route.","source":"Microsoft, NotPetya / M.E.Doc technical analysis, 2017","confidence":"high","type":"Malware","cls":"C","stages":4,"fe":"The M.E.Doc accounting software updater on a Ukrainian company network, spreading outward to its customers.","be":"An internal update service distributes a harmless propagation marker, synthetic credentials are harvested for lateral movement, and selected disposable file trees are wiped.","source_urls":["https://www.microsoft.com/en-us/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/","https://blog.talosintelligence.com/the-medoc-connection/"]},{"id":"vault7-2017","name":"Vault 7","year":2017,"vector":"espionage","attacker_cost":2,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"A disclosure of CIA cyber-tool material, not a conventional victim compromise. What was published was an inventory: tools, exploits and the targeting categories they supported.","lesson":"This is the rarest class in the catalogue. No victim, no blast radius — an inventory, published. The attack surface on this one is the reader.","source":"BBC News and WikiLeaks, Vault 7 disclosure, March 2017","confidence":"high","type":"Disclosure","cls":"D","stages":0,"fe":"A document and tool archive explorer rather than an attack animation.","be":"A Vultr-hosted analysis agent reads a synthetic, redacted capability archive, builds a capability and evidence graph, and produces a report. Nothing destructive runs.","source_urls":["https://www.washingtonpost.com/world/national-security/wikileaks-says-it-has-obtained-trove-of-cia-hacking-tools/2017/03/07/c8c50c5c-0345-11e7-b1e9-a05d3c21f7cf_story.html","https://www.bbc.com/news/technology-39193008"]},{"id":"wannacry-2017","name":"WannaCry (WanaCrypt0r)","year":2017,"vector":"ransomware","attacker_cost":3,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"A wormable ransomware that spread through unpatched SMBv1 systems using MS17-010. Registering the malware's hard-coded domain interrupted propagation for that strain; Microsoft had released a patch in March 2017. Unpatched NHS systems amplified service disruption.","lesson":"The emergency stop was a domain name. The whole global rollout turned on a lookup that administrators had never been told to watch.","source":"CISA, Microsoft, and NHS England, WannaCry reporting, 2017","confidence":"high","type":"Malware","cls":"C","stages":3,"fe":"An NHS-style workstation and fleet with patch status visible, and a kill-switch lookup running alongside it.","be":"A private propagation simulator discovers susceptible synthetic hosts, real synthetic files are encrypted, and an internal DNS kill-switch lookup changes the outcome. No EternalBlue is used.","source_urls":["https://www.england.nhs.uk/wp-content/uploads/2018/02/lessons-learned-review-wannacry-ransomware-cyber-attack-cio-review.pdf","https://www.cisa.gov/news-events/alerts/2017/05/12/indicators-associated-wannacry-ransomware","https://www.microsoft.com/en-us/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/"]},{"id":"marriott-2018","name":"Marriott / Starwood","year":2018,"vector":"theft","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Investigators found a web shell, remote access tools and credential harvesting, and a long dwell period. The method by which the initial web shell was installed was not determined, and no single old encryption key is presented as the answer here.","lesson":"The unanswered question is the whole lesson: nobody can say how they got in, which means the control that would have stopped them is still unknown too.","source":"Office of the Privacy Commissioner, Marriott International breach report","confidence":"high","type":"Incident","cls":"C","stages":3,"fe":"A four-year dwell-time timeline, a reservation system, and administrative access.","be":"Start from a web-shell foothold explicitly labelled \"initial route unknown\", make synthetic credentials available, and export a synthetic reservation database.","source_urls":["https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2022/pipeda-2022-005/"]},{"id":"vpnfilter-2018","name":"VPNFilter","year":2018,"vector":"botnet","attacker_cost":2,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"CISA described a multi-stage implant targeting some routers and network-attached storage devices. It could collect network traffic, including website credentials, and monitor Modbus/SCADA traffic.","lesson":"VPNFilter's first stage survived a reboot and could retrieve later stages. Restarting the router was not the same as removing its persistent foothold.","source":"Cisco Talos, VPNFilter technical analysis, 2018","confidence":"high","type":"Malware","cls":"C","stages":3,"fe":"A router interface and a reboot button.","be":"A synthetic router's persistent stage-one marker survives a restart, and a private C2 re-delivers stage two. A demonstrated persistence mechanism, not merely a config line that persisted.","source_urls":["https://blog.talosintelligence.com/vpnfilter/","https://www.cisa.gov/news-events/alerts/2018/05/25/cyber-actors-target-home-and-office-routers-and-networked-devices-worldwide"]},{"id":"capitalone-2019","name":"Capital One (WAF misconfiguration, SSRF)","year":2019,"vector":"exploit","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"A misconfigured web application firewall allowed a server-side request to reach the cloud instance metadata service and retrieve credentials, which were then used to list and copy object storage. Over a hundred million customers affected.","lesson":"A configuration error, not a vulnerability, took a hundred million records. No malware was involved and no firewall rule existed that would have told anyone.","source":"U.S. Department of Justice, Paige Thompson criminal complaint and case materials, 2019","confidence":"high","type":"Incident","cls":"C","stages":4,"fe":"A cloud architecture and web-application-firewall view, with the user as the engineer who left the dangerous configuration in place.","be":"A safe metadata and identity emulator issues a scoped fake role token, and that token lists and copies synthetic object-storage objects. No real cloud account is touched.","source_urls":["https://www.justice.gov/usao-wdwa/united-states-v-paige-thompson","https://www.justice.gov/usao-wdwa/press-release/file/1188626/dl"]},{"id":"collection1-2019","name":"Collection #1 (credential compilation)","year":2019,"vector":"theft","attacker_cost":3,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"A compiled collection of roughly 773 million email and password pairs, not itself an intrusion. Its danger is that attackers take each password offline and spray it at every service where the same person has an account.","lesson":"No breach is required. The attack is arithmetic — one leaked password, applied everywhere, until it lands on the one account that also protects your email.","source":"Troy Hunt, Have I Been Pwned analysis of Collection #1, 2019","confidence":"high","type":"Disclosure","cls":"C","stages":2,"fe":"The 773-million-address credential reuse graph.","be":"A bounded credential-reuse test using generated credentials against our own fake services. The receipt shows which reused passwords opened which accounts.","source_urls":["https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/"]},{"id":"simswap-2020","name":"SIM swap / SMS OTP interception","year":2020,"vector":"social","attacker_cost":4,"impact":5,"sev":4,"lure":true,"simulatable":true,"summary":"A technique rather than a single named incident. Social-engineering a carrier rep transfers a number to another SIM, so the one-time codes the victim expects arrive somewhere else. Carrier-side social engineering is the technique itself.","lesson":"Multi-factor authentication was on, the code was sent, and the code arrived in the wrong hands. The second factor was never questioned, only redirected.","source":"FBI IC3, Criminals Increasing SIM Swap Schemes to Steal Millions, 2022","confidence":"high","type":"Technique","cls":"A","stages":3,"fe":"The user plays the carrier or help-desk agent and has to decide whether to approve a port request.","be":"An internal telco state machine ports a fake number, the subsequent SMS one-time code goes to the attacker inbox, and a synthetic account is taken over. No real SMS is ever intercepted.","source_urls":["https://www.ic3.gov/PSA/2022/PSA220208"],"date_note":"Technique family; the displayed year is a representative reporting year, not one incident."},{"id":"solarwinds-2020","name":"SolarWinds / SUNBURST","year":2020,"vector":"supply-chain","attacker_cost":1,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"SolarWinds said SUNBURST was inserted during the Orion build process, not in its source repository, and shipped in a signed update. CISA describes the malicious code as inserted into the Orion software lifecycle while remaining signed by SolarWinds. SolarWinds reported that up to 18,000 customers could potentially have been vulnerable, based on downloads of the affected versions, and later estimated that fewer than 100 were actually hacked.","lesson":"Nobody approved anything. Every sign-off was genuine, every signature was valid, and the trusted channel was the attack. Code review would not have found it because the code review was never the compromised surface.","source":"SolarWinds, SUNBURST incident disclosure and forensic report, 2021","confidence":"high","type":"Incident","cls":"C","stages":5,"flagship":true,"fe":"A developer and release engineer view, with a highlighted Publish Update button.","be":"A build pipeline injects a benign callback module, signs the package with a disposable demo key, an internal customer instance downloads and installs it, the callback fires, and synthetic data access is recorded. The source repository itself is never modified.","source_urls":["https://www.cisa.gov/news-events/analysis-reports/ar21-039a","https://www.solarwinds.com/blog/an-investigative-update-of-the-cyberattack","https://www.cisa.gov/sites/default/files/publications/Supply_Chain_Compromise_Detecting_APT_Activity_from_known_TTPs.pdf"]},{"id":"colonial-2021","name":"Colonial Pipeline","year":2021,"vector":"ransomware","attacker_cost":3,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Colonial said it believed attackers exploited a legacy VPN profile that was not intended to be active; it used single-factor authentication. Investigators were still determining how the credentials were compromised. Colonial proactively halted operations on May 7, 2021, and PHMSA recorded that a full restart was initiated five days later.","lesson":"One account, one factor, one legacy system that everyone knew was a problem and nobody retired. The ransom was an event. The access account was the vulnerability.","source":"U.S. Senate HSGAC testimony and Department of Energy response report, 2021","confidence":"high","type":"Incident","cls":"C","stages":2,"fe":"A legacy VPN account and configuration screen, single-factor, with no second prompt anywhere.","be":"An already-compromised synthetic credential logs into a single-factor VPN, and the downstream network and impact are simulated. How the password was obtained is not invented — Colonial said it remained under investigation.","source_urls":["https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/Testimony-Blount-2021-06-08.pdf","https://www.govinfo.gov/content/pkg/CHRG-117shrg46569/html/CHRG-117shrg46569.htm","https://www.hsgac.senate.gov/media/reps/portman-presses-president-and-ceo-of-colonial-pipeline-on-gaps-in-cybersecurity-practices/","https://www.energy.gov/ceser/articles/ceser-2021-emergency-response-recap","https://www.colpipe.com/news-insights/media-resources/post/media-statement-update-colonial-pipeline-system-disruption/","https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2022-05/32022026_Colonial_Pipeline_NOPV_PCP_PCO_05052022.pdf"]},{"id":"log4shell-2021","name":"Log4Shell (CVE-2021-44228)","year":2021,"vector":"vulnerability","attacker_cost":1,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"A JNDI lookup flaw in Log4j 2 could enable remote code execution when attacker-controlled text was logged and evaluated. The vulnerability was disclosed in December 2021.","lesson":"Logging can become an input boundary when untrusted text triggers lookups. Patch affected libraries and prevent attacker-controlled values from reaching unsafe evaluation paths.","source":"CISA, Log4Shell vulnerability advisory and Known Exploited Vulnerabilities catalog","confidence":"high","type":"Vulnerability","cls":"C","stages":1,"fe":"An application log, where harmless text mysteriously becomes execution.","be":"A purpose-built training service, written from scratch, that reproduces Log4j behaviour turns the request into a benign canary and file-read event. No real code path from the historical vulnerability is used and no vulnerable Log4j build is ever installed.","source_urls":["https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a"]},{"id":"drainer-2022","name":"Crypto drainer kits (wallet-approval phishing)","year":2022,"vector":"phishing","attacker_cost":5,"impact":5,"sev":4,"lure":true,"simulatable":true,"summary":"Drainer kits masquerade as Web3 projects and abuse wallet approval requests to move assets out. A family of kits, not one breach. The cost to the attacker is a landing page and a signing prompt.","lesson":"The cheapest attack in this catalogue is also the most destructive. A signature is treated as routine, and a signature is a wire transfer.","source":"Chainalysis, 2022 crypto drainer ecosystem reporting","confidence":"high","type":"Technique","cls":"B","stages":2,"fe":"A fake airdrop, NFT or game dApp that opens a wallet-connect and signature request.","be":"An internal wallet ledger on a test-only chain executes the approval and moves worthless synthetic assets to a sink address. No mainnet asset is ever involved.","source_urls":["https://www.chainalysis.com/blog/crypto-drainers/"],"date_note":"Technique family; 2022 is a representative reporting year, not a single incident."},{"id":"lapsus-2022","name":"LAPSUS$ (Okta / Microsoft / T-Mobile / Uber)","year":2022,"vector":"social","attacker_cost":3,"impact":4,"sev":2,"lure":true,"simulatable":true,"summary":"A campaign rather than a single intrusion. Microsoft documents the combination of multi-factor prompt spam, help-desk social engineering, SIM swapping and purchased credentials.","lesson":"Support-desk staff are the control that decides everything, and they are trained to be helpful to callers in distress. That is not a bug. It is the entire job.","source":"Microsoft Security Blog, LAPSUS$ campaign analysis, 2022","confidence":"high","type":"Campaign","cls":"A","stages":3,"fe":"MFA fatigue prompts, a fake employee, and a help-desk reset call.","be":"A successful human decision yields an internal identity token, and an actual synthetic source tree becomes accessible and is copied.","source_urls":["https://www.microsoft.com/en-us/security/blog/2022/03/22/dev-0537-criminal-actor-targeting-organizations-for-data-exfiltration-and-destruction/"]},{"id":"lastpass-2022","name":"LastPass (2022)","year":2022,"vector":"exploit","attacker_cost":3,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"Two incidents. In the first, an engineer’s corporate laptop was compromised and development source code and internal secrets were accessed; LastPass says no customer vault data was in that environment. In the second, the attacker targeted a senior DevOps engineer using vulnerable third-party software and reached cloud backups containing customer vault data, most of it encrypted. The public account does not say that local vault files were copied from the endpoint.","lesson":"Separate the first development-environment breach from the later cloud-backup theft. The second incident exposed how privileged endpoint access could reach backup data.","source":"LastPass, Security Incident Update and Recommended Actions, 2023","confidence":"high","type":"Incident","cls":"C","stages":4,"fe":"A two-incident timeline: compromised engineer endpoint and development environment first, then the senior DevOps engineer and cloud-backup topology.","be":"Use an original harmless endpoint event to expose synthetic development secrets, then a separate toy access-control chain to copy a synthetic vault backup. Never install vulnerable third-party software or use real LastPass code.","source_urls":["https://blog.lastpass.com/posts/security-incident-update-recommended-actions"]},{"id":"ukraine-2022","name":"Viasat KA-SAT disruption (2022)","year":2022,"vector":"exploit","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Viasat says the February 2022 KA-SAT attack exploited a VPN-appliance misconfiguration to reach the trusted management segment, then used legitimate management commands to overwrite modem flash and take tens of thousands of terminals offline. Kyivstar was a separate incident in December 2023 and is not included here.","lesson":"The attacker used legitimate management commands after entering a trusted segment. No uplink flood or firmware compromise is claimed.","source":"Viasat, KA-SAT Network Cyber Attack Overview, 2022","confidence":"high","type":"Incident","cls":"C","stages":3,"fe":"A satellite terminal fleet controlled from one management network.","be":"A misconfigured private VPN permits access to a management simulator, then a batch of legitimate management commands overwrite synthetic modem state and terminals actually go offline. No uplink flooding.","source_urls":["https://www.viasat.com/perspectives/corporate/2022/ka-sat-network-cyber-attack-overview/"]},{"id":"moveit-2023","name":"MOVEit / Cl0p (CVE-2023-34362)","year":2023,"vector":"exploit","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"CISA and the FBI said the CL0P group began exploiting a previously unknown SQL injection vulnerability, CVE-2023-34362, in Progress Software's MOVEit Transfer on May 27, 2023, installing the LEMURLOOT web shell to steal data from MOVEit databases. Emsisoft's June 2024 tally of public disclosures counted 2,773 organizations and 95,788,491 individuals affected.","lesson":"The product existed to move large amounts of data for a living. That made it the best possible target, and the reason the number was so large.","source":"CISA, NVD, and Emsisoft’s June 2024 MOVEit impact tally","confidence":"high","type":"Campaign","cls":"C","stages":2,"fe":"A managed file transfer portal with named customer folders.","be":"An intentionally vulnerable toy MFT route, written from scratch, reaches synthetic database and file access, and real copies land in an attacker sink. Real MOVEit is never installed or run.","source_urls":["https://nvd.nist.gov/vuln/detail/CVE-2023-34362","https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a","https://www.emsisoft.com/en/blog/44123/unpacking-the-moveit-breach-statistics-and-analysis/"]},{"id":"oauth-2023","name":"OAuth consent phishing (AiTM precursor, category)","year":2023,"vector":"phishing","attacker_cost":3,"impact":4,"sev":2,"lure":true,"simulatable":true,"summary":"A technique family, not one breach. The user approves a consent screen that names an application and lists scopes, and grants access without being sent to a fake login at all.","lesson":"The identity provider itself can issue an access token when a user grants app consent. No fake login page or password capture is required.","source":"Microsoft Learn, Protect against consent phishing","confidence":"high","type":"Technique","cls":"B","stages":1,"fe":"An authentic-looking application consent page listing suspicious scopes.","be":"Our own identity provider actually issues a token after consent, and the agent uses that token to read a synthetic mailbox and files. No password is ever captured, because none is needed.","source_urls":["https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/protect-against-consent-phishing"],"date_note":"Technique family, not a single 2023 incident."},{"id":"att-2024","name":"AT&T (third-party cloud workspace)","year":2024,"vector":"theft","attacker_cost":4,"impact":4,"sev":1,"lure":false,"simulatable":false,"summary":"AT&T told the SEC that threat actors accessed an AT&T workspace on a third-party cloud platform and, between April 14 and 25, 2024, exfiltrated files of customer call and text records from 2022 and one day in 2023, not call or text content. Reuters reported AT&T's estimate of about 109 million customer accounts. The cited public sources do not establish how access was first obtained.","lesson":"A data warehouse can expose sensitive metadata at scale. Limit workspace access and detect unusual bulk queries and exports.","source":"AT&T SEC Form 8-K and Reuters reporting, 2024","confidence":"high","type":"Incident","cls":"C","stages":2,"fe":"A synthetic cloud data workspace, with a 109-million-customer impact visualisation.","be":"A synthetic service account reads and exports mock call metadata to an isolated sink. This models data access only; the historical entry does not claim a verified initial credential source.","source_urls":["https://www.reuters.com/technology/cybersecurity/att-says-data-around-109-mln-us-customer-accounts-illegally-downloaded-2024-07-12/","https://www.sec.gov/Archives/edgar/data/732717/000073271724000046/t-20240506.htm","https://www.blumenthal.senate.gov/imo/media/doc/2024-07-16_snowflake_breach_att.pdf"]},{"id":"bec-2024","name":"Business Email Compromise (invoice thread)","year":2024,"vector":"bec","attacker_cost":4,"impact":5,"sev":2,"lure":true,"simulatable":true,"summary":"A technique family, not a single 2024 incident. The attacker enters an existing conversation rather than starting a new one, so the thread already looks legitimate and the payment is already urgent.","lesson":"A new message asking for money is suspicious. A reply inside a conversation that has been running for six weeks is not.","source":"FBI and Microsoft reporting on business email compromise and thread hijacking, 2022–2024","confidence":"high","type":"Technique","cls":"B","stages":2,"fe":"A genuine-looking ongoing invoice email thread in which one bank detail has changed.","be":"A synthetic mailbox actually modifies and replies to the thread, and an internal payment ledger releases a pretend payment to the attacker account once the user authorises it.","source_urls":["https://www.fbi.gov/news/stories/business-e-mail-compromise-on-the-rise","https://www.ic3.gov/PSA/2024/PSA240911","https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/"],"date_note":"Technique family, not a single 2024 incident."},{"id":"changehealth-2024","name":"Change Healthcare (Citrix portal, no MFA)","year":2024,"vector":"theft","attacker_cost":3,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"UnitedHealth CEO Andrew Witty testified that attackers used compromised credentials to access a Change Healthcare Citrix portal without MFA, exfiltrated data, and deployed ransomware nine days later. The outage disrupted claims, pharmacy, and provider-payment services; Witty confirmed at a Senate Finance hearing that UnitedHealth paid a $22 million ransom.","lesson":"A $22 million ransom payment followed an intrusion through a portal that never asked for a second factor. The MFA toggle existed. It was off.","source":"Andrew Witty’s House Energy and Commerce prepared testimony, Senate Finance hearing, and Reuters reporting, 2024","confidence":"high","type":"Incident","cls":"C","stages":2,"fe":"A remote access portal with a prominent multi-factor indicator reading OFF.","be":"A valid generated credential is used against our own fake Citrix-style portal to reach synthetic network and data access. Not credential spraying.","source_urls":["https://www.reuters.com/technology/cybersecurity/unitedhealth-hackers-took-advantage-citrix-vulnerabilty-break-ceo-says-2024-04-29/","https://www.finance.senate.gov/imo/media/doc/0501_witty_testimony.pdf","https://www.finance.senate.gov/hearings/hacking-americas-health-care-assessing-the-change-healthcare-cyber-attack-and-whats-next","https://www.congress.gov/118/meeting/house/117242/witnesses/HHRG-118-IF02-Wstate-WittyS-20240501-U5.pdf","https://nationalcioreview.com/articles-insights/extra-bytes/unitedhealth-ceo-testifies-before-congress-regarding-massive-security-breach/"]},{"id":"npd-2024","name":"National Public Data / Infobroker","year":2024,"vector":"theft","attacker_cost":5,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Public reporting described an alleged release of billions of records from a background-check data broker; the number of unique people remains unconfirmed. The company's notice said a third party attempted to access its data in late December 2023, but the public record cited here does not establish a specific entry mechanism.","lesson":"A data broker can aggregate sensitive information at enormous scale. The public record still does not reveal how the actor got in.","source":"National Public Data notice, House Oversight correspondence and state breach notifications, 2024","date_note":"Public disclosure/reporting year; the company's notice said attempted access began in late December 2023.","confidence":"medium","type":"Incident","cls":"D","stages":0,"fe":"A very large data-broker database and the claimed scale of the exposure.","be":"An analyst reconstructs the exposed-data blast radius against a synthetic broker database. No intrusion technique is staged, because the public record does not establish one.","source_urls":["https://www.nytimes.com/2024/08/15/business/social-security-numbers-stolen-hack.html","https://oversight.house.gov/wp-content/uploads/2024/08/NPD-Breach-Letter-08222024.pdf","https://oag.maryland.gov/resources-info/SBN%20Documents/2024/ITU-375412.pdf"]},{"id":"quishing-2024","name":"Quishing (QR-code phishing)","year":2024,"vector":"phishing","attacker_cost":4,"impact":4,"sev":2,"lure":true,"simulatable":true,"summary":"A technique family, not one breach. The Federal Trade Commission documents QR codes on physical media redirecting to spoofed credential-stealing sites, and notes that unlike a link in an email, the destination cannot be read before following it.","lesson":"Every other phishing defence assumes you can see the URL. A QR code takes that away, and the physical sticker is what makes it feel safe to scan.","source":"FTC Consumer Advice, QR code scams guidance","confidence":"high","type":"Technique","cls":"B","stages":1,"fe":"A QR code on an email, a poster or a parking barrier, opening a phone-shaped browser.","be":"A genuinely generated QR code leads through a private redirect chain to a synthetic login and into the receipt.","source_urls":["https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"],"date_note":"Technique family, not a single 2024 incident."},{"id":"salesforce-2025","name":"Salesforce / UNC6040 vishing","year":2025,"vector":"social","attacker_cost":3,"impact":4,"sev":2,"lure":true,"simulatable":true,"summary":"A campaign, not one incident. Google documents a pattern of voice-phishing callers leading employees to approve a malicious connected application, followed by data being exported with an attacker-controlled tool. Figures circulating about this campaign should be sourced per-campaign rather than merged.","lesson":"The password was never stolen because it was never needed. The user was walked through an authorisation on their own, by someone who was very helpful on the phone.","source":"Google Cloud Threat Intelligence, UNC6040 Salesforce vishing campaign analysis, 2025","confidence":"high","type":"Campaign","cls":"A","stages":3,"fe":"A fake IT-support phone interaction ending in a connected-app authorisation screen.","be":"An internal OAuth grant produces a genuine fake access and refresh token, and that token retrieves synthetic records. No help-desk spray.","source_urls":["https://cloud.google.com/blog/topics/threat-intelligence/voice-phishing-data-extortion"]},{"id":"sharepoint-2025","name":"SharePoint ToolShell (CVE-2025-53770)","year":2025,"vector":"exploit","attacker_cost":2,"impact":5,"sev":1,"lure":false,"simulatable":false,"summary":"Microsoft observed exploitation of a deserialisation flaw in the SharePoint ToolPane by unauthenticated requests, followed by web shells being written and the server MachineKey being read and stolen.","lesson":"The MachineKey is the crown jewel of an on-premises deployment. Anything that can read it can impersonate every signed token the application will ever issue.","source":"Microsoft Security Response Center, SharePoint ToolShell advisories, 2025","confidence":"high","type":"Vulnerability","cls":"C","stages":2,"fe":"An on-premises SharePoint administrator and user portal.","be":"A training clone of the vulnerable request flow, written from scratch, creates a harmless web-shell object, reads only a synthetic MachineKey-like secret, and produces a receipt. No real SharePoint instance is involved.","source_urls":["https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53770","https://www.microsoft.com/en-us/msrc/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770"]}]};
+const PERSONAS = {"schema_version":1,"oauth_app":{"id":"app-game-library-sync","name":"Game Library Sync","publisher":"Example Labs (synthetic)","purpose":"Synchronize a game library","requested_scopes":["mail.read","files.read"]},"personas":[{"id":"persona-game-001","synthetic":true,"display_name":"Alex Example","role":"Synthetic game-platform user","email":"alex@example.invalid","account":{"service_label":"Steam-style game account","handle":"player-001"},"mailbox":{"id":"mailbox-game-001","messages":[{"id":"message-game-001","sender":"receipts@game.example.invalid","subject":"Synthetic game-library receipt"},{"id":"message-game-002","sender":"support@game.example.invalid","subject":"Synthetic account notice"}]}}]};
+const OAUTH_ATTACK_ID = 'oauth-2023';
+
+/* ── map the 11 raw vectors down to 6 hue buckets ── */
+const BUCKET = {
+  'phishing':'phishing','bec':'phishing','card-fraud':'phishing','social':'phishing',
+  'supply-chain':'supply-chain','theft':'supply-chain',
+  'ransomware':'ransomware','wiper':'ransomware',
+  'espionage':'espionage',
+  'botnet':'botnet','exploit':'botnet',
+  'vulnerability':'door',
+};
+const BUCKETS = [
+  ['phishing','--v-phishing'],
+  ['supply-chain','--v-supply-chain'],
+  ['ransomware','--v-ransomware'],
+  ['espionage','--v-espionage'],
+  ['botnet','--v-botnet'],
+  ['door','--v-door'],
+];
+const BUCKET_LABEL = {
+  phishing:'phishing', 'supply-chain':'supply chain', ransomware:'ransomware / wiper',
+  espionage:'espionage', botnet:'botnet / exploit', door:'door',
+};
+
+/* severity → radius, luminance, bloom. The only channel that gets loud. */
+const SZ  = {1:30, 2:19, 3:13, 4:10, 5:7, null:13};
+const LIT = {1:1,  2:.86, 3:.68, 4:.55, 5:.4, null:.5};
+const BL  = {1:1.15, 2:.6, 3:.3, 4:.2, 5:0, null:0};
+const sevOf = a => (a.vector === 'vulnerability' ? 'door' : a.sev);
+
+const $  = (s,r=document)=>r.querySelector(s);
+const el = (t,c)=>{const n=document.createElement(t); if(c)n.className=c; return n;};
+const hueOf = a => `var(${BUCKETS.find(([b])=>b===BUCKET[a.vector])?.[1] ?? '--v-none'})`;
+
+const SEVS = DATA._meta.severity_ladder;
+const ATTACKS = DATA.attacks;
+const state = { mode:'year', sev:new Set(), vec:new Set(), q:'', open:null, pinned:null };
+
+/* ── controls ── */
+const ladder = $('#ladder');
+[1,2,3,4,5].forEach(n=>{
+  const b=el('button','rung s'+n);
+  b.setAttribute('aria-pressed','false');
+  b.innerHTML = `<b>${SEVS[n].name}</b><span>${SEVS[n].action}</span>`;
+  b.onclick = ()=>{
+    state.sev.has(n) ? state.sev.delete(n) : state.sev.add(n);
+    b.setAttribute('aria-pressed', state.sev.has(n));
+    render();
+  };
+  ladder.append(b);
+});
+
+const vf = $('#vecfilters');
+BUCKETS.forEach(([b,varName])=>{
+  const c=el('button','chip');
+  c.style.setProperty('--hue',`var(${varName})`);
+  c.setAttribute('aria-pressed','false');
+  c.innerHTML = `<span class="swatch"></span>${BUCKET_LABEL[b] || b}`;
+  c.onclick = ()=>{
+    state.vec.has(b) ? state.vec.delete(b) : state.vec.add(b);
+    c.setAttribute('aria-pressed', state.vec.has(b));
+    render();
+  };
+  vf.append(c);
+});
+
+const setMode = m=>{
+  state.mode=m; document.body.dataset.mode=m;
+  $('#m-year').setAttribute('aria-pressed', m==='year');
+  $('#m-sev').setAttribute('aria-pressed',  m==='sev');
+  render();
+};
+$('#m-year').onclick = ()=>setMode('year');
+$('#m-sev').onclick  = ()=>setMode('sev');
+
+$('#q').oninput = e=>{ state.q = e.target.value.trim().toLowerCase(); render(); };
+
+$('#clear').onclick = ()=>{
+  state.sev.clear(); state.vec.clear(); state.q = '';
+  $('#q').value = '';
+  document.querySelectorAll('.rung, #vecfilters .chip').forEach(b=>b.setAttribute('aria-pressed','false'));
+  render();
+};
+
+$('#t-entries').textContent  = ATTACKS.length;
+$('#t-human').textContent    = ATTACKS.filter(a=>a.cls==='A'||a.cls==='B').length;
+$('#t-verifier').textContent = ATTACKS.filter(a=>a.cls==='C').length;
+$('#t-analyst').textContent  = ATTACKS.filter(a=>a.cls==='D').length;
+
+/* ── filter ── */
+const match = a=>{
+  if (state.sev.size && !state.sev.has(a.sev)) return false;
+  if (state.vec.size && !state.vec.has(BUCKET[a.vector])) return false;
+  if (state.q){
+    const hay = `${a.name} ${a.summary} ${a.lesson} ${a.vector} ${a.type} ${a.cls} ${a.fe} ${a.be} ${a.source} ${a.year} ${a.date_note||''}`.toLowerCase();
+    if (!hay.includes(state.q)) return false;
+  }
+  return true;
+};
+
+/* ── render ── */
+const rail = $('#rail');
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function makeRow(a){
+  const isDoor = a.vector === 'vulnerability';
+  const k = sevOf(a);
+
+  const li = el('li','row');
+  li.style.setProperty('--hue', hueOf(a));
+  li.tabIndex = 0;
+  li.setAttribute('role','button');
+  li.setAttribute('aria-label', `${a.name}; class ${a.cls}; ${a.type}; ${a.stages} backend steps`);
+  li.dataset.id = a.id;
+
+  const n = el('div','node');
+  // severity and lure are independent encodings and must both survive.
+  // chaining these as ternaries silently drops `no-lure` on every SEV1 entry,
+  // which is where hollow-rings-mean-no-lure matters most.
+  const dotCls = ['dot'];
+  if(k === 'door') dotCls.push('door');
+  else {
+    if(k === 1) dotCls.push('sev1');
+    if(!a.lure) dotCls.push('no-lure');
+  }
+  const d = el('div', dotCls.join(' '));
+  d.style.setProperty('--sz', SZ[k] + 'px');
+  d.style.setProperty('--lit', LIT[k]);
+  d.style.setProperty('--bloom', BL[k]);
+  if(k === 1){
+    const pulse = el('span','pulse');
+    pulse.setAttribute('aria-hidden','true');
+    d.append(pulse);
+  }
+  n.append(d);
+
+  const nm = el('div','name');
+  const main = el('div','name-main');
+  const title = el('b');
+  title.textContent = a.name;
+  main.append(title);
+  const spec = el('div','row-spec');
+  const cls = el('span',`class-pill cls-${String(a.cls).toLowerCase()}`);
+  cls.textContent = a.cls;
+  cls.title = DATA._meta.build_classes[a.cls].name;
+  const type = el('span','type-tag');
+  type.textContent = a.type;
+  const steps = el('span','stage-tag');
+  steps.textContent = `${a.stages} ${a.stages===1?'STEP':'STEPS'}`;
+  spec.append(cls,type,steps);
+  nm.append(main,spec);
+
+  const sv = el('div','sevmini');
+  sv.textContent = isDoor ? 'DOOR'
+    : a.sev == null ? SEVS[null].action
+    : a.lure ? `${SEVS[a.sev].name} · ${SEVS[a.sev].action}`
+    : `${SEVS[a.sev].name} · NO LURE`;
+
+  const meta = el('div','meta');
+  meta.append(sv);
+  if(!isDoor){
+    const bar = el('div','ibar');
+    bar.title = `Damage to the victim: ${a.impact}/5 · cost to the attacker: ${a.attacker_cost}/5`;
+    bar.setAttribute('aria-label', bar.title);
+    const fill = el('i');
+    fill.style.transform = `scaleX(${a.impact/5})`;
+    bar.append(fill);
+    meta.append(bar);
+  }
+
+  li.append(n, nm, meta);
+
+  const open = ()=>{ state.pinned = a.id; markPinned(); openDrawer(a, li); };
+  li.onclick = open;
+  li.onkeydown = e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); } };
+  return li;
+}
+
+function markPinned(){
+  rail.querySelectorAll('.row').forEach(r=>
+    r.classList.toggle('pinned', r.dataset.id === state.pinned));
+}
+
+function render(){
+  const hits = ATTACKS.filter(match);
+  rail.textContent = '';
+  $('#empty').hidden = hits.length > 0;
+
+  const filtering = state.sev.size || state.vec.size || state.q;
+  $('#fstat').hidden = !filtering;
+  if(filtering) $('#fcount').textContent = hits.length;
+  $('#empty').textContent = `no attack matches — ${ATTACKS.length} in the catalogue`;
+
+  const groups = new Map();
+  hits.forEach(a=>{
+    const gk = state.mode==='year' ? a.year : (a.vector==='vulnerability' ? 'door' : a.sev);
+    if(!groups.has(gk)) groups.set(gk,[]);
+    groups.get(gk).push(a);
+  });
+  const keys = [...groups.keys()].sort((x,y)=>{
+    if(state.mode==='year') return x-y;
+    // doors and ungraded entries go last, they are not ladder positions
+    const rank = v => v==='door' ? 98 : v==null ? 99 : v;
+    return rank(x) - rank(y);
+  });
+
+  keys.forEach(k=>{
+    const items = groups.get(k);
+    const atk = items.filter(a=>a.vector!=='vulnerability');
+    const dr  = items.filter(a=>a.vector==='vulnerability');
+
+    const sec = el('section','year');
+    // SEV bands are positioned by severity, so they must not also carry a hue.
+    sec.style.setProperty('--hue', state.mode==='sev'
+      ? (k==='door' ? 'var(--v-door)' : 'var(--bone)')
+      : 'var(--dimmer)');
+
+    const head = el('div','year-num');
+    head.innerHTML = state.mode==='year'
+      ? `${k}<em>${atk.length + dr.length}</em>`
+      : k==='door' ? `DOOR<em>${dr.length} — not an attack</em>`
+      : k===null ? 'UNGRADED<em>nothing was clicked</em>'
+      : `${SEVS[k].name}<em>${SEVS[k].action}</em>`;
+    sec.append(head);
+
+    if(atk.length){
+      const b=el('ul','band'); atk.forEach(a=>b.append(makeRow(a))); sec.append(b);
+    }
+    if(dr.length){
+      const b=el('ul','band doors'); dr.forEach(a=>b.append(makeRow(a))); sec.append(b);
+    }
+    rail.append(sec);
+  });
+  markPinned();
+
+  // the ghost tracks the nearest band on scroll, but a mode switch
+  // rebuilds the rail and has to update it synchronously
+  const first = rail.firstElementChild;
+  if(first) ghost.textContent = first.querySelector('.year-num').firstChild.textContent.trim();
+}
+
+/* ── drawer ── */
+const drawer=$('#drawer'), scrim=$('#scrim');
+const bar = (label,val,hi)=>`
+  <div class="axis ${hi?'hi':''}">
+    <span class="k">${label}</span><span class="v">${val}<i>/5</i></span>
+    <span class="track"><i style="transform:scaleX(${val/5})"></i></span>
+  </div>`;
+
+/* the two axes disagree far more often than they agree.
+   three shapes worth saying out loud, plus a generic catch-all. */
+function divergenceNote(a){
+  const {attacker_cost:c, impact:i} = a;
+  if(c >= 4 && i >= 5){
+    if(a.id === 'drainer-2022')
+      return '<b>The cheapest attack in this catalogue is also the most destructive.</b> Its demo uses only worthless synthetic assets on a private ledger; no seed phrase, real wallet, or mainnet is involved.';
+    return '<b>Low effort, high impact.</b> The attacker-cost scale does not predict how much damage the victim takes. The wallet drainer is the clearest example elsewhere in this catalogue.';
+  }
+  if(c <= 2 && i >= 4)
+    return '<b>Expensive, and worth it.</b> This cost the attacker far more than commodity kits, yet reached the top of the impact scale.';
+  if(c >= 4 && i <= 2)
+    return '<b>Cheap, and not worth much.</b> High volume, low value. Aimed at everyone, and it is what most people actually receive.';
+  if(Math.abs(c - i) >= 2)
+    return '<b>These two do not agree.</b> What it cost the attacker and what it did to you are different numbers, and the severity ladder only shows you the first one.';
+  return '';
+}
+
+function oauthTrainingPanel(a){
+  const persona = PERSONAS.personas.find(item => item.id === 'persona-game-001');
+  const app = PERSONAS.oauth_app;
+  if(!persona || !app) return '';
+  const scopes = app.requested_scopes.map(scope => `<li>${esc(scope)}</li>`).join('');
+  return `
+    <section class="training-panel" id="oauth-training" aria-labelledby="oauth-training-title">
+      <div class="training-banner">Fictional training desktop · synthetic data only</div>
+      <h3 class="training-title" id="oauth-training-title" tabindex="-1">Inbox to consent · OAuth walkthrough</h3>
+      <div class="training-desktop" role="group" aria-label="Fictional training desktop walkthrough">
+        <div class="desktop-chrome">
+          <span class="desktop-mark"><i aria-hidden="true"></i>Training desktop</span>
+          <span>local exercise · no real account</span>
+        </div>
+        <ol class="desktop-sequence" aria-label="Walkthrough sequence">
+          <li aria-current="step"><b>01</b> Inbox</li><li aria-hidden="true">→</li>
+          <li><b>02</b> App</li><li aria-hidden="true">→</li>
+          <li><b>03</b> Consent</li>
+        </ol>
+        <div class="desktop-content">
+          <section class="desktop-card" aria-labelledby="oauth-inbox-title">
+            <small>01 · Synthetic inbox</small>
+            <div class="desktop-mail-meta"><span>${esc(persona.display_name)} · ${esc(persona.email)}</span><span>FABRICATED INVITE</span></div>
+            <strong id="oauth-inbox-title">${esc(app.name)} would like to connect</strong>
+            <p>This staged invite opens the fictional app. It is not an email, and no mailbox is read before you choose an outcome.</p>
+            <button type="button" class="btn secondary desktop-next" id="oauth-open-invite">Open invitation</button>
+          </section>
+          <section class="desktop-card" aria-labelledby="oauth-app-title" hidden>
+            <small>02 · Fictional app</small>
+            <strong id="oauth-app-title">${esc(app.name)}</strong>
+            <div class="desktop-app-meta">Publisher: ${esc(app.publisher)} · Purpose: ${esc(app.purpose)}</div>
+            <p>The requested access is broader than the stated game-sync purpose.</p>
+            <button type="button" class="btn secondary desktop-next" id="oauth-review-access">Review requested access</button>
+          </section>
+          <section class="desktop-card" aria-labelledby="oauth-request-title" hidden>
+            <small>03 · Consent request · no real service</small>
+            <strong id="oauth-request-title">Review the requested access</strong>
+            <p>These permissions belong only to this synthetic exercise. Allow reads fake mailbox metadata; deny issues no token and reads no records.</p>
+            <ul class="scope-list" aria-label="Requested synthetic scopes">${scopes}</ul>
+          </section>
+        </div>
+      </div>
+      <div class="persona-card">
+        <small>Synthetic persona</small>
+        <strong>${esc(persona.display_name)}</strong>
+        <span>${esc(persona.email)} · ${esc(persona.account.service_label)} · ${esc(persona.account.handle)}</span>
+        <span>${persona.mailbox.messages.length} synthetic mailbox records are bundled for the Allow outcome. No real account exists.</span>
+      </div>
+      <div class="training-runtime" id="oauth-runtime-note" role="status">Default mode uses Node-process memory. Optional browser-container execution is not host attestation.</div>
+      <label class="training-optin">
+        <input type="checkbox" id="oauth-browser-opt-in">
+        <span>Separately opt in to run this exercise in a disposable browser container. The run fails if the reviewed image or Docker daemon is unavailable; it never falls back to the controller's in-memory state.</span>
+      </label>
+      <label class="training-optin" id="oauth-training-optin" hidden>
+        <input type="checkbox" id="oauth-opt-in">
+        <span>I explicitly opt in to prepare this exercise. It uses a fake identity provider and synthetic data; it never asks for a password or contacts a real identity provider or account.</span>
+      </label>
+      <div class="training-hint" id="oauth-hint" aria-live="polite">Open the staged invitation, review the app and its access request, then opt in. No sandbox starts before a simulated choice.</div>
+      <div id="oauth-plan" hidden></div>
+      <div class="consent-card" id="oauth-consent" hidden>
+        <small>Simulated consent choice</small>
+        <strong>Would you allow this synthetic app the requested scopes?</strong>
+        <p>Allow issues a synthetic token and reads fake mailbox metadata; Deny issues no token and reads no records. No real account is affected.</p>
+        <label class="training-optin" id="oauth-cloud-ack-row" hidden>
+          <input type="checkbox" id="oauth-cloud-ack">
+          <span>This separately gated mode may create a temporary paid Vultr Cloud Compute instance, including the provider’s one-hour minimum. This path is not live-verified here; the plan is capped at $0.05 per hour.</span>
+        </label>
+        <label class="training-optin" id="oauth-inference-ack-row" hidden>
+          <input type="checkbox" id="oauth-inference-ack">
+          <span>This run sends only its three synthetic browser screenshots to Vultr Serverless Inference for one bounded visual check. I approve that provider call for this run; the controller caps the service at ten runs per process.</span>
+        </label>
+        <div class="training-actions">
+          <button type="button" class="btn" id="oauth-allow" disabled>Simulate Allow</button>
+          <button type="button" class="btn secondary" id="oauth-deny" disabled>Simulate Deny</button>
+        </div>
+      </div>
+      <div class="training-result" id="oauth-result" aria-live="polite" hidden></div>
+    </section>`;
+}
+
+function connectOAuthTrainingPanel(a){
+  const panel = $('#oauth-training');
+  if(!panel) return;
+  const optIn = panel.querySelector('#oauth-opt-in');
+  const steps = [...panel.querySelectorAll('.desktop-content .desktop-card')];
+  const sequence = [...panel.querySelectorAll('.desktop-sequence li:not([aria-hidden])')];
+  const optInRow = panel.querySelector('#oauth-training-optin');
+  panel.querySelector('#oauth-open-invite').addEventListener('click', () => showStep(1));
+  panel.querySelector('#oauth-review-access').addEventListener('click', () => showStep(2));
+  function showStep(index){
+    steps.forEach((step, i) => { step.hidden = i !== index; });
+    sequence.forEach((item, i) => i === index ? item.setAttribute('aria-current', 'step') : item.removeAttribute('aria-current'));
+    optInRow.hidden = index !== 2;
+    (index === 1 ? panel.querySelector('#oauth-review-access') : optIn).focus();
+  }
+  const browserOptIn = panel.querySelector('#oauth-browser-opt-in');
+  const allow = panel.querySelector('#oauth-allow');
+  const deny = panel.querySelector('#oauth-deny');
+  const planBox = panel.querySelector('#oauth-plan');
+  const consent = panel.querySelector('#oauth-consent');
+  const result = panel.querySelector('#oauth-result');
+  const hint = panel.querySelector('#oauth-hint');
+  const runtimeNote = panel.querySelector('#oauth-runtime-note');
+  const cloudAckRow = panel.querySelector('#oauth-cloud-ack-row');
+  const cloudAck = panel.querySelector('#oauth-cloud-ack');
+  const inferenceAckRow = panel.querySelector('#oauth-inference-ack-row');
+  const inferenceAck = panel.querySelector('#oauth-inference-ack');
+  const localOnly = location.protocol === 'https:' || location.protocol === 'http:' && location.hostname === '127.0.0.1';
+  let planId = null, mode = 'local-synthetic', preparing = false, running = false, cleanupUnconfirmed = false, generation = 0;
+
+  const updateRuntimeNote = () => {
+    runtimeNote.textContent = mode === 'vultr-hackathon'
+      ? 'Execution mode: Vultr controller → disposable browser container → Serverless Inference screenshot check. Live deployment is not established by this page.'
+      : mode === 'vultr-gated'
+        ? 'Execution mode: vultr-gated. This optional paid cloud path is not live-verified here. No container or remote screenshot is claimed by this UI.'
+        : mode === 'docker-browser-requested'
+          ? 'Execution mode: disposable Docker browser requested. Failure never falls back to in-memory execution.'
+          : 'Execution mode: local-synthetic. The adapter uses Node-process memory, not an OS sandbox, container, VM, or microVM. No screenshots are captured in this mode.';
+  };
+  if(!localOnly) hint.textContent = 'Execution is disabled here. Open this page on its loopback or configured HTTPS application origin.';
+  const syncButtons = () => {
+    const costAcknowledged = mode !== 'vultr-gated' || cloudAck.checked;
+    const inferenceAcknowledged = mode !== 'vultr-hackathon' || inferenceAck.checked;
+    allow.disabled = deny.disabled = !localOnly || !optIn.checked || !planId || !costAcknowledged || !inferenceAcknowledged || preparing || running ||
+      (cleanupUnconfirmed && ['docker-browser-requested', 'vultr-hackathon'].includes(mode));
+    optIn.disabled = running;
+    browserOptIn.disabled = !localOnly || preparing || running;
+  };
+
+  const postLocal = async (path, body) => {
+    const response = await fetch(path, {
+      method: 'POST', mode: 'same-origin', credentials: 'omit', cache: 'no-store',
+      referrerPolicy: 'no-referrer', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const payload = await response.json().catch(() => null);
+    return { response, payload };
+  };
+
+  const preparePlan = async () => {
+    const current = ++generation;
+    planId = null;
+    planBox.hidden = true;
+    planBox.replaceChildren();
+    consent.hidden = true;
+    cloudAckRow.hidden = true;
+    cloudAck.checked = false;
+    inferenceAckRow.hidden = true;
+    inferenceAck.checked = false;
+    mode = browserOptIn.checked ? 'docker-browser-requested' : 'local-synthetic';
+    updateRuntimeNote();
+    result.hidden = true;
+    if(!optIn.checked){
+      preparing = false;
+      hint.textContent = 'Opt in to prepare the deterministic plan. No sandbox starts until you choose a simulated outcome.';
+      syncButtons();
+      return;
+    }
+    if(!localOnly){
+      preparing = false;
+      hint.textContent = 'The local server is required. This page will not send the request anywhere else.';
+      syncButtons();
+      return;
+    }
+    preparing = true;
+    hint.textContent = 'Preparing the scenario plan locally…';
+    syncButtons();
+    try{
+      const { response, payload } = await postLocal('/api/scenarios/oauth/plan', {
+        attackId: a.id,
+        personaId: 'persona-game-001',
+        optIn: true,
+        browserContainerOptIn: browserOptIn.checked,
+      });
+      const expectedMode = browserOptIn.checked ? 'docker-browser-requested' : 'local-synthetic';
+      if(!response.ok || !payload?.planId || !payload?.plan ||
+          !['local-synthetic','docker-browser-requested','vultr-gated','vultr-hackathon'].includes(payload.executionMode) ||
+          (!payload.executionMode.startsWith('vultr') && payload.executionMode !== expectedMode) ||
+          payload.browserContainerOptIn !== browserOptIn.checked) {
+        throw new Error(payload?.error || 'Plan preparation failed.');
+      }
+      if(current !== generation || !optIn.checked) return;
+      planId = payload.planId;
+      mode = payload.executionMode;
+      updateRuntimeNote();
+      cloudAckRow.hidden = mode !== 'vultr-gated';
+      inferenceAckRow.hidden = mode !== 'vultr-hackathon';
+      planBox.innerHTML = `<h4>${mode === 'vultr-hackathon' ? 'Bounded synthetic run plan' : 'Deterministic agent plan'}</h4><ol>${payload.plan.steps.map(step => `<li>${esc(step.label)}</li>`).join('')}</ol>`;
+      planBox.hidden = false;
+      consent.hidden = false;
+      hint.textContent = mode === 'vultr-gated'
+        ? 'Plan ready. This gated cloud path is not live-verified. A separate cost acknowledgement is required before any execution.'
+        : mode === 'vultr-hackathon'
+          ? 'Plan ready. Confirm the browser-container and inference acknowledgements before choosing the synthetic outcome.'
+          : 'Plan ready. Review the synthetic request, then choose one simulated outcome.';
+    }catch(error){
+      if(current === generation) hint.textContent = `${error.message || 'Local plan unavailable.'} Check that node server.mjs is running.`;
+    }finally{
+      if(current === generation){ preparing = false; syncButtons(); }
+    }
+  };
+
+  const evidenceSummary = event => {
+    const d = event.details || {};
+    if(event.type === 'agent.plan_created') return `${d.stepIds?.length || 0} deterministic steps planned.`;
+    if(event.type === 'sandbox.created') return mode === 'vultr-gated'
+      ? 'The run reports a temporary Vultr Cloud Compute environment in a private VPC.'
+      : mode === 'docker-browser-requested'
+        ? 'Synthetic scenario state uses Node-process memory inside the requested browser container.'
+        : 'Per-run synthetic sandbox created in Node-process memory.';
+    if(event.type === 'consent.choice_received') return `User chose simulated ${d.decision}.`;
+    if(event.type === 'idp.synthetic_token_issued') return `Fake IdP issued ${d.tokenHandle} with ${d.scopes.join(', ')}.`;
+    if(event.type === 'idp.synthetic_token_not_issued') return 'No token issued after simulated denial.';
+    if(event.type === 'mailbox.synthetic_records_read') return `${d.messages.length} synthetic mailbox records read.`;
+    if(event.type === 'sandbox.destroyed') return mode === 'vultr-gated'
+      ? 'The run reports confirmed instance deletion; this cloud path has not been live-verified here.'
+      : 'Sandbox destroyed and in-memory token state cleared.';
+    if(event.type === 'sandbox.not_created') return 'Preflight stopped before creating a sandbox or cloud resource.';
+    if(event.type === 'scenario.failed') return 'Synthetic step failed; teardown was attempted.';
+    if(event.type === 'sandbox.destroy_failed') return 'Teardown was not confirmed.';
+    if(event.type === 'receipt.created') return `Receipt status: ${d.status}.`;
+    return event.type;
+  };
+
+  const showResult = payload => {
+    if(payload.pattern === 'B'){
+      const expectedStages = ['desktop-before-optin', 'consent-ready', 'receipt'];
+      const screenshots = Array.isArray(payload.screenshots) ? payload.screenshots.filter((item, index) =>
+        item?.stage === expectedStages[index] && item.mimeType === 'image/jpeg' &&
+        typeof item.base64 === 'string' && item.base64.length <= 700000 &&
+        /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(item.base64) &&
+        /^[a-f0-9]{64}$/.test(item.sha256)
+      ) : [];
+      const screenshotHtml = screenshots.length === expectedStages.length
+        ? `<h4>Synthetic worker screenshots</h4><div class="training-screenshots">${screenshots.map(item =>
+          `<figure><img src="data:image/jpeg;base64,${item.base64}" alt="${esc(item.stage.replaceAll('-', ' '))} screenshot from the synthetic browser worker"><figcaption>${esc(item.stage.replaceAll('-', ' '))} · SHA-256 ${esc(item.sha256)}</figcaption></figure>`
+        ).join('')}</div>`
+        : '';
+      const label = payload.contractMet ? 'Worker and screenshot checks passed' : 'Proof conditions not met';
+      const evidenceLabel = payload.evidenceClass === 'host-docker'
+        ? 'Host Docker evidence · Vultr hosting is not verified.'
+        : payload.evidenceClass === 'injected' ? 'Injected test evidence · not live.' : 'Execution evidence class unavailable.';
+      result.innerHTML = `
+        <div class="receipt-stamp">OAuth worker proof · ${esc(label)}</div>
+        <p>${esc(evidenceLabel)}</p>
+        <p>Simulated choice: <strong>${esc(payload.decision || 'unknown')}</strong> · Synthetic token: <strong>${payload.tokenIssued ? 'issued' : 'not issued'}</strong> · Synthetic records exposed: <strong>${Number.isInteger(payload.exposedMessageCount) ? payload.exposedMessageCount : 'unknown'}</strong>.</p>
+        <p>Container teardown: <strong>${esc(payload.containerTeardown || 'unconfirmed')}</strong> · Vultr Serverless Inference: <strong>${payload.vision?.live ? 'live check completed' : esc(payload.vision?.status || 'not run')}</strong>.</p>
+        ${screenshotHtml}
+        <p class="evidence-hash">${esc(payload.submissionGap || 'No public deployment or submission readiness is proven.')}</p>
+        ${payload.error ? `<p>${esc(payload.error)}</p>` : ''}`;
+      result.hidden = false;
+      return;
+    }
+    const receipt = payload.receipt;
+    if(!receipt){
+      result.innerHTML = `<p>${esc(payload.error || 'No verified receipt was returned.')}</p>`;
+      result.hidden = false;
+      return;
+    }
+    const messageList = receipt.exposedMessages.length
+      ? `<ul>${receipt.exposedMessages.map(message => `<li>${esc(message.subject)} <span class="metal">(${esc(message.id)})</span></li>`).join('')}</ul>`
+      : '<p>No synthetic mailbox records were accessed.</p>';
+    const events = (payload.events || []).map(event => `<li><strong>${esc(event.type)}</strong> — ${esc(evidenceSummary(event))}</li>`).join('');
+    const screenshotStages = ['desktop-before-optin', 'consent-ready', 'receipt'];
+    const screenshots = Array.isArray(payload.screenshots) ? payload.screenshots.filter((item, index) =>
+      item?.stage === screenshotStages[index] && item.mimeType === 'image/jpeg' &&
+      typeof item.base64 === 'string' && item.base64.length <= 700000 &&
+      /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(item.base64)
+    ) : [];
+    const screenshotHtml = screenshots.length === screenshotStages.length
+      ? `<h4>Browser-run screenshots</h4><div class="training-screenshots">${screenshots.map(item =>
+        `<figure><img src="data:image/jpeg;base64,${item.base64}" alt="${esc(item.stage.replaceAll('-', ' '))} screenshot from the local browser run"><figcaption>${esc(item.stage.replaceAll('-', ' '))} · SHA-256 ${esc(item.sha256)}</figcaption></figure>`
+      ).join('')}</div><p>Returned by the local Docker browser run. This is not host or daemon attestation.</p>`
+      : '';
+    const statusLabel = receipt.status === 'complete' ? 'Synthetic data accessed' : receipt.status === 'denied' ? 'Consent denied · no access' : 'Run failed';
+    result.innerHTML = `
+      <div class="receipt-stamp">Blast-radius receipt · ${esc(statusLabel)}</div>
+      <p>Token issued: <strong>${receipt.tokenIssued ? 'yes (synthetic only)' : 'no'}</strong> · Mailbox records exposed: <strong>${receipt.exposedMessageCount}</strong> · Synthetic state teardown: <strong>${receipt.sandboxTeardown === 'not_required' ? 'not required (none created)' : receipt.sandboxTeardown === 'confirmed' ? 'confirmed' : 'not confirmed'}</strong>${payload.executionMode === 'docker-browser-requested' ? ` · Docker container removal: <strong>${payload.containerTeardown === 'confirmed' ? 'confirmed' : 'not confirmed'}</strong>` : ''}</p>
+      ${messageList}
+      <p>Granted scopes: ${esc(receipt.grantedScopes.join(', ') || 'none')} · Unused granted scopes: ${esc(receipt.unusedGrantedScopes.join(', ') || 'none')}</p>
+      <p class="evidence-hash">Scenario event SHA-256: ${esc(receipt.evidenceSha256)}. It is not a signature or third-party attestation.</p>
+      ${payload.executionMode === 'docker-browser-requested' ? screenshotHtml : ''}
+      ${payload.error ? `<p>${esc(payload.error)}</p>` : ''}
+      <h4>Structured evidence</h4><ol>${events}</ol>`;
+    result.hidden = false;
+  };
+
+  const receiptStatusMessage = receipt => receipt.status === 'failed'
+    ? 'Run failed. Review the receipt and teardown status before retrying.'
+    : 'Run complete. The receipt is derived from the structured event log.';
+
+  const runDecision = async decision => {
+    if(!localOnly || !optIn.checked || !planId || (mode === 'vultr-gated' && !cloudAck.checked) ||
+        (mode === 'vultr-hackathon' && !inferenceAck.checked) || preparing || running) return;
+    running = true;
+    result.hidden = true;
+    hint.textContent = mode === 'vultr-gated'
+      ? 'Starting the configured gated cloud run… This path has not been live-verified.'
+      : mode === 'vultr-hackathon'
+        ? 'The Vultr controller is starting the disposable browser worker and bounded screenshot check…'
+        : mode === 'docker-browser-requested'
+          ? 'Starting Chromium in the selected local Docker image. Failure will not fall back to in-memory execution.'
+          : 'Running only against the local in-memory synthetic adapter…';
+    syncButtons();
+    let failurePayload = null;
+    try{
+      const proofMode = mode === 'vultr-hackathon';
+      const { response, payload } = await postLocal(proofMode ? '/api/hackathon/proof' : '/api/scenarios/oauth/execute', {
+        attackId: a.id,
+        personaId: 'persona-game-001',
+        decision,
+        planId,
+        optIn: optIn.checked,
+        browserContainerOptIn: browserOptIn.checked,
+        ...(proofMode ? { inferenceAcknowledged: inferenceAck.checked } : { costAcknowledged: mode === 'vultr-gated' && cloudAck.checked }),
+      });
+      failurePayload = payload;
+      if(!payload) throw new Error('No response from the training backend.');
+      if(payload.executionMode){ mode = payload.executionMode; updateRuntimeNote(); }
+      if(!response.ok && !payload.receipt && !payload.pattern) throw new Error(payload.error || 'Synthetic run failed.');
+      showResult(payload);
+      hint.textContent = payload.pattern === 'B'
+        ? payload.contractMet ? 'Worker result verified and container removal confirmed.' : 'The worker proof did not pass. Review the result and cleanup status before retrying.'
+        : receiptStatusMessage(payload.receipt);
+    }catch(error){
+      if(['docker-browser-requested', 'vultr-hackathon'].includes(mode) && failurePayload?.containerTeardown !== 'confirmed' &&
+          failurePayload?.containerTeardown !== 'not_started') cleanupUnconfirmed = true;
+      result.innerHTML = `<p>${esc(error.message || 'Synthetic run failed.')}</p>`;
+      result.hidden = false;
+      hint.textContent = mode === 'vultr-gated'
+        ? 'A configured cloud request failed. Inspect the receipt for teardown status; if deletion is unconfirmed, review the Vultr account manually.'
+        : mode === 'vultr-hackathon'
+          ? `The isolated proof failed; no in-process fallback was used. Container teardown: ${failurePayload?.containerTeardown || 'unconfirmed'}. ${failurePayload?.containerTeardown === 'unconfirmed' ? 'Reconcile the worker on the Vultr VM before another run.' : 'Check the inference gate and worker image before retrying.'}`
+          : mode === 'docker-browser-requested'
+            ? failurePayload?.containerTeardown === 'not_started'
+              ? 'Another scenario is running. This request started no container; wait for it to finish, then retry.'
+              : `Browser-container run failed; no in-memory fallback was used. Error: ${failurePayload?.code || 'unknown'}; container teardown: ${failurePayload?.containerTeardown || 'unconfirmed'}. ${failurePayload?.containerTeardown === 'unconfirmed' ? 'Inspect and clean Docker, then restart the server before using browser mode again.' : 'Check the local image and Docker daemon before retrying.'}`
+            : 'No external service was contacted by this local run. Retry locally or inspect the server output.';
+    }finally{
+      running = false;
+      syncButtons();
+    }
+  };
+
+  optIn.addEventListener('change', preparePlan);
+  browserOptIn.addEventListener('change', preparePlan);
+  cloudAck.addEventListener('change', syncButtons);
+  inferenceAck.addEventListener('change', syncButtons);
+  allow.addEventListener('click', () => runDecision('allow'));
+  deny.addEventListener('click', () => runDecision('deny'));
+  syncButtons();
+}
+
+let drawerOpener = null;
+const background = [$('.top'), $('.wrap'), $('.foot')];
+function openDrawer(a, opener){
+  drawerOpener = opener;
+  const isDoor = a.vector === 'vulnerability';
+  const ladderEntry = a.sev == null ? SEVS['null'] : SEVS[a.sev];
+  const classInfo = DATA._meta.build_classes[a.cls];
+  const typeInfo = DATA._meta.types[a.type];
+  const note = isDoor ? '' : divergenceNote(a);
+  const sourceUrls = (a.source_urls || []).filter(url => typeof url === 'string' && /^https:\/\//i.test(url));
+  const sourceLinks = sourceUrls.map((url, i) =>
+    `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="Open source ${i+1} for ${esc(a.name)}">Reference ${i+1} ↗</a>`
+  ).join('');
+  const profileContext = a.id === OAUTH_ATTACK_ID && new URLSearchParams(window.location.search).get('profile') === 'deception-abyss'
+    ? '<p class="date-note">Selected profile: Deception · Abyss. This victim-action depth is separate from the historical SEV2 label above.</p>'
+    : '';
+
+  $('#d-body').innerHTML = `
+    <div class="kicker">
+      <span class="badge ${isDoor?'doorb':!a.lure?'nolure':''}">${isDoor?'DOOR':ladderEntry.name}</span>
+      <span class="metal">${a.year} · ${isDoor ? `${SEVS[a.sev].name} · ` : ''}${esc(ladderEntry.action)}</span>
+      ${a.confidence!=='high'?`<span class="metal">· ${a.confidence} confidence</span>`:''}
+    </div>
+    <h2 class="d-title" id="d-title">${esc(a.name)}</h2>
+    <p class="d-vec">Family · ${esc(a.vector.replace('-',' '))}</p>
+    ${profileContext}
+
+    <div class="classification">
+      <span class="class-pill cls-${String(a.cls).toLowerCase()}" title="${esc(classInfo.name)}">CLASS ${esc(a.cls)}</span>
+      <span class="type-pill">${esc(a.type)}</span>
+      <span class="stage-pill">${a.stages} backend ${a.stages===1?'step':'steps'}</span>
+    </div>
+    <p class="class-desc">${esc(classInfo.desc)}</p>
+    <p class="type-desc">${esc(typeInfo)}</p>
+    ${a.date_note?`<p class="date-note">${esc(a.date_note)}</p>`:''}
+
+    <div class="act">
+      <span class="what">Historical reconstruction · synthetic only</span>
+      <span class="why">This catalogue card does not execute a historical payload or contact a real account or target. The backend plan below describes only original toy logic and synthetic data.</span>
+    </div>
+
+    <p class="d-sum">${esc(a.summary)}</p>
+    <div class="scenario-split">
+      <section class="split-card">
+        <div class="h">Front end · reconstructed moment</div>
+        <p>${esc(a.fe)}</p>
+      </section>
+      <section class="split-card">
+        <div class="h">Vultr backend plan · synthetic consequence</div>
+        <p>${esc(a.be)}</p>
+      </section>
+    </div>
+
+    ${a.id===OAUTH_ATTACK_ID?oauthTrainingPanel(a):''}
+
+    <div class="d-lesson">
+      <div class="h">The takeaway</div>
+      <p>${esc(a.lesson)}</p>
+    </div>
+
+    ${isDoor?'':`
+    <div class="axes">
+      ${bar('Cost to the attacker', a.attacker_cost, a.attacker_cost>=4)}
+      ${bar('Damage to the victim', a.impact, a.impact>=5)}
+    </div>
+    ${note?`<div class="divergence">${note}</div>`:''}
+    `}
+
+    <div class="src">
+      <div class="h">Source</div>
+      <p>${esc(a.source)}</p>
+      <nav class="src-links" aria-label="Historical source links">${sourceLinks}</nav>
+    </div>`;
+  if(a.id===OAUTH_ATTACK_ID) connectOAuthTrainingPanel(a);
+  drawer.classList.toggle('training-open', a.id === OAUTH_ATTACK_ID);
+  drawer.classList.add('on'); scrim.classList.add('on');
+  drawer.style.setProperty('--hue', hueOf(a));
+  drawer.inert = false;
+  background.forEach(node => { node.inert = true; });
+  drawer.scrollTop = 0;
+  if(a.id === OAUTH_ATTACK_ID){
+    $('#oauth-training').scrollIntoView({block:'start'});
+    $('#oauth-training-title').focus({preventScroll:true});
+  }else drawer.focus();
+}
+
+const closeAll = ()=>{
+  if(!drawer.classList.contains('on')) return;
+  drawer.classList.remove('on'); scrim.classList.remove('on');
+  drawer.inert = true;
+  background.forEach(node => { node.inert = false; });
+  state.pinned = null; markPinned();
+  if(drawerOpener?.isConnected) drawerOpener.focus();
+  drawerOpener = null;
+};
+drawer.inert = true;
+$('#close').onclick = closeAll; scrim.onclick = closeAll;
+addEventListener('keydown', e=>{
+  if(!drawer.classList.contains('on')) return;
+  if(e.key === 'Escape'){ e.preventDefault(); closeAll(); return; }
+  if(e.key !== 'Tab') return;
+  const items = [...drawer.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])')]
+    .filter(node => node.getClientRects().length && !node.closest('[hidden]'));
+  if(!items.length){ e.preventDefault(); drawer.focus(); return; }
+  const first = items[0], last = items[items.length - 1];
+  if(e.shiftKey && (document.activeElement === first || document.activeElement === drawer)){
+    e.preventDefault(); last.focus();
+  }else if(!e.shiftKey && (document.activeElement === last || !drawer.contains(document.activeElement) || document.activeElement === drawer)){
+    e.preventDefault(); first.focus();
+  }
+});
+
+/* ── ghost year: the nearest row to the optical centre ── */
+const ghost = $('#ghost');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting) ghost.textContent = en.target.dataset.ghost;
+    });
+  },{rootMargin:'-45% 0px -45% 0px'});
+  const watch = ()=>rail.querySelectorAll('.year').forEach(y=>{
+    y.dataset.ghost = y.querySelector('.year-num').firstChild.textContent.trim();
+    io.observe(y);
+  });  new MutationObserver(watch).observe(rail,{childList:true});
+  watch();
+}
+
+/* ── hero gets out of the way once you start scrolling.
+   the hero lives inside a sticky header, so it never leaves the
+   viewport and an IntersectionObserver on it can never fire. ── */
+let tucking = false;
+addEventListener('scroll', ()=>{
+  if(tucking) return;
+  tucking = true;
+  requestAnimationFrame(()=>{
+    document.querySelector('.top').classList.toggle('tucked', scrollY > 90);
+    tucking = false;
+  });
+},{passive:true});
+
+/* ── row hover lights the ghost ── */
+rail.addEventListener('pointerover', e=>{ if(e.target.closest('.row')) ghost.classList.add('hot'); });
+rail.addEventListener('pointerout',  e=>{ if(!e.relatedTarget?.closest?.('.row')) ghost.classList.remove('hot'); });
+
+render();
+const requestedDemo = new URLSearchParams(window.location.search).get('demo');
+if(requestedDemo === OAUTH_ATTACK_ID){
+  const attack = ATTACKS.find(item => item.id === OAUTH_ATTACK_ID);
+  const row = rail.querySelector('.row[data-id="oauth-2023"]');
+  if(attack && row) openDrawer(attack, row);
+}
+</script>
+</body>
+</html>

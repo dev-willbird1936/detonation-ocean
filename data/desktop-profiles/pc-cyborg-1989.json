@@ -1,0 +1,228 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Harold Pennick",
+    "short": "harold",
+    "email": "harold.pennick@fenwick-trust.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img3.jpg",
+    "wifi": false,
+    "bluetooth": false,
+    "wifiNetwork": "Office-LAN",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "harold"
+      },
+      "f-grants": {
+        "id": "f-grants",
+        "parentId": "documents",
+        "name": "GRANTS.TXT",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 3100,
+        "modified": "1989-12-10T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-grants"
+      },
+      "f-clinics": {
+        "id": "f-clinics",
+        "parentId": "documents",
+        "name": "CLINICS.TXT",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1200,
+        "modified": "1989-12-06T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-clinics"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Harold",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "1989-12-12T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "mail",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "settings",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "mail",
+      "notes",
+      "calendar",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-grant-report-due-f",
+          "folder": "inbox",
+          "from": "Imogen Fenwick <imogen.fenwick@fenwick-trust.example>",
+          "to": "harold.pennick@fenwick-trust.example",
+          "subject": "Grant report due Friday",
+          "body": "Harold, the grant report for the regional health study is due Friday. Please finish the tables.\n\nImogen",
+          "time": "1989-12-11T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-post-room-closes-a",
+          "folder": "inbox",
+          "from": "Bram Oduya <bram.oduya@fenwick-trust.example>",
+          "to": "harold.pennick@fenwick-trust.example",
+          "subject": "Post room closes at noon on the 22nd",
+          "body": "The post room closes at noon on the 22nd for the holidays. Send outgoing mail by then.\n\nBram",
+          "time": "1989-12-08T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Harold Pennick <harold.pennick@fenwick-trust.example>",
+          "to": "imogen.fenwick@fenwick-trust.example",
+          "subject": "Draft tables",
+          "body": "Tables 1 to 3 are done. Table 4 needs the clinic counts.\n\nHarold",
+          "time": "1989-12-09T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-1-study-notes",
+        "folder": "notes",
+        "title": "Study notes",
+        "body": "Tables 1-3 done\nTable 4 needs clinic counts\nPrint 12 copies for the board",
+        "modified": "1989-12-11T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Grant report due",
+        "start": "1989-12-15T12:00:00Z",
+        "end": "1989-12-15T12:30:00Z",
+        "location": "Imogen's office"
+      },
+      {
+        "id": "e-2",
+        "title": "Board meeting",
+        "start": "1989-12-17T14:00:00Z",
+        "end": "1989-12-17T15:30:00Z",
+        "location": "Committee room"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Finish table 4",
+        "due": "1989-12-13T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-imogen-fenwick",
+        "name": "Imogen Fenwick",
+        "email": "imogen.fenwick@fenwick-trust.example",
+        "phone": "+1 555 0191",
+        "org": "Fenwick Health Trust"
+      },
+      {
+        "id": "p-2-bram-oduya",
+        "name": "Bram Oduya",
+        "email": "bram.oduya@fenwick-trust.example",
+        "phone": "+1 555 0192",
+        "org": "Mailroom"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-grants": {
+        "text": "Grant report draft\nRegional health study\nTables 1 to 3 complete"
+      },
+      "c-f-clinics": {
+        "text": "Clinic counts\nNorth: 14\nSouth: 9\nEast: 11"
+      }
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Report due Fri",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 160,
+        "collapsed": false
+      }
+    ]
+  }
+}

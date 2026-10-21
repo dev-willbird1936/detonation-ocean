@@ -1,0 +1,13 @@
+Call the Codex-native `image_gen.imagegen` tool exactly once. Input images are attached in this order: Image 1 is the Midnight/Abyss squid and is the immediate lineage; Image 2 is the base-form squid and controls identity. Never use or modify Octopus art. Do not use shell, scripts, another provider, an API fallback, or retries. Pass the following image prompt verbatim:
+
+Use case: stylized-concept
+Asset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.
+Input images: Image 1 is the Midnight/Abyss squid, the immediate lineage to advance from. Image 2 is the base-form squid, the species identity reference.
+Scene/backdrop: none; genuinely transparent background.
+Subject: Keep one elongated squid mantle with fins, same facing direction and one compact grouped tentacle bundle. Absolutely no radial spread, eight separate curling arms, octopus-style arm spiral, detached clubs, or cuttlefish body. Keep Mid's striped mantle and advance with a larger scarred mantle, wider frilled yellow fin edge, thicker/longer single bundle, prominent clubs, sucker rows, hooked tips and larger dark eye.
+Style/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.
+Composition/framing: square canvas; one complete centered creature, all parts connected and in frame with generous transparent margin; no crop.
+Color palette: keep each semantic region contiguous. Primary mantle, head and body shadow/base/highlight: #633A46, #A95650, #E28B6C. Secondary one compact grouped tentacle bundle shadow/base/highlight: #243B61, #3C6A93, #89ABD0. Tertiary mantle fins, sucker rows and tentacle-tip accents shadow/base/highlight: #79612C, #C0A33F, #F1D075. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these role colors and neutral details only, plus transparent pixels.
+Constraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, gore, radial arrangement or detached limbs. Return one complete transparent PNG.
+
+After the one image call, return only the generated PNG's full local path. If the call fails or returns no image, report that and stop without retrying.

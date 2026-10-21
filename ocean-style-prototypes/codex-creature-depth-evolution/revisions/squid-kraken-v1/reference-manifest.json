@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "revision": "squid-kraken-v1",
+  "references": [
+    {
+      "target_family": "squid",
+      "kind": "anatomy-shape-reference",
+      "file": "inputs/squid-mantle-tentacle-reference.png",
+      "sha256": "22085a7b40386fb3ba5e3500fd6a5eb86e4e59957a58b7ca7f57b6bf6dd7ce4d",
+      "source_file": "ocean-style-prototypes/creature-assets/minimal-silhouettes/02-twilight.png",
+      "source_sha256": "2d1b3556325389c2170b4abe5241d666a86f0a169685e1795de378463af783b4",
+      "crop_xyxy": [845, 311, 1434, 673],
+      "role": "Cuttlefish-derived mantle/clustered-arm cue only; reinterpret as squid and keep the pixel-art output style. Do not copy the original arrangement or palette."
+    },
+    {
+      "target_family": "viperfish",
+      "kind": "anatomy-reference",
+      "file": "../../inputs/viperfish-anatomy-reference.png",
+      "sha256": "8b0ecdd8010dd087281dc0a162b7cd48d7e8bff8499c0a73a4abe3aaf600f115",
+      "role": "Preserve viperfish identity, long body, left-facing side view, tail and fin layout."
+    },
+    {
+      "target_family": "viperfish",
+      "kind": "role-map-reference",
+      "file": "../../inputs/viperfish-role-map-reference.png",
+      "sha256": "ab8771d2e47359347cfec67e77336e8775b0db378c66521fa027419def78882e",
+      "role": "Primary/secondary/tertiary body-region placement only; ignore magenta/cyan/lime placeholder colors. Use palette-profile-v1.json."
+    }
+  ]
+}

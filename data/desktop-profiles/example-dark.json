@@ -1,0 +1,18 @@
+{
+  "user": { "id": "trainee", "name": "Jordan Blake", "short": "jordan", "email": "jordan.blake@contoso.example", "avatar": "initials" },
+  "sys": { "theme": "dark", "accent": "purple", "wallpaper": "depth-abyss" },
+  "fs": { "nodes": { "home": { "name": "jordan" } } },
+  "notifications": { "history": [
+    { "id": "n-welcome", "app": "settings", "title": "Welcome, Jordan", "body": "This is a fictional training desktop. Nothing here is real.", "time": "2026-11-02T09:00:00Z" }
+  ] },
+  "installed": ["files", "browser", "mail", "messages", "mfa", "updates", "settings", "terminal", "notes", "texteditor", "calendar", "reminders", "contacts", "photos", "calculator", "clock"],
+  "dock": { "pins": ["files", "browser", "mail", "messages", "mfa", "calendar", "notes", "settings", "terminal"], "badges": { "mail": 1 } },
+  "data": {
+    "mail": {
+      "messages": [
+        { "id": "m-payroll", "folder": "inbox", "from": "Payroll Team <payroll@contoso-hr.example>", "to": "jordan.blake@contoso.example", "subject": "Action needed: confirm your direct deposit", "body": "Hi Jordan,\n\nWe could not process your direct deposit update. Confirm your details today to avoid a delay.\n\nPayroll Team", "time": "2026-11-02T07:55:00Z", "read": false, "flagged": false, "attachments": [], "link": "scene:payroll-portal" },
+        { "id": "m-it", "folder": "inbox", "from": "IT Service Desk <servicedesk@contoso.example>", "to": "jordan.blake@contoso.example", "subject": "Planned maintenance Saturday", "body": "Email will be unavailable from 22:00 to 23:00 on Saturday. No action is needed.", "time": "2026-10-31T12:00:00Z", "read": true, "flagged": false, "attachments": [] }
+      ]
+    }
+  }
+}

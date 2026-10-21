@@ -1,0 +1,247 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Layla Haddad",
+    "short": "layla",
+    "email": "layla.haddad@openvoice-ngo.example",
+    "avatar": "pegasus-trident-2016"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-bigsur.jpg",
+    "wifiNetwork": "OpenVoice-Office"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "layla"
+      },
+      "f-pegasus-trid-1": {
+        "id": "f-pegasus-trid-1",
+        "parentId": "documents",
+        "name": "Report-section.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 44,
+        "modified": "2016-08-09T17:10:00Z",
+        "trashed": false,
+        "contentId": "c-pegasus-trid-1"
+      },
+      "f-pegasus-trid-2": {
+        "id": "f-pegasus-trid-2",
+        "parentId": "documents",
+        "name": "Security-reminders.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 49,
+        "modified": "2016-08-09T17:10:00Z",
+        "trashed": false,
+        "contentId": "c-pegasus-trid-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Layla",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2016-08-09T17:10:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "reminders",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "contacts",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-director",
+          "folder": "inbox",
+          "from": "Samira Joubert <samira.joubert@openvoice-ngo.example>",
+          "to": "layla.haddad@openvoice-ngo.example",
+          "subject": "Report draft for Friday",
+          "body": "Layla,\n\nPlease send your section of the report by Friday. Use the secure share.\n\nSamira",
+          "time": "2016-08-09T17:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sec",
+          "folder": "inbox",
+          "from": "Open Voice Security <security@openvoice-ngo.example>",
+          "to": "layla.haddad@openvoice-ngo.example",
+          "subject": "Reminder: unknown links",
+          "body": "Send any odd link or message to the security address before you open it.\n\nOpen Voice Security",
+          "time": "2016-08-02T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Samira Joubert",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Samira Joubert",
+              "text": "Meeting at 10, bring the interview notes.",
+              "time": "2016-08-10T07:50:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Layla Haddad",
+              "text": "On my way.",
+              "time": "2016-08-10T07:55:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Report section",
+        "body": "Interview summaries\nSources: keep anonymous\nSend by Friday",
+        "modified": "2016-08-09T17:10:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Report meeting",
+        "start": "2016-08-10T10:00:00Z",
+        "end": "2016-08-10T11:00:00Z",
+        "location": "Meeting room"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Samira Joubert",
+        "email": "samira.joubert@openvoice-ngo.example",
+        "phone": "+1 555 0101",
+        "org": "Open Voice"
+      },
+      {
+        "id": "p-2",
+        "name": "Open Voice Security",
+        "email": "security@openvoice-ngo.example",
+        "phone": "+1 555 0102",
+        "org": "Open Voice"
+      },
+      {
+        "id": "p-3",
+        "name": "Karim Aziz",
+        "email": "karim.aziz@openvoice-ngo.example",
+        "phone": "+1 555 0103",
+        "org": "Open Voice"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-pegasus-trid-1": {
+        "text": "Report section draft. Interviews anonymised."
+      },
+      "c-pegasus-trid-2": {
+        "text": "Send odd links to security. Keep devices updated."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-ngo-home": {
+          "title": "Open Voice",
+          "url": "openvoice-ngo.example/home",
+          "brand": "Open Voice",
+          "heading": "Open Voice",
+          "body": "Open Voice supports community reporting. Read our latest briefings.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Open Voice",
+          "url": "scene:pg-ngo-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-ngo-home",
+          "title": "Open Voice"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Open Voice",
+          "url": "scene:pg-ngo-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-ngo-home",
+          "title": "Open Voice",
+          "time": "2016-08-09T17:10:00Z"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Tomas Ferrer",
+    "short": "tomas",
+    "email": "tomas.ferrer@pinecrest-goods.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-light.jpg",
+    "wifiNetwork": "Pinecrest-Office"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "tomas"
+      },
+      "f-runbook": {
+        "id": "f-runbook",
+        "parentId": "documents",
+        "name": "Gateway-runbook.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1400,
+        "modified": "2014-03-12T10:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-runbook"
+      },
+      "f-orders": {
+        "id": "f-orders",
+        "parentId": "documents",
+        "name": "Orders-March.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2200,
+        "modified": "2014-04-01T08:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-orders"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Tomas",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2014-04-03T09:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "terminal",
+      "notes",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-hosting",
+          "folder": "inbox",
+          "from": "Northgate Hosting <noc@northgate-hosting.example>",
+          "to": "tomas.ferrer@pinecrest-goods.example",
+          "subject": "Planned maintenance on Saturday",
+          "body": "The shared network will be unavailable from 02:00 to 02:30 on Saturday. No action is needed.\n\nNorthgate Hosting",
+          "time": "2014-04-03T09:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-orders",
+          "folder": "inbox",
+          "from": "Rosa Alvarez <rosa.alvarez@pinecrest-goods.example>",
+          "to": "tomas.ferrer@pinecrest-goods.example",
+          "subject": "Weekend order volume",
+          "body": "Tomas, orders doubled over the weekend. Can you check the gateway is coping?\n\nRosa",
+          "time": "2014-04-07T07:55:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-cert",
+          "folder": "inbox",
+          "from": "Keystone Certificates <renewals@keystone-certs.example>",
+          "to": "tomas.ferrer@pinecrest-goods.example",
+          "subject": "Your certificate renews in 40 days",
+          "body": "Your certificate for the shop domain renews automatically on 2014-05-17.",
+          "time": "2014-04-01T10:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Tomas Ferrer <tomas.ferrer@pinecrest-goods.example>",
+          "to": "rosa.alvarez@pinecrest-goods.example",
+          "subject": "Re: Weekend order volume",
+          "body": "On it. Load looks normal so far.",
+          "time": "2014-04-07T08:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-rosa",
+          "with": "Rosa Alvarez",
+          "items": [
+            {
+              "id": "i-rosa-1",
+              "from": "Rosa Alvarez",
+              "text": "Coffee after the stand-up?",
+              "time": "2014-04-07T08:20:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-runbook",
+        "folder": "notes",
+        "title": "Gateway runbook",
+        "body": "Restart order: cache, gateway, workers.\nCertificates live in the key store.\nCall hosting NOC for network faults.",
+        "modified": "2014-03-12T10:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-standup",
+        "title": "Stand-up",
+        "start": "2014-04-08T09:30:00Z",
+        "end": "2014-04-08T09:45:00Z",
+        "location": "Back office"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-backup",
+        "list": "work",
+        "title": "Check nightly backup log",
+        "due": "2014-04-08T09:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-rosa",
+        "name": "Rosa Alvarez",
+        "email": "rosa.alvarez@pinecrest-goods.example",
+        "phone": "+1 555 0211",
+        "org": "Pinecrest Goods"
+      },
+      {
+        "id": "p-noc",
+        "name": "Northgate NOC",
+        "email": "noc@northgate-hosting.example",
+        "phone": "+1 555 0212",
+        "org": "Northgate Hosting"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-runbook": {
+        "text": "Gateway runbook (excerpt). Fictional training file."
+      },
+      "c-f-orders": {
+        "text": "Order totals for March. Fictional training file."
+      }
+    }
+  }
+}

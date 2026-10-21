@@ -1,0 +1,6 @@
+{
+  "detonation-ocean/detonate": "sha256:393c82fa547d1b4b6237b96072ed8d15122a36be266fcfa26d31402e3249569f",
+  "detonation-ocean/collect": "sha256:193f09c9621b90fcf937420d85d6c53de2fa3de0fb0a579d42248f234c57b5dd",
+  "detonation-ocean/analyse": "sha256:5790bb8ae5cea40c442f8667104938d3f59b8971041ed1c547a84f40edfb87a3",
+  "detonation-ocean/wine": "sha256:8619ce679580b5f910f8ef8f9ac3c809bf1554c4ff4a54775ba9a7f35226b89a"
+}

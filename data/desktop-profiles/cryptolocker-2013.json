@@ -1,0 +1,338 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Ruth Whitlock",
+    "short": "ruth",
+    "email": "ruth.whitlock@dunmore-plumbing.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img3.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Dunmore-Office",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "ruth"
+      },
+      "f-ledger": {
+        "id": "f-ledger",
+        "parentId": "documents",
+        "name": "Ledger-Sept.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2800,
+        "modified": "2013-09-30T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-ledger"
+      },
+      "f-payroll": {
+        "id": "f-payroll",
+        "parentId": "documents",
+        "name": "Payroll-Oct-draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1200,
+        "modified": "2013-10-07T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-payroll"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Ruth",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2013-10-08T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "settings",
+    "updates",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-october-payroll",
+          "folder": "inbox",
+          "from": "Arthur Dunmore <arthur.dunmore@dunmore-plumbing.example>",
+          "to": "ruth.whitlock@dunmore-plumbing.example",
+          "subject": "October payroll",
+          "body": "Ruth, please have October payroll ready by the 28th. Selma has the overtime sheet.\n\nArthur",
+          "time": "2013-10-07T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-statement-for-sept",
+          "folder": "inbox",
+          "from": "Fitz Calder <fitz.calder@calder-pipes.example>",
+          "to": "ruth.whitlock@dunmore-plumbing.example",
+          "subject": "Statement for September",
+          "body": "The September statement is below. Net 30 as usual.\n\nFitz",
+          "time": "2013-10-06T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-overtime-sheet",
+          "folder": "inbox",
+          "from": "Selma Okoye <selma.okoye@dunmore-plumbing.example>",
+          "to": "ruth.whitlock@dunmore-plumbing.example",
+          "subject": "Overtime sheet",
+          "body": "The overtime sheet is in the shared folder.\n\nSelma",
+          "time": "2013-10-05T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Ruth Whitlock <ruth.whitlock@dunmore-plumbing.example>",
+          "to": "arthur.dunmore@dunmore-plumbing.example",
+          "subject": "Re: Quarterly tax figures",
+          "body": "The figures are in the folder. Everything balances.\n\nRuth",
+          "time": "2013-10-03T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-selma-okoye",
+          "with": "Selma Okoye",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Selma Okoye",
+              "text": "Overtime sheet is in the folder.",
+              "time": "2013-10-05T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Ruth Whitlock",
+              "text": "Got it, thanks.",
+              "time": "2013-10-05T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-bookkeeping-to",
+        "folder": "notes",
+        "title": "Bookkeeping to-do",
+        "body": "Payroll by the 28th\nReconcile the bank account\nFile the VAT return",
+        "modified": "2013-10-07T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Payroll deadline",
+        "start": "2013-10-28T12:00:00Z",
+        "end": "2013-10-28T12:30:00Z",
+        "location": "Office"
+      },
+      {
+        "id": "e-2",
+        "title": "Accountant visit",
+        "start": "2013-10-12T10:00:00Z",
+        "end": "2013-10-12T11:30:00Z",
+        "location": "Meeting room"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Reconcile the bank account",
+        "due": "2013-10-10T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "File the VAT return",
+        "due": "2013-10-15T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-arthur-dunmore",
+        "name": "Arthur Dunmore",
+        "email": "arthur.dunmore@dunmore-plumbing.example",
+        "phone": "+1 555 0241",
+        "org": "Dunmore Plumbing Supply"
+      },
+      {
+        "id": "p-2-selma-okoye",
+        "name": "Selma Okoye",
+        "email": "selma.okoye@dunmore-plumbing.example",
+        "phone": "+1 555 0242",
+        "org": "Dunmore Plumbing Supply"
+      },
+      {
+        "id": "p-3-fitz-calder",
+        "name": "Fitz Calder",
+        "email": "fitz.calder@calder-pipes.example",
+        "phone": "+1 555 0243",
+        "org": "Calder Pipes"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-ledger": {
+        "text": "Ledger September\nSales: 118,400\nPurchases: 74,250\nPayroll: 22,100"
+      },
+      "c-f-payroll": {
+        "text": "Payroll October (draft)\nStaff: 14\nOvertime: see sheet"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2013-09-26T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2013-09-14T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2013-09-02T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2013-08-21T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "bank-portal": {
+          "title": "Dunmore trade bank",
+          "url": "online.dunmore-bank.example/home",
+          "brand": "Dunmore Bank",
+          "heading": "Business banking",
+          "body": "View balances and pending payments. Sign-in is on the next page.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Dunmore trade bank",
+          "url": "scene:bank-portal"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:bank-portal",
+          "title": "Dunmore trade bank",
+          "time": "2013-10-07T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

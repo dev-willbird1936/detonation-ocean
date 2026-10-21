@@ -1,0 +1,78 @@
+{
+  "prompt": "A blue-ringed octopus for a PS1 ocean menu: golden ochre rounded mantle, electric blue ring markings, two dark eyes, exactly eight distinct curled arms with visible suckers. Hand-painted pixel textures, faceted silhouette, separate articulated arms.",
+  "size": 64,
+  "animation_prompts": {
+    "Idle": "Looping idle hover in place. Mantle gently breathes, all eight arms slowly curl and uncurl with staggered phases, tips sway softly. Keep body centered. No forward travel, no camera motion.",
+    "Swim": "Looping swim in place. All eight arms draw together then fan outward in a coordinated gentle propulsion cycle, with delayed curling at the tips and subtle mantle pulses. Keep body centered. No forward travel, no camera motion."
+  },
+  "comparison_note": "Identical prompts, independently generated geometry and animation curves. Local clip names normalized only.",
+  "variants": [
+    {
+      "label": "detailed",
+      "style": "rd_lowpoly__detailed",
+      "asset_id": "a1ec4355-79b6-434f-954b-0d73b2dd196a",
+      "cost": 1.55,
+      "stats": {
+        "size_px": [
+          62.3,
+          39.6,
+          60.8
+        ],
+        "triangles": 2206,
+        "atlas_pages": [
+          "256x128"
+        ]
+      },
+      "bytes": 319884,
+      "clip_names": {
+        "idle_hover": "Idle",
+        "swim_pulse": "Swim"
+      },
+      "controls": 14,
+      "mesh_parts": 16,
+      "skins": 0
+    },
+    {
+      "label": "lite",
+      "style": "rd_lowpoly__detailed_lite",
+      "asset_id": "72fd515c-e439-4aba-9e77-415b9617a37f",
+      "cost": 0.26,
+      "stats": {
+        "size_px": [
+          62.0,
+          19.5,
+          54.5
+        ],
+        "triangles": 1634,
+        "atlas_pages": [
+          "256x128"
+        ]
+      },
+      "bytes": 258532,
+      "clip_names": {
+        "idle_hover": "Idle",
+        "swim_idle": "Swim"
+      },
+      "controls": 15,
+      "mesh_parts": 15,
+      "skins": 0
+    },
+    {
+      "label": "handmade",
+      "style": "Original handmade",
+      "cost": 0,
+      "stats": {
+        "triangles": 1728
+      },
+      "bytes": 416076,
+      "controls": 25,
+      "mesh_parts": 1,
+      "skins": 1,
+      "clips": [
+        "Idle",
+        "Swim"
+      ]
+    }
+  ],
+  "total_cost": 1.81
+}

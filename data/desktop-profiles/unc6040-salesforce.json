@@ -1,0 +1,232 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Elena Moretti",
+    "short": "elena",
+    "email": "elena.moretti@marrowfinch.example",
+    "avatar": "unc6040-salesforce"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img0.jpg",
+    "wifiNetwork": "MarrowFinch-Staff"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "elena"
+      },
+      "f-unc6040-sale-1": {
+        "id": "f-unc6040-sale-1",
+        "parentId": "documents",
+        "name": "Escalation-guide.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 105,
+        "modified": "2025-06-09T17:00:00Z",
+        "trashed": false,
+        "contentId": "c-unc6040-sale-1"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Elena",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2025-06-09T17:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "updates",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-crm",
+          "folder": "inbox",
+          "from": "Guestbook CRM <noreply@guestbook-crm.example>",
+          "to": "elena.moretti@marrowfinch.example",
+          "subject": "Your weekly case summary",
+          "body": "You closed 38 cases this week. 4 are waiting for a customer reply.\n\nGuestbook CRM",
+          "time": "2025-06-09T17:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-lead",
+          "folder": "inbox",
+          "from": "Owen Banerjee <owen.banerjee@marrowfinch.example>",
+          "to": "elena.moretti@marrowfinch.example",
+          "subject": "Team meeting moved to Wednesday",
+          "body": "Elena,\n\nThe support team meeting moves to Wednesday at 10.\n\nOwen",
+          "time": "2025-06-10T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Support team",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Owen Banerjee",
+              "text": "Queue is quiet this morning.",
+              "time": "2025-06-10T09:00:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Elena Moretti",
+              "text": "Taking the loyalty cases.",
+              "time": "2025-06-10T09:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Case notes",
+        "body": "Loyalty upgrade cases\nRefund over 200 needs sign-off\nCall guest in room 412",
+        "modified": "2025-06-09T17:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Support team meeting",
+        "start": "2025-06-11T10:00:00Z",
+        "end": "2025-06-11T11:00:00Z",
+        "location": "Room 2"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Owen Banerjee",
+        "email": "owen.banerjee@marrowfinch.example",
+        "phone": "+1 555 0101",
+        "org": "Marrow & Finch Hotels"
+      },
+      {
+        "id": "p-2",
+        "name": "IT Service Desk",
+        "email": "it-servicedesk@marrowfinch.example",
+        "phone": "+1 555 0102",
+        "org": "Marrow & Finch Hotels"
+      },
+      {
+        "id": "p-3",
+        "name": "Guestbook CRM",
+        "email": "support@guestbook-crm.example",
+        "phone": "+1 555 0103",
+        "org": "Guestbook CRM"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-unc6040-sale-1": {
+        "text": "Escalate refunds over 200 to a duty manager. For IT, call the service desk number in the staff directory."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-crm-home": {
+          "title": "Guestbook CRM",
+          "url": "crm.marrowfinch.example/home",
+          "brand": "Guestbook CRM",
+          "heading": "Guestbook CRM",
+          "body": "Cases, guests and bookings. Open the queue to see your cases.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Guestbook CRM",
+          "url": "scene:pg-crm-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-crm-home",
+          "title": "Guestbook CRM"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Guestbook CRM",
+          "url": "scene:pg-crm-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-crm-home",
+          "title": "Guestbook CRM",
+          "time": "2025-06-09T17:00:00Z"
+        }
+      ]
+    }
+  }
+}

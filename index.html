@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Abyss — File detonation sandbox</title>
+  <meta name="description" content="Drop a file. We open it in a sealed box and show you what it really does. The deeper it sinks, the more harm it did.">
+  <!-- The server sets content="production" on the public site. "auto" decides from the host name; "development" forces the local menu (see detonation-menu.js). -->
+  <meta name="do-env" content="auto">
+  <meta name="theme-color" content="#01060a">
+  <meta name="color-scheme" content="dark">
+  <!-- Dark water from the first byte: no white frame before the stylesheet and the loader paint. -->
+  <style>html,body{background:#0a3a4a}</style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 shape-rendering=%22crispEdges%22%3E%3Cpath fill=%22%2307162a%22 d=%22M2 0h12v1h1v1h1v12h-1v1h-1v1H2v-1H1v-1H0V2h1V1h1z%22/%3E%3Cpath fill=%22%236fe0d4%22 d=%22M7 2h2v8H7zM5 10h6v1h1v3h-1v1H5v-1H4v-3h1z%22/%3E%3Cpath fill=%22%23effcf8%22 d=%22M6 11h2v2H6z%22/%3E%3C/svg%3E">
+  <!-- Retro pixel theme: sets the render scale before the renderer starts (see retro-pixel.css). -->
+  <script src="/ui/abyss/pixel-lit.js"></script>
+<script src="/ui/abyss/pixel-fish.js"></script>
+  <script src="/ui/abyss/retro-pixel.js"></script>
+  <link rel="preload" href="/ui/abyss/fonts/Jersey10-Regular.woff" as="font" type="font/woff" crossorigin>
+  <script type="module" src="/ui/abyss/desktop-entry.js"></script>
+<script type="module" crossorigin src="/ui/abyss/assets/index-retro.js"></script>
+  <link rel="modulepreload" crossorigin href="/ui/abyss/assets/flock-BUJDfhon.js">
+  <link rel="stylesheet" crossorigin href="/ui/abyss/assets/index-DaFenpNB.css">
+  <link rel="stylesheet" href="/ui/abyss/retro-pixel.css">
+</head>
+<body>
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <canvas id="gl-px" aria-hidden="true"></canvas>
+
+  <div class="loader" role="status">
+    <!-- The water itself, in CSS: sun shafts, a caustic net, the surface and a passing school. Everything here
+         animates transform and opacity only, so it keeps moving while the main thread builds the scene. -->
+    <div class="lw" aria-hidden="true">
+      <div class="lw-caus lw-caus-a"></div><div class="lw-caus lw-caus-b"></div>
+      <div class="lw-surface"></div>
+      <div class="lw-shafts"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="lw-school lw-school-a"></div><div class="lw-school lw-school-b"></div>
+      <div class="lw-angler"><i class="lw-ab" data-pixel-bg="/ui/abyss/pixel/loader-angler.png"></i><i class="lw-lure"></i></div>
+    </div>
+    <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <!-- Title and premise stack in normal flow (the premise can never ride up over the title); the status is one
+         quiet line at the foot. -->
+    <p class="loader-name" aria-hidden="true">The <i>Abyss</i></p>
+    <p class="loader-premise" aria-hidden="true">Drop a file. We open it in a sealed box and show you what it really does. The deeper it sinks, the more harm it did.</p>
+    <p class="loader-title"><span class="loader-step">Loading the water</span> <span class="loader-pct mono">0%</span><i class="loader-bar" aria-hidden="true"></i></p>
+  </div>
+  <script>
+    // Runs before the module: the loader counts real progress from the first paint. Until main.js reports its
+    // stages, progress follows the files actually arriving; the CSS bubbles keep moving even while the main
+    // thread is busy building the scene.
+    (() => {
+      const L = document.querySelector('.loader'), pct = L.querySelector('.loader-pct'), step = L.querySelector('.loader-step');
+      // A tileable caustic net (cellular noise, F2 − F1), drawn once (~10 ms) and drifted by CSS.
+      {
+        const N = 70, C = 4, cv = document.createElement('canvas'), g = cv.getContext('2d'), img = g.createImageData(N, N), pts = [];
+        let s = 7;
+        const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+        for (let j = 0; j < C; j++) for (let i = 0; i < C; i++) pts.push([(i + 0.15 + rnd() * 0.7) / C, (j + 0.15 + rnd() * 0.7) / C]);
+        cv.width = cv.height = N;
+        for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+          let f1 = 9, f2 = 9;
+          for (const [px, py] of pts) {
+            let dx = Math.abs(x / N - px), dy = Math.abs(y / N - py);
+            dx = Math.min(dx, 1 - dx); dy = Math.min(dy, 1 - dy);
+            const d = Math.hypot(dx, dy);
+            if (d < f1) { f2 = f1; f1 = d; } else if (d < f2) f2 = d;
+          }
+          const v = Math.max(0, 1 - (f2 - f1) / 0.03), o = (y * N + x) * 4;
+          img.data[o] = 225; img.data[o + 1] = 255; img.data[o + 2] = 248; img.data[o + 3] = Math.floor(v * v * 4) * 64;
+        }
+        g.putImageData(img, 0, 0);
+        L.style.setProperty('--caustic', `url(${cv.toDataURL()})`);
+      }
+      // Two bait schools: small fish with seeded offsets.
+      for (const [k, n] of [['a', 14], ['b', 10]]) {
+        const box = L.querySelector('.lw-school-' + k);
+        for (let i = 0; i < n; i++) {
+          const f = document.createElement('i');
+          f.style.cssText = `--x:${(i * 37) % 100}%;--y:${(i * 53) % 100}%;--w:${(i * 0.29) % 1}s`;
+          box.append(f);
+        }
+      }
+      const show = v => {
+        B.shown = v;
+        L.style.setProperty('--p', v.toFixed(3));
+        pct.textContent = Math.round(v * 100) + '%';
+      };
+      // A stage report snaps the counter to the true value, so every paint between busy chunks is honest.
+      const B = window.__boot = { p: 0.03, shown: 0, stage(p, label) { B.p = Math.max(B.p, p); if (label) step.textContent = label; show(Math.max(B.shown, B.p)); } };
+      const tick = () => {
+        if (B.done) return;
+        const files = performance.getEntriesByType('resource').length;
+        const target = Math.max(B.p, Math.min(0.4, 0.4 * (1 - Math.exp(-files / 40))));
+        show(B.shown + (target - B.shown) * 0.18);
+        requestAnimationFrame(tick);
+      };
+      tick();
+    })();
+  </script>
+
+  <header class="bar">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span><span><span class="brand-pre">Detonation Ocean <i>·</i> </span><b>The Abyss</b></span></a>
+    <nav aria-label="Page">
+      <a class="nav-upload" href="#upload">Upload</a>
+      <a href="/bestiary">Bestiary</a>
+      <a href="/about">How it works</a>
+      <button class="snd" type="button" aria-pressed="false"><svg class="snd-ico" viewBox="0 0 18 14" aria-hidden="true"><path class="spk" d="M1.5 4.8h3l4-3.3v11l-4-3.3h-3z"/><path class="wav" d="M11.5 4.5q1.6 2.5 0 5M13.8 2.6q3 4.4 0 8.8"/><path class="mute" d="M11.6 4.6l4.8 4.8M16.4 4.6l-4.8 4.8"/></svg><span class="snd-txt">Sound off</span></button>
+      <!-- Removed in production until open item 8 is decided. The server adds "Creature matrix" before the Legend link, inside this span. -->
+      <span class="nav-dev" data-dev-only><a href="#legend">Legend</a>
+      <a href="#index">All 50</a><a href="/chamber.html">Chamber</a></span>
+    </nav>
+  </header>
+
+  <aside class="gauge" aria-hidden="true">
+    <div class="gauge-rail"><i class="gauge-dot"></i></div>
+    <ol class="gauge-zones"></ol>
+  </aside>
+
+  <!-- Submersible readouts: approximate open-ocean values for the camera's depth (decorative; the zone cards say it). -->
+  <div class="hud-scrim" aria-hidden="true"></div>
+  <aside class="hud mono" aria-hidden="true">
+    <div class="hud-cell hud-depth"><span class="hud-k">Depth</span><span class="hud-v"><span class="odo"></span><span class="hud-u">m</span></span></div>
+    <div class="hud-cell"><span class="hud-k">Pressure</span><span class="hud-v"><b class="hud-p">1</b><span class="hud-u">atm</span></span></div>
+    <div class="hud-cell"><span class="hud-k">Sunlight</span><span class="hud-v"><b class="hud-l">100</b><span class="hud-u">%</span></span></div>
+    <div class="hud-cell"><span class="hud-k">Water</span><span class="hud-v"><b class="hud-t">27.2</b><span class="hud-u">°C</span></span></div>
+    <div class="hud-cell hud-torch"><span class="hud-k">Torch</span><span class="hud-v"><b class="hud-tv">off</b></span></div>
+  </aside>
+
+  <div class="ret" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="tag" aria-hidden="true">
+    <span class="tag-name"></span>
+    <span class="tag-meta mono"></span>
+    <span class="tag-hint mono"></span>
+  </div>
+
+  <main id="top">
+    <section class="stage hero" data-st="0">
+      <p class="eyebrow mono">File detonation sandbox · on Vultr</p>
+      <h1><span class="l"><span>The</span></span> <span class="l"><span>Abyss</span></span></h1>
+      <p class="premise">Drop a file. We open it in a sealed box and show you what it really does. The deeper it sinks, the more harm it did.</p>
+      <form class="drop glass" id="upload" aria-labelledby="drop-h" novalidate>
+        <h2 class="drop-title" id="drop-h">Drop a file</h2>
+        <label class="drop-zone" for="drop-file">
+          <input class="drop-file" type="file" id="drop-file" name="file">
+          <span class="drop-prompt">Drag a file here, or choose one</span>
+          <span class="drop-name mono" aria-live="polite">No file chosen</span>
+        </label>
+        <div class="drop-side">
+          <label class="drop-consent"><input type="checkbox" id="drop-consent" name="consent" value="true"><span>I own this file or have permission to analyse it, and I understand it will be executed in a sandbox</span></label>
+          <button class="drop-go" type="submit">Upload</button>
+        </div>
+        <p class="drop-note mono">Up to 100 MB. Files over 10 MB get static analysis only.</p>
+        <p class="drop-msg mono" role="status" aria-live="polite"></p>
+      </form>
+      <p class="hint mono"><span class="hint-dot" aria-hidden="true"></span><span class="hint-text">Scroll to dive. Point at a creature to name it; click it to open its Bestiary card. Below 1,000 m your pointer is a torch.</span></p>
+    </section>
+
+    <section class="stage zone" data-st="1" data-sev="5"></section>
+    <section class="stage zone" data-st="2" data-sev="4"></section>
+    <section class="stage zone" data-st="3" data-sev="3"></section>
+    <section class="stage zone" data-st="4" data-sev="2"></section>
+    <section class="stage zone" data-st="5" data-sev="1" data-part="upper"></section>
+    <section class="stage zone" data-st="6" data-sev="1" data-part="deep"></section>
+    <section class="stage zone zone-floor" data-st="7" data-sev="1" data-part="floor"></section>
+
+    <section class="stage ending" data-st="8" aria-labelledby="end-line">
+      <div class="end-black">
+        <div class="end-text">
+          <p class="end-line" id="end-line"></p>
+          <p class="end-sub mono"></p>
+          <p class="end-actions"><a class="end-btn" href="/bestiary">Open the Bestiary <span aria-hidden="true">→</span></a><a class="end-btn ghost" href="#top">Return to the surface <span aria-hidden="true">↑</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage legend" id="legend" data-st="9" aria-labelledby="legend-h" data-dev-only>
+      <div class="glass">
+        <p class="eyebrow mono">Legend</p>
+        <h2 id="legend-h">Read the water</h2>
+        <p class="legend-lede"></p>
+        <ul class="forms"></ul>
+        <ul class="vectors" aria-label="Depth zones"></ul>
+        <p class="legend-note mono">The small fish (silver bait, hatchetfish, lanternfish) and the glowing plankton are scenery, not attacks. They school, and they flee the fifty predators and your pointer.</p>
+      </div>
+    </section>
+
+    <section class="stage index" id="index" data-st="10" aria-labelledby="index-h" data-dev-only>
+      <div class="glass list-wrap">
+        <p class="eyebrow mono">The accessible path</p>
+        <h2 id="index-h">All fifty, shallow to deep</h2>
+        <p class="list-lede">Each button opens the same detail panel as the creature. Focusing a row lights that creature in the water.</p>
+        <p class="list-keys mono" aria-hidden="true"><kbd>↑</kbd> <kbd>↓</kbd> move · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</p>
+        <div class="tiers"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="foot-line">Files you drop here run only inside a sealed sandbox that is destroyed afterwards. The ocean shows anonymous counts, in batches.</p>
+    <p class="foot-credits mono">Anglerfish: 3D model from the Dioramas project, CC BY 4.0 · Every other animal sculpted in code (signed distance fields), the hydrothermal chimneys built from noise · Skin, rock and sediment textures: ambientCG Leather037, Rock035 and Ground054, CC0 · Sound synthesised in the browser, on from your first click or key press (the sound button turns it off) · Flocking model inspired by wasm-boids by tokachi269 (MIT) · Built with the Dioramas engine (MIT) · Pixel theme: Jersey 10 typeface (SIL OFL 1.1), creature sprites from the project’s RetroDiffusion studies (provider terms apply, no CC0 claim) · Part of the Detonation Chamber</p>
+  </footer>
+
+  <dialog class="panel" aria-labelledby="panel-name">
+    <form method="dialog" class="panel-close-form"><button class="panel-close" aria-label="Close details" value="close">Close <kbd>Esc</kbd></button></form>
+    <p class="panel-kind mono"></p>
+    <h2 id="panel-name" class="panel-name"></h2>
+    <p class="panel-meta mono"></p>
+    <dl class="panel-facts"></dl>
+    <h3>What happened</h3>
+    <p class="panel-summary"></p>
+    <h3>The lesson</h3>
+    <p class="panel-lesson"></p>
+    <h3>Sources</h3>
+    <ul class="panel-sources"></ul>
+  </dialog>
+
+  <!-- Classic scripts at the end of <body> run before the deferred renderer module, so window.__menu exists when it starts. -->
+  <script src="/ui/abyss/detonation-menu.js"></script>
+  <script src="/ui/abyss/drop-panel.js"></script>
+  <script src="/ui/abyss/menu-octopus.js"></script>
+</body>
+</html>

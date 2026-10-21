@@ -1,0 +1,216 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Marcus Delaney",
+    "short": "marcus",
+    "email": "marcus.delaney@fenwick-council.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/default/img0.jpg",
+    "wifiNetwork": "Fenwick-Council"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "marcus"
+      },
+      "f-servers": {
+        "id": "f-servers",
+        "parentId": "documents",
+        "name": "Server-list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 640,
+        "modified": "2008-09-10T11:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-servers"
+      },
+      "f-tickets": {
+        "id": "f-tickets",
+        "parentId": "documents",
+        "name": "Open-tickets-November.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 3000,
+        "modified": "2008-11-07T08:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-tickets"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Marcus",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2008-11-06T09:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "notes",
+    "calendar",
+    "contacts",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "messages"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-patch",
+          "folder": "inbox",
+          "from": "Fenwick IT Manager <it.manager@fenwick-council.example>",
+          "to": "marcus.delaney@fenwick-council.example",
+          "subject": "Server update window",
+          "body": "Marcus, the next server update window is the first Sunday of the month. Please prepare the list.\n\nIT Manager",
+          "time": "2008-11-06T09:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-helpdesk",
+          "folder": "inbox",
+          "from": "Helpdesk Queue <helpdesk@fenwick-council.example>",
+          "to": "marcus.delaney@fenwick-council.example",
+          "subject": "12 open tickets",
+          "body": "There are 12 open tickets in your queue. Most are printer or password resets.",
+          "time": "2008-11-07T08:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-vendor",
+          "folder": "inbox",
+          "from": "Corvid Server Supply <sales@corvid-supply.example>",
+          "to": "marcus.delaney@fenwick-council.example",
+          "subject": "Your replacement drive has shipped",
+          "body": "Your replacement drive ships today and arrives within three days.",
+          "time": "2008-11-04T14:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Marcus Delaney <marcus.delaney@fenwick-council.example>",
+          "to": "it.manager@fenwick-council.example",
+          "subject": "Re: Server update window",
+          "body": "List will be ready by Friday.",
+          "time": "2008-11-06T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-it",
+          "with": "IT Manager",
+          "items": [
+            {
+              "id": "i-it-1",
+              "from": "IT Manager",
+              "text": "Are the file servers on the list?",
+              "time": "2008-11-07T08:30:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-servers",
+        "folder": "notes",
+        "title": "Server list",
+        "body": "File server\nPrint server\nDirectory server\nBackup server",
+        "modified": "2008-09-10T11:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-window",
+        "title": "Server update window",
+        "start": "2008-11-09T03:00:00Z",
+        "end": "2008-11-09T05:00:00Z",
+        "location": "Server room"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-it",
+        "name": "Fenwick IT Manager",
+        "email": "it.manager@fenwick-council.example",
+        "phone": "+1 555 0291",
+        "org": "Fenwick Council"
+      },
+      {
+        "id": "p-help",
+        "name": "Helpdesk Queue",
+        "email": "helpdesk@fenwick-council.example",
+        "phone": "+1 555 0292",
+        "org": "Fenwick Council"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-servers": {
+        "text": "Server list. Fictional training file."
+      },
+      "c-f-tickets": {
+        "text": "Open tickets for November. Fictional training file."
+      }
+    }
+  }
+}

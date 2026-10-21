@@ -1,0 +1,306 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Eli Navarro",
+    "short": "eli",
+    "email": "eli.navarro@threadwell.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "orange",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-tahoe-day.jpg",
+    "wifiNetwork": "Threadwell-HQ"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "eli"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Moderation report.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 74,
+        "modified": "2023-02-01T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Update draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 27,
+        "modified": "2023-02-03T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Eli",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-02-05T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "stickies"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-weekly-update-mo",
+          "folder": "inbox",
+          "from": "Threadwell Weekly <weekly@threadwell.example>",
+          "to": "eli.navarro@threadwell.example",
+          "subject": "Weekly update: moderator tools",
+          "body": "This week: new moderator report queue, a fix for slow comment threads and a reminder to use the staff gateway bookmark.\n\nThreadwell Weekly",
+          "time": "2023-02-03T09:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-reminder-the-gat",
+          "folder": "inbox",
+          "from": "Threadwell IT <it@threadwell.example>",
+          "to": "eli.navarro@threadwell.example",
+          "subject": "Reminder: the gateway has not changed",
+          "body": "There is no policy change that needs you to re-confirm your gateway sign-in. If a message says otherwise, report it.\n\nThreadwell IT",
+          "time": "2023-01-30T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-product-ops-sync",
+          "folder": "inbox",
+          "from": "Jules Ferreira <jules.ferreira@threadwell.example>",
+          "to": "eli.navarro@threadwell.example",
+          "subject": "Product ops sync notes",
+          "body": "Notes from the sync are in the shared folder. Eli, please add the moderation numbers.\n\nJules",
+          "time": "2023-02-02T15:40:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-jules-ferreira",
+          "with": "Jules Ferreira",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Jules Ferreira",
+              "text": "Can you add the moderation numbers?",
+              "time": "2023-02-05T08:55:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-product-ops",
+          "with": "Product ops",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Wren Alder",
+              "text": "Weekly update goes out Monday.",
+              "time": "2023-02-05T09:20:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-moderation-numbers",
+        "folder": "notes",
+        "title": "Moderation numbers",
+        "body": "Reports resolved: 8,412\nMedian time: 6 hours",
+        "modified": "2023-02-02T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-update-draft",
+        "folder": "notes",
+        "title": "Update draft",
+        "body": "Moderator queue\nSlow threads fix\nGateway reminder",
+        "modified": "2023-02-03T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-product-ops-sync",
+        "title": "Product ops sync",
+        "start": "2023-02-06T10:00:00Z",
+        "end": "2023-02-06T10:30:00Z",
+        "location": "Room 3"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-add-moderation-numbers-to-the-",
+        "list": "work",
+        "title": "Add moderation numbers to the notes",
+        "due": "2023-02-06T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-jules-ferreira",
+        "name": "Jules Ferreira",
+        "email": "jules.ferreira@threadwell.example",
+        "phone": "+1 555 0291",
+        "org": "Threadwell"
+      },
+      {
+        "id": "p-2-wren-alder",
+        "name": "Wren Alder",
+        "email": "wren.alder@threadwell.example",
+        "phone": "+1 555 0292",
+        "org": "Threadwell"
+      },
+      {
+        "id": "p-3-threadwell-it",
+        "name": "Threadwell IT",
+        "email": "it@threadwell.example",
+        "phone": "+1 555 0290",
+        "org": "Threadwell"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Moderation report, January\nResolved: 8,412\nMedian time to resolve: 6 hours"
+      },
+      "c-doc-2": {
+        "text": "Draft of the weekly update."
+      }
+    },
+    "web": {
+      "pages": {
+        "threadwell-gateway": {
+          "title": "Threadwell intranet gateway",
+          "url": "gateway.threadwell.example",
+          "body": "Intranet gateway\n\nNo policy change is pending. Your sign-in is confirmed and current.",
+          "choices": []
+        },
+        "threadwell-wiki": {
+          "title": "Product ops wiki",
+          "url": "wiki.threadwell.example",
+          "body": "Product operations handbook and dashboards.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-threadwell-gateway",
+          "title": "Threadwell intranet gateway",
+          "url": "scene:threadwell-gateway"
+        },
+        {
+          "id": "bm-threadwell-wiki",
+          "title": "Product ops wiki",
+          "url": "scene:threadwell-wiki"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-threadwell-gateway",
+          "url": "scene:threadwell-gateway",
+          "title": "Threadwell intranet gateway",
+          "time": "2023-02-05T08:45:00Z"
+        },
+        {
+          "id": "h-threadwell-wiki",
+          "url": "scene:threadwell-wiki",
+          "title": "Product ops wiki",
+          "time": "2023-02-03T11:00:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Report gateway messages to IT",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

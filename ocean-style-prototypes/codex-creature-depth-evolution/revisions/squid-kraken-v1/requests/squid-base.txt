@@ -1,0 +1,13 @@
+Call the Codex-native `image_gen.imagegen` tool exactly once. Use the attached Image 1 reference only for an elongated cephalopod mantle, side view, and compact forward arm cluster; it is a cropped cuttlefish cue, not a request to draw a cuttlefish. Ignore its flat style and colors. Do not use shell, scripts, another provider, an API fallback, or retries. Pass the following image prompt verbatim:
+
+Use case: stylized-concept
+Asset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.
+Input images: Image 1 is a cropped cephalopod anatomy cue. Use only its elongated mantle, side view, and compact forward arm cluster; reinterpret it as a squid, not a cuttlefish. Ignore its flat style and colors.
+Scene/backdrop: none; genuinely transparent background.
+Subject: one readable base-form squid, left-facing in side view. Give it a smooth tapered mantle with two small lateral fins, one large visible eye, and exactly one attached bundle of eight short arms plus two longer feeding tentacles. Keep every appendage together in one tight fan/bouquet below and just behind the head, trailing in the same direction. Do not spread the arms around the mantle, make a radial star or ring, or create a separate tail. The silhouette must read as a squid with a compact tentacle cluster, not the previous front-facing octopus. The base form is alert but not monstrous.
+Style/medium: crisp SNES/PC98-era game-sprite pixel art, hard-edged pixel clusters, visible stepped dark outline, coherent flat stepped shading; no smoothing.
+Composition/framing: square canvas; one complete centered creature at readable scale, generous transparent margin on every side, no crop.
+Color palette: keep each semantic region contiguous. Primary mantle/head/body shadow/base/highlight: #633A46, #A95650, #E28B6C. Secondary single bundled arm/tentacle mass shadow/base/highlight: #243B61, #3C6A93, #89ABD0. Tertiary mantle fins, sucker rows and tentacle tips shadow/base/highlight: #79612C, #C0A33F, #F1D075. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these role colors and neutral details only, plus transparent pixels; no magenta/cyan/lime placeholders.
+Constraints: true RGBA alpha transparency outside the sprite. No background, checkerboard, soft paint, gradient, 3D, text, frame, detached prop, extra organism, or gore. Return one complete transparent PNG.
+
+After the one image call, return only the generated PNG's full local path. If the call fails or returns no image, report that and stop without retrying.

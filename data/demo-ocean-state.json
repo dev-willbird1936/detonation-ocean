@@ -1,0 +1,96 @@
+{
+ "schools": {
+  "lionfish": {
+   "twilight": 6
+  },
+  "ribbonfish": {
+   "sunlight": 13
+  },
+  "remora": {
+   "sunlight": 20
+  },
+  "picasso-triggerfish": {
+   "twilight": 8
+  },
+  "batfish": {
+   "sunlight": 15
+  },
+  "archerfish": {
+   "sunlight": 22
+  },
+  "sea-bass": {
+   "twilight": 10
+  },
+  "goblin-shark": {
+   "sunlight": 17
+  },
+  "jawfish": {
+   "sunlight": 24
+  },
+  "pocket-shark": {
+   "twilight": 12
+  },
+  "mackerel": {
+   "sunlight": 19
+  },
+  "java-rabbitfish": {
+   "sunlight": 7
+  },
+  "sole": {
+   "twilight": 14
+  },
+  "butterflyfish": {
+   "sunlight": 21
+  },
+  "plaice": {
+   "sunlight": 9
+  },
+  "pufferfish": {
+   "twilight": 16
+  },
+  "flounder": {
+   "sunlight": 23
+  },
+  "leafy-seadragon": {
+   "sunlight": 11
+  },
+  "boxfish": {
+   "twilight": 18
+  },
+  "barracuda": {
+   "sunlight": 6
+  },
+  "mandarin-dragonet": {
+   "sunlight": 13
+  },
+  "flying-fish": {
+   "twilight": 20
+  },
+  "pilot-fish": {
+   "sunlight": 8
+  },
+  "coelacanth": {
+   "sunlight": 15
+  },
+  "snake-eel": {
+   "sunlight": 25
+  },
+  "torpedo-ray": {
+   "twilight": 20
+  }
+ },
+ "creatures": {
+  "steal-credentials": 3,
+  "fake-login": 4,
+  "keylog": 2,
+  "capture": 1,
+  "persistence": 2,
+  "remote-control": 3,
+  "resource-hijack": 1,
+  "second-stage": 2,
+  "encrypt": 2,
+  "system-wipe": 1,
+  "destroy-files": 1,
+  "spread": 1
+ }
+}

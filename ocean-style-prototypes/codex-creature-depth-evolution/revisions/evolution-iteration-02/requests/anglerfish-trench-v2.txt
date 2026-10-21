@@ -1,0 +1,13 @@
+Call the Codex-native `image_gen.imagegen` tool exactly once. Input images are attached in this order: Image 1 is the existing Midnight/Abyss anglerfish and is the immediate lineage; Image 2 is the base-form anglerfish and controls species identity. Do not use shell, scripts, another provider, an API fallback, or retries. Pass the following image prompt verbatim:
+
+Use case: stylized-concept
+Asset type: one complete pixel-art game creature sprite for an evolution-gallery prototype.
+Input images: Image 1 is the Midnight/Abyss anglerfish, the immediate lineage to advance from. Image 2 is the base-form anglerfish, the species identity reference.
+Scene/backdrop: none; genuinely transparent background.
+Subject: Keep the same facing direction and dark teal family palette. Create a clear next evolution, not a pose-only or palette-only variant: visibly heavier/larger silhouette, brighter larger glowing forehead lure with two-tone esca, wider underbite with two ranks of uneven fangs, dorsal armor/scars and longer tapered spines. Do not brighten the overall body relative to Midnight/Abyss. One isolated centered full-body sprite.
+Style/medium: crisp pixel art, hard edges, dark outline, limited flat role palette; SNES/PC98-era game-sprite look, no smoothing.
+Composition/framing: square canvas; one complete centered creature, all parts in frame with generous transparent margin; no crop.
+Color palette: keep role clusters clean, contiguous and readable. Primary broad head and body shadow/base/highlight: #0B4752, #167D88, #55B6AD. Secondary belly/fins/fan tail shadow/base/highlight: #536A70, #8FADAA, #DDD5B8. Tertiary forehead lure bulb (two-tone esca) and small dorsal accents shadow/base/highlight: #A9562F, #D7883E, #F2C66D. Neutral outline: #17232D. Mouth/pupil: #0B1118. Eye/teeth: #E9E3D3. Use these role colors and neutral details only, plus transparent pixels.
+Constraints: true RGBA alpha transparency outside the sprite. No scenery, text, extra animals, background, checkerboard, soft paint, gradient, 3D, frame, detached prop or gore. Return one complete transparent PNG.
+
+After the one image call, return only the generated PNG's full local path. If the call fails or returns no image, report that and stop without retrying.

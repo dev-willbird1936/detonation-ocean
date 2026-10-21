@@ -1,0 +1,30 @@
+{
+  "description": "AT-4: memory balloon is OOMKilled; no process-limit evidence.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "incomplete"
+    ],
+    "depth": "twilight",
+    "findings": [],
+    "complete": false
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "file-read",
+      "detail": "file-read /tmp/balloon.dat",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/tmp/balloon.dat"
+    },
+    {
+      "id": "ev-2",
+      "source": "limits",
+      "kind": "oom",
+      "detail": "OOMKilled, exit 137",
+      "at": "2026-01-01T00:00:01.000Z"
+    }
+  ]
+}

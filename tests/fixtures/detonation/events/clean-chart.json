@@ -1,0 +1,398 @@
+{
+  "jobId": "j-mock-sunlight",
+  "events": [
+    {
+      "id": 1,
+      "event": "stage",
+      "data": {
+        "stage": "received",
+        "at": "2026-01-01T00:00:00.000Z"
+      },
+      "delay": 100
+    },
+    {
+      "id": 2,
+      "event": "typed",
+      "data": {
+        "detectedType": "py",
+        "claimedExtension": "py",
+        "path": "run",
+        "species": "snake-eel",
+        "label": "Executed on Linux",
+        "mismatch": false,
+        "sizeTier": "full"
+      },
+      "delay": 150
+    },
+    {
+      "id": 3,
+      "event": "stage",
+      "data": {
+        "stage": "typed",
+        "at": "2026-01-01T00:00:02.000Z"
+      },
+      "delay": 100
+    },
+    {
+      "id": 4,
+      "event": "stage",
+      "data": {
+        "stage": "queued",
+        "at": "2026-01-01T00:00:03.000Z"
+      },
+      "delay": 100
+    },
+    {
+      "id": 5,
+      "event": "stage",
+      "data": {
+        "stage": "detonating",
+        "at": "2026-01-01T00:00:04.000Z"
+      },
+      "delay": 300
+    },
+    {
+      "id": 6,
+      "event": "evidence",
+      "data": {
+        "id": "ev-1",
+        "source": "trace",
+        "kind": "file-read",
+        "detail": "Read Documents/sales.csv",
+        "at": "2026-01-01T00:00:01.000Z",
+        "path": "/home/dana/Documents/sales.csv"
+      },
+      "delay": 200
+    },
+    {
+      "id": 7,
+      "event": "stage",
+      "data": {
+        "stage": "collecting",
+        "at": "2026-01-01T00:00:06.000Z"
+      },
+      "delay": 250
+    },
+    {
+      "id": 8,
+      "event": "evidence",
+      "data": {
+        "id": "ev-2",
+        "source": "trace",
+        "kind": "file-write",
+        "detail": "Wrote /tmp/summary.txt",
+        "at": "2026-01-01T00:00:02.000Z",
+        "path": "/tmp/summary.txt"
+      },
+      "delay": 200
+    },
+    {
+      "id": 9,
+      "event": "coverage",
+      "data": {
+        "steps": [
+          {
+            "step": "identify",
+            "status": "ok",
+            "detail": "Python 3 script"
+          },
+          {
+            "step": "run in gVisor container",
+            "status": "ok",
+            "detail": "Executed on Linux; ran to completion"
+          },
+          {
+            "step": "collect file changes",
+            "status": "ok",
+            "detail": "No seeded files changed"
+          }
+        ]
+      },
+      "delay": 150
+    },
+    {
+      "id": 10,
+      "event": "stage",
+      "data": {
+        "stage": "analysing",
+        "at": "2026-01-01T00:00:09.000Z",
+        "attempt": 1
+      },
+      "delay": 250
+    },
+    {
+      "id": 11,
+      "event": "analysis-attempt",
+      "data": {
+        "n": 1,
+        "code": "import csv, json, glob\nimport matplotlib\nmatplotlib.use(\"Agg\")\nimport matplotlib.pyplot as plt\n\nitems = []\nfor name in sorted(glob.glob(\"/in/*.json\")):\n    items += json.load(open(name))\nrows = [(i[\"path\"], i.get(\"entropyBefore\"), i.get(\"entropyAfter\")) for i in items if i.get(\"source\") == \"diff\"]\nwith open(\"/out/diff.csv\", \"w\", newline=\"\") as handle:\n    writer = csv.writer(handle)\n    writer.writerow([\"path\", \"entropy before\", \"entropy after\"])\n    writer.writerows(rows)\nplt.bar(range(len(rows)), [r[2] or 0 for r in rows])\nplt.savefig(\"/out/timeline.png\")\n",
+        "exitCode": 0,
+        "stderr": ""
+      },
+      "delay": 400
+    },
+    {
+      "id": 12,
+      "event": "stage",
+      "data": {
+        "stage": "explaining",
+        "at": "2026-01-01T00:00:11.000Z"
+      },
+      "delay": 250
+    },
+    {
+      "id": 13,
+      "event": "verdict",
+      "data": {
+        "depth": "sunlight",
+        "family": "drifter",
+        "signals": [],
+        "findings": [],
+        "statement": "No harmful behaviour observed in the checks run. This is not a guarantee.",
+        "complete": true
+      },
+      "delay": 200
+    },
+    {
+      "id": 14,
+      "event": "explanation",
+      "data": {
+        "text": "The script read one seeded spreadsheet, wrote a short summary to a temporary file and exited. It made no network connection and changed none of the seeded files.",
+        "modelAvailable": true
+      },
+      "delay": 200
+    },
+    {
+      "id": 15,
+      "event": "stage",
+      "data": {
+        "stage": "tearing_down",
+        "at": "2026-01-01T00:00:14.000Z"
+      },
+      "delay": 250
+    },
+    {
+      "id": 16,
+      "event": "receipt",
+      "data": {
+        "jobId": "j-mock-sunlight",
+        "containers": [
+          {
+            "role": "detonate",
+            "runtime": "runsc",
+            "network": "none",
+            "readOnlyRoot": true,
+            "capDrop": [
+              "ALL"
+            ],
+            "user": "10001:10001",
+            "memoryBytes": 536870912,
+            "pidsLimit": 512,
+            "nanoCpus": 1000000000,
+            "secretEnvVars": 0,
+            "createdAt": "2026-01-01T00:00:05.000Z",
+            "exit": {
+              "code": 0,
+              "reason": "exited"
+            },
+            "removedAt": "2026-01-01T00:00:40.000Z"
+          },
+          {
+            "role": "collect",
+            "runtime": "runsc",
+            "network": "none",
+            "readOnlyRoot": true,
+            "capDrop": [
+              "ALL"
+            ],
+            "user": "10001:10001",
+            "memoryBytes": 536870912,
+            "pidsLimit": 512,
+            "nanoCpus": 1000000000,
+            "secretEnvVars": 0,
+            "createdAt": "2026-01-01T00:00:06.000Z",
+            "exit": {
+              "code": 0,
+              "reason": "exited"
+            },
+            "removedAt": "2026-01-01T00:00:41.000Z"
+          },
+          {
+            "role": "analyse",
+            "runtime": "runsc",
+            "network": "none",
+            "readOnlyRoot": true,
+            "capDrop": [
+              "ALL"
+            ],
+            "user": "10001:10001",
+            "memoryBytes": 536870912,
+            "pidsLimit": 512,
+            "nanoCpus": 1000000000,
+            "secretEnvVars": 0,
+            "createdAt": "2026-01-01T00:00:07.000Z",
+            "exit": {
+              "code": 0,
+              "reason": "exited"
+            },
+            "removedAt": "2026-01-01T00:00:42.000Z"
+          }
+        ],
+        "limitsHit": [],
+        "volumesRemoved": true,
+        "uploadDeleted": true,
+        "hostCanary": "unchanged",
+        "teardownConfirmed": true,
+        "inference": {
+          "provider": "vultr-serverless-inference",
+          "calls": 2,
+          "model": "mock-code-model"
+        }
+      },
+      "delay": 300
+    },
+    {
+      "id": 17,
+      "event": "stage",
+      "data": {
+        "stage": "done",
+        "at": "2026-01-01T00:00:16.000Z"
+      },
+      "delay": 150
+    },
+    {
+      "id": 18,
+      "event": "report",
+      "data": {
+        "jobId": "j-mock-sunlight",
+        "file": {
+          "detectedType": "py",
+          "claimedExtension": "py",
+          "path": "run",
+          "sizeBytes": 2113
+        },
+        "verdict": {
+          "depth": "sunlight",
+          "family": "drifter",
+          "signals": [],
+          "findings": [],
+          "statement": "No harmful behaviour observed in the checks run. This is not a guarantee.",
+          "complete": true
+        },
+        "evidence": [
+          {
+            "id": "ev-1",
+            "source": "trace",
+            "kind": "file-read",
+            "detail": "Read Documents/sales.csv",
+            "at": "2026-01-01T00:00:01.000Z",
+            "path": "/home/dana/Documents/sales.csv"
+          },
+          {
+            "id": "ev-2",
+            "source": "trace",
+            "kind": "file-write",
+            "detail": "Wrote /tmp/summary.txt",
+            "at": "2026-01-01T00:00:02.000Z",
+            "path": "/tmp/summary.txt"
+          }
+        ],
+        "analysis": {
+          "attempts": [
+            {
+              "n": 1,
+              "code": "import csv, json, glob\nimport matplotlib\nmatplotlib.use(\"Agg\")\nimport matplotlib.pyplot as plt\n\nitems = []\nfor name in sorted(glob.glob(\"/in/*.json\")):\n    items += json.load(open(name))\nrows = [(i[\"path\"], i.get(\"entropyBefore\"), i.get(\"entropyAfter\")) for i in items if i.get(\"source\") == \"diff\"]\nwith open(\"/out/diff.csv\", \"w\", newline=\"\") as handle:\n    writer = csv.writer(handle)\n    writer.writerow([\"path\", \"entropy before\", \"entropy after\"])\n    writer.writerows(rows)\nplt.bar(range(len(rows)), [r[2] or 0 for r in rows])\nplt.savefig(\"/out/timeline.png\")\n",
+              "exitCode": 0,
+              "artifacts": [
+                "timeline.png"
+              ]
+            }
+          ]
+        },
+        "explanation": "The script read one seeded spreadsheet, wrote a short summary to a temporary file and exited. It made no network connection and changed none of the seeded files.",
+        "receipt": {
+          "jobId": "j-mock-sunlight",
+          "containers": [
+            {
+              "role": "detonate",
+              "runtime": "runsc",
+              "network": "none",
+              "readOnlyRoot": true,
+              "capDrop": [
+                "ALL"
+              ],
+              "user": "10001:10001",
+              "memoryBytes": 536870912,
+              "pidsLimit": 512,
+              "nanoCpus": 1000000000,
+              "secretEnvVars": 0,
+              "createdAt": "2026-01-01T00:00:05.000Z",
+              "exit": {
+                "code": 0,
+                "reason": "exited"
+              },
+              "removedAt": "2026-01-01T00:00:40.000Z"
+            },
+            {
+              "role": "collect",
+              "runtime": "runsc",
+              "network": "none",
+              "readOnlyRoot": true,
+              "capDrop": [
+                "ALL"
+              ],
+              "user": "10001:10001",
+              "memoryBytes": 536870912,
+              "pidsLimit": 512,
+              "nanoCpus": 1000000000,
+              "secretEnvVars": 0,
+              "createdAt": "2026-01-01T00:00:06.000Z",
+              "exit": {
+                "code": 0,
+                "reason": "exited"
+              },
+              "removedAt": "2026-01-01T00:00:41.000Z"
+            },
+            {
+              "role": "analyse",
+              "runtime": "runsc",
+              "network": "none",
+              "readOnlyRoot": true,
+              "capDrop": [
+                "ALL"
+              ],
+              "user": "10001:10001",
+              "memoryBytes": 536870912,
+              "pidsLimit": 512,
+              "nanoCpus": 1000000000,
+              "secretEnvVars": 0,
+              "createdAt": "2026-01-01T00:00:07.000Z",
+              "exit": {
+                "code": 0,
+                "reason": "exited"
+              },
+              "removedAt": "2026-01-01T00:00:42.000Z"
+            }
+          ],
+          "limitsHit": [],
+          "volumesRemoved": true,
+          "uploadDeleted": true,
+          "hostCanary": "unchanged",
+          "teardownConfirmed": true,
+          "inference": {
+            "provider": "vultr-serverless-inference",
+            "calls": 2,
+            "model": "mock-code-model"
+          }
+        }
+      },
+      "delay": 100
+    }
+  ],
+  "artifacts": {
+    "timeline.png": {
+      "type": "image/png",
+      "base64": "iVBORw0KGgoAAAANSUhEUgAAAHAAAAA8CAYAAAC+ej5cAAAA3ElEQVR4nO3RsQkCURRFwc3swCJszmYtwA5MDRZWzEUEkf3HP8EJb/DeLLf1vj07HE8KtgBsBzAewHgAd+p8vXwcwAEDGA9gPIDxAMYDGA9gPICDPRIgQIAAJwxgPIDxAMYDGA9gvG8eudcW4AAIAAECBPgHAYwHcIBHAgQIECBAgAABAgQIECDAuQBn2wKMbwHGtwDjW4DxLcD4FmB8CzC+/Rlg8RnFLcD4FmB8CzC+BRjfAoxv3wIWD5ptCzC+BRjfAoxvAca3AONbgPEtwPj2JaCaAYwHMB7AeA8JhZtSOi1W5QAAAABJRU5ErkJggg=="
+    }
+  }
+}

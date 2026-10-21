@@ -1,0 +1,213 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Priya Raman",
+    "short": "priya",
+    "email": "priya.raman@eastmarch-health.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/default/img0.jpg",
+    "wifiNetwork": "Eastmarch-Ward"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "priya"
+      },
+      "f-filing": {
+        "id": "f-filing",
+        "parentId": "documents",
+        "name": "Filing-routine.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 650,
+        "modified": "2017-03-06T09:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-filing"
+      },
+      "f-equip": {
+        "id": "f-equip",
+        "parentId": "documents",
+        "name": "Equipment-checks.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1800,
+        "modified": "2017-05-05T15:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-equip"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Priya",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2017-05-11T16:40:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "calendar",
+      "notes",
+      "updates",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-rota",
+          "folder": "inbox",
+          "from": "Hannah Boyd <hannah.boyd@eastmarch-health.example>",
+          "to": "priya.raman@eastmarch-health.example",
+          "subject": "Rota for week 19",
+          "body": "Priya, the week 19 rota is on the clinic drive. Please check your shifts.\n\nHannah",
+          "time": "2017-05-11T16:40:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-it",
+          "folder": "inbox",
+          "from": "Eastmarch IT Service <it.service@eastmarch-health.example>",
+          "to": "priya.raman@eastmarch-health.example",
+          "subject": "Update schedule for ward computers",
+          "body": "Security updates for ward computers are scheduled for the next maintenance window.",
+          "time": "2017-05-04T09:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-clinic",
+          "folder": "inbox",
+          "from": "Clinic Reception <reception@eastmarch-health.example>",
+          "to": "priya.raman@eastmarch-health.example",
+          "subject": "Letters waiting for filing",
+          "body": "A batch of clinic letters is waiting to be filed on the drive.",
+          "time": "2017-05-10T14:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Priya Raman <priya.raman@eastmarch-health.example>",
+          "to": "hannah.boyd@eastmarch-health.example",
+          "subject": "Re: Rota for week 19",
+          "body": "Thanks Hannah, shifts look fine.",
+          "time": "2017-05-11T17:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-filing",
+        "folder": "notes",
+        "title": "Filing routine",
+        "body": "Letters to the Clinic-letters folder\nRota to the shared drive\nLog equipment checks",
+        "modified": "2017-03-06T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-team",
+        "title": "Records team meeting",
+        "start": "2017-05-16T10:00:00Z",
+        "end": "2017-05-16T10:30:00Z",
+        "location": "Ward office"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-equip",
+        "list": "work",
+        "title": "Log equipment check",
+        "due": "2017-05-12T11:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-hannah",
+        "name": "Hannah Boyd",
+        "email": "hannah.boyd@eastmarch-health.example",
+        "phone": "+1 555 0251",
+        "org": "Eastmarch Health"
+      },
+      {
+        "id": "p-it",
+        "name": "Eastmarch IT Service",
+        "email": "it.service@eastmarch-health.example",
+        "phone": "+1 555 0252",
+        "org": "Eastmarch Health"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-filing": {
+        "text": "Filing routine. Fictional training file."
+      },
+      "c-f-equip": {
+        "text": "Equipment checks for May. Fictional training file."
+      }
+    }
+  }
+}

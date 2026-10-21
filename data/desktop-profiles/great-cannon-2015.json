@@ -1,0 +1,245 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Wei Lan",
+    "short": "wei",
+    "email": "wei.lan@campus-mail.example",
+    "avatar": "great-cannon-2015"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "green",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img1.jpg",
+    "wifiNetwork": "Campus-Residence"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "wei"
+      },
+      "f-great-cannon-1": {
+        "id": "f-great-cannon-1",
+        "parentId": "documents",
+        "name": "Essay-draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 50,
+        "modified": "2015-03-17T15:10:00Z",
+        "trashed": false,
+        "contentId": "c-great-cannon-1"
+      },
+      "f-great-cannon-2": {
+        "id": "f-great-cannon-2",
+        "parentId": "documents",
+        "name": "Stats-set-4.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 38,
+        "modified": "2015-03-17T15:10:00Z",
+        "trashed": false,
+        "contentId": "c-great-cannon-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Wei",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2015-03-17T15:10:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "photos",
+      "media",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-prof",
+          "folder": "inbox",
+          "from": "Dr. Okonkwo <okonkwo@campus-mail.example>",
+          "to": "wei.lan@campus-mail.example",
+          "subject": "Essay draft due Monday",
+          "body": "Wei,\n\nPlease send your essay draft by Monday 9 am. Short is fine.\n\nDr. Okonkwo",
+          "time": "2015-03-17T15:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-library",
+          "folder": "inbox",
+          "from": "Campus Library <library@campus-mail.example>",
+          "to": "wei.lan@campus-mail.example",
+          "subject": "Your book is ready for pickup",
+          "body": "Your requested book is on the hold shelf until Friday.\n\nCampus Library",
+          "time": "2015-03-16T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Study group",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Lena Fischer",
+              "text": "Library at 3 for the stats set?",
+              "time": "2015-03-18T08:40:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Wei Lan",
+              "text": "Yes, see you there.",
+              "time": "2015-03-18T08:44:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Essay outline",
+        "body": "Intro: the harbour town\nTwo case studies\nConclusion",
+        "modified": "2015-03-17T15:10:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Stats lecture",
+        "start": "2015-03-19T09:00:00Z",
+        "end": "2015-03-19T10:00:00Z",
+        "location": "Hall B"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Lena Fischer",
+        "email": "lena.fischer@campus-mail.example",
+        "phone": "+1 555 0101",
+        "org": "Campus"
+      },
+      {
+        "id": "p-2",
+        "name": "Dr. Okonkwo",
+        "email": "okonkwo@campus-mail.example",
+        "phone": "+1 555 0102",
+        "org": "Campus"
+      },
+      {
+        "id": "p-3",
+        "name": "Campus Library",
+        "email": "library@campus-mail.example",
+        "phone": "+1 555 0103",
+        "org": "Campus"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-great-cannon-1": {
+        "text": "Draft essay about harbour towns. 600 words so far."
+      },
+      "c-great-cannon-2": {
+        "text": "Stats problem set 4. Questions 1 to 8."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-forum-home": {
+          "title": "Parkbench Forum",
+          "url": "parkbench-forum.example/home",
+          "brand": "Parkbench Forum",
+          "heading": "Parkbench Forum",
+          "body": "Welcome to Parkbench. Today's popular threads: study tips, bike repair, and cheap noodle recipes.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Parkbench Forum",
+          "url": "scene:pg-forum-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-forum-home",
+          "title": "Parkbench Forum"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Parkbench Forum",
+          "url": "scene:pg-forum-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-forum-home",
+          "title": "Parkbench Forum",
+          "time": "2015-03-17T15:10:00Z"
+        }
+      ]
+    }
+  }
+}

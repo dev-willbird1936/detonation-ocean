@@ -1,0 +1,111 @@
+{
+  "verifiedAtUtc": "2026-10-06T21:35:27.581435+00:00",
+  "checks": [
+    {
+      "check": "native generation count",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "generation pairs unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference copies match hashes",
+      "passed": false,
+      "detail": {
+        "verified": 0,
+        "expected": 12
+      }
+    },
+    {
+      "check": "native image copies equal staged hashes",
+      "passed": true,
+      "detail": {
+        "verified": 12,
+        "expected": 12
+      }
+    },
+    {
+      "check": "18 family/form cells",
+      "passed": true,
+      "detail": 18
+    },
+    {
+      "check": "depth grouping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "18 logical/display exports hash, size and alpha",
+      "passed": true,
+      "detail": {
+        "verified": 36,
+        "expected": 36
+      }
+    },
+    {
+      "check": "exact per-family role palette",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "role and shade masks match exported pixels",
+      "passed": true,
+      "detail": {
+        "verified": 216,
+        "expected": 216
+      }
+    },
+    {
+      "check": "browser renders all forms",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "failed packaging attempt files preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "separate six-style/five-depth native sources",
+      "passed": true,
+      "detail": {
+        "verified": 30,
+        "expected": 30
+      }
+    },
+    {
+      "check": "separate six-style/five-depth exports",
+      "passed": true,
+      "detail": {
+        "verified": 30,
+        "expected": 30
+      }
+    }
+  ],
+  "failures": [
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/anglerfish-anatomy-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/anglerfish-role-map-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/viperfish-anatomy-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/viperfish-role-map-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/siphonophore-anatomy-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/siphonophore-role-map-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/isopod-host-anatomy-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/isopod-host-role-map-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/cookiecutter-anatomy-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/cookiecutter-role-map-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/octopus-anatomy-reference.png",
+    "Reference missing/hash mismatch: ocean-style-prototypes/codex-creature-depth-evolution/inputs/octopus-role-map-reference.png"
+  ],
+  "passed": false,
+  "scope": {
+    "families": 6,
+    "formsPerFamily": 3,
+    "nativeNewImages": 12,
+    "offlineBaseRecolors": 6,
+    "nativeStyleDepthLayers": 30,
+    "styleDepthPairs": 30
+  }
+}

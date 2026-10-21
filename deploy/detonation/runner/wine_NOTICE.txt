@@ -1,0 +1,12 @@
+detonation-ocean/wine: third-party components and where to get their source
+
+Wine 11.0 (WineHQ stable, wine-stable 11.0.0.0~bookworm-1). LGPL-2.1. Source: https://gitlab.winehq.org/wine/wine (tag wine-11.0) and the
+Debian-style source package at https://dl.winehq.org/wine-builds/debian/ (suite bookworm). The Wine prefix holds Wine's own DLLs only
+(symbolic links to /opt/wine-stable/lib/wine); no Microsoft redistributable is installed.
+
+Xvfb (X.Org xserver, Debian bookworm package xvfb). MIT/X11 and other notices: /usr/share/doc/xvfb/copyright in the image.
+Python 3.11 (Debian bookworm package python3). PSF-2.0.
+Fonts: fonts-wine (Wine's own fonts, LGPL-2.1) and the Debian packages listed in /var/lib/dpkg/status.
+
+Licence texts for the Debian packages are in /usr/share/doc/<package>/copyright. docs/SPEC.md 6.6 and deploy/detonation/TOOLS.md hold the
+project's licence checks.

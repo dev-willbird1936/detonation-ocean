@@ -1,0 +1,28 @@
+{
+  "description": "One seeded Document is edited; too few files for encrypt or destroy-files.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "trench",
+    "family": "extortion-destruction",
+    "findings": [
+      "other-harm"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "diff",
+      "kind": "changed",
+      "detail": "changed /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Documents/notes.txt",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 4.7,
+      "sizeBefore": 800,
+      "sizeAfter": 820
+    }
+  ]
+}

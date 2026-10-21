@@ -1,0 +1,19 @@
+{
+  "source": "Local renderer of existing Dioramas Abyss species; no new model generation",
+  "families": [
+    "phishing",
+    "exploit",
+    "botnet",
+    "theft",
+    "supply-chain",
+    "espionage",
+    "ransomware",
+    "social",
+    "vulnerability",
+    "card-fraud",
+    "wiper",
+    "bec"
+  ],
+  "angler": "Existing Dioramas angler model, CC BY 4.0; credited by the UI",
+  "otherSpecies": "Locally authored procedural sculpts, project source license"
+}

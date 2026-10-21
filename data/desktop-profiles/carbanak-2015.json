@@ -1,0 +1,295 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Renata Voss",
+    "short": "renata",
+    "email": "renata.voss@larkspur-savings.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeD/img2.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Larkspur-Branch",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "renata"
+      },
+      "f-recon": {
+        "id": "f-recon",
+        "parentId": "documents",
+        "name": "Reconciliation-9-Feb.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1500,
+        "modified": "2015-02-09T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-recon"
+      },
+      "f-roster": {
+        "id": "f-roster",
+        "parentId": "documents",
+        "name": "Teller-roster-wk7.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 600,
+        "modified": "2015-02-08T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-roster"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Renata",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2015-02-10T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "media",
+    "settings",
+    "updates",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-end-of-day-reconci",
+          "folder": "inbox",
+          "from": "Colm Treadwell <colm.treadwell@larkspur-savings.example>",
+          "to": "renata.voss@larkspur-savings.example",
+          "subject": "End-of-day reconciliation",
+          "body": "Renata, please send the reconciliation by 5:30. Flag anything over the daily limit.\n\nColm",
+          "time": "2015-02-09T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-teller-roster-next",
+          "folder": "inbox",
+          "from": "Emeka Dube <emeka.dube@larkspur-savings.example>",
+          "to": "renata.voss@larkspur-savings.example",
+          "subject": "Teller roster next week",
+          "body": "The roster for next week is on the shared drive. Swaps by Thursday.\n\nEmeka",
+          "time": "2015-02-08T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-reminder-report-su",
+          "folder": "inbox",
+          "from": "Larkspur IT Helpdesk <larkspur.it.helpdesk@larkspur-savings.example>",
+          "to": "renata.voss@larkspur-savings.example",
+          "subject": "Reminder: report suspicious messages",
+          "body": "If a message looks odd, use the Report button or call extension 4410. IT never asks for passwords.",
+          "time": "2015-02-05T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Renata Voss <renata.voss@larkspur-savings.example>",
+          "to": "colm.treadwell@larkspur-savings.example",
+          "subject": "Reconciliation 9 Feb",
+          "body": "Attached figures match the ledger. Nothing over the limit.\n\nRenata",
+          "time": "2015-02-09T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-emeka-dube",
+          "with": "Emeka Dube",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Emeka Dube",
+              "text": "Can you cover the Friday desk?",
+              "time": "2015-02-08T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Renata Voss",
+              "text": "Yes, I can.",
+              "time": "2015-02-08T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-back-office-ch",
+        "folder": "notes",
+        "title": "Back-office checklist",
+        "body": "Reconcile ledger\nCheck the daily limit report\nFile the branch cash log",
+        "modified": "2015-02-09T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Daily reconciliation",
+        "start": "2015-02-10T17:00:00Z",
+        "end": "2015-02-10T17:30:00Z",
+        "location": "Back office"
+      },
+      {
+        "id": "e-2",
+        "title": "Branch team meeting",
+        "start": "2015-02-12T09:30:00Z",
+        "end": "2015-02-12T10:15:00Z",
+        "location": "Meeting room"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Send reconciliation to the branch manager",
+        "due": "2015-02-10T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "File the cash log",
+        "due": "2015-02-11T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-sabine-orlov",
+        "name": "Sabine Orlov",
+        "email": "sabine.orlov@larkspur-savings.example",
+        "phone": "+1 555 0181",
+        "org": "Larkspur Savings Head Office"
+      },
+      {
+        "id": "p-2-emeka-dube",
+        "name": "Emeka Dube",
+        "email": "emeka.dube@larkspur-savings.example",
+        "phone": "+1 555 0182",
+        "org": "Branch operations"
+      },
+      {
+        "id": "p-3-colm-treadwell",
+        "name": "Colm Treadwell",
+        "email": "colm.treadwell@larkspur-savings.example",
+        "phone": "+1 555 0183",
+        "org": "Branch manager"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-recon": {
+        "text": "Reconciliation 9 Feb\nLedger total matches\nNo items over the daily limit"
+      },
+      "c-f-roster": {
+        "text": "Teller roster week 7\nMon-Fri desk cover list"
+      }
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "bank-intranet": {
+          "title": "Larkspur staff portal",
+          "url": "staff.larkspur-savings.example/home",
+          "brand": "Larkspur Savings",
+          "heading": "Staff portal",
+          "body": "Branch notices, rate sheets and the head-office contact list. Wire approval limits are published here by head office.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Larkspur staff portal",
+          "url": "scene:bank-intranet"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:bank-intranet",
+          "title": "Larkspur staff portal",
+          "time": "2015-02-09T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

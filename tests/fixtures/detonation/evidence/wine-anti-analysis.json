@@ -1,0 +1,24 @@
+{
+  "description": "AT-24: Windows program reads HKCU\\Software\\Wine and exits.",
+  "path": "wine",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "anti-analysis"
+    ],
+    "depth": "twilight",
+    "family": "disguise",
+    "findings": []
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "wine",
+      "kind": "registry-read",
+      "detail": "registry-read Software\\Wine",
+      "at": "2026-01-01T00:00:00.000Z",
+      "hive": "HKCU",
+      "key": "Software\\Wine"
+    }
+  ]
+}

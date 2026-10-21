@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#07162a">
+  <title>Job · Detonation Ocean</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/ui/abyss/retro-pixel.css">
+  <link rel="stylesheet" href="/ui/job/job.css">
+  <script src="/ui/abyss/pixel-lit.js"></script>
+<script type="module" src="/ui/job/main.mjs"></script>
+</head>
+<body class="jv">
+  <header class="jv-bar">
+    <a class="jv-brand" href="/">Detonation Ocean</a>
+    <span id="jv-jobid" class="jv-jobid"></span>
+    <button id="jv-skip" class="jv-button" type="button" hidden>Skip animation</button>
+  </header>
+  <p id="jv-notice" class="jv-notice" role="alert" hidden></p>
+
+  <noscript><p class="jv-notice">The job view needs JavaScript to follow a live run.</p></noscript>
+
+  <main class="jv-grid">
+    <section class="jv-box jv-side" aria-labelledby="jv-sonar-title">
+      <h2 id="jv-sonar-title">Sonar</h2>
+      <ol id="jv-stages" class="jv-stages"></ol>
+      <p id="jv-status" class="jv-status" role="status"></p>
+      <h2>Evidence log</h2>
+      <ul id="jv-log" class="jv-log" tabindex="0" aria-label="Evidence log"></ul>
+    </section>
+
+    <section class="jv-box jv-dive" aria-label="The dive">
+      <div class="jv-tabs">
+        <button id="jv-tab-ocean" class="jv-button" type="button" aria-pressed="true">Ocean</button>
+        <button id="jv-tab-replay" class="jv-button" type="button" aria-pressed="false">Desktop replay</button>
+      </div>
+      <div id="jv-scene" class="jv-scene"></div>
+      <div id="jv-replay" class="jv-replay" hidden>
+        <p id="jv-replay-label" class="jv-replay-label">Replay of the evidence</p>
+        <div id="jv-replay-body" class="jv-replay-body"><span class="jv-tint" aria-hidden="true"></span></div>
+      </div>
+    </section>
+
+    <section class="jv-box jv-octopus" aria-labelledby="jv-octopus-title">
+      <h2 id="jv-octopus-title"><span class="jv-octopus-art" data-pixel-bg="/ui/abyss/pixel/creatures/octopus-sunlight-spritesheet.png" aria-hidden="true"></span>Octopus <small id="jv-octopus-status">Waiting</small></h2>
+      <div id="jv-terminal" class="jv-terminal" tabindex="0" aria-label="Analysis code, stderr and retries"></div>
+    </section>
+  </main>
+
+  <section id="jv-report" class="jv-box jv-report" aria-label="Report" hidden></section>
+</body>
+</html>

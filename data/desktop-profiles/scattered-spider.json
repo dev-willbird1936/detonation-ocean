@@ -1,0 +1,305 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Dale Whitcomb",
+    "short": "dale",
+    "email": "dale.whitcomb@marloweresorts.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "red",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeD/img1.jpg",
+    "wifiNetwork": "Marlowe-FrontOffice"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "dale"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Arrivals Saturday.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 41,
+        "modified": "2023-09-07T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Front desk rota.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 34,
+        "modified": "2023-09-01T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Dale",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-09-08T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-weekend-occupanc",
+          "folder": "inbox",
+          "from": "Resort Operations <ops@marloweresorts.example>",
+          "to": "dale.whitcomb@marloweresorts.example",
+          "subject": "Weekend occupancy forecast",
+          "body": "The forecast is at 92 percent for Saturday. Please confirm the late arrival plan with the front desk.\n\nResort Operations",
+          "time": "2023-09-07T16:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-service-desk-tic",
+          "folder": "inbox",
+          "from": "Marlowe Service Desk <servicedesk@marloweresorts.example>",
+          "to": "dale.whitcomb@marloweresorts.example",
+          "subject": "Service desk tickets are raised in the portal",
+          "body": "Please raise help requests in the service desk portal. We will never ask you to read out a code or approve a prompt on a call.\n\nService Desk",
+          "time": "2023-09-01T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-late-arrival-lis",
+          "folder": "inbox",
+          "from": "Joss Okonkwo <joss.okonkwo@marloweresorts.example>",
+          "to": "dale.whitcomb@marloweresorts.example",
+          "subject": "Late arrival list",
+          "body": "Dale, the late arrival list is in the shared folder for tonight.\n\nJoss",
+          "time": "2023-09-07T12:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-joss-okonkwo",
+          "with": "Joss Okonkwo",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Joss Okonkwo",
+              "text": "Late arrival list is ready.",
+              "time": "2023-09-08T07:30:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-front-office",
+          "with": "Front office",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Mina Ford",
+              "text": "Two groups arrive at noon.",
+              "time": "2023-09-08T08:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-front-desk-handover",
+        "folder": "notes",
+        "title": "Front desk handover",
+        "body": "Groups at noon\nVIP at four\nLate arrivals after nine",
+        "modified": "2023-09-07T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-contacts",
+        "folder": "notes",
+        "title": "Contacts",
+        "body": "Housekeeping: ext. 214\nEngineering: ext. 220",
+        "modified": "2023-08-15T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-arrivals-briefing",
+        "title": "Arrivals briefing",
+        "start": "2023-09-09T09:00:00Z",
+        "end": "2023-09-09T09:20:00Z",
+        "location": "Front desk"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-confirm-the-late-arrival-plan",
+        "list": "work",
+        "title": "Confirm the late arrival plan",
+        "due": "2023-09-08T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-joss-okonkwo",
+        "name": "Joss Okonkwo",
+        "email": "joss.okonkwo@marloweresorts.example",
+        "phone": "+1 555 0251",
+        "org": "Marlowe Resorts"
+      },
+      {
+        "id": "p-2-mina-ford",
+        "name": "Mina Ford",
+        "email": "mina.ford@marloweresorts.example",
+        "phone": "+1 555 0252",
+        "org": "Marlowe Resorts"
+      },
+      {
+        "id": "p-3-marlowe-service-desk",
+        "name": "Marlowe Service Desk",
+        "email": "servicedesk@marloweresorts.example",
+        "phone": "+1 555 0250",
+        "org": "Marlowe Resorts"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Arrivals: 188\nGroups: 3\nLate arrivals: 12"
+      },
+      "c-doc-2": {
+        "text": "Week 36 rota for the front office."
+      }
+    },
+    "web": {
+      "pages": {
+        "marlowe-portal": {
+          "title": "Marlowe service desk portal",
+          "url": "servicedesk.marloweresorts.example",
+          "body": "Service desk portal\n\nOpen tickets: none. Your device registration is current.",
+          "choices": []
+        },
+        "marlowe-intranet": {
+          "title": "Marlowe staff intranet",
+          "url": "intranet.marloweresorts.example",
+          "body": "Staff news and the front desk rota.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-marlowe-portal",
+          "title": "Marlowe service desk portal",
+          "url": "scene:marlowe-portal"
+        },
+        {
+          "id": "bm-marlowe-intranet",
+          "title": "Marlowe staff intranet",
+          "url": "scene:marlowe-intranet"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-marlowe-portal",
+          "url": "scene:marlowe-portal",
+          "title": "Marlowe service desk portal",
+          "time": "2023-09-08T07:40:00Z"
+        },
+        {
+          "id": "h-marlowe-intranet",
+          "url": "scene:marlowe-intranet",
+          "title": "Marlowe staff intranet",
+          "time": "2023-09-07T13:30:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Service desk never asks for a code",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

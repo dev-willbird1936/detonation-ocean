@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bestiary — Detonation Ocean</title>
+  <meta name="description" content="Every creature in the Detonation Ocean: the five depths, the file-type fish, the finding creatures and the system.">
+  <meta name="theme-color" content="#01060a">
+  <meta name="color-scheme" content="dark">
+  <!-- The server sets content="production" on the public site; "auto" decides from the host name. -->
+  <meta name="do-env" content="auto">
+  <style>html,body{background:#07162a}</style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 shape-rendering=%22crispEdges%22%3E%3Cpath fill=%22%2307162a%22 d=%22M0 0h16v16H0z%22/%3E%3Cpath fill=%22%236fe0d4%22 d=%22M7 2h2v8H7zM5 10h6v4H5z%22/%3E%3C/svg%3E">
+  <link rel="preload" href="/ui/abyss/fonts/Jersey10-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/ui/abyss/retro-pixel.css">
+  <link rel="stylesheet" href="/ui/bestiary/bestiary.css">
+</head>
+<body class="pg">
+  <a class="pg-skip" href="#main">Skip to the Bestiary</a>
+  <header class="pg-bar">
+    <a class="pg-brand" href="/"><span class="pg-mark" aria-hidden="true"></span><span>Detonation Ocean <b>The Abyss</b></span></a>
+    <nav class="pg-nav" aria-label="Page">
+      <a href="/#upload">Upload</a>
+      <a href="/bestiary" aria-current="page">Bestiary</a>
+      <a href="/about">How it works</a>
+    </nav>
+  </header>
+
+  <main class="pg-main" id="main">
+    <h1>Bestiary</h1>
+    <p class="pg-lede">Every creature in the ocean. The collection fills as real files prove real behaviour.</p>
+    <p class="pg-status mono" id="status" role="status" aria-live="polite">Loading the creatures…</p>
+    <noscript><p>The Bestiary needs JavaScript to list the creatures.</p></noscript>
+
+    <section aria-labelledby="h-depths">
+      <h2 id="h-depths">Depths</h2>
+      <p>How harmful the file proved to be. The deeper the water, the more harm it did.</p>
+      <div id="depths"></div>
+    </section>
+
+    <section aria-labelledby="h-fish">
+      <h2 id="h-fish">Fish</h2>
+      <p>Every upload starts as one fish for its file type. Fish of one type gather in a school; a bigger school means more files of that type.</p>
+      <div id="fish"></div>
+    </section>
+
+    <section aria-labelledby="h-creatures">
+      <h2 id="h-creatures">Creatures</h2>
+      <p>One creature for each finding in the three deepest tiers, and the giant squid for harm that fits no named finding. A creature grows as it eats more files.</p>
+      <div id="creatures"></div>
+    </section>
+
+    <section aria-labelledby="h-system">
+      <h2 id="h-system">The system</h2>
+      <p>The two parts of the sandbox itself.</p>
+      <div id="system"></div>
+    </section>
+
+    <p class="pg-foot">The ocean counts files in batches and never shows who uploaded what. “Clean” means no harmful behaviour was observed, not a guarantee.</p>
+  </main>
+
+  <script src="/ui/abyss/pixel-lit.js"></script>
+<script src="/ui/abyss/pixel-fish.js"></script>
+  <script src="/ui/bestiary/render.js"></script>
+  <script src="/ui/bestiary/bestiary.js"></script>
+</body>
+</html>

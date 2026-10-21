@@ -1,0 +1,4 @@
+Synthetic to-do list (demo data)
+- Send the Q3 numbers to the finance team
+- Book the dentist for next month
+- Renew the library card

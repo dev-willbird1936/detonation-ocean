@@ -1,0 +1,227 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Kofi Mensah",
+    "short": "kofi",
+    "email": "kofi.mensah@bluecup-cafe.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "orange",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img2.jpg",
+    "wifiNetwork": "BlueCup-Shop"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "kofi"
+      },
+      "f-menu": {
+        "id": "f-menu",
+        "parentId": "documents",
+        "name": "Autumn-menu.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 800,
+        "modified": "2016-10-01T09:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-menu"
+      },
+      "f-takings": {
+        "id": "f-takings",
+        "parentId": "documents",
+        "name": "Takings-September.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1500,
+        "modified": "2016-10-02T20:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-takings"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Kofi",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2016-10-14T14:20:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "messages",
+      "photos",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-supplier",
+          "folder": "inbox",
+          "from": "Granary Wholesale <orders@granary-wholesale.example>",
+          "to": "kofi.mensah@bluecup-cafe.example",
+          "subject": "Your delivery is booked for Tuesday",
+          "body": "Your coffee and pastry delivery is booked for Tuesday between 7 and 9.\n\nGranary Wholesale",
+          "time": "2016-10-14T14:20:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-rota",
+          "folder": "inbox",
+          "from": "Lena Park <lena.park@bluecup-cafe.example>",
+          "to": "kofi.mensah@bluecup-cafe.example",
+          "subject": "Weekend rota",
+          "body": "Kofi, can I swap Sunday with Maya? Thanks!\n\nLena",
+          "time": "2016-10-13T18:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-cam",
+          "folder": "inbox",
+          "from": "Cameo Security <support@cameo-security.example>",
+          "to": "kofi.mensah@bluecup-cafe.example",
+          "subject": "Thanks for registering your camera",
+          "body": "Your door camera and recorder are registered. Keep the box for warranty.",
+          "time": "2016-06-02T11:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Kofi Mensah <kofi.mensah@bluecup-cafe.example>",
+          "to": "lena.park@bluecup-cafe.example",
+          "subject": "Re: Weekend rota",
+          "body": "Fine by me, tell Maya.",
+          "time": "2016-10-13T19:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-lena",
+          "with": "Lena Park",
+          "items": [
+            {
+              "id": "i-lena-1",
+              "from": "Lena Park",
+              "text": "Milk delivery came early today.",
+              "time": "2016-10-14T07:10:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-menu",
+        "folder": "notes",
+        "title": "Autumn menu",
+        "body": "Pumpkin loaf\nChai latte\nCinnamon roll",
+        "modified": "2016-10-01T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-delivery",
+        "title": "Wholesale delivery",
+        "start": "2016-10-18T07:00:00Z",
+        "end": "2016-10-18T09:00:00Z",
+        "location": "Back door"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-float",
+        "list": "work",
+        "title": "Order till float",
+        "due": "2016-10-17T10:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-lena",
+        "name": "Lena Park",
+        "email": "lena.park@bluecup-cafe.example",
+        "phone": "+1 555 0221",
+        "org": "Blue Cup Cafe"
+      },
+      {
+        "id": "p-granary",
+        "name": "Granary Wholesale",
+        "email": "orders@granary-wholesale.example",
+        "phone": "+1 555 0222",
+        "org": "Granary Wholesale"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-menu": {
+        "text": "Autumn menu draft. Fictional training file."
+      },
+      "c-f-takings": {
+        "text": "Daily takings for September. Fictional training file."
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "verifiedAtUtc": "2026-10-06T21:42:09.673510+00:00",
+  "browser": "Chrome via chrome-devtools",
+  "mode": "file:// standalone",
+  "url": "file:///C:/SyncedProjects/Websites/Vultr-Phishing-Sandbox/ocean-style-prototypes/codex-creature-depth-evolution/index.html",
+  "title": "Ocean Depth Forms \u2014 Creature Design Review",
+  "desktop": {
+    "viewport": [
+      1811,
+      897
+    ],
+    "document": [
+      1796,
+      4078
+    ],
+    "familySections": 6,
+    "cards": 18,
+    "loadedImages": 18,
+    "failedImages": 0,
+    "horizontalOverflow": false,
+    "depthGroups": [
+      "Sunlight + Twilight shared base",
+      "Midnight + Abyss shared evolved form",
+      "Trench advanced form"
+    ]
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      10644
+    ],
+    "familySections": 6,
+    "cards": 18,
+    "loadedImages": 18,
+    "failedImages": 0,
+    "horizontalOverflow": false,
+    "firstCardWidth": 358
+  },
+  "images": [
+    {
+      "family": "anglerfish",
+      "stage": "base-rich",
+      "path": "variants/anglerfish-base-rich-256.png",
+      "sha256": "bdc2eb8521fe71eafd79e5acd5645fc4d40b347652c418af63c950161e940ff9",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "anglerfish",
+      "stage": "midnight-abyss",
+      "path": "variants/anglerfish-midnight-abyss-256.png",
+      "sha256": "50f534af62360b3c4ccaec5fb0ce7de27509ead32744add3d5fffbef3ddb0819",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "anglerfish",
+      "stage": "trench",
+      "path": "variants/anglerfish-trench-256.png",
+      "sha256": "0b37379a7c336499bffb0fbadf6c0c8b8d256a55e98bd9e2dbde4307d415e25f",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "viperfish",
+      "stage": "base-rich",
+      "path": "variants/viperfish-base-rich-256.png",
+      "sha256": "e9fe9d464308ca301d6439d0cf473cf2a1b0503e7d3e632c8b1b99b55446f20e",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "viperfish",
+      "stage": "midnight-abyss",
+      "path": "variants/viperfish-midnight-abyss-256.png",
+      "sha256": "ef7ef0a012c40663688fff0a99e9902c707a092e5512b80d63cc35c72012c41b",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "viperfish",
+      "stage": "trench",
+      "path": "variants/viperfish-trench-256.png",
+      "sha256": "f1ea15e9b046559c7fb9464a546a314041a2231e274994dbebe8b4e48800ce83",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "siphonophore",
+      "stage": "base-rich",
+      "path": "variants/siphonophore-base-rich-256.png",
+      "sha256": "0e5c8bb073da9e7908c21f7fd58abfb52f830bd8601a00f9c04c49b69f86edfc",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "siphonophore",
+      "stage": "midnight-abyss",
+      "path": "variants/siphonophore-midnight-abyss-256.png",
+      "sha256": "6832d4f68711e73e9ae3149af176d0f625465db6fc086339c298d40dd66205f6",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "siphonophore",
+      "stage": "trench",
+      "path": "variants/siphonophore-trench-256.png",
+      "sha256": "19e0ac215c0fcc0d441be96e4adc19c734c73ea5cf9d61e7097d2e982b22bf41",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "isopod-host",
+      "stage": "base-rich",
+      "path": "variants/isopod-host-base-rich-256.png",
+      "sha256": "934511fee6a1c78a6dccb3fd05c06f4128b897abdc009e8c38e4441cd6ea385d",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "isopod-host",
+      "stage": "midnight-abyss",
+      "path": "variants/isopod-host-midnight-abyss-256.png",
+      "sha256": "03f57624639a2b001a0abe4630c97d0dc507c03fd452713052158e6184f24ee9",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "isopod-host",
+      "stage": "trench",
+      "path": "variants/isopod-host-trench-256.png",
+      "sha256": "1c791128d26c891fa484e111643a93f9232fccf035b943ecdf49ac638f982e1d",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "base-rich",
+      "path": "variants/cookiecutter-base-rich-256.png",
+      "sha256": "271c7cac9b83774037e2c01dff188758bf1060d4ea1735cee6870ac32c9899b8",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "midnight-abyss",
+      "path": "variants/cookiecutter-midnight-abyss-256.png",
+      "sha256": "0d65f92c7ab68d1d982289ccee7e2e4923dc6b9277aae9d7a3f357ee1e148824",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "trench",
+      "path": "variants/cookiecutter-trench-256.png",
+      "sha256": "56f265b9d3f4bde095553b23d7ddf32dceb7ca237ff3ad21d0ee59ac0497a358",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "octopus",
+      "stage": "base-rich",
+      "path": "variants/octopus-base-rich-256.png",
+      "sha256": "edd32886f50705bfb248feb71701e414fa7f83dee6e3e90a10775f009b4c7ce2",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "octopus",
+      "stage": "midnight-abyss",
+      "path": "variants/octopus-midnight-abyss-256.png",
+      "sha256": "ca6c3b7c0f681be888b4ff04d17ed5fd29151ebd3b3153a424e3c4c84f76ddf1",
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "family": "octopus",
+      "stage": "trench",
+      "path": "variants/octopus-trench-256.png",
+      "sha256": "c2b3bbc249f7128727885117cd01d42468deb55a1b27070d6c32c907ebf2a14a",
+      "dimensions": [
+        256,
+        256
+      ]
+    }
+  ],
+  "screenshot": "Chrome DevTools screenshot calls timed out; browser rendering was verified through decoded image and layout checks."
+}

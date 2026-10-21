@@ -1,0 +1,37 @@
+{
+  "purpose": "Three semantic regions; three coherent tone swatches per region, plus neutral outline and anatomy detail colors. Use a crisp nearest palette profile for later recolouring.",
+  "tone_order": ["shadow", "base", "highlight"],
+  "neutral": {"outline":"#17232D","mouth_pupil":"#0B1118","eye_teeth":"#E9E3D3"},
+  "families": {
+    "anglerfish": {
+      "primary":{"role":"broad head and body","shadow":"#0B4752","base":"#167D88","highlight":"#55B6AD"},
+      "secondary":{"role":"belly, fins, fan tail","shadow":"#536A70","base":"#8FADAA","highlight":"#DDD5B8"},
+      "tertiary":{"role":"forehead lure bulb and small dorsal accents","shadow":"#A9562F","base":"#D7883E","highlight":"#F2C66D"}
+    },
+    "viperfish": {
+      "primary":{"role":"long upper flank and back","shadow":"#0A334E","base":"#176286","highlight":"#51A6B8"},
+      "secondary":{"role":"belly, fins, forked tail","shadow":"#344A5D","base":"#6D8591","highlight":"#B7C8C8"},
+      "tertiary":{"role":"sparse lateral photophores","shadow":"#2FAABB","base":"#55D6CF","highlight":"#C7F1DC"}
+    },
+    "siphonophore": {
+      "primary":{"role":"one continuous shared stem","shadow":"#30284E","base":"#514D79","highlight":"#9B95BC"},
+      "secondary":{"role":"attached zooids, bells and feeding filaments","shadow":"#07545D","base":"#168A97","highlight":"#73D2CF"},
+      "tertiary":{"role":"terminal float and small filament tips","shadow":"#7A4547","base":"#C16B5A","highlight":"#E9B47E"}
+    },
+    "isopod-host": {
+      "primary":{"role":"host fish body","shadow":"#105554","base":"#16857C","highlight":"#68B69C"},
+      "secondary":{"role":"belly, fins and tail","shadow":"#506A72","base":"#9BB2AA","highlight":"#E1DDC7"},
+      "tertiary":{"role":"segmented isopod inside the open mouth","shadow":"#5C4338","base":"#9C7051","highlight":"#D1AF7A"}
+    },
+    "cookiecutter": {
+      "primary":{"role":"compact dorsal cigar body","shadow":"#1E3445","base":"#3F6277","highlight":"#809FA4"},
+      "secondary":{"role":"belly, fins and tail","shadow":"#61574E","base":"#A49580","highlight":"#E3D6B7"},
+      "tertiary":{"role":"distinctive body collar and circular mouth rim","shadow":"#6C2F48","base":"#A35540","highlight":"#E0A85D"}
+    },
+    "octopus": {
+      "primary":{"role":"rounded mantle","shadow":"#633A46","base":"#A95650","highlight":"#E28B6C"},
+      "secondary":{"role":"eight attached arms","shadow":"#243B61","base":"#3C6A93","highlight":"#89ABD0"},
+      "tertiary":{"role":"suckers and compact ring accents","shadow":"#79612C","base":"#C0A33F","highlight":"#F1D075"}
+    }
+  }
+}

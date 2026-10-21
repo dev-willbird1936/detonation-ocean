@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3a4d">
+  <title>Ocean creature matrix · Abyss</title>
+  <link rel="stylesheet" href="/ocean-profiles.css">
+  <script src="/ocean-profiles.js" defer></script>
+</head>
+<body>
+  <div class="ocean-backdrop" aria-hidden="true">
+    <div class="rays"></div>
+    <div id="bubbles" class="bubbles"></div>
+  </div>
+  <header class="topbar">
+    <a class="back-link" href="/">← Return to the ocean</a>
+    <div class="hero">
+      <p class="eyebrow">THE ABYSS · CREATURE INDEX</p>
+      <h1>Six families. Five depths. <span>Thirty profiles.</span></h1>
+      <p class="intro">Each cell is a creature, a depth and one short training scene on a fictional desktop. Choose a cell to see how its harm plays out.</p>
+    </div>
+  </header>
+  <main>
+    <section class="depth-key" aria-labelledby="depth-title">
+      <h2 id="depth-title">Depth is the worst harm proven</h2>
+      <ol id="depth-key-list" class="depth-key-list" aria-label="Five ocean depth tiers"></ol>
+    </section>
+    <p class="morphology-note">Three creature forms span the five depths: one shared base for Sunlight/Twilight, one evolution for Midnight/Abyss, and a distinct Trench form. Each cell shows its own depth-coloured candidate image, which passed the colour review; final promotion is pending. The original creature assets remain preserved.</p>
+    <p id="catalog-status" role="status" aria-live="polite">Loading the verified creature catalog…</p>
+    <div class="matrix-scroll" tabindex="0" aria-label="Scrollable six-family by five-depth creature matrix">
+      <div id="profile-matrix" role="table" aria-label="Vulnerability family and harm-tier depth profiles"></div>
+    </div>
+    <section class="scenario-catalog" aria-labelledby="scenario-title">
+      <header class="scenario-catalog-header">
+        <p class="eyebrow">MAIN VULNERABILITY LIST · 60 SCENARIOS</p>
+        <h2 id="scenario-title">Twelve selected scenarios at each depth</h2>
+        <p class="scenario-intro">Thirty family anchors map to the creature profiles above; thirty free picks do not have a forced family. Citation status describes evidence for the listed victim action. This catalogue does not mean every entry is a runnable scene.</p>
+      </header>
+      <p id="scenario-status" class="scenario-load-status" role="status" aria-live="polite">Loading the 60 selected scenarios…</p>
+      <div id="scenario-list" class="scenario-list" aria-label="Selected scenarios grouped by depth"></div>
+    </section>
+    <p class="asset-note">Matrix thumbnails use the 30 depth-colour variants (three shared forms); existing verified RetroDiffusion animations remain the assets for scripted local scenes. These images are decorative; no camera is accessed here. Every cell opens a fictional local simulation: nothing runs on your machine and no real account or file is used. The “inspired by” name is context for the scene, not a claim that the incident belongs in that cell.</p>
+  </main>
+  <dialog id="profile-dialog" aria-labelledby="profile-title">
+    <button id="profile-close" class="close-button" type="button" aria-label="Close profile">×</button>
+    <div class="profile-stage"><img id="profile-creature" class="profile-creature" alt="" width="256" height="256"></div>
+    <p id="profile-family" class="eyebrow"></p>
+    <h2 id="profile-title"></h2>
+    <p id="profile-action" class="profile-action"></p>
+    <p id="profile-note" class="profile-note"></p>
+    <a id="profile-desktop" class="demo-link" href="/ocean-entry.html">Begin the visual-only camera-bite entry</a>
+  </dialog>
+</body>
+</html>

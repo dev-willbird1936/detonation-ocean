@@ -1,0 +1,32 @@
+[Unit]
+Description=Blast Radius Zero synthetic OAuth guest agent
+After=network-online.target nftables.service
+Wants=network-online.target
+ConditionPathExists=/etc/blast-radius/run.json
+
+[Service]
+Type=simple
+User=root
+Environment=BRZ_GUEST_CONFIG=/etc/blast-radius/run.json
+WorkingDirectory=/opt/blast-radius
+ExecStart=/usr/bin/node /opt/blast-radius/backend/guest-agent.mjs
+Restart=on-failure
+RestartSec=1
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+RestrictSUIDSGID=true
+LockPersonality=true
+# AF_NETLINK: the agent runs `nft list ruleset` to verify its own egress policy; without it nft cannot open a netlink
+# socket, the check fails closed and the agent never listens.
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX AF_NETLINK
+CapabilityBoundingSet=CAP_NET_ADMIN
+AmbientCapabilities=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target

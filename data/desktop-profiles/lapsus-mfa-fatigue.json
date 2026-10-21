@@ -1,0 +1,305 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Sofia Brandt",
+    "short": "sofia",
+    "email": "sofia.brandt@callbridge.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/dark/img0.jpg",
+    "wifiNetwork": "Callbridge-Floor3"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "sofia"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Outage tickets.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 64,
+        "modified": "2022-03-09T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Escalation matrix.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 65,
+        "modified": "2022-02-20T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Sofia",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-03-10T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-overnight-queue-",
+          "folder": "inbox",
+          "from": "Callbridge Shift Lead <shiftlead@callbridge.example>",
+          "to": "sofia.brandt@callbridge.example",
+          "subject": "Overnight queue handover",
+          "body": "Night queue is at 38 open tickets. Please prioritise the carrier outage cases first.\n\nShift Lead",
+          "time": "2022-03-09T22:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-sign-in-prompts-",
+          "folder": "inbox",
+          "from": "Callbridge Security <security@callbridge.example>",
+          "to": "sofia.brandt@callbridge.example",
+          "subject": "Sign-in prompts you did not start",
+          "body": "If you receive sign-in prompts you did not start, deny them and call the security line. Nobody on our team will ask you to approve one.\n\nCallbridge Security",
+          "time": "2022-03-02T10:15:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-training-next-we",
+          "folder": "inbox",
+          "from": "Raul Esposito <raul.esposito@callbridge.example>",
+          "to": "sofia.brandt@callbridge.example",
+          "subject": "Training next week",
+          "body": "Sofia, night staff training is moved to Wednesday at 16:00.\n\nRaul",
+          "time": "2022-03-07T13:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-raul-esposito",
+          "with": "Raul Esposito",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Raul Esposito",
+              "text": "Training moved to Wednesday.",
+              "time": "2022-03-10T20:10:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-night-desk",
+          "with": "Night desk",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Tess Whelan",
+              "text": "Carrier outage tickets are piling up.",
+              "time": "2022-03-10T22:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-carrier-outage-steps",
+        "folder": "notes",
+        "title": "Carrier outage steps",
+        "body": "Check the status board\nTag with the outage label\nTell the customer the ETA",
+        "modified": "2022-03-08T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-night-routine",
+        "folder": "notes",
+        "title": "Night routine",
+        "body": "Snack at midnight\nStretch at two\nHand over at six",
+        "modified": "2022-03-01T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-night-staff-training",
+        "title": "Night staff training",
+        "start": "2022-03-16T16:00:00Z",
+        "end": "2022-03-16T17:00:00Z",
+        "location": "Training room"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-hand-over-the-queue-at-six",
+        "list": "work",
+        "title": "Hand over the queue at six",
+        "due": "2022-03-11T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-raul-esposito",
+        "name": "Raul Esposito",
+        "email": "raul.esposito@callbridge.example",
+        "phone": "+1 555 0281",
+        "org": "Callbridge"
+      },
+      {
+        "id": "p-2-tess-whelan",
+        "name": "Tess Whelan",
+        "email": "tess.whelan@callbridge.example",
+        "phone": "+1 555 0282",
+        "org": "Callbridge"
+      },
+      {
+        "id": "p-3-callbridge-security",
+        "name": "Callbridge Security",
+        "email": "security@callbridge.example",
+        "phone": "+1 555 0280",
+        "org": "Callbridge"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Outage tickets: 38\nPriority: carrier outage\nNext update at 03:00"
+      },
+      "c-doc-2": {
+        "text": "Tier 2 night lead: Raul Esposito\nSecurity line on the staff card."
+      }
+    },
+    "web": {
+      "pages": {
+        "callbridge-nightdesk": {
+          "title": "Callbridge night desk",
+          "url": "nightdesk.callbridge.example",
+          "body": "Night desk\n\nSign-in service operating normally. No repeated prompts are reported.",
+          "choices": []
+        },
+        "callbridge-status": {
+          "title": "Callbridge status board",
+          "url": "status.callbridge.example",
+          "body": "Carrier outage in progress. Next update at 03:00.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-callbridge-nightdesk",
+          "title": "Callbridge night desk",
+          "url": "scene:callbridge-nightdesk"
+        },
+        {
+          "id": "bm-callbridge-status",
+          "title": "Callbridge status board",
+          "url": "scene:callbridge-status"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-callbridge-nightdesk",
+          "url": "scene:callbridge-nightdesk",
+          "title": "Callbridge night desk",
+          "time": "2022-03-10T21:50:00Z"
+        },
+        {
+          "id": "h-callbridge-status",
+          "url": "scene:callbridge-status",
+          "title": "Callbridge status board",
+          "time": "2022-03-10T22:30:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Deny prompts you did not start. Call security.",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "addr_history": {},
+    "keystore": {
+        "seed": "synthetic seed {{CANARY}} not a real wallet",
+        "type": "bip32"
+    },
+    "seed_version": 13,
+    "use_encryption": false,
+    "wallet_type": "standard"
+}

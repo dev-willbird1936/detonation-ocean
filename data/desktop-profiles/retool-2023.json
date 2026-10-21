@@ -1,0 +1,308 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Tomas Rydell",
+    "short": "tomas",
+    "email": "tomas.rydell@latchwork.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-bigsur.jpg",
+    "wifiNetwork": "Latchwork-Office"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "tomas"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Access review.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 70,
+        "modified": "2023-08-22T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Onboarding checklist.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 58,
+        "modified": "2023-07-30T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Tomas",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-08-27T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "terminal",
+    "stickies"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings",
+      "terminal"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-open-enrolment-s",
+          "folder": "inbox",
+          "from": "Latchwork People <people@latchwork.example>",
+          "to": "tomas.rydell@latchwork.example",
+          "subject": "Open enrolment starts 1 September",
+          "body": "Open enrolment for benefits starts on 1 September. Choices are made inside the staff intranet, never through a link in a message.\n\nLatchwork People",
+          "time": "2023-08-24T10:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-on-call-handover",
+          "folder": "inbox",
+          "from": "Ines Karlsson <ines.karlsson@latchwork.example>",
+          "to": "tomas.rydell@latchwork.example",
+          "subject": "On-call handover",
+          "body": "Tomas, handover notes for the week are in the runbook. Ping me if anything looks odd.\n\nInes",
+          "time": "2023-08-25T17:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-reminder-report-",
+          "folder": "inbox",
+          "from": "Latchwork Security <security@latchwork.example>",
+          "to": "tomas.rydell@latchwork.example",
+          "subject": "Reminder: report odd messages",
+          "body": "Use the Report button for anything about payroll or benefits that you did not expect. We will look within the hour.\n\nLatchwork Security",
+          "time": "2023-08-21T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-ines-karlsson",
+          "with": "Ines Karlsson",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Ines Karlsson",
+              "text": "Handover is in the runbook.",
+              "time": "2023-08-27T09:05:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-operations",
+          "with": "Operations",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Hugo Meza",
+              "text": "Weekend deploy freeze starts at six.",
+              "time": "2023-08-27T09:30:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-runbook-index",
+        "folder": "notes",
+        "title": "Runbook index",
+        "body": "Deploys\nAccess requests\nIncident roles",
+        "modified": "2023-08-25T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-support-tickets",
+        "folder": "notes",
+        "title": "Support tickets",
+        "body": "Check the access queue\nReview the audit export",
+        "modified": "2023-08-23T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-access-review",
+        "title": "Access review",
+        "start": "2023-08-28T11:00:00Z",
+        "end": "2023-08-28T11:45:00Z",
+        "location": "Video call"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-finish-the-access-review",
+        "list": "work",
+        "title": "Finish the access review",
+        "due": "2023-08-31T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-ines-karlsson",
+        "name": "Ines Karlsson",
+        "email": "ines.karlsson@latchwork.example",
+        "phone": "+1 555 0231",
+        "org": "Latchwork"
+      },
+      {
+        "id": "p-2-hugo-meza",
+        "name": "Hugo Meza",
+        "email": "hugo.meza@latchwork.example",
+        "phone": "+1 555 0232",
+        "org": "Latchwork"
+      },
+      {
+        "id": "p-3-latchwork-security",
+        "name": "Latchwork Security",
+        "email": "security@latchwork.example",
+        "phone": "+1 555 0230",
+        "org": "Latchwork"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Quarterly access review\nOwners confirmed: 31 of 34\nStatus: in progress"
+      },
+      "c-doc-2": {
+        "text": "Create account\nAssign hardware key\nAdd to the right groups"
+      }
+    },
+    "web": {
+      "pages": {
+        "latchwork-intranet": {
+          "title": "Latchwork intranet",
+          "url": "intranet.latchwork.example",
+          "body": "Intranet\n\nBenefits: open enrolment starts on 1 September. No payroll problems are reported for you.",
+          "choices": []
+        },
+        "latchwork-status": {
+          "title": "Latchwork status page",
+          "url": "status.latchwork.example",
+          "body": "All systems operational.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-latchwork-intranet",
+          "title": "Latchwork intranet",
+          "url": "scene:latchwork-intranet"
+        },
+        {
+          "id": "bm-latchwork-status",
+          "title": "Latchwork status page",
+          "url": "scene:latchwork-status"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-latchwork-intranet",
+          "url": "scene:latchwork-intranet",
+          "title": "Latchwork intranet",
+          "time": "2023-08-27T08:40:00Z"
+        },
+        {
+          "id": "h-latchwork-status",
+          "url": "scene:latchwork-status",
+          "title": "Latchwork status page",
+          "time": "2023-08-25T09:10:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Benefits go through the intranet only",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "verifiedAtUtc": "2026-10-06T21:23:20.343087+00:00",
+  "browser": "Chrome DevTools",
+  "url": "file:///C:/SyncedProjects/Websites/Vultr-Phishing-Sandbox/ocean-style-prototypes/codex-creature-depth-evolution/index.html",
+  "pageTitle": "Ocean Depth Forms \u2014 Creature Design Review",
+  "familySections": 6,
+  "cards": 18,
+  "depthMapping": {
+    "Sunlight+Twilight": "shared existing base",
+    "Midnight+Abyss": "one new native morphology",
+    "Trench": "one new advanced native morphology"
+  },
+  "browserImageLoadCheck": {
+    "loaded": 18,
+    "failed": 0,
+    "allComplete": true
+  },
+  "screenshot": {
+    "file": "browser-preview.png",
+    "sha256": "66e88271fece3ff4da804946f5b7067cbcb29ae64cb3ed70b219a30ea5d08fc4"
+  },
+  "nativeGeneratedFiles": [
+    {
+      "family": "anglerfish",
+      "stage": "midnight-abyss",
+      "file": "anglerfish-midnight-abyss-native.png",
+      "sha256": "ceff711d650a76e78b5ec7ae50daf629e06936713af07d170a75d5311a473c11"
+    },
+    {
+      "family": "anglerfish",
+      "stage": "trench",
+      "file": "anglerfish-trench-native.png",
+      "sha256": "68cd57d45e5d244023a42886102b60244868c6ae491e113030a66046d2e7c3e4"
+    },
+    {
+      "family": "viperfish",
+      "stage": "midnight-abyss",
+      "file": "viperfish-midnight-abyss-native.png",
+      "sha256": "cef0799c377492c120f2120394dc5b1491845bc75622d6fe7efd47ec5270d165"
+    },
+    {
+      "family": "viperfish",
+      "stage": "trench",
+      "file": "viperfish-trench-native.png",
+      "sha256": "7a12e9bd5434f2fa90425785ce6a2b0d6f516322a42b1828bd368c7aea1497a4"
+    },
+    {
+      "family": "siphonophore",
+      "stage": "midnight-abyss",
+      "file": "siphonophore-midnight-abyss-native.png",
+      "sha256": "61efb46198c2d5aec2e61d54fcf50b2ad62fd2536b2b4430d878e07b015c1a06"
+    },
+    {
+      "family": "siphonophore",
+      "stage": "trench",
+      "file": "siphonophore-trench-native.png",
+      "sha256": "48a6348da3de5770f5dc9db85ba66a98e3b6f5b66bfa9fd43cf4d5e1f2766e8c"
+    },
+    {
+      "family": "isopod-host",
+      "stage": "midnight-abyss",
+      "file": "isopod-host-midnight-abyss-native.png",
+      "sha256": "1b31b7a085d4fe2d99c2a1924a9f7b51f44cdc58ebfb3d4a5155435568165f01"
+    },
+    {
+      "family": "isopod-host",
+      "stage": "trench",
+      "file": "isopod-host-trench-native.png",
+      "sha256": "8890a65ce1811307543963d2f3246006d256d24a39dfa7fac993baba02695c2b"
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "midnight-abyss",
+      "file": "cookiecutter-midnight-abyss-native.png",
+      "sha256": "bfe2384b76abf7deca347cc644ee9b53c7ec572765e274beab753a32f05026af"
+    },
+    {
+      "family": "cookiecutter",
+      "stage": "trench",
+      "file": "cookiecutter-trench-native.png",
+      "sha256": "70be9e2f8c02e6e1c669c4cf0a00fb58fad387308a390b8ac75d4f3476ec7192"
+    },
+    {
+      "family": "octopus",
+      "stage": "midnight-abyss",
+      "file": "octopus-midnight-abyss-native.png",
+      "sha256": "ddd697cff6486cb3d328659b633f8d8fd89be60568e93cc4dd0b9a6e18038c73"
+    },
+    {
+      "family": "octopus",
+      "stage": "trench",
+      "file": "octopus-trench-native.png",
+      "sha256": "0973bd471edb11c748cd2195080e5115d907d3ea9b3d5219d378e52f30f7a53e"
+    }
+  ],
+  "limitations": [
+    "Browser review used individual family sprites on a flat design-review backdrop, not the 16:9 ocean backgrounds.",
+    "The visible palette chips describe intended family role profiles; the initial browser view shows native/source art, not the separate indexed 128px palette exports."
+  ]
+}

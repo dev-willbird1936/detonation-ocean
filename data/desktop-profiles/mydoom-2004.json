@@ -1,0 +1,311 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Gwen Aldous",
+    "short": "gwen",
+    "email": "gwen.aldous@pinecrest-parts.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img1.jpg",
+    "wifi": false,
+    "bluetooth": false,
+    "wifiNetwork": "Shop-LAN",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "gwen"
+      },
+      "f-stock-list": {
+        "id": "f-stock-list",
+        "parentId": "documents",
+        "name": "Stock-list-Jan.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2200,
+        "modified": "2004-01-21T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-stock-list"
+      },
+      "f-orders": {
+        "id": "f-orders",
+        "parentId": "documents",
+        "name": "Open-orders.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 800,
+        "modified": "2004-01-25T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-orders"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Gwen",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2004-01-26T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "media",
+    "settings",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "notes",
+      "calendar",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-brake-pad-order-44",
+          "folder": "inbox",
+          "from": "Dina Rourke <dina.rourke@driveline-supply.example>",
+          "to": "gwen.aldous@pinecrest-parts.example",
+          "subject": "Brake pad order 4417: shipping Thursday",
+          "body": "Gwen, the brake pads for order 4417 ship Thursday. Tracking will follow.\n\nDina",
+          "time": "2004-01-25T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-saturday-opening-h",
+          "folder": "inbox",
+          "from": "Walt Pinecrest <walt.pinecrest@pinecrest-parts.example>",
+          "to": "gwen.aldous@pinecrest-parts.example",
+          "subject": "Saturday opening hours",
+          "body": "We open at 8 on Saturday this month. Please update the sign.\n\nWalt",
+          "time": "2004-01-24T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-invoice-3318-recei",
+          "folder": "inbox",
+          "from": "Maggie Fenn <maggie.fenn@fenn-garage.example>",
+          "to": "gwen.aldous@pinecrest-parts.example",
+          "subject": "Invoice 3318 received",
+          "body": "Thanks, the invoice for 3318 arrived. I will pay it Friday.\n\nMaggie",
+          "time": "2004-01-23T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Gwen Aldous <gwen.aldous@pinecrest-parts.example>",
+          "to": "dina.rourke@driveline-supply.example",
+          "subject": "Re: Order 4417",
+          "body": "Please send the order by Thursday if you can.\n\nGwen",
+          "time": "2004-01-22T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-walt-pinecre",
+          "with": "Walt Pinecrest",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Walt Pinecrest",
+              "text": "Is the parts count done?",
+              "time": "2004-01-25T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Gwen Aldous",
+              "text": "Finishing it this afternoon.",
+              "time": "2004-01-25T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-shop-to-do",
+        "folder": "notes",
+        "title": "Shop to-do",
+        "body": "Update the Saturday sign\nCount the filters\nCall Driveline about order 4417",
+        "modified": "2004-01-25T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Parts count",
+        "start": "2004-01-26T15:00:00Z",
+        "end": "2004-01-26T17:00:00Z",
+        "location": "Stockroom"
+      },
+      {
+        "id": "e-2",
+        "title": "Delivery from Driveline",
+        "start": "2004-01-29T10:00:00Z",
+        "end": "2004-01-29T10:30:00Z",
+        "location": "Loading door"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Pay Fenn invoice reminder",
+        "due": "2004-01-30T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "Update Saturday sign",
+        "due": "2004-01-27T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-walt-pinecrest",
+        "name": "Walt Pinecrest",
+        "email": "walt.pinecrest@pinecrest-parts.example",
+        "phone": "+1 555 0161",
+        "org": "Pinecrest Auto Parts"
+      },
+      {
+        "id": "p-2-dina-rourke",
+        "name": "Dina Rourke",
+        "email": "dina.rourke@driveline-supply.example",
+        "phone": "+1 555 0162",
+        "org": "Driveline Supply"
+      },
+      {
+        "id": "p-3-karl-oyelaran",
+        "name": "Karl Oyelaran",
+        "email": "karl.oyelaran@pinecrest-parts.example",
+        "phone": "+1 555 0163",
+        "org": "Pinecrest Auto Parts"
+      },
+      {
+        "id": "p-4-maggie-fenn",
+        "name": "Maggie Fenn",
+        "email": "maggie.fenn@fenn-garage.example",
+        "phone": "+1 555 0164",
+        "org": "Fenn Garage"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-stock-list": {
+        "text": "Stock list January\nBrake pads: 40\nOil filters: 62\nWiper blades: 28"
+      },
+      "c-f-orders": {
+        "text": "Open orders\n4417 brake pads (Driveline)\n4421 wiper blades"
+      }
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Sat sign: open at 8",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 160,
+        "collapsed": false
+      }
+    ],
+    "web": {
+      "pages": {
+        "parts-catalogue": {
+          "title": "Driveline Supply: parts catalogue",
+          "url": "catalogue.driveline-supply.example/home",
+          "brand": "Driveline Supply",
+          "heading": "Parts catalogue",
+          "body": "Search the catalogue by part number. Next-day delivery on orders placed before noon.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Driveline Supply: parts catalogue",
+          "url": "scene:parts-catalogue"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:parts-catalogue",
+          "title": "Driveline Supply: parts catalogue",
+          "time": "2004-01-25T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

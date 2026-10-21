@@ -1,0 +1,23 @@
+{
+  "description": "Process cap reached: 126 children created, then one clone fails with EAGAIN (a program that stops at the first error).",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "resource-hijack"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "clone-eagain",
+      "detail": "1 process creations failed after 126 succeeded",
+      "at": "2026-01-01T00:00:00.000Z",
+      "count": 1,
+      "created": 126
+    }
+  ]
+}

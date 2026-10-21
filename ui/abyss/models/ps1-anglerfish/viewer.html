@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PS1 Anglerfish — animated preview</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0d151e;color:#d7e8e7;font:16px system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:24px}h1{margin:0 0 8px;font-size:25px}p{color:#a4bdc2}model-viewer{display:block;width:100%;height:70vh;min-height:360px;background:radial-gradient(ellipse,#243c46,#0d151e 70%);border:1px solid #304751;border-radius:12px}nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0}button,a{padding:10px 18px;border:1px solid #507575;border-radius:6px;background:#20383c;color:#d7e8e7;font:inherit;cursor:pointer}button[aria-pressed=true]{background:#b0edc5;color:#102b22}a{text-decoration:none}#status{margin-left:8px}small{color:#a4bdc2}
+</style>
+</head>
+<body><main>
+<h1>PS1 Anglerfish</h1>
+<p>932 triangles · 7 bones · 64 × 64 pixel atlas · Drag to orbit, scroll to zoom</p>
+<model-viewer id="fish" src="./anglerfish.glb" poster="./blender-preview.png" alt="A low-poly anglerfish with a glowing lure, sharp teeth and animated fins" camera-controls autoplay animation-name="Idle" camera-orbit="-55deg 75deg 5m" camera-target="0m 0.35m 0m" exposure="1.1" shadow-intensity="0" interaction-prompt="none"></model-viewer>
+<nav aria-label="Animation controls">
+<button data-clip="Idle" aria-pressed="true">Idle</button><button data-clip="Swim" aria-pressed="false">Swim</button><button data-clip="Bite" aria-pressed="false">Bite</button><button id="pause">Pause</button><a href="./anglerfish.glb" download>Download GLB</a><span id="status" role="status">Loading 3D model…</span>
+</nav><small>Idle and Swim loop. Bite plays once. Viewer library loads from unpkg; model stays local.</small>
+</main>
+<script type="module">
+const fish=document.querySelector('#fish'),status=document.querySelector('#status'),pause=document.querySelector('#pause');
+fish.addEventListener('load',()=>{status.textContent='Ready — Idle';window.anglerfishReady=true;});
+fish.addEventListener('error',()=>{status.textContent='Could not load the model. Check the network connection and reload.';});
+document.querySelectorAll('[data-clip]').forEach(button=>button.addEventListener('click',()=>{
+fish.pause();fish.animationName=button.dataset.clip;fish.currentTime=0;fish.play({repetitions:button.dataset.clip==='Bite'?1:Infinity});
+document.querySelectorAll('[data-clip]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+pause.textContent='Pause';status.textContent=`Playing — ${button.dataset.clip}`;
+}));
+pause.addEventListener('click',()=>{if(fish.paused){fish.play();pause.textContent='Pause';}else{fish.pause();pause.textContent='Resume';}});
+fish.addEventListener('finished',()=>{pause.textContent='Replay';status.textContent='Bite complete';});
+</script>
+</body></html>

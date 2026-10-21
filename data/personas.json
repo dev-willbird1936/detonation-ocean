@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "oauth_app": {
+    "id": "app-game-library-sync",
+    "name": "Game Library Sync",
+    "publisher": "Example Labs (synthetic)",
+    "purpose": "Synchronize a game library",
+    "requested_scopes": ["mail.read", "files.read"]
+  },
+  "personas": [
+    {
+      "id": "persona-game-001",
+      "synthetic": true,
+      "display_name": "Alex Example",
+      "role": "Synthetic game-platform user",
+      "email": "alex@example.invalid",
+      "account": {
+        "service_label": "Steam-style game account",
+        "handle": "player-001"
+      },
+      "mailbox": {
+        "id": "mailbox-game-001",
+        "messages": [
+          {
+            "id": "message-game-001",
+            "sender": "receipts@game.example.invalid",
+            "subject": "Synthetic game-library receipt"
+          },
+          {
+            "id": "message-game-002",
+            "sender": "support@game.example.invalid",
+            "subject": "Synthetic account notice"
+          }
+        ]
+      }
+    }
+  ]
+}

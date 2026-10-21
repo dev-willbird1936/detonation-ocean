@@ -1,0 +1,39 @@
+{
+  "description": "A few failed process creations after few successes, plus an informational pids limit item and a time cap: incomplete, not resource-hijack.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "incomplete"
+    ],
+    "depth": "twilight",
+    "findings": [],
+    "complete": false
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "clone-eagain",
+      "detail": "3 process creations failed after 40 succeeded",
+      "at": "2026-01-01T00:00:00.000Z",
+      "count": 3,
+      "created": 40
+    },
+    {
+      "id": "ev-2",
+      "source": "limits",
+      "kind": "pids",
+      "detail": "The sample hit the process limit.",
+      "at": "2026-01-01T00:00:01.000Z",
+      "crash": false
+    },
+    {
+      "id": "ev-3",
+      "source": "limits",
+      "kind": "time",
+      "detail": "The sample was stopped at the wall-clock limit.",
+      "at": "2026-01-01T00:00:02.000Z"
+    }
+  ]
+}

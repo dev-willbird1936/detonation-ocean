@@ -1,0 +1,12 @@
+{
+  "reviewer": "reviewer",
+  "runId": "2000c4a6-1533-4741-9c8c-f448a6caa959",
+  "decision": "CONFIRM",
+  "risk": "medium",
+  "category": "resource-use",
+  "target": "Four native image-generation requests; outputs in revisions/squid-kraken-v1 and normal Codex image staging.",
+  "environment": "Codex CLI native imagegen with workspace-write scope.",
+  "reversible": false,
+  "reason": "The brief limits generation to four requests, and the listed output files are not currently present. The requested scope and preservation constraints match. However, native usage may consume quota or incur unknown account usage that cannot be reversed; the user has not explicitly confirmed this specific resource use.",
+  "decisionAction": "Do not execute until the user explicitly confirms four native Codex image-generation requests using their account despite unknown quota/usage. No purchase, subscription, RetroDiffusion, provider fallback, or retries are included."
+}

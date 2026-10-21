@@ -1,0 +1,86 @@
+[
+  {
+    "family": "anglerfish",
+    "kind": "anatomy",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/anglerfish-anatomy-reference.png",
+    "sha256": "e3b7b830f15025aead4b112546efbbfa844d48354e075826671998c92cb20d6a",
+    "role": "shape/pose identity; existing high-quality selected sprite"
+  },
+  {
+    "family": "anglerfish",
+    "kind": "role-map",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/anglerfish-role-map-reference.png",
+    "sha256": "f9a9d2b5e12bd99eeaa8a43d33e02507f5a6c2905b789937ce11574ae9418d9d",
+    "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+  },
+  {
+    "family": "viperfish",
+    "kind": "anatomy",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/viperfish-anatomy-reference.png",
+    "sha256": "8b0ecdd8010dd087281dc0a162b7cd48d7e8bff8499c0a73a4abe3aaf600f115",
+    "role": "shape/pose identity; existing high-quality selected sprite"
+  },
+  {
+    "family": "viperfish",
+    "kind": "role-map",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/viperfish-role-map-reference.png",
+    "sha256": "ab8771d2e47359347cfec67e77336e8775b0db378c66521fa027419def78882e",
+    "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+  },
+  {
+    "family": "siphonophore",
+    "kind": "anatomy",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/siphonophore-anatomy-reference.png",
+    "sha256": "a8aa37077e7bb322b6c126f9dbf3b2fc16249f8f9ff309016c3e35a47def69e3",
+    "role": "shape/pose identity; existing high-quality selected sprite"
+  },
+  {
+    "family": "siphonophore",
+    "kind": "role-map",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/siphonophore-role-map-reference.png",
+    "sha256": "4702dc8806d81829da5ba2474a33f9573ff5e19c27c6112c1199125bcc52e09b",
+    "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+  },
+  {
+    "family": "isopod-host",
+    "kind": "anatomy",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/isopod-host-anatomy-reference.png",
+    "sha256": "32a860b7c044f7f5cf4b2247910f9ce16940abb5e58c29e8a60ee9f1ed096ee1",
+    "role": "shape/pose identity; existing high-quality selected sprite"
+  },
+  {
+    "family": "isopod-host",
+    "kind": "role-map",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/isopod-host-role-map-reference.png",
+    "sha256": "9c8cea3972ffb88db7e731f0624997f0a9c1c25c245dde9dcd80f4970a5aaa99",
+    "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+  },
+  {
+    "family": "cookiecutter",
+    "kind": "anatomy",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/cookiecutter-anatomy-reference.png",
+    "sha256": "7ec56bf501dba48e21ef8a66004e9ac3f2dd763be3c3cbfbc07c181f99252285",
+    "role": "shape/pose identity; existing high-quality selected sprite"
+  },
+  {
+    "family": "cookiecutter",
+    "kind": "role-map",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/cookiecutter-role-map-reference.png",
+    "sha256": "b7f00d012c37c91b8a0385ea57fdc53cbad1bfb644aa0a9c83daae00ea08aa9d",
+    "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+  },
+  {
+    "family": "octopus",
+    "kind": "anatomy",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/octopus-anatomy-reference.png",
+    "sha256": "601f45952d1f8ece56970653f70ef88c47f3e3979026e92bdc6697501684ad71",
+    "role": "shape/pose identity; existing high-quality selected sprite"
+  },
+  {
+    "family": "octopus",
+    "kind": "role-map",
+    "file": "ocean-style-prototypes/codex-creature-depth-evolution/inputs/octopus-role-map-reference.png",
+    "sha256": "14bba5459fa54795eda77b94adb1f33d08b8303e0ead85dcbcf315c4383cfd91",
+    "role": "primary/secondary/tertiary region placement only; old magenta/cyan/lime are NOT the target palette"
+  }
+]

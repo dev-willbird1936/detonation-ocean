@@ -1,0 +1,22 @@
+{
+  "description": "Evidence that adds only the unsigned signal.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "unsigned"
+    ],
+    "depth": "twilight",
+    "findings": []
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "identify",
+      "kind": "unsigned",
+      "detail": "unsigned",
+      "at": "2026-01-01T00:00:00.000Z",
+      "reason": "no Authenticode signature"
+    }
+  ]
+}

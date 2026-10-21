@@ -1,0 +1,307 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Colm Brennan",
+    "short": "colm",
+    "email": "colm.brennan@fernhill-works.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img0.jpg",
+    "wifiNetwork": "Fernhill-Admin"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "colm"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Roll-out plan.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 55,
+        "modified": "2023-06-12T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Printer faults.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 44,
+        "modified": "2023-06-13T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Colm",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-06-14T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings",
+      "terminal"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-tickets-assigned",
+          "folder": "inbox",
+          "from": "Fernhill Helpdesk <helpdesk@fernhill-works.example>",
+          "to": "colm.brennan@fernhill-works.example",
+          "subject": "Tickets assigned to you this week",
+          "body": "You have 6 open tickets. Two are about the new chat app roll-out.\n\nHelpdesk",
+          "time": "2023-06-13T08:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-welcome-to-huddl",
+          "folder": "inbox",
+          "from": "Huddle Notifications <notifications@huddle-chat.example>",
+          "to": "colm.brennan@fernhill-works.example",
+          "subject": "Welcome to Huddle",
+          "body": "Huddle is now available to your organisation. Chats from outside your organisation show an external label.\n\nHuddle",
+          "time": "2023-06-05T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-chat-app-roll-ou",
+          "folder": "inbox",
+          "from": "Maeve Duffy <maeve.duffy@fernhill-works.example>",
+          "to": "colm.brennan@fernhill-works.example",
+          "subject": "Chat app roll-out plan",
+          "body": "Colm, the roll-out plan is in the shared folder. Verification messages from IT always come from the helpdesk mailbox.\n\nMaeve",
+          "time": "2023-06-12T14:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-maeve-duffy",
+          "with": "Maeve Duffy",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Maeve Duffy",
+              "text": "Roll-out plan is ready for you.",
+              "time": "2023-06-14T08:20:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-it-team",
+          "with": "IT team",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Ciaran Boyle",
+              "text": "Two printers are down on level 2.",
+              "time": "2023-06-14T08:45:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-roll-out-checklist",
+        "folder": "notes",
+        "title": "Roll-out checklist",
+        "body": "Pilot group first\nTrain the front desk\nCheck external labels",
+        "modified": "2023-06-12T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-ticket-notes",
+        "folder": "notes",
+        "title": "Ticket notes",
+        "body": "Printers level 2\nPassword resets\nChat app questions",
+        "modified": "2023-06-13T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-roll-out-checkpoint",
+        "title": "Roll-out checkpoint",
+        "start": "2023-06-15T11:00:00Z",
+        "end": "2023-06-15T11:30:00Z",
+        "location": "IT office"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-fix-the-level-2-printers",
+        "list": "work",
+        "title": "Fix the level 2 printers",
+        "due": "2023-06-15T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-maeve-duffy",
+        "name": "Maeve Duffy",
+        "email": "maeve.duffy@fernhill-works.example",
+        "phone": "+1 555 0311",
+        "org": "Fernhill Works"
+      },
+      {
+        "id": "p-2-ciaran-boyle",
+        "name": "Ciaran Boyle",
+        "email": "ciaran.boyle@fernhill-works.example",
+        "phone": "+1 555 0312",
+        "org": "Fernhill Works"
+      },
+      {
+        "id": "p-3-fernhill-helpdesk",
+        "name": "Fernhill Helpdesk",
+        "email": "helpdesk@fernhill-works.example",
+        "phone": "+1 555 0310",
+        "org": "Fernhill Works"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Chat app roll-out\nPilot: 20 staff\nFull roll-out: 4 July"
+      },
+      "c-doc-2": {
+        "text": "Level 2 printers are offline. Parts ordered."
+      }
+    },
+    "web": {
+      "pages": {
+        "fernhill-directory": {
+          "title": "Fernhill staff directory",
+          "url": "directory.fernhill-works.example",
+          "body": "Staff directory\n\nDepartments: Helpdesk, Facilities, Finance. There is no Identity Protection team.",
+          "choices": []
+        },
+        "fernhill-tickets": {
+          "title": "Fernhill ticket queue",
+          "url": "tickets.fernhill-works.example",
+          "body": "Open tickets: 6.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-fernhill-directory",
+          "title": "Fernhill staff directory",
+          "url": "scene:fernhill-directory"
+        },
+        {
+          "id": "bm-fernhill-tickets",
+          "title": "Fernhill ticket queue",
+          "url": "scene:fernhill-tickets"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-fernhill-directory",
+          "url": "scene:fernhill-directory",
+          "title": "Fernhill staff directory",
+          "time": "2023-06-14T08:10:00Z"
+        },
+        {
+          "id": "h-fernhill-tickets",
+          "url": "scene:fernhill-tickets",
+          "title": "Fernhill ticket queue",
+          "time": "2023-06-13T08:40:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "External chat label means be careful",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

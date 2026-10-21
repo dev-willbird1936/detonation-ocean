@@ -1,0 +1,113 @@
+{
+  "request": "rock black cave cliff",
+  "generatedAt": "2026-10-02T16:07:24.090Z",
+  "source": "ambientcg",
+  "asset": {
+    "source": "ambientcg",
+    "id": "Rock035",
+    "title": "Rock 035",
+    "url": "https://ambientcg.com/a/Rock035",
+    "category": "Textures",
+    "tags": [
+      "35",
+      "black",
+      "cave",
+      "cliff",
+      "grey",
+      "rock",
+      "stone"
+    ],
+    "series": [],
+    "license": "Creative Commons CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false,
+    "licenseSafety": 10,
+    "score": 30,
+    "reason": "ambientCG CC0 material result",
+    "previewUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Rock035.jpg",
+    "downloadUrl": "https://ambientcg.com/get?file=Rock035_1K-JPG.zip",
+    "downloadFileName": "Rock035_1K-JPG.zip",
+    "downloadMode": "direct",
+    "manualDownload": false
+  },
+  "paths": {
+    "root": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Rock035",
+    "pack": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Rock035\\pack",
+    "ready": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Rock035\\ready",
+    "manifest": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Rock035\\asset-grabber-manifest.json"
+  },
+  "selectedFiles": [
+    "Rock035.png",
+    "Rock035_1K-JPG_AmbientOcclusion.jpg",
+    "Rock035_1K-JPG_Color.jpg",
+    "Rock035_1K-JPG_Displacement.jpg",
+    "Rock035_1K-JPG_NormalDX.jpg",
+    "Rock035_1K-JPG_NormalGL.jpg",
+    "Rock035_1K-JPG_Roughness.jpg",
+    "Rock035_1K-JPG.blend",
+    "Rock035_1K-JPG.mtlx",
+    "Rock035_1K-JPG.tres",
+    "Rock035_1K-JPG.usdc"
+  ],
+  "readyFiles": [
+    "Rock035.png",
+    "Rock035_1K-JPG_AmbientOcclusion.jpg",
+    "Rock035_1K-JPG_Color.jpg",
+    "Rock035_1K-JPG_Displacement.jpg",
+    "Rock035_1K-JPG_NormalDX.jpg",
+    "Rock035_1K-JPG_NormalGL.jpg",
+    "Rock035_1K-JPG_Roughness.jpg",
+    "Rock035_1K-JPG.blend",
+    "Rock035_1K-JPG.mtlx",
+    "Rock035_1K-JPG.tres",
+    "Rock035_1K-JPG.usdc"
+  ],
+  "allExtractedFileCount": 11,
+  "cacheKey": "{\"request\":\"rock black cave cliff\",\"category\":\"Textures\",\"source\":\"ambientcg\",\"fullPack\":false,\"maxReadyFiles\":80,\"asset\":{\"source\":\"ambientcg\",\"id\":\"Rock035\",\"url\":\"https://ambientcg.com/a/Rock035\",\"downloadUrl\":\"https://ambientcg.com/get?file=Rock035_1K-JPG.zip\"}}",
+  "advisor": {
+    "provider": "none",
+    "used": false,
+    "originalRequest": "rock black cave cliff",
+    "request": "rock black cave cliff",
+    "category": "Textures",
+    "source": "ambientcg"
+  },
+  "diagnostics": [
+    {
+      "source": "ambientcg",
+      "ok": true,
+      "count": 1,
+      "durationMs": 429
+    }
+  ],
+  "license": {
+    "name": "Creative Commons CC0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false,
+    "shipSafe": true
+  },
+  "engineReadiness": {
+    "recommendedFormats": [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp"
+    ],
+    "selectedFormats": [
+      "blend",
+      "jpg",
+      "mtlx",
+      "png",
+      "tres",
+      "usdc"
+    ],
+    "warnings": [],
+    "notes": [
+      "Use files from ready/ first; full extracted pack remains in pack/."
+    ]
+  },
+  "importNotes": [
+    "Use files from ready/ first; full extracted pack remains in pack/."
+  ],
+  "alternatives": []
+}

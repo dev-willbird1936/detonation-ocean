@@ -1,0 +1,26 @@
+{
+  "description": "Blocked connect whose payload carries a canary token.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "unknown-hosts"
+    ],
+    "depth": "midnight",
+    "findings": [
+      "exfil-attempt"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "connect",
+      "detail": "connect 203.0.113.9",
+      "at": "2026-01-01T00:00:00.000Z",
+      "host": "203.0.113.9",
+      "port": 443,
+      "payloadPreview": "POST /u HTTP/1.1 body=CANARY-AWS-7f3a9c"
+    }
+  ]
+}

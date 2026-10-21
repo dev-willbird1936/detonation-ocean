@@ -1,0 +1,23 @@
+/* Bestiary cards. Page chrome, palette and type come from ui/abyss/retro-pixel.css (content-page block). */
+.tiers-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--t) * 12)), 1fr)); gap: calc(var(--u) * 6); list-style: none; margin: 0; padding: 0; }
+.card { --bd: var(--tint, var(--p5)); --hi: var(--p3); list-style: none; display: flex; gap: calc(var(--u) * 4); align-items: flex-start; box-sizing: border-box; padding: calc(var(--u) * 4); background: var(--dither), var(--p1); }
+.tiers-list .card { display: block; }
+.card:target, .card.picked { --bd: var(--gold); }
+.card:focus-visible { box-shadow: var(--ring) !important; }
+.card-text { min-width: 0; flex: 1; }
+.card-text h3 { margin-bottom: calc(var(--u) * 2); }
+.card-text p { margin: 0 0 calc(var(--u) * 2); }
+.card-text b { color: var(--tint, var(--p6)); font-weight: 400; }
+.card .eaten { color: var(--p8); }
+.pg-status { color: var(--faint); }
+
+/* One frame of a sheet at a time; steps() advances it. Cell sizes: creatures 128 px, fish 64 px. */
+.sprite { --s: calc(var(--u) * 24); flex: none; display: block; width: var(--s); height: var(--s); image-rendering: pixelated; background: no-repeat 0 0 / calc(var(--s) * 14) var(--s); animation: sheet 1.4s steps(14) infinite; }
+.sprite.fish { --s: calc(var(--u) * 16); }
+.sprite.stand-in { width: calc(var(--u) * 26); height: auto; animation: none; align-self: center; }
+.sprite.none { display: grid; place-items: center; background: var(--p2); font: 400 calc(var(--t) * 2) var(--serif); color: var(--p6); animation: none; }
+.sprite.dark { filter: brightness(0); opacity: .7; }
+.sprite.none.dark { filter: none; background: var(--p0); color: var(--p3); }
+@keyframes sheet { to { background-position-x: calc(var(--s) * -14); } }
+@media (max-width: 760px) { .card { flex-direction: column; } .sprite { --s: calc(var(--u) * 32); } }
+@media (prefers-reduced-motion: reduce) { .sprite { animation: none; } }

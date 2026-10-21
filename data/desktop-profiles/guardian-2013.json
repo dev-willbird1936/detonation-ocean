@@ -1,0 +1,261 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Bryn Hallett",
+    "short": "bryn",
+    "email": "bryn.hallett@meridiancourier.example",
+    "avatar": "guardian-2013"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "green",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeD/img2.jpg",
+    "wifiNetwork": "Courier-Newsroom",
+    "battery": 78
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "bryn"
+      },
+      "f-feature": {
+        "id": "f-feature",
+        "parentId": "documents",
+        "name": "Transport feature draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 61,
+        "modified": "2013-04-25T15:00:00Z",
+        "trashed": false,
+        "contentId": "c-feature"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-conf",
+        "app": "calendar",
+        "title": "Morning conference",
+        "body": "Newsdesk morning conference at 10.",
+        "time": "2013-04-26T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "media",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "contacts",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-ed",
+          "folder": "inbox",
+          "from": "Fiona Marsh <fiona.marsh@meridiancourier.example>",
+          "to": "bryn.hallett@meridiancourier.example",
+          "subject": "Feature for Saturday",
+          "body": "Bryn,\n\nCan you file the transport feature by Thursday evening? Photos are arranged.\n\nFiona",
+          "time": "2013-04-25T16:00:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-pr",
+          "folder": "inbox",
+          "from": "Courier Social <social@meridiancourier.example>",
+          "to": "bryn.hallett@meridiancourier.example",
+          "subject": "Today's social plan",
+          "body": "We will post the transport feature on Saturday morning. Send us a pull quote.",
+          "time": "2013-04-25T11:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-source",
+          "folder": "inbox",
+          "from": "Tolu Adeyemi <tolu.adeyemi@railwatch.example>",
+          "to": "bryn.hallett@meridiancourier.example",
+          "subject": "Figures you asked for",
+          "body": "Attached are the commuter figures I mentioned. Happy to talk them through.",
+          "time": "2013-04-24T15:15:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Bryn Hallett <bryn.hallett@meridiancourier.example>",
+          "to": "fiona.marsh@meridiancourier.example",
+          "subject": "Re: Pitch",
+          "body": "Thanks. I will start interviews tomorrow.",
+          "time": "2013-04-23T09:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-desk",
+          "with": "Newsdesk",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Fiona Marsh",
+              "text": "Transport feature needs a stronger intro.",
+              "time": "2013-04-25T17:00:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Bryn Hallett",
+              "text": "Rewriting it now.",
+              "time": "2013-04-25T17:03:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-trans",
+        "folder": "notes",
+        "title": "Transport feature",
+        "body": "Interview: Tolu Adeyemi\nFigures: peak-hour crowding\nPull quote still needed",
+        "modified": "2013-04-25T12:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-conf",
+        "title": "Morning conference",
+        "start": "2013-04-26T10:00:00Z",
+        "end": "2013-04-26T10:30:00Z",
+        "location": "Newsroom"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-file",
+        "list": "work",
+        "title": "File the transport feature",
+        "due": "2013-04-25T18:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-fiona",
+        "name": "Fiona Marsh",
+        "email": "fiona.marsh@meridiancourier.example",
+        "phone": "+44 555 0181",
+        "org": "The Meridian Courier"
+      },
+      {
+        "id": "p-social",
+        "name": "Courier Social",
+        "email": "social@meridiancourier.example",
+        "phone": "+44 555 0182",
+        "org": "The Meridian Courier"
+      },
+      {
+        "id": "p-tolu",
+        "name": "Tolu Adeyemi",
+        "email": "tolu.adeyemi@railwatch.example",
+        "phone": "+44 555 0183",
+        "org": "Railwatch"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-feature": {
+        "text": "Peak-hour crowding is up again.\n\nDraft intro to be rewritten."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-courier": {
+          "title": "The Meridian Courier",
+          "url": "www.meridiancourier.example",
+          "brand": "The Meridian Courier",
+          "heading": "News, comment and culture",
+          "body": "Today's top stories. This is a fictional newspaper site.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-courier",
+          "title": "The Meridian Courier"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

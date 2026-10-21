@@ -1,0 +1,56 @@
+{
+  "description": "Three seeded Documents are renamed with a new extension.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "trench",
+    "findings": [
+      "encrypt"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "diff",
+      "kind": "renamed",
+      "detail": "renamed /home/dana/Documents/Q3-report.docx",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/home/dana/Documents/Q3-report.docx",
+      "to": "/home/dana/Documents/Q3-report.docx.locked",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 4.6,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-2",
+      "source": "diff",
+      "kind": "renamed",
+      "detail": "renamed /home/dana/Documents/budget.xlsx",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "/home/dana/Documents/budget.xlsx",
+      "to": "/home/dana/Documents/budget.xlsx.locked",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 4.6,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    },
+    {
+      "id": "ev-3",
+      "source": "diff",
+      "kind": "renamed",
+      "detail": "renamed /home/dana/Documents/notes.txt",
+      "at": "2026-01-01T00:00:02.000Z",
+      "path": "/home/dana/Documents/notes.txt",
+      "to": "/home/dana/Documents/notes.txt.locked",
+      "seeded": true,
+      "entropyBefore": 4.6,
+      "entropyAfter": 4.6,
+      "sizeBefore": 800,
+      "sizeAfter": 800
+    }
+  ]
+}

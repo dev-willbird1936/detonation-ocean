@@ -1,0 +1,48 @@
+{
+  "reviewer": "Parent-agent visual inspection of the actual 1254x1254 native images and six-family contact sheet",
+  "nativeImageCount": 12,
+  "status": "Reviewed; no files regenerated or modified during review.",
+  "sharedChecks": {
+    "transparentRGBA": "All 12 files were checked for alpha extrema 0 and 255.",
+    "fullCreatureAndPixelStyle": "All 12 show an isolated, recognizable pixel-art creature with a transparent background.",
+    "paletteIntent": "Primary/secondary/tertiary regions appear distinct; palette-indexed derivatives quantize to the exact family profiles.",
+    "scientificValidation": "Not performed; these are visual concept sprites."
+  },
+  "families": [
+    {
+      "family": "anglerfish",
+      "midnightAbyss": {"file": "anglerfish-midnight-abyss-native.png", "decision": "keep", "review": "Recognizable single raised lure, enlarged jaw and clear fangs; same family pose."},
+      "trench": {"file": "anglerfish-trench-native.png", "decision": "keep", "review": "Broader mature jaw and more extended lure than the midpoint; still unmistakably an anglerfish."}
+    },
+    {
+      "family": "viperfish",
+      "midnightAbyss": {"file": "viperfish-midnight-abyss-native.png", "decision": "keep", "review": "Long, slender family silhouette with more prominent needle teeth and photophores."},
+      "trench": {"file": "viperfish-trench-native.png", "decision": "keep", "review": "Larger jaw/fangs and dorsal display than the midpoint. The elongated silhouette remains appropriate to its family."}
+    },
+    {
+      "family": "siphonophore",
+      "midnightAbyss": {"file": "siphonophore-midnight-abyss-native.png", "decision": "keep", "review": "A single connected stem with repeated attached zooids; not a set of detached jellyfish."},
+      "trench": {"file": "siphonophore-trench-native.png", "decision": "keep", "review": "Longer, more mature connected colony with additional visible structures."}
+    },
+    {
+      "family": "isopod-host",
+      "midnightAbyss": {"file": "isopod-host-midnight-abyss-native.png", "decision": "keep-with-caveat", "review": "Armored host fish with a segmented tan parasite-like form inside the open mouth. The parasite anatomy is stylized and could be clearer."},
+      "trench": {"file": "isopod-host-trench-native.png", "decision": "keep-with-caveat", "review": "More advanced armored host and an attached segmented mouth form. The isopod identity is not scientifically validated."}
+    },
+    {
+      "family": "cookiecutter",
+      "midnightAbyss": {"file": "cookiecutter-midnight-abyss-native.png", "decision": "keep", "review": "Compact shark body, circular toothed mouth and contrasting collar remain recognizable."},
+      "trench": {"file": "cookiecutter-trench-native.png", "decision": "keep", "review": "Bulkier megalodon-inspired shark profile with larger circular jaws and retained collar motif."}
+    },
+    {
+      "family": "octopus",
+      "midnightAbyss": {"file": "octopus-midnight-abyss-native.png", "decision": "keep", "review": "Exactly eight attached arms, suckers and mantle are visible; more imposing than the base."},
+      "trench": {"file": "octopus-trench-native.png", "decision": "keep-with-caveat", "review": "Exactly eight attached arms and a larger, more aggressive kraken-like mantle. Overall pose is close to the midpoint, so the morphological difference is moderate rather than dramatic."}
+    }
+  ],
+  "residualNotes": [
+    "The viewer shows the user-requested five depth labels using three shared morphology profiles; it does not invent five separate creature morphologies.",
+    "No additional image generation was requested or performed after the 12 approved native outputs.",
+    "Codex usage price and quota remain unknown."
+  ]
+}

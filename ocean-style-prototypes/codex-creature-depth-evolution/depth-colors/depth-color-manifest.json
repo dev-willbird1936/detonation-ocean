@@ -1,0 +1,2836 @@
+{
+  "schema": "evolution-depth-colors-v1",
+  "status": "candidate",
+  "morphology": "accepted-for-pipeline",
+  "qvl": "pending",
+  "counts": {
+    "sources": 18,
+    "variants": 30,
+    "png_files": 96
+  },
+  "tool_versions": {
+    "python": "3.11.4",
+    "pillow": "12.2.0"
+  },
+  "colour_math": {
+    "space": "CIELAB D65, float64",
+    "P": 18.0,
+    "H_deg": 274.4,
+    "CT": 20.0,
+    "steps": {
+      "sunlight": {
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0
+      },
+      "twilight": {
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0
+      },
+      "midnight": {
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0
+      },
+      "abyss": {
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85
+      },
+      "trench": {
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75
+      }
+    },
+    "white": [
+      0.95047,
+      1.0,
+      1.08883
+    ],
+    "rgb_to_xyz": [
+      [
+        0.4124564,
+        0.3575761,
+        0.1804375
+      ],
+      [
+        0.2126729,
+        0.7151522,
+        0.072175
+      ],
+      [
+        0.0193339,
+        0.119192,
+        0.9503041
+      ]
+    ],
+    "xyz_to_rgb": [
+      [
+        3.2404542,
+        -1.5371385,
+        -0.4985314
+      ],
+      [
+        -0.969266,
+        1.8760108,
+        0.041556
+      ],
+      [
+        0.0556434,
+        -0.2040259,
+        1.0572252
+      ]
+    ],
+    "rounding": "python round(), clamp 0..255, linear clamp 0..1 before companding"
+  },
+  "normalization": {
+    "key_color": "#FF00FF",
+    "key_tolerance": 120.0,
+    "despill_ramp": [
+      60.0,
+      180.0
+    ],
+    "edge_band_px": 2,
+    "alpha_threshold": 128,
+    "fit_long_side": 96,
+    "canvas": 128,
+    "min_margin_128": 16,
+    "display": "nearest x2"
+  },
+  "inputs": {
+    "palette-profiles.json": "c1dd02d3c9f7fe8889c173e00628bac9468bd7e62ccdb7148f782c3c5edf9712",
+    "variant-manifest.json": "5167317e46d03d913ac8ac4e0dea1fe1f0f4f9f7e04fabbb871bb675bd763312",
+    "revisions/squid-kraken-v1/app-preview-manifest.json": "f1ea1c6818991c4f3ab220a63310b8e9e77bd941ac3e37baa88d878f4e1a5454",
+    "squid-kraken-v1/palette-profile.json": "verified equal to palette-profiles.json#families.octopus"
+  },
+  "legacy_untouched": [
+    "variants/",
+    "masks/",
+    "revisions/",
+    "variant-manifest.json",
+    "palette-profiles.json",
+    "../codex-creature-palette-base/depth-variants/"
+  ],
+  "sources": [
+    {
+      "id": "anglerfish-base-rich",
+      "form": "anglerfish",
+      "stage": "base-rich",
+      "palette_family": "anglerfish",
+      "file": "morphology/anglerfish-base-rich-128.png",
+      "sha256": "1bdc835521ce3db2eced833b28777ef14039d3ff4317e05b481a846d0fb29a47",
+      "display_file": "morphology/anglerfish-base-rich-256.png",
+      "display_sha256": "2b9720c39b7185057a5ba3d3d3a02f83137e465fd51922b28801817ddc7f89be",
+      "origin": "unchanged",
+      "origin_file": "variants/anglerfish-base-rich-128.png",
+      "origin_sha256": "dffbbda9b280c1db6f6d99c79e6bd18b86f89d64126b1c22a7cfed2711dc68a1",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 256,
+        "primary.base": 1181,
+        "primary.highlight": 39,
+        "secondary.shadow": 214,
+        "secondary.base": 732,
+        "secondary.highlight": 57,
+        "tertiary.shadow": 0,
+        "tertiary.base": 166,
+        "tertiary.highlight": 0,
+        "outline": 536,
+        "mouth_pupil": 912,
+        "eye_teeth": 222
+      },
+      "visible_color_count": 10,
+      "alpha_sha256": "d04702b69b843ab97289c768aac193c1bb6436b4fc50883e49c94b591dbc2892",
+      "status": "candidate"
+    },
+    {
+      "id": "anglerfish-midnight-abyss",
+      "form": "anglerfish",
+      "stage": "midnight-abyss",
+      "palette_family": "anglerfish",
+      "file": "morphology/anglerfish-midnight-abyss-128.png",
+      "sha256": "8e83b2ec00a4d40a6d4653d4e95c03c88e239cef9b2553fc8f21b07ad411bafb",
+      "display_file": "morphology/anglerfish-midnight-abyss-256.png",
+      "display_sha256": "20b18716943a1a7ca1ce9a773a267b4a298635feeaf9c5e0a3132418b90b8751",
+      "origin": "unchanged",
+      "origin_file": "variants/anglerfish-midnight-abyss-128.png",
+      "origin_sha256": "e6b64154f8fb83b70151719e035a0908e3cedc98db00a6e65ee3f5808487d5e4",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 1035,
+        "primary.base": 302,
+        "primary.highlight": 212,
+        "secondary.shadow": 445,
+        "secondary.base": 576,
+        "secondary.highlight": 247,
+        "tertiary.shadow": 53,
+        "tertiary.base": 74,
+        "tertiary.highlight": 44,
+        "outline": 490,
+        "mouth_pupil": 878,
+        "eye_teeth": 174
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "125e9e9e352b8f864d7371f0ab1c87107d32820833b0791a2d155204d7251fce",
+      "status": "candidate"
+    },
+    {
+      "id": "anglerfish-trench",
+      "form": "anglerfish",
+      "stage": "trench",
+      "palette_family": "anglerfish",
+      "file": "morphology/anglerfish-trench-128.png",
+      "sha256": "59de45697c6d00000cf004fc8f586099edafc906b56aa58d52ae532df7ffac21",
+      "display_file": "morphology/anglerfish-trench-256.png",
+      "display_sha256": "bb976bcb32aa17e2a9ad8ceb9affbf5ebc791a30c7a0977fa0e8ba0402a81e15",
+      "origin": "round5-replacement",
+      "origin_file": "revisions/evolution-iteration-02/anglerfish-trench-v2-native.png",
+      "origin_sha256": "d635c2f571624123b3764dd6481861a9ca6aa32b4cc66454ba215eee1b33ad61",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "native_bbox": [
+        95,
+        142,
+        1191,
+        1148
+      ],
+      "fit_size": [
+        96,
+        88
+      ],
+      "process": {
+        "method": "alpha-threshold",
+        "alpha_threshold": 128,
+        "haze_px": 28694,
+        "retained_component_px": 572577,
+        "discarded_components_px": [],
+        "removed_component_px": 0,
+        "enclosed_pockets": 0
+      },
+      "mean_index_error": 21.308,
+      "morphology": "accepted-for-pipeline",
+      "swatch_pixels": {
+        "primary.shadow": 907,
+        "primary.base": 238,
+        "primary.highlight": 155,
+        "secondary.shadow": 454,
+        "secondary.base": 579,
+        "secondary.highlight": 221,
+        "tertiary.shadow": 94,
+        "tertiary.base": 118,
+        "tertiary.highlight": 63,
+        "outline": 557,
+        "mouth_pupil": 831,
+        "eye_teeth": 183
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "eaa0725f223cb5aeaedc916e7bebb6e34e198cd3cc6d394a9b0c05358c4bab6c",
+      "status": "candidate"
+    },
+    {
+      "id": "viperfish-base-rich",
+      "form": "viperfish",
+      "stage": "base-rich",
+      "palette_family": "viperfish",
+      "file": "morphology/viperfish-base-rich-128.png",
+      "sha256": "2bb9f666bb9af7a2ffedbbae8d3155060fa6afa748ea7e7525d61768a2bf4fc7",
+      "display_file": "morphology/viperfish-base-rich-256.png",
+      "display_sha256": "2c3475d6a61b4d9f3c337486cf95f82e64c8084b6a43dfd74ff027911075d33c",
+      "origin": "unchanged",
+      "origin_file": "variants/viperfish-base-rich-128.png",
+      "origin_sha256": "77a9d03bb509e3045486d82b4567ca600e84ef96a74213e6e4dd3c62151d09e8",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 112,
+        "primary.base": 205,
+        "primary.highlight": 93,
+        "secondary.shadow": 91,
+        "secondary.base": 229,
+        "secondary.highlight": 55,
+        "tertiary.shadow": 14,
+        "tertiary.base": 27,
+        "tertiary.highlight": 12,
+        "outline": 262,
+        "mouth_pupil": 325,
+        "eye_teeth": 47
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "83cb5bcdc4c44c798d3d8f726076dc795dc1dca2f3900c160858599e2b9a1f31",
+      "status": "candidate"
+    },
+    {
+      "id": "viperfish-midnight-abyss",
+      "form": "viperfish",
+      "stage": "midnight-abyss",
+      "palette_family": "viperfish",
+      "file": "morphology/viperfish-midnight-abyss-128.png",
+      "sha256": "1765295caacb1e869c5feec98c288aa0b4319cbf43e637ee13264263088672e5",
+      "display_file": "morphology/viperfish-midnight-abyss-256.png",
+      "display_sha256": "4e831fa4ed03f944b8f5e6e40c8ff912bcdaa340f49cedfa9cc422725277fd09",
+      "origin": "round5-replacement",
+      "origin_file": "revisions/evolution-iteration-02/viperfish-midnight-abyss-v2-native.png",
+      "origin_sha256": "002ac9556d75cd7d911d949b5e571d79eff93819dfb4c0f076e5523cd1a8d57c",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "native_bbox": [
+        71,
+        361,
+        1210,
+        907
+      ],
+      "fit_size": [
+        96,
+        46
+      ],
+      "process": {
+        "method": "alpha-threshold",
+        "alpha_threshold": 128,
+        "haze_px": 23020,
+        "retained_component_px": 205208,
+        "discarded_components_px": [],
+        "removed_component_px": 0,
+        "enclosed_pockets": 1
+      },
+      "mean_index_error": 22.576,
+      "morphology": "accepted-for-pipeline",
+      "swatch_pixels": {
+        "primary.shadow": 190,
+        "primary.base": 281,
+        "primary.highlight": 14,
+        "secondary.shadow": 236,
+        "secondary.base": 277,
+        "secondary.highlight": 56,
+        "tertiary.shadow": 64,
+        "tertiary.base": 16,
+        "tertiary.highlight": 14,
+        "outline": 154,
+        "mouth_pupil": 137,
+        "eye_teeth": 13
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "6ac3cbf22986563af7dafb579308a1409dc4c54d2801555348fa244c8fe0d23e",
+      "status": "candidate"
+    },
+    {
+      "id": "viperfish-trench",
+      "form": "viperfish",
+      "stage": "trench",
+      "palette_family": "viperfish",
+      "file": "morphology/viperfish-trench-128.png",
+      "sha256": "71ef2fe5c2f34730a9899a9bfa447abd204c949437308c6debd63ff600275131",
+      "display_file": "morphology/viperfish-trench-256.png",
+      "display_sha256": "9261cbd7ceecd52b719c8610bb96ba62e748ec6839ca5c6e3550940102792c44",
+      "origin": "round5-replacement",
+      "origin_file": "revisions/evolution-iteration-02/viperfish-trench-v2-native.png",
+      "origin_sha256": "f23fbab53747418bde5c1ab73e53c95eb97ea94e294723f1dad8361b6a0f59bc",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "native_bbox": [
+        37,
+        336,
+        1233,
+        965
+      ],
+      "fit_size": [
+        96,
+        50
+      ],
+      "process": {
+        "method": "alpha-threshold",
+        "alpha_threshold": 128,
+        "haze_px": 47160,
+        "retained_component_px": 236286,
+        "discarded_components_px": [],
+        "removed_component_px": 0,
+        "enclosed_pockets": 1
+      },
+      "mean_index_error": 24.79,
+      "morphology": "accepted-for-pipeline",
+      "swatch_pixels": {
+        "primary.shadow": 267,
+        "primary.base": 220,
+        "primary.highlight": 33,
+        "secondary.shadow": 219,
+        "secondary.base": 267,
+        "secondary.highlight": 96,
+        "tertiary.shadow": 42,
+        "tertiary.base": 37,
+        "tertiary.highlight": 44,
+        "outline": 160,
+        "mouth_pupil": 107,
+        "eye_teeth": 13
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "3cedc1b408720c853a3ea7cd7201138c27e2ae5964812902c908e5bf8d444f76",
+      "status": "candidate"
+    },
+    {
+      "id": "siphonophore-base-rich",
+      "form": "siphonophore",
+      "stage": "base-rich",
+      "palette_family": "siphonophore",
+      "file": "morphology/siphonophore-base-rich-128.png",
+      "sha256": "435ce2121af28731d2383e4fccc776f0e69999bec8ecd2801d97450ce912f3f1",
+      "display_file": "morphology/siphonophore-base-rich-256.png",
+      "display_sha256": "c9ec896cf59b7a7ba952d6345b57fad938209405fe3425925fa6b622e56a961b",
+      "origin": "unchanged",
+      "origin_file": "variants/siphonophore-base-rich-128.png",
+      "origin_sha256": "1ec0df32508c17e4bf9045246bb4b4d7c1d7d8e5b9480ca6b889943b6abd7fcf",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 41,
+        "primary.base": 55,
+        "primary.highlight": 39,
+        "secondary.shadow": 117,
+        "secondary.base": 209,
+        "secondary.highlight": 131,
+        "tertiary.shadow": 30,
+        "tertiary.base": 33,
+        "tertiary.highlight": 43,
+        "outline": 443,
+        "mouth_pupil": 463,
+        "eye_teeth": 10
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "886644e591e8a818575ae0f28690d35f25b5a9af2b7e2d33f7e8ed7629bf676e",
+      "status": "candidate"
+    },
+    {
+      "id": "siphonophore-midnight-abyss",
+      "form": "siphonophore",
+      "stage": "midnight-abyss",
+      "palette_family": "siphonophore",
+      "file": "morphology/siphonophore-midnight-abyss-128.png",
+      "sha256": "5ab70ec5f57a56d3fe0b0aab5eee77df2d07eb1d833a1d4511cad412b4e3798a",
+      "display_file": "morphology/siphonophore-midnight-abyss-256.png",
+      "display_sha256": "735aa6e24fb26b9cb30f991a4218f20916ca6cd4ca190a40192eb44b54c3a1d1",
+      "origin": "unchanged",
+      "origin_file": "variants/siphonophore-midnight-abyss-128.png",
+      "origin_sha256": "a7c57bb5489fe35b0d02cc25d072b6361018f72d83494358ba1712d3a143fbad",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 109,
+        "primary.base": 99,
+        "primary.highlight": 96,
+        "secondary.shadow": 282,
+        "secondary.base": 335,
+        "secondary.highlight": 157,
+        "tertiary.shadow": 96,
+        "tertiary.base": 66,
+        "tertiary.highlight": 35,
+        "outline": 406,
+        "mouth_pupil": 192,
+        "eye_teeth": 11
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "e0d0948a3b38ed550419ef09c1a8cc99044a77fe1b42c6c82c43f59a83775277",
+      "status": "candidate"
+    },
+    {
+      "id": "siphonophore-trench",
+      "form": "siphonophore",
+      "stage": "trench",
+      "palette_family": "siphonophore",
+      "file": "morphology/siphonophore-trench-128.png",
+      "sha256": "964709964b0b90b340e864be55fc8f6f6d2b2dc3026d462bc6186a96da4aae17",
+      "display_file": "morphology/siphonophore-trench-256.png",
+      "display_sha256": "d6311a1a20831782e6e9aaec4632e8968076b14666e513b2fac427a96b0f8c13",
+      "origin": "round5-replacement",
+      "origin_file": "revisions/evolution-iteration-05/siphonophore-trench-v4-native.png",
+      "origin_sha256": "a6edd95c2b010de671224f55cc3f983b5a141473b26abea944d5b4b86932e28a",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "native_bbox": [
+        235,
+        57,
+        1044,
+        1189
+      ],
+      "fit_size": [
+        69,
+        96
+      ],
+      "process": {
+        "method": "global-tolerance-key",
+        "key_color": "#FF00FF",
+        "tolerance": 120.0,
+        "despill_ramp": [
+          60.0,
+          180.0
+        ],
+        "edge_band_px": 2,
+        "retained_component_px": 284987,
+        "discarded_components_px": [
+          51
+        ],
+        "removed_component_px": 51,
+        "enclosed_pockets": 25,
+        "enclosed_pocket_px": 7712,
+        "soft_edge_px": 4224,
+        "despilled_px": 4117,
+        "protected_interior_soft_px": 107,
+        "min_foreground_key_distance": 120.004
+      },
+      "mean_index_error": 31.683,
+      "morphology": "accepted-for-pipeline",
+      "swatch_pixels": {
+        "primary.shadow": 282,
+        "primary.base": 182,
+        "primary.highlight": 64,
+        "secondary.shadow": 414,
+        "secondary.base": 488,
+        "secondary.highlight": 132,
+        "tertiary.shadow": 169,
+        "tertiary.base": 134,
+        "tertiary.highlight": 62,
+        "outline": 72,
+        "mouth_pupil": 28,
+        "eye_teeth": 35
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "5e03f2148ee6b7fece3494d5f29535a8f4cce0df40a3b960a434fb2b5963509d",
+      "status": "candidate"
+    },
+    {
+      "id": "isopod-host-base-rich",
+      "form": "isopod-host",
+      "stage": "base-rich",
+      "palette_family": "isopod-host",
+      "file": "morphology/isopod-host-base-rich-128.png",
+      "sha256": "4f74389e210f9f30e5cffdb4dacded52f518e7ca4453c503c58835e536f96ad2",
+      "display_file": "morphology/isopod-host-base-rich-256.png",
+      "display_sha256": "a1897f56fc35e6d26f708d82b7d1a9c01823b5c727f2134d2a10fc83039e1328",
+      "origin": "unchanged",
+      "origin_file": "variants/isopod-host-base-rich-128.png",
+      "origin_sha256": "c1fa62d7ecaf0a5ab99944cc3dd3e2b2278126e4ee21a05f0569c4b91a2fb569",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 352,
+        "primary.base": 922,
+        "primary.highlight": 366,
+        "secondary.shadow": 235,
+        "secondary.base": 658,
+        "secondary.highlight": 53,
+        "tertiary.shadow": 22,
+        "tertiary.base": 38,
+        "tertiary.highlight": 0,
+        "outline": 264,
+        "mouth_pupil": 544,
+        "eye_teeth": 60
+      },
+      "visible_color_count": 11,
+      "alpha_sha256": "5e0fd4893904771b8004d0787287cc02a5a68923f7e0645b542116e1588a76a2",
+      "status": "candidate"
+    },
+    {
+      "id": "isopod-host-midnight-abyss",
+      "form": "isopod-host",
+      "stage": "midnight-abyss",
+      "palette_family": "isopod-host",
+      "file": "morphology/isopod-host-midnight-abyss-128.png",
+      "sha256": "c78e8cfc2c3670d18ebbb475b425a58d262ce0e2a54c90043e10bad40dd317cd",
+      "display_file": "morphology/isopod-host-midnight-abyss-256.png",
+      "display_sha256": "ee85a6b83f0d273558e048d34fd07210ae8361006033df1aa02f68bfdf968384",
+      "origin": "unchanged",
+      "origin_file": "variants/isopod-host-midnight-abyss-128.png",
+      "origin_sha256": "7cd8ddef6a38fc334c21a4f6544d9825088c88666cd5e56fbab87ae94fdd4d17",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 730,
+        "primary.base": 679,
+        "primary.highlight": 270,
+        "secondary.shadow": 179,
+        "secondary.base": 571,
+        "secondary.highlight": 170,
+        "tertiary.shadow": 87,
+        "tertiary.base": 55,
+        "tertiary.highlight": 17,
+        "outline": 322,
+        "mouth_pupil": 421,
+        "eye_teeth": 29
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "d2045b31065456a15dab87a20c93483a3ce71ff13dfa74f44853af0871b71c4e",
+      "status": "candidate"
+    },
+    {
+      "id": "isopod-host-trench",
+      "form": "isopod-host",
+      "stage": "trench",
+      "palette_family": "isopod-host",
+      "file": "morphology/isopod-host-trench-128.png",
+      "sha256": "fb619f40ef96e3806ad7188c5dbefb91d98057f254839a65cbca9d27b1ee95f8",
+      "display_file": "morphology/isopod-host-trench-256.png",
+      "display_sha256": "b8a73ee4b5fa36d683b21e78797f5319d0be470e42336999db4b656e1db04a1e",
+      "origin": "unchanged",
+      "origin_file": "variants/isopod-host-trench-128.png",
+      "origin_sha256": "dcddbce30f3f4129edf9c6fddd971b6310b38adab835a892313d020f5247557d",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 744,
+        "primary.base": 799,
+        "primary.highlight": 390,
+        "secondary.shadow": 366,
+        "secondary.base": 544,
+        "secondary.highlight": 163,
+        "tertiary.shadow": 124,
+        "tertiary.base": 66,
+        "tertiary.highlight": 30,
+        "outline": 248,
+        "mouth_pupil": 360,
+        "eye_teeth": 32
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "e89bb767c7a2e073a4e2b41136c375749d96a881739a7bebc721a51daa51b1b2",
+      "status": "candidate"
+    },
+    {
+      "id": "cookiecutter-base-rich",
+      "form": "cookiecutter",
+      "stage": "base-rich",
+      "palette_family": "cookiecutter",
+      "file": "morphology/cookiecutter-base-rich-128.png",
+      "sha256": "cdf3d0bc6931ffcc0b5b6346a79a7d106e1fdb6125a04123ad518f6f2289f75c",
+      "display_file": "morphology/cookiecutter-base-rich-256.png",
+      "display_sha256": "8eb7aa46c8cd5854caa2818b0deb5fe1266e1ac8aff04c8df382ee1a1d112193",
+      "origin": "unchanged",
+      "origin_file": "variants/cookiecutter-base-rich-128.png",
+      "origin_sha256": "21b96691c29d91573e995591664043743d32c38607d5d82cdd4a68f16ab59c2c",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 214,
+        "primary.base": 368,
+        "primary.highlight": 187,
+        "secondary.shadow": 91,
+        "secondary.base": 288,
+        "secondary.highlight": 116,
+        "tertiary.shadow": 44,
+        "tertiary.base": 98,
+        "tertiary.highlight": 32,
+        "outline": 185,
+        "mouth_pupil": 469,
+        "eye_teeth": 17
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "b399430347eb58d3e1f7b4a59b5f22668444e0d71687b4091dafdedad20b6886",
+      "status": "candidate"
+    },
+    {
+      "id": "cookiecutter-midnight-abyss",
+      "form": "cookiecutter",
+      "stage": "midnight-abyss",
+      "palette_family": "cookiecutter",
+      "file": "morphology/cookiecutter-midnight-abyss-128.png",
+      "sha256": "afad115dadd0e781a597459fd25b677f3888cd1d15d1a1bb4774baff08073e35",
+      "display_file": "morphology/cookiecutter-midnight-abyss-256.png",
+      "display_sha256": "c6582afc49198d375ecc1f8022b036682b2c8edc6fcd0351d0ddf6b1c05a0ffe",
+      "origin": "round5-replacement",
+      "origin_file": "revisions/evolution-iteration-03/cookiecutter-midnight-abyss-v3-native.png",
+      "origin_sha256": "a6c4c1f4076e410fd49f53eb99912e35172d536e05749c58b277f5330baf546a",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "native_bbox": [
+        152,
+        436,
+        1102,
+        837
+      ],
+      "fit_size": [
+        96,
+        41
+      ],
+      "process": {
+        "method": "global-tolerance-key",
+        "key_color": "#FF00FF",
+        "tolerance": 120.0,
+        "despill_ramp": [
+          60.0,
+          180.0
+        ],
+        "edge_band_px": 2,
+        "retained_component_px": 207898,
+        "discarded_components_px": [],
+        "removed_component_px": 0,
+        "enclosed_pockets": 0,
+        "enclosed_pocket_px": 0,
+        "soft_edge_px": 556,
+        "despilled_px": 556,
+        "protected_interior_soft_px": 0,
+        "min_foreground_key_distance": 120.108
+      },
+      "mean_index_error": 21.313,
+      "morphology": "accepted-for-pipeline",
+      "swatch_pixels": {
+        "primary.shadow": 518,
+        "primary.base": 194,
+        "primary.highlight": 185,
+        "secondary.shadow": 219,
+        "secondary.base": 222,
+        "secondary.highlight": 146,
+        "tertiary.shadow": 75,
+        "tertiary.base": 92,
+        "tertiary.highlight": 37,
+        "outline": 262,
+        "mouth_pupil": 197,
+        "eye_teeth": 6
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "1c43f24e5cf6aebd23e6963ed8cb4957c6e641c004b5ef207c8dde04a9aa0167",
+      "status": "candidate"
+    },
+    {
+      "id": "cookiecutter-trench",
+      "form": "cookiecutter",
+      "stage": "trench",
+      "palette_family": "cookiecutter",
+      "file": "morphology/cookiecutter-trench-128.png",
+      "sha256": "e49bacb3efe6d36d5a604b7f81d5a3eccd44e0b58ec9ad4cea7e76cf8ac5840b",
+      "display_file": "morphology/cookiecutter-trench-256.png",
+      "display_sha256": "e710b09740253c977c1c55635f373b999fbcf9257288104dc763c59d0219d2a2",
+      "origin": "unchanged",
+      "origin_file": "variants/cookiecutter-trench-128.png",
+      "origin_sha256": "c3412b33ce5928ac8033f4efd5f9528c9efa75d68d336c655d85eaca3cbbb422",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 498,
+        "primary.base": 228,
+        "primary.highlight": 94,
+        "secondary.shadow": 293,
+        "secondary.base": 308,
+        "secondary.highlight": 171,
+        "tertiary.shadow": 79,
+        "tertiary.base": 88,
+        "tertiary.highlight": 70,
+        "outline": 222,
+        "mouth_pupil": 242,
+        "eye_teeth": 14
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "73a121a346c3fb168fb497c4912d6d7e6e60bb7ab62313316a84932eb06ce923",
+      "status": "candidate"
+    },
+    {
+      "id": "squid-base-rich",
+      "form": "squid",
+      "stage": "base-rich",
+      "palette_family": "octopus",
+      "file": "morphology/squid-base-rich-128.png",
+      "sha256": "25d709653a757beef743ec3a6dd1a0cef8c0fd10953e0357a48b8b74575536ea",
+      "display_file": "morphology/squid-base-rich-256.png",
+      "display_sha256": "6368eb0613ceb70f16b6a3c69a2b61382c44f22611649afadc3c8dcbcb94c243",
+      "origin": "unchanged",
+      "origin_file": "revisions/squid-kraken-v1/app-preview/squid-base-rich-128.png",
+      "origin_sha256": "6e05acea9892e9a11fb4a8578c60b4d5c6208dd134e8271fa1702e6428e6db08",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 666,
+        "primary.base": 466,
+        "primary.highlight": 190,
+        "secondary.shadow": 155,
+        "secondary.base": 144,
+        "secondary.highlight": 37,
+        "tertiary.shadow": 122,
+        "tertiary.base": 112,
+        "tertiary.highlight": 34,
+        "outline": 288,
+        "mouth_pupil": 46,
+        "eye_teeth": 11
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "287d9c81fcf0737dff1b2d5a82d8ad58c920c97fed3b624819b0f60d5b3a78c6",
+      "status": "candidate"
+    },
+    {
+      "id": "squid-midnight-abyss",
+      "form": "squid",
+      "stage": "midnight-abyss",
+      "palette_family": "octopus",
+      "file": "morphology/squid-midnight-abyss-128.png",
+      "sha256": "750a6e85063a572daac49496ad7a8ba1390fab2792b25c4d91dc0b530aba5ba4",
+      "display_file": "morphology/squid-midnight-abyss-256.png",
+      "display_sha256": "f7b04b26c04e0436cfc267463b23964ddf87058dc822f265f4708118f004e224",
+      "origin": "unchanged",
+      "origin_file": "revisions/squid-kraken-v1/app-preview/squid-midnight-abyss-128.png",
+      "origin_sha256": "b7e53069590863cb8071ea96def81964348ae251222a65bfb33ebc14e724b1b6",
+      "morphology": "unchanged",
+      "swatch_pixels": {
+        "primary.shadow": 781,
+        "primary.base": 547,
+        "primary.highlight": 240,
+        "secondary.shadow": 228,
+        "secondary.base": 234,
+        "secondary.highlight": 54,
+        "tertiary.shadow": 107,
+        "tertiary.base": 102,
+        "tertiary.highlight": 33,
+        "outline": 215,
+        "mouth_pupil": 18,
+        "eye_teeth": 8
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "dcb674d907b4fe3108ae5c75d6f98e70a8d187d07e08ff9b86d00ff8653bd731",
+      "status": "candidate"
+    },
+    {
+      "id": "squid-trench",
+      "form": "squid",
+      "stage": "trench",
+      "palette_family": "octopus",
+      "file": "morphology/squid-trench-128.png",
+      "sha256": "03c50d60f25ca6e3e2782c20a23bf41f35f2aeef7965aa39c3cf876325c122e4",
+      "display_file": "morphology/squid-trench-256.png",
+      "display_sha256": "35c298f8fdfe2a8b3f014c69fb94f440de4212290d6740a7f6e812bd70bf6333",
+      "origin": "round5-replacement",
+      "origin_file": "revisions/evolution-iteration-05/squid-trench-v5-native.png",
+      "origin_sha256": "a5feab4a08fe0e646bcf9d4ecc17c54dc915eed4596d3e3eec152e6646312557",
+      "native_size": [
+        1254,
+        1254
+      ],
+      "native_bbox": [
+        79,
+        305,
+        1188,
+        935
+      ],
+      "fit_size": [
+        96,
+        55
+      ],
+      "process": {
+        "method": "global-tolerance-key",
+        "key_color": "#FF00FF",
+        "tolerance": 120.0,
+        "despill_ramp": [
+          60.0,
+          180.0
+        ],
+        "edge_band_px": 2,
+        "retained_component_px": 317664,
+        "discarded_components_px": [
+          1
+        ],
+        "removed_component_px": 1,
+        "enclosed_pockets": 3,
+        "enclosed_pocket_px": 65,
+        "soft_edge_px": 1282,
+        "despilled_px": 1265,
+        "protected_interior_soft_px": 17,
+        "min_foreground_key_distance": 120.004
+      },
+      "mean_index_error": 25.954,
+      "morphology": "accepted-for-pipeline",
+      "swatch_pixels": {
+        "primary.shadow": 522,
+        "primary.base": 498,
+        "primary.highlight": 208,
+        "secondary.shadow": 217,
+        "secondary.base": 151,
+        "secondary.highlight": 66,
+        "tertiary.shadow": 178,
+        "tertiary.base": 192,
+        "tertiary.highlight": 92,
+        "outline": 261,
+        "mouth_pupil": 11,
+        "eye_teeth": 3
+      },
+      "visible_color_count": 12,
+      "alpha_sha256": "8178300dc47d9dad62d03c5192fcfce8dc4bff0ed4f5db9f651edaab8377edf4",
+      "status": "candidate"
+    }
+  ],
+  "variants": [
+    {
+      "id": "anglerfish-sunlight",
+      "form": "anglerfish",
+      "palette_family": "anglerfish",
+      "depth": "sunlight",
+      "stage": "base-rich",
+      "file": "anglerfish-sunlight-128.png",
+      "sha256": "1bdc835521ce3db2eced833b28777ef14039d3ff4317e05b481a846d0fb29a47",
+      "display_file": "anglerfish-sunlight-256.png",
+      "display_sha256": "2b9720c39b7185057a5ba3d3d3a02f83137e465fd51922b28801817ddc7f89be",
+      "source_id": "anglerfish-base-rich",
+      "source_file": "morphology/anglerfish-base-rich-128.png",
+      "source_sha256": "1bdc835521ce3db2eced833b28777ef14039d3ff4317e05b481a846d0fb29a47",
+      "palette": {
+        "primary": {
+          "shadow": "#0B4752",
+          "base": "#167D88",
+          "highlight": "#55B6AD"
+        },
+        "secondary": {
+          "shadow": "#536A70",
+          "base": "#8FADAA",
+          "highlight": "#DDD5B8"
+        },
+        "tertiary": {
+          "shadow": "#A9562F",
+          "base": "#D7883E",
+          "highlight": "#F2C66D"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0B4752",
+          "base": "#167D88",
+          "highlight": "#55B6AD"
+        },
+        "secondary": {
+          "shadow": "#536A70",
+          "base": "#8FADAA",
+          "highlight": "#DDD5B8"
+        },
+        "tertiary": {
+          "shadow": "#A9562F",
+          "base": "#D7883E",
+          "highlight": "#F2C66D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 0,
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.0,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "d04702b69b843ab97289c768aac193c1bb6436b4fc50883e49c94b591dbc2892",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "anglerfish-twilight",
+      "form": "anglerfish",
+      "palette_family": "anglerfish",
+      "depth": "twilight",
+      "stage": "base-rich",
+      "file": "anglerfish-twilight-128.png",
+      "sha256": "da76208711862066ed7d11e1518346346d2abae0e8e845e74df772f096dc5522",
+      "display_file": "anglerfish-twilight-256.png",
+      "display_sha256": "ce9088dceb93c51612425b674507a8d539763630cf0f17d44360bb1cbe11b276",
+      "source_id": "anglerfish-base-rich",
+      "source_file": "morphology/anglerfish-base-rich-128.png",
+      "source_sha256": "1bdc835521ce3db2eced833b28777ef14039d3ff4317e05b481a846d0fb29a47",
+      "palette": {
+        "primary": {
+          "shadow": "#0F4351",
+          "base": "#1B727F",
+          "highlight": "#4EA29F"
+        },
+        "secondary": {
+          "shadow": "#4B616B",
+          "base": "#7F9A9D",
+          "highlight": "#C1BCAA"
+        },
+        "tertiary": {
+          "shadow": "#A55837",
+          "base": "#D38949",
+          "highlight": "#F0C678"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0B4752",
+          "base": "#167D88",
+          "highlight": "#55B6AD"
+        },
+        "secondary": {
+          "shadow": "#536A70",
+          "base": "#8FADAA",
+          "highlight": "#DDD5B8"
+        },
+        "tertiary": {
+          "shadow": "#A9562F",
+          "base": "#D7883E",
+          "highlight": "#F2C66D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 1,
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.075,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "d04702b69b843ab97289c768aac193c1bb6436b4fc50883e49c94b591dbc2892",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "anglerfish-midnight",
+      "form": "anglerfish",
+      "palette_family": "anglerfish",
+      "depth": "midnight",
+      "stage": "midnight-abyss",
+      "file": "anglerfish-midnight-128.png",
+      "sha256": "8eefc0be4af9c0b8ce67d9df14e93c7032f408a2a1ca6e59cf8f5d33a323a396",
+      "display_file": "anglerfish-midnight-256.png",
+      "display_sha256": "2f438644566d05a9e6b7c68d793d6b2c40cf84be4e53cdffe475df3897e3f6df",
+      "source_id": "anglerfish-midnight-abyss",
+      "source_file": "morphology/anglerfish-midnight-abyss-128.png",
+      "source_sha256": "8e83b2ec00a4d40a6d4653d4e95c03c88e239cef9b2553fc8f21b07ad411bafb",
+      "palette": {
+        "primary": {
+          "shadow": "#134050",
+          "base": "#216878",
+          "highlight": "#4A9195"
+        },
+        "secondary": {
+          "shadow": "#455A67",
+          "base": "#718B93",
+          "highlight": "#AAA89F"
+        },
+        "tertiary": {
+          "shadow": "#A15A3E",
+          "base": "#D08B53",
+          "highlight": "#EDC782"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0B4752",
+          "base": "#167D88",
+          "highlight": "#55B6AD"
+        },
+        "secondary": {
+          "shadow": "#536A70",
+          "base": "#8FADAA",
+          "highlight": "#DDD5B8"
+        },
+        "tertiary": {
+          "shadow": "#A9562F",
+          "base": "#D7883E",
+          "highlight": "#F2C66D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 2,
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.15,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "125e9e9e352b8f864d7371f0ab1c87107d32820833b0791a2d155204d7251fce",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "anglerfish-abyss",
+      "form": "anglerfish",
+      "palette_family": "anglerfish",
+      "depth": "abyss",
+      "stage": "midnight-abyss",
+      "file": "anglerfish-abyss-128.png",
+      "sha256": "c290ed1ce6bbbf0ffeb266b0859f785b4c4ee0f54859c16824ee0ec5b8cf3afb",
+      "display_file": "anglerfish-abyss-256.png",
+      "display_sha256": "45da2f558a8a86ca30f81d6b7dcec0fc271e237570c816249589236f40191e0f",
+      "source_id": "anglerfish-midnight-abyss",
+      "source_file": "morphology/anglerfish-midnight-abyss-128.png",
+      "source_sha256": "8e83b2ec00a4d40a6d4653d4e95c03c88e239cef9b2553fc8f21b07ad411bafb",
+      "palette": {
+        "primary": {
+          "shadow": "#1F3D4D",
+          "base": "#325F6F",
+          "highlight": "#53828B"
+        },
+        "secondary": {
+          "shadow": "#435462",
+          "base": "#6A7E89",
+          "highlight": "#979899"
+        },
+        "tertiary": {
+          "shadow": "#975F4B",
+          "base": "#C68F66",
+          "highlight": "#E7C896"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0B4752",
+          "base": "#167D88",
+          "highlight": "#55B6AD"
+        },
+        "secondary": {
+          "shadow": "#536A70",
+          "base": "#8FADAA",
+          "highlight": "#DDD5B8"
+        },
+        "tertiary": {
+          "shadow": "#A9562F",
+          "base": "#D7883E",
+          "highlight": "#F2C66D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 3,
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.225,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "125e9e9e352b8f864d7371f0ab1c87107d32820833b0791a2d155204d7251fce",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "anglerfish-trench",
+      "form": "anglerfish",
+      "palette_family": "anglerfish",
+      "depth": "trench",
+      "stage": "trench",
+      "file": "anglerfish-trench-128.png",
+      "sha256": "7303d5cbaa548835f582815b878e991f42fe287e12e0d4f402a1f8b904f915e4",
+      "display_file": "anglerfish-trench-256.png",
+      "display_sha256": "381875cf4206bf28f733ab62ae51fb6dac41761071ff8473dc0e4e01d68c7b77",
+      "source_id": "anglerfish-trench",
+      "source_file": "morphology/anglerfish-trench-128.png",
+      "source_sha256": "59de45697c6d00000cf004fc8f586099edafc906b56aa58d52ae532df7ffac21",
+      "palette": {
+        "primary": {
+          "shadow": "#223848",
+          "base": "#304F5F",
+          "highlight": "#466772"
+        },
+        "secondary": {
+          "shadow": "#3A4757",
+          "base": "#546471",
+          "highlight": "#72757D"
+        },
+        "tertiary": {
+          "shadow": "#906255",
+          "base": "#BE9173",
+          "highlight": "#E1C9A4"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0B4752",
+          "base": "#167D88",
+          "highlight": "#55B6AD"
+        },
+        "secondary": {
+          "shadow": "#536A70",
+          "base": "#8FADAA",
+          "highlight": "#DDD5B8"
+        },
+        "tertiary": {
+          "shadow": "#A9562F",
+          "base": "#D7883E",
+          "highlight": "#F2C66D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 4,
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.3,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "eaa0725f223cb5aeaedc916e7bebb6e34e198cd3cc6d394a9b0c05358c4bab6c",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "viperfish-sunlight",
+      "form": "viperfish",
+      "palette_family": "viperfish",
+      "depth": "sunlight",
+      "stage": "base-rich",
+      "file": "viperfish-sunlight-128.png",
+      "sha256": "2bb9f666bb9af7a2ffedbbae8d3155060fa6afa748ea7e7525d61768a2bf4fc7",
+      "display_file": "viperfish-sunlight-256.png",
+      "display_sha256": "2c3475d6a61b4d9f3c337486cf95f82e64c8084b6a43dfd74ff027911075d33c",
+      "source_id": "viperfish-base-rich",
+      "source_file": "morphology/viperfish-base-rich-128.png",
+      "source_sha256": "2bb9f666bb9af7a2ffedbbae8d3155060fa6afa748ea7e7525d61768a2bf4fc7",
+      "palette": {
+        "primary": {
+          "shadow": "#0A334E",
+          "base": "#176286",
+          "highlight": "#51A6B8"
+        },
+        "secondary": {
+          "shadow": "#344A5D",
+          "base": "#6D8591",
+          "highlight": "#B7C8C8"
+        },
+        "tertiary": {
+          "shadow": "#2FAABB",
+          "base": "#55D6CF",
+          "highlight": "#C7F1DC"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0A334E",
+          "base": "#176286",
+          "highlight": "#51A6B8"
+        },
+        "secondary": {
+          "shadow": "#344A5D",
+          "base": "#6D8591",
+          "highlight": "#B7C8C8"
+        },
+        "tertiary": {
+          "shadow": "#2FAABB",
+          "base": "#55D6CF",
+          "highlight": "#C7F1DC"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 0,
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.0,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "83cb5bcdc4c44c798d3d8f726076dc795dc1dca2f3900c160858599e2b9a1f31",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "viperfish-twilight",
+      "form": "viperfish",
+      "palette_family": "viperfish",
+      "depth": "twilight",
+      "stage": "base-rich",
+      "file": "viperfish-twilight-128.png",
+      "sha256": "6acc06770f6dff77a42419fa88153f3813b96b7a42ca64780ca759f53a08999d",
+      "display_file": "viperfish-twilight-256.png",
+      "display_sha256": "de18583055cfe8510c0f6463d17e711c7fa29e251e0d9f1c3be4400483c01c5d",
+      "source_id": "viperfish-base-rich",
+      "source_file": "morphology/viperfish-base-rich-128.png",
+      "source_sha256": "2bb9f666bb9af7a2ffedbbae8d3155060fa6afa748ea7e7525d61768a2bf4fc7",
+      "palette": {
+        "primary": {
+          "shadow": "#0D324D",
+          "base": "#1A5A7D",
+          "highlight": "#4A94A8"
+        },
+        "secondary": {
+          "shadow": "#30465A",
+          "base": "#617887",
+          "highlight": "#A1B1B7"
+        },
+        "tertiary": {
+          "shadow": "#3BA9BB",
+          "base": "#5FD5D1",
+          "highlight": "#C8F0E0"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0A334E",
+          "base": "#176286",
+          "highlight": "#51A6B8"
+        },
+        "secondary": {
+          "shadow": "#344A5D",
+          "base": "#6D8591",
+          "highlight": "#B7C8C8"
+        },
+        "tertiary": {
+          "shadow": "#2FAABB",
+          "base": "#55D6CF",
+          "highlight": "#C7F1DC"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 1,
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.075,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "83cb5bcdc4c44c798d3d8f726076dc795dc1dca2f3900c160858599e2b9a1f31",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "viperfish-midnight",
+      "form": "viperfish",
+      "palette_family": "viperfish",
+      "depth": "midnight",
+      "stage": "midnight-abyss",
+      "file": "viperfish-midnight-128.png",
+      "sha256": "636c134ea74354f1934adecd87ad13200cfcf5f533b0c9e10da14312d3184cc4",
+      "display_file": "viperfish-midnight-256.png",
+      "display_sha256": "e9ddc9f7116255b96e167e6cb9c79e94bc288f46cbc5f37c9b80d4f42f42334b",
+      "source_id": "viperfish-midnight-abyss",
+      "source_file": "morphology/viperfish-midnight-abyss-128.png",
+      "source_sha256": "1765295caacb1e869c5feec98c288aa0b4319cbf43e637ee13264263088672e5",
+      "palette": {
+        "primary": {
+          "shadow": "#0F314D",
+          "base": "#1D5476",
+          "highlight": "#46859B"
+        },
+        "secondary": {
+          "shadow": "#2D4358",
+          "base": "#586E80",
+          "highlight": "#8E9EA9"
+        },
+        "tertiary": {
+          "shadow": "#45A8BC",
+          "base": "#68D4D3",
+          "highlight": "#CAF0E3"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0A334E",
+          "base": "#176286",
+          "highlight": "#51A6B8"
+        },
+        "secondary": {
+          "shadow": "#344A5D",
+          "base": "#6D8591",
+          "highlight": "#B7C8C8"
+        },
+        "tertiary": {
+          "shadow": "#2FAABB",
+          "base": "#55D6CF",
+          "highlight": "#C7F1DC"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 2,
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.15,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "6ac3cbf22986563af7dafb579308a1409dc4c54d2801555348fa244c8fe0d23e",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "viperfish-abyss",
+      "form": "viperfish",
+      "palette_family": "viperfish",
+      "depth": "abyss",
+      "stage": "midnight-abyss",
+      "file": "viperfish-abyss-128.png",
+      "sha256": "af4d462ee225008a9e4df981e653687af07ff1b8844653f8e37abc2399f4d070",
+      "display_file": "viperfish-abyss-256.png",
+      "display_sha256": "5569b517f2033f9612d78e1da982ceb70aba2050845acca417c19dc908e46a17",
+      "source_id": "viperfish-midnight-abyss",
+      "source_file": "morphology/viperfish-midnight-abyss-128.png",
+      "source_sha256": "1765295caacb1e869c5feec98c288aa0b4319cbf43e637ee13264263088672e5",
+      "palette": {
+        "primary": {
+          "shadow": "#193048",
+          "base": "#2C4E6A",
+          "highlight": "#4F798D"
+        },
+        "secondary": {
+          "shadow": "#2F4053",
+          "base": "#546577",
+          "highlight": "#82909D"
+        },
+        "tertiary": {
+          "shadow": "#5FA6B7",
+          "base": "#81D0D2",
+          "highlight": "#CFEEE7"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0A334E",
+          "base": "#176286",
+          "highlight": "#51A6B8"
+        },
+        "secondary": {
+          "shadow": "#344A5D",
+          "base": "#6D8591",
+          "highlight": "#B7C8C8"
+        },
+        "tertiary": {
+          "shadow": "#2FAABB",
+          "base": "#55D6CF",
+          "highlight": "#C7F1DC"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 3,
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.225,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "6ac3cbf22986563af7dafb579308a1409dc4c54d2801555348fa244c8fe0d23e",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "viperfish-trench",
+      "form": "viperfish",
+      "palette_family": "viperfish",
+      "depth": "trench",
+      "stage": "trench",
+      "file": "viperfish-trench-128.png",
+      "sha256": "a3bd02bf6ae5f8a4f7803448a96a6ed7e4bb674cc8217fd231ce5e2a53749abc",
+      "display_file": "viperfish-trench-256.png",
+      "display_sha256": "951553867e78d4e64aaa0dcac37f3774d2ef1b71e88687e479d1ffe2cb820ec0",
+      "source_id": "viperfish-trench",
+      "source_file": "morphology/viperfish-trench-128.png",
+      "source_sha256": "71ef2fe5c2f34730a9899a9bfa447abd204c949437308c6debd63ff600275131",
+      "palette": {
+        "primary": {
+          "shadow": "#1E2F44",
+          "base": "#2B445B",
+          "highlight": "#436073"
+        },
+        "secondary": {
+          "shadow": "#2C3A4C",
+          "base": "#455364",
+          "highlight": "#64707E"
+        },
+        "tertiary": {
+          "shadow": "#6DA4B4",
+          "base": "#8FCED2",
+          "highlight": "#D3EDEA"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#0A334E",
+          "base": "#176286",
+          "highlight": "#51A6B8"
+        },
+        "secondary": {
+          "shadow": "#344A5D",
+          "base": "#6D8591",
+          "highlight": "#B7C8C8"
+        },
+        "tertiary": {
+          "shadow": "#2FAABB",
+          "base": "#55D6CF",
+          "highlight": "#C7F1DC"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 4,
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.3,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "3cedc1b408720c853a3ea7cd7201138c27e2ae5964812902c908e5bf8d444f76",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "siphonophore-sunlight",
+      "form": "siphonophore",
+      "palette_family": "siphonophore",
+      "depth": "sunlight",
+      "stage": "base-rich",
+      "file": "siphonophore-sunlight-128.png",
+      "sha256": "435ce2121af28731d2383e4fccc776f0e69999bec8ecd2801d97450ce912f3f1",
+      "display_file": "siphonophore-sunlight-256.png",
+      "display_sha256": "c9ec896cf59b7a7ba952d6345b57fad938209405fe3425925fa6b622e56a961b",
+      "source_id": "siphonophore-base-rich",
+      "source_file": "morphology/siphonophore-base-rich-128.png",
+      "source_sha256": "435ce2121af28731d2383e4fccc776f0e69999bec8ecd2801d97450ce912f3f1",
+      "palette": {
+        "primary": {
+          "shadow": "#30284E",
+          "base": "#514D79",
+          "highlight": "#9B95BC"
+        },
+        "secondary": {
+          "shadow": "#07545D",
+          "base": "#168A97",
+          "highlight": "#73D2CF"
+        },
+        "tertiary": {
+          "shadow": "#7A4547",
+          "base": "#C16B5A",
+          "highlight": "#E9B47E"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#30284E",
+          "base": "#514D79",
+          "highlight": "#9B95BC"
+        },
+        "secondary": {
+          "shadow": "#07545D",
+          "base": "#168A97",
+          "highlight": "#73D2CF"
+        },
+        "tertiary": {
+          "shadow": "#7A4547",
+          "base": "#C16B5A",
+          "highlight": "#E9B47E"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 0,
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.0,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "886644e591e8a818575ae0f28690d35f25b5a9af2b7e2d33f7e8ed7629bf676e",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "siphonophore-twilight",
+      "form": "siphonophore",
+      "palette_family": "siphonophore",
+      "depth": "twilight",
+      "stage": "base-rich",
+      "file": "siphonophore-twilight-128.png",
+      "sha256": "f17080f082af6e59cea1982b8002f663e8105efdb7b972c512a0fb2d3fd5ea35",
+      "display_file": "siphonophore-twilight-256.png",
+      "display_sha256": "27ce3c68479f3aa68439559e17abcc12d3f30761404c63b67482299026369f74",
+      "source_id": "siphonophore-base-rich",
+      "source_file": "morphology/siphonophore-base-rich-128.png",
+      "source_sha256": "435ce2121af28731d2383e4fccc776f0e69999bec8ecd2801d97450ce912f3f1",
+      "palette": {
+        "primary": {
+          "shadow": "#2D294D",
+          "base": "#494972",
+          "highlight": "#8886AC"
+        },
+        "secondary": {
+          "shadow": "#0E4F5B",
+          "base": "#1D7D8C",
+          "highlight": "#68BABC"
+        },
+        "tertiary": {
+          "shadow": "#77464A",
+          "base": "#BD6D60",
+          "highlight": "#E6B586"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#30284E",
+          "base": "#514D79",
+          "highlight": "#9B95BC"
+        },
+        "secondary": {
+          "shadow": "#07545D",
+          "base": "#168A97",
+          "highlight": "#73D2CF"
+        },
+        "tertiary": {
+          "shadow": "#7A4547",
+          "base": "#C16B5A",
+          "highlight": "#E9B47E"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 1,
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.075,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "886644e591e8a818575ae0f28690d35f25b5a9af2b7e2d33f7e8ed7629bf676e",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "siphonophore-midnight",
+      "form": "siphonophore",
+      "palette_family": "siphonophore",
+      "depth": "midnight",
+      "stage": "midnight-abyss",
+      "file": "siphonophore-midnight-128.png",
+      "sha256": "bd60a0ea585192c50163792359f1423f4f8b75d1dc577c51cf90c0c8edb6ad79",
+      "display_file": "siphonophore-midnight-256.png",
+      "display_sha256": "98bde6890b3f7f19dbb779de76f4cf3fd5bf6fd83c89b32b5116779f8123e804",
+      "source_id": "siphonophore-midnight-abyss",
+      "source_file": "morphology/siphonophore-midnight-abyss-128.png",
+      "source_sha256": "5ab70ec5f57a56d3fe0b0aab5eee77df2d07eb1d833a1d4511cad412b4e3798a",
+      "palette": {
+        "primary": {
+          "shadow": "#2A2A4C",
+          "base": "#42456C",
+          "highlight": "#787A9E"
+        },
+        "secondary": {
+          "shadow": "#134A59",
+          "base": "#237183",
+          "highlight": "#60A5AD"
+        },
+        "tertiary": {
+          "shadow": "#74484E",
+          "base": "#B86F65",
+          "highlight": "#E3B68D"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#30284E",
+          "base": "#514D79",
+          "highlight": "#9B95BC"
+        },
+        "secondary": {
+          "shadow": "#07545D",
+          "base": "#168A97",
+          "highlight": "#73D2CF"
+        },
+        "tertiary": {
+          "shadow": "#7A4547",
+          "base": "#C16B5A",
+          "highlight": "#E9B47E"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 2,
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.15,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "e0d0948a3b38ed550419ef09c1a8cc99044a77fe1b42c6c82c43f59a83775277",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "siphonophore-abyss",
+      "form": "siphonophore",
+      "palette_family": "siphonophore",
+      "depth": "abyss",
+      "stage": "midnight-abyss",
+      "file": "siphonophore-abyss-128.png",
+      "sha256": "9980c68d47a4ea2d1fd4f621a7c9209c3e83d353f56e7fdac71454512acaef60",
+      "display_file": "siphonophore-abyss-256.png",
+      "display_sha256": "ceafb6ee12e5186a27833ca28714ea97b02f5c3cd570e26566e33e4ef2967d0b",
+      "source_id": "siphonophore-midnight-abyss",
+      "source_file": "morphology/siphonophore-midnight-abyss-128.png",
+      "source_sha256": "5ab70ec5f57a56d3fe0b0aab5eee77df2d07eb1d833a1d4511cad412b4e3798a",
+      "palette": {
+        "primary": {
+          "shadow": "#282B47",
+          "base": "#3E4362",
+          "highlight": "#6D718F"
+        },
+        "secondary": {
+          "shadow": "#224554",
+          "base": "#366779",
+          "highlight": "#65949F"
+        },
+        "tertiary": {
+          "shadow": "#6D4B51",
+          "base": "#AD746E",
+          "highlight": "#DBB79B"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#30284E",
+          "base": "#514D79",
+          "highlight": "#9B95BC"
+        },
+        "secondary": {
+          "shadow": "#07545D",
+          "base": "#168A97",
+          "highlight": "#73D2CF"
+        },
+        "tertiary": {
+          "shadow": "#7A4547",
+          "base": "#C16B5A",
+          "highlight": "#E9B47E"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 3,
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.225,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "e0d0948a3b38ed550419ef09c1a8cc99044a77fe1b42c6c82c43f59a83775277",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "siphonophore-trench",
+      "form": "siphonophore",
+      "palette_family": "siphonophore",
+      "depth": "trench",
+      "stage": "trench",
+      "file": "siphonophore-trench-128.png",
+      "sha256": "cbb612da546bfd83032d26d9eeaff872d605299e6f5f36f67d87ecbf62f8485f",
+      "display_file": "siphonophore-trench-256.png",
+      "display_sha256": "7923db544ac326ac20b061ef1f183e8d9b90d7ad246bb8d5e2afb853fe03498f",
+      "source_id": "siphonophore-trench",
+      "source_file": "morphology/siphonophore-trench-128.png",
+      "source_sha256": "964709964b0b90b340e864be55fc8f6f6d2b2dc3026d462bc6186a96da4aae17",
+      "palette": {
+        "primary": {
+          "shadow": "#272C43",
+          "base": "#363C56",
+          "highlight": "#555B74"
+        },
+        "secondary": {
+          "shadow": "#253D4D",
+          "base": "#335465",
+          "highlight": "#527280"
+        },
+        "tertiary": {
+          "shadow": "#674D54",
+          "base": "#A57875",
+          "highlight": "#D5B9A5"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#30284E",
+          "base": "#514D79",
+          "highlight": "#9B95BC"
+        },
+        "secondary": {
+          "shadow": "#07545D",
+          "base": "#168A97",
+          "highlight": "#73D2CF"
+        },
+        "tertiary": {
+          "shadow": "#7A4547",
+          "base": "#C16B5A",
+          "highlight": "#E9B47E"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 4,
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.3,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "5e03f2148ee6b7fece3494d5f29535a8f4cce0df40a3b960a434fb2b5963509d",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "isopod-host-sunlight",
+      "form": "isopod-host",
+      "palette_family": "isopod-host",
+      "depth": "sunlight",
+      "stage": "base-rich",
+      "file": "isopod-host-sunlight-128.png",
+      "sha256": "4f74389e210f9f30e5cffdb4dacded52f518e7ca4453c503c58835e536f96ad2",
+      "display_file": "isopod-host-sunlight-256.png",
+      "display_sha256": "a1897f56fc35e6d26f708d82b7d1a9c01823b5c727f2134d2a10fc83039e1328",
+      "source_id": "isopod-host-base-rich",
+      "source_file": "morphology/isopod-host-base-rich-128.png",
+      "source_sha256": "4f74389e210f9f30e5cffdb4dacded52f518e7ca4453c503c58835e536f96ad2",
+      "palette": {
+        "primary": {
+          "shadow": "#105554",
+          "base": "#16857C",
+          "highlight": "#68B69C"
+        },
+        "secondary": {
+          "shadow": "#506A72",
+          "base": "#9BB2AA",
+          "highlight": "#E1DDC7"
+        },
+        "tertiary": {
+          "shadow": "#5C4338",
+          "base": "#9C7051",
+          "highlight": "#D1AF7A"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#105554",
+          "base": "#16857C",
+          "highlight": "#68B69C"
+        },
+        "secondary": {
+          "shadow": "#506A72",
+          "base": "#9BB2AA",
+          "highlight": "#E1DDC7"
+        },
+        "tertiary": {
+          "shadow": "#5C4338",
+          "base": "#9C7051",
+          "highlight": "#D1AF7A"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 0,
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.0,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "5e0fd4893904771b8004d0787287cc02a5a68923f7e0645b542116e1588a76a2",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "isopod-host-twilight",
+      "form": "isopod-host",
+      "palette_family": "isopod-host",
+      "depth": "twilight",
+      "stage": "base-rich",
+      "file": "isopod-host-twilight-128.png",
+      "sha256": "a05f742b3e27dba230db4eaacced2c25780d581f8683fe5f38f740f2d5f1e91e",
+      "display_file": "isopod-host-twilight-256.png",
+      "display_sha256": "cc7a67470c7677f71efe8a0d75e490e6d1b01cfd773e9fc9be5af144d335e9e6",
+      "source_id": "isopod-host-base-rich",
+      "source_file": "morphology/isopod-host-base-rich-128.png",
+      "source_sha256": "4f74389e210f9f30e5cffdb4dacded52f518e7ca4453c503c58835e536f96ad2",
+      "palette": {
+        "primary": {
+          "shadow": "#144F53",
+          "base": "#1D7876",
+          "highlight": "#5EA291"
+        },
+        "secondary": {
+          "shadow": "#49616D",
+          "base": "#899F9D",
+          "highlight": "#C4C3B6"
+        },
+        "tertiary": {
+          "shadow": "#5A433C",
+          "base": "#997157",
+          "highlight": "#CFAF81"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#105554",
+          "base": "#16857C",
+          "highlight": "#68B69C"
+        },
+        "secondary": {
+          "shadow": "#506A72",
+          "base": "#9BB2AA",
+          "highlight": "#E1DDC7"
+        },
+        "tertiary": {
+          "shadow": "#5C4338",
+          "base": "#9C7051",
+          "highlight": "#D1AF7A"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 1,
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.075,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "5e0fd4893904771b8004d0787287cc02a5a68923f7e0645b542116e1588a76a2",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "isopod-host-midnight",
+      "form": "isopod-host",
+      "palette_family": "isopod-host",
+      "depth": "midnight",
+      "stage": "midnight-abyss",
+      "file": "isopod-host-midnight-128.png",
+      "sha256": "1b50ef3e7a7b7493d0b20d3bf54cac5c8ed68b10038977813f69b5d342e19a36",
+      "display_file": "isopod-host-midnight-256.png",
+      "display_sha256": "e26d280bfd827d1723c2c35e729ab52f139bb448ce467abd9b243382089e7cea",
+      "source_id": "isopod-host-midnight-abyss",
+      "source_file": "morphology/isopod-host-midnight-abyss-128.png",
+      "source_sha256": "c78e8cfc2c3670d18ebbb475b425a58d262ce0e2a54c90043e10bad40dd317cd",
+      "palette": {
+        "primary": {
+          "shadow": "#184B53",
+          "base": "#226D71",
+          "highlight": "#579189"
+        },
+        "secondary": {
+          "shadow": "#435A69",
+          "base": "#7A8E93",
+          "highlight": "#ACADA9"
+        },
+        "tertiary": {
+          "shadow": "#58443F",
+          "base": "#97715C",
+          "highlight": "#CCB088"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#105554",
+          "base": "#16857C",
+          "highlight": "#68B69C"
+        },
+        "secondary": {
+          "shadow": "#506A72",
+          "base": "#9BB2AA",
+          "highlight": "#E1DDC7"
+        },
+        "tertiary": {
+          "shadow": "#5C4338",
+          "base": "#9C7051",
+          "highlight": "#D1AF7A"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 2,
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.15,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "d2045b31065456a15dab87a20c93483a3ce71ff13dfa74f44853af0871b71c4e",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "isopod-host-abyss",
+      "form": "isopod-host",
+      "palette_family": "isopod-host",
+      "depth": "abyss",
+      "stage": "midnight-abyss",
+      "file": "isopod-host-abyss-128.png",
+      "sha256": "f71c45957afe72a74569bb46fedc866cd980ea3a87c9a408fc674807b1b28889",
+      "display_file": "isopod-host-abyss-256.png",
+      "display_sha256": "a822366e762494350e424929a95dd2616af6e849ef36a0fb6967b9fbd9b087ba",
+      "source_id": "isopod-host-midnight-abyss",
+      "source_file": "morphology/isopod-host-midnight-abyss-128.png",
+      "source_sha256": "c78e8cfc2c3670d18ebbb475b425a58d262ce0e2a54c90043e10bad40dd317cd",
+      "palette": {
+        "primary": {
+          "shadow": "#244650",
+          "base": "#34646B",
+          "highlight": "#5A8283"
+        },
+        "secondary": {
+          "shadow": "#425463",
+          "base": "#71818B",
+          "highlight": "#9A9DA1"
+        },
+        "tertiary": {
+          "shadow": "#544544",
+          "base": "#907365",
+          "highlight": "#C7B195"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#105554",
+          "base": "#16857C",
+          "highlight": "#68B69C"
+        },
+        "secondary": {
+          "shadow": "#506A72",
+          "base": "#9BB2AA",
+          "highlight": "#E1DDC7"
+        },
+        "tertiary": {
+          "shadow": "#5C4338",
+          "base": "#9C7051",
+          "highlight": "#D1AF7A"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 3,
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.225,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "d2045b31065456a15dab87a20c93483a3ce71ff13dfa74f44853af0871b71c4e",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "isopod-host-trench",
+      "form": "isopod-host",
+      "palette_family": "isopod-host",
+      "depth": "trench",
+      "stage": "trench",
+      "file": "isopod-host-trench-128.png",
+      "sha256": "37ac07d8964a4f759f6938bf2f91f211915a827c822c05cca3f4015ccdb93bea",
+      "display_file": "isopod-host-trench-256.png",
+      "display_sha256": "6339691aafc34c3fb6fb2a23317dbda7d56c9d18f98f4371b95bf1de02643934",
+      "source_id": "isopod-host-trench",
+      "source_file": "morphology/isopod-host-trench-128.png",
+      "source_sha256": "fb619f40ef96e3806ad7188c5dbefb91d98057f254839a65cbca9d27b1ee95f8",
+      "palette": {
+        "primary": {
+          "shadow": "#263E4A",
+          "base": "#32525D",
+          "highlight": "#4B676E"
+        },
+        "secondary": {
+          "shadow": "#394757",
+          "base": "#596672",
+          "highlight": "#747982"
+        },
+        "tertiary": {
+          "shadow": "#514647",
+          "base": "#8B756C",
+          "highlight": "#C3B19E"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#105554",
+          "base": "#16857C",
+          "highlight": "#68B69C"
+        },
+        "secondary": {
+          "shadow": "#506A72",
+          "base": "#9BB2AA",
+          "highlight": "#E1DDC7"
+        },
+        "tertiary": {
+          "shadow": "#5C4338",
+          "base": "#9C7051",
+          "highlight": "#D1AF7A"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 4,
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.3,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "e89bb767c7a2e073a4e2b41136c375749d96a881739a7bebc721a51daa51b1b2",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "cookiecutter-sunlight",
+      "form": "cookiecutter",
+      "palette_family": "cookiecutter",
+      "depth": "sunlight",
+      "stage": "base-rich",
+      "file": "cookiecutter-sunlight-128.png",
+      "sha256": "cdf3d0bc6931ffcc0b5b6346a79a7d106e1fdb6125a04123ad518f6f2289f75c",
+      "display_file": "cookiecutter-sunlight-256.png",
+      "display_sha256": "8eb7aa46c8cd5854caa2818b0deb5fe1266e1ac8aff04c8df382ee1a1d112193",
+      "source_id": "cookiecutter-base-rich",
+      "source_file": "morphology/cookiecutter-base-rich-128.png",
+      "source_sha256": "cdf3d0bc6931ffcc0b5b6346a79a7d106e1fdb6125a04123ad518f6f2289f75c",
+      "palette": {
+        "primary": {
+          "shadow": "#1E3445",
+          "base": "#3F6277",
+          "highlight": "#809FA4"
+        },
+        "secondary": {
+          "shadow": "#61574E",
+          "base": "#A49580",
+          "highlight": "#E3D6B7"
+        },
+        "tertiary": {
+          "shadow": "#6C2F48",
+          "base": "#A35540",
+          "highlight": "#E0A85D"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#1E3445",
+          "base": "#3F6277",
+          "highlight": "#809FA4"
+        },
+        "secondary": {
+          "shadow": "#61574E",
+          "base": "#A49580",
+          "highlight": "#E3D6B7"
+        },
+        "tertiary": {
+          "shadow": "#6C2F48",
+          "base": "#A35540",
+          "highlight": "#E0A85D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 0,
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.0,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "b399430347eb58d3e1f7b4a59b5f22668444e0d71687b4091dafdedad20b6886",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "cookiecutter-twilight",
+      "form": "cookiecutter",
+      "palette_family": "cookiecutter",
+      "depth": "twilight",
+      "stage": "base-rich",
+      "file": "cookiecutter-twilight-128.png",
+      "sha256": "ad9f5e979f9a0cc7fa2eae227fd906511887ce5e17fcfd8e80cfcef007c064a9",
+      "display_file": "cookiecutter-twilight-256.png",
+      "display_sha256": "e526ac7764c8875c1c2e7887686bd0270f30932ec5ecbbbcdb45725e7879e032",
+      "source_id": "cookiecutter-base-rich",
+      "source_file": "morphology/cookiecutter-base-rich-128.png",
+      "source_sha256": "cdf3d0bc6931ffcc0b5b6346a79a7d106e1fdb6125a04123ad518f6f2289f75c",
+      "palette": {
+        "primary": {
+          "shadow": "#1D3346",
+          "base": "#3A5A71",
+          "highlight": "#728E98"
+        },
+        "secondary": {
+          "shadow": "#58514E",
+          "base": "#91867A",
+          "highlight": "#C6BDA9"
+        },
+        "tertiary": {
+          "shadow": "#69314A",
+          "base": "#9F5746",
+          "highlight": "#DDA967"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#1E3445",
+          "base": "#3F6277",
+          "highlight": "#809FA4"
+        },
+        "secondary": {
+          "shadow": "#61574E",
+          "base": "#A49580",
+          "highlight": "#E3D6B7"
+        },
+        "tertiary": {
+          "shadow": "#6C2F48",
+          "base": "#A35540",
+          "highlight": "#E0A85D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 1,
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.075,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "b399430347eb58d3e1f7b4a59b5f22668444e0d71687b4091dafdedad20b6886",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "cookiecutter-midnight",
+      "form": "cookiecutter",
+      "palette_family": "cookiecutter",
+      "depth": "midnight",
+      "stage": "midnight-abyss",
+      "file": "cookiecutter-midnight-128.png",
+      "sha256": "e422e1716c686854f486e706a55b287159bf42f9c9d91d24c9ab3891a37bebfb",
+      "display_file": "cookiecutter-midnight-256.png",
+      "display_sha256": "1c2adc49866a84748ace2f1c8c8243dde4afdb656b9e97fb56d857a2e616f0e1",
+      "source_id": "cookiecutter-midnight-abyss",
+      "source_file": "morphology/cookiecutter-midnight-abyss-128.png",
+      "source_sha256": "afad115dadd0e781a597459fd25b677f3888cd1d15d1a1bb4774baff08073e35",
+      "palette": {
+        "primary": {
+          "shadow": "#1C3246",
+          "base": "#36546C",
+          "highlight": "#66818E"
+        },
+        "secondary": {
+          "shadow": "#504C4F",
+          "base": "#817A75",
+          "highlight": "#AEA89E"
+        },
+        "tertiary": {
+          "shadow": "#65334C",
+          "base": "#9B594B",
+          "highlight": "#DAA970"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#1E3445",
+          "base": "#3F6277",
+          "highlight": "#809FA4"
+        },
+        "secondary": {
+          "shadow": "#61574E",
+          "base": "#A49580",
+          "highlight": "#E3D6B7"
+        },
+        "tertiary": {
+          "shadow": "#6C2F48",
+          "base": "#A35540",
+          "highlight": "#E0A85D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 2,
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.15,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "1c43f24e5cf6aebd23e6963ed8cb4957c6e641c004b5ef207c8dde04a9aa0167",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "cookiecutter-abyss",
+      "form": "cookiecutter",
+      "palette_family": "cookiecutter",
+      "depth": "abyss",
+      "stage": "midnight-abyss",
+      "file": "cookiecutter-abyss-128.png",
+      "sha256": "7f48f1ef9ff99cb98df008febc649a092a86e9a5c5601bd4b4f470bd38ec642c",
+      "display_file": "cookiecutter-abyss-256.png",
+      "display_sha256": "19e24bc0d544b1a9aeb6c940d56d12b00187e43b1173c0eb8943576f487413c8",
+      "source_id": "cookiecutter-midnight-abyss",
+      "source_file": "morphology/cookiecutter-midnight-abyss-128.png",
+      "source_sha256": "afad115dadd0e781a597459fd25b677f3888cd1d15d1a1bb4774baff08073e35",
+      "palette": {
+        "primary": {
+          "shadow": "#203144",
+          "base": "#384F64",
+          "highlight": "#617584"
+        },
+        "secondary": {
+          "shadow": "#494950",
+          "base": "#737074",
+          "highlight": "#9A9999"
+        },
+        "tertiary": {
+          "shadow": "#5E384C",
+          "base": "#925E55",
+          "highlight": "#D2AB82"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#1E3445",
+          "base": "#3F6277",
+          "highlight": "#809FA4"
+        },
+        "secondary": {
+          "shadow": "#61574E",
+          "base": "#A49580",
+          "highlight": "#E3D6B7"
+        },
+        "tertiary": {
+          "shadow": "#6C2F48",
+          "base": "#A35540",
+          "highlight": "#E0A85D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 3,
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.225,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "1c43f24e5cf6aebd23e6963ed8cb4957c6e641c004b5ef207c8dde04a9aa0167",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "cookiecutter-trench",
+      "form": "cookiecutter",
+      "palette_family": "cookiecutter",
+      "depth": "trench",
+      "stage": "trench",
+      "file": "cookiecutter-trench-128.png",
+      "sha256": "26fcfd58c1e3c334d3228c747f3a55ff9a12295171038699b0b80da8ed8e7afe",
+      "display_file": "cookiecutter-trench-256.png",
+      "display_sha256": "43e5401843b13bd93bc2c639957b5fd26d49f9c1e6f9322872c4a78b80788971",
+      "source_id": "cookiecutter-trench",
+      "source_file": "morphology/cookiecutter-trench-128.png",
+      "source_sha256": "e49bacb3efe6d36d5a604b7f81d5a3eccd44e0b58ec9ad4cea7e76cf8ac5840b",
+      "palette": {
+        "primary": {
+          "shadow": "#223041",
+          "base": "#334457",
+          "highlight": "#4E5E6E"
+        },
+        "secondary": {
+          "shadow": "#3D404B",
+          "base": "#595B63",
+          "highlight": "#74767D"
+        },
+        "tertiary": {
+          "shadow": "#583B4D",
+          "base": "#8A615C",
+          "highlight": "#CCAD8F"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#1E3445",
+          "base": "#3F6277",
+          "highlight": "#809FA4"
+        },
+        "secondary": {
+          "shadow": "#61574E",
+          "base": "#A49580",
+          "highlight": "#E3D6B7"
+        },
+        "tertiary": {
+          "shadow": "#6C2F48",
+          "base": "#A35540",
+          "highlight": "#E0A85D"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 4,
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.3,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "73a121a346c3fb168fb497c4912d6d7e6e60bb7ab62313316a84932eb06ce923",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "squid-sunlight",
+      "form": "squid",
+      "palette_family": "octopus",
+      "depth": "sunlight",
+      "stage": "base-rich",
+      "file": "squid-sunlight-128.png",
+      "sha256": "25d709653a757beef743ec3a6dd1a0cef8c0fd10953e0357a48b8b74575536ea",
+      "display_file": "squid-sunlight-256.png",
+      "display_sha256": "6368eb0613ceb70f16b6a3c69a2b61382c44f22611649afadc3c8dcbcb94c243",
+      "source_id": "squid-base-rich",
+      "source_file": "morphology/squid-base-rich-128.png",
+      "source_sha256": "25d709653a757beef743ec3a6dd1a0cef8c0fd10953e0357a48b8b74575536ea",
+      "palette": {
+        "primary": {
+          "shadow": "#633A46",
+          "base": "#A95650",
+          "highlight": "#E28B6C"
+        },
+        "secondary": {
+          "shadow": "#243B61",
+          "base": "#3C6A93",
+          "highlight": "#89ABD0"
+        },
+        "tertiary": {
+          "shadow": "#79612C",
+          "base": "#C0A33F",
+          "highlight": "#F1D075"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#633A46",
+          "base": "#A95650",
+          "highlight": "#E28B6C"
+        },
+        "secondary": {
+          "shadow": "#243B61",
+          "base": "#3C6A93",
+          "highlight": "#89ABD0"
+        },
+        "tertiary": {
+          "shadow": "#79612C",
+          "base": "#C0A33F",
+          "highlight": "#F1D075"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 0,
+        "k": 1.0,
+        "w": 0.0,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.0,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "287d9c81fcf0737dff1b2d5a82d8ad58c920c97fed3b624819b0f60d5b3a78c6",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "squid-twilight",
+      "form": "squid",
+      "palette_family": "octopus",
+      "depth": "twilight",
+      "stage": "base-rich",
+      "file": "squid-twilight-128.png",
+      "sha256": "bc3995cb2150e04413724608c3c0ca96da346dde5c3834500cd0eed9f7e29d0e",
+      "display_file": "squid-twilight-256.png",
+      "display_sha256": "60ce43151ded05c5b4c01bf12e7b20b761065159b631837bc38baffd9c90a43d",
+      "source_id": "squid-base-rich",
+      "source_file": "morphology/squid-base-rich-128.png",
+      "source_sha256": "25d709653a757beef743ec3a6dd1a0cef8c0fd10953e0357a48b8b74575536ea",
+      "palette": {
+        "primary": {
+          "shadow": "#5A3947",
+          "base": "#965150",
+          "highlight": "#C67E69"
+        },
+        "secondary": {
+          "shadow": "#22395E",
+          "base": "#376188",
+          "highlight": "#7999BD"
+        },
+        "tertiary": {
+          "shadow": "#786133",
+          "base": "#BFA34B",
+          "highlight": "#EFD07F"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#633A46",
+          "base": "#A95650",
+          "highlight": "#E28B6C"
+        },
+        "secondary": {
+          "shadow": "#243B61",
+          "base": "#3C6A93",
+          "highlight": "#89ABD0"
+        },
+        "tertiary": {
+          "shadow": "#79612C",
+          "base": "#C0A33F",
+          "highlight": "#F1D075"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 1,
+        "k": 0.867,
+        "w": 0.15,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.075,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "287d9c81fcf0737dff1b2d5a82d8ad58c920c97fed3b624819b0f60d5b3a78c6",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "squid-midnight",
+      "form": "squid",
+      "palette_family": "octopus",
+      "depth": "midnight",
+      "stage": "midnight-abyss",
+      "file": "squid-midnight-128.png",
+      "sha256": "f4e50be346783fc0791ea3d0ddb2feca458af1dc3a274bd1160999b215c03e30",
+      "display_file": "squid-midnight-256.png",
+      "display_sha256": "2cd5eeeb5083a9df868ccfedb401409b5d166eebd0fa160e73b1ed3773ff5fc6",
+      "source_id": "squid-midnight-abyss",
+      "source_file": "morphology/squid-midnight-abyss-128.png",
+      "source_sha256": "750a6e85063a572daac49496ad7a8ba1390fab2792b25c4d91dc0b530aba5ba4",
+      "palette": {
+        "primary": {
+          "shadow": "#513848",
+          "base": "#854E52",
+          "highlight": "#AE7469"
+        },
+        "secondary": {
+          "shadow": "#21375A",
+          "base": "#345A7F",
+          "highlight": "#6C89AC"
+        },
+        "tertiary": {
+          "shadow": "#76613A",
+          "base": "#BDA356",
+          "highlight": "#EDD08A"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#633A46",
+          "base": "#A95650",
+          "highlight": "#E28B6C"
+        },
+        "secondary": {
+          "shadow": "#243B61",
+          "base": "#3C6A93",
+          "highlight": "#89ABD0"
+        },
+        "tertiary": {
+          "shadow": "#79612C",
+          "base": "#C0A33F",
+          "highlight": "#F1D075"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 2,
+        "k": 0.754,
+        "w": 0.3,
+        "c": 1.0,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.15,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "dcb674d907b4fe3108ae5c75d6f98e70a8d187d07e08ff9b86d00ff8653bd731",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "squid-abyss",
+      "form": "squid",
+      "palette_family": "octopus",
+      "depth": "abyss",
+      "stage": "midnight-abyss",
+      "file": "squid-abyss-128.png",
+      "sha256": "0be9c4e95e74dda091ceab9982c0f6b3415ffd5a7d0b78e509cf0af9ebc13059",
+      "display_file": "squid-abyss-256.png",
+      "display_sha256": "b9431f1ff819b1f5abc7b230d2e095561d6f248d47f65a2b5a6fd44623d40c30",
+      "source_id": "squid-midnight-abyss",
+      "source_file": "morphology/squid-midnight-abyss-128.png",
+      "source_sha256": "750a6e85063a572daac49496ad7a8ba1390fab2792b25c4d91dc0b530aba5ba4",
+      "palette": {
+        "primary": {
+          "shadow": "#473849",
+          "base": "#714E56",
+          "highlight": "#946E6D"
+        },
+        "secondary": {
+          "shadow": "#253653",
+          "base": "#3A5472",
+          "highlight": "#687D9A"
+        },
+        "tertiary": {
+          "shadow": "#736247",
+          "base": "#B9A46C",
+          "highlight": "#E8D19D"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#633A46",
+          "base": "#A95650",
+          "highlight": "#E28B6C"
+        },
+        "secondary": {
+          "shadow": "#243B61",
+          "base": "#3C6A93",
+          "highlight": "#89ABD0"
+        },
+        "tertiary": {
+          "shadow": "#79612C",
+          "base": "#C0A33F",
+          "highlight": "#F1D075"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 3,
+        "k": 0.667,
+        "w": 0.45,
+        "c": 0.85,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.225,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "dcb674d907b4fe3108ae5c75d6f98e70a8d187d07e08ff9b86d00ff8653bd731",
+      "status": "candidate",
+      "qvl": "pending"
+    },
+    {
+      "id": "squid-trench",
+      "form": "squid",
+      "palette_family": "octopus",
+      "depth": "trench",
+      "stage": "trench",
+      "file": "squid-trench-128.png",
+      "sha256": "ac9a383120aea8c57e856be861e0b1ad133b269fe5b2c86d0d3ce54677c07274",
+      "display_file": "squid-trench-256.png",
+      "display_sha256": "38a59124d72075d21427725d5c56c1a8d4778b299ce2f6c41b6925dc22a68fe0",
+      "source_id": "squid-trench",
+      "source_file": "morphology/squid-trench-128.png",
+      "source_sha256": "03c50d60f25ca6e3e2782c20a23bf41f35f2aeef7965aa39c3cf876325c122e4",
+      "palette": {
+        "primary": {
+          "shadow": "#3C3545",
+          "base": "#58444F",
+          "highlight": "#6F5A5F"
+        },
+        "secondary": {
+          "shadow": "#25334B",
+          "base": "#344861",
+          "highlight": "#52637C"
+        },
+        "tertiary": {
+          "shadow": "#70624F",
+          "base": "#B5A47A",
+          "highlight": "#E4D1AB"
+        }
+      },
+      "source_palette": {
+        "primary": {
+          "shadow": "#633A46",
+          "base": "#A95650",
+          "highlight": "#E28B6C"
+        },
+        "secondary": {
+          "shadow": "#243B61",
+          "base": "#3C6A93",
+          "highlight": "#89ABD0"
+        },
+        "tertiary": {
+          "shadow": "#79612C",
+          "base": "#C0A33F",
+          "highlight": "#F1D075"
+        }
+      },
+      "neutral": {
+        "outline": "#17232D",
+        "mouth_pupil": "#0B1118",
+        "eye_teeth": "#E9E3D3"
+      },
+      "transform": {
+        "depth_step": 4,
+        "k": 0.466,
+        "w": 0.6,
+        "c": 0.75,
+        "tertiary_k": 1.0,
+        "tertiary_w": 0.3,
+        "linear_clipped": false
+      },
+      "alpha": "identical-to-source",
+      "alpha_sha256": "8178300dc47d9dad62d03c5192fcfce8dc4bff0ed4f5db9f651edaab8377edf4",
+      "status": "candidate",
+      "qvl": "pending"
+    }
+  ]
+}

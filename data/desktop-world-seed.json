@@ -1,0 +1,151 @@
+{
+  "v": 3,
+  "revision": 0,
+  "phase": "lock",
+  "user": { "id": "trainee", "name": "Alex Rivera", "short": "alex", "email": "alex.rivera@northwind.example", "avatar": "initials" },
+  "sys": {
+    "theme": "dark", "accent": "blue", "wallpaper": "depth-sunlight",
+    "volume": 60, "muted": false, "brightness": 90, "nightLight": false,
+    "wifi": true, "bluetooth": true, "focus": false, "lowPower": false, "battery": 82,
+    "reduceMotion": false, "reduceTransparency": false,
+    "dockAutohide": false, "showBatteryPercent": false, "increaseContrast": false, "wifiNetwork": "Northwind-Staff",
+    "locationServices": true, "shareAnalytics": false, "personalizedAds": false
+  },
+  "fs": { "nodes": {
+    "root":      { "id": "root", "parentId": null, "name": "", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "home":      { "id": "home", "parentId": "root", "name": "alex", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "desktop":   { "id": "desktop", "parentId": "home", "name": "Desktop", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "documents": { "id": "documents", "parentId": "home", "name": "Documents", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "downloads": { "id": "downloads", "parentId": "home", "name": "Downloads", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "pictures":  { "id": "pictures", "parentId": "home", "name": "Pictures", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "music":     { "id": "music", "parentId": "home", "name": "Music", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "trash":     { "id": "trash", "parentId": "home", "name": "Trash", "kind": "folder", "mime": null, "size": 0, "modified": "2026-11-02T09:00:00Z", "trashed": false },
+    "f-welcome":   { "id": "f-welcome", "parentId": "desktop", "name": "Welcome.txt", "kind": "file", "mime": "text/plain", "size": 412, "modified": "2026-11-02T09:00:00Z", "trashed": false, "contentId": "c-welcome", "desktopPos": { "x": 900, "y": 20 } },
+    "f-q3":        { "id": "f-q3", "parentId": "desktop", "name": "Q3 Planning", "kind": "folder", "mime": null, "size": 0, "modified": "2026-10-28T15:10:00Z", "trashed": false, "desktopPos": { "x": 900, "y": 110 } },
+    "f-q3-notes":  { "id": "f-q3-notes", "parentId": "f-q3", "name": "Meeting notes.txt", "kind": "file", "mime": "text/plain", "size": 980, "modified": "2026-10-28T15:10:00Z", "trashed": false, "contentId": "c-q3-notes" },
+    "f-budget":    { "id": "f-budget", "parentId": "documents", "name": "Team budget 2027.txt", "kind": "file", "mime": "text/plain", "size": 1260, "modified": "2026-10-30T11:42:00Z", "trashed": false, "contentId": "c-budget" },
+    "f-handbook":  { "id": "f-handbook", "parentId": "documents", "name": "Employee handbook.txt", "kind": "file", "mime": "text/plain", "size": 2048, "modified": "2026-09-14T08:00:00Z", "trashed": false, "contentId": "c-handbook" },
+    "f-offsite":   { "id": "f-offsite", "parentId": "pictures", "name": "Team offsite.png", "kind": "file", "mime": "image/png", "size": 0, "modified": "2026-08-21T17:30:00Z", "trashed": false, "contentId": "c-offsite" },
+    "f-installer": { "id": "f-installer", "parentId": "downloads", "name": "printer-driver-setup.txt", "kind": "file", "mime": "text/plain", "size": 220, "modified": "2026-11-01T13:05:00Z", "trashed": false, "contentId": "c-installer" },
+    "f-song":      { "id": "f-song", "parentId": "music", "name": "Focus loop.txt", "kind": "file", "mime": "text/plain", "size": 64, "modified": "2026-07-02T10:00:00Z", "trashed": false, "contentId": "c-song" }
+  } },
+  "windows": [],
+  "order": [],
+  "focusedId": null,
+  "overlays": { "launcher": false, "search": false, "quick": false, "centre": false, "taskView": false, "switcher": false },
+  "notifications": { "banners": [], "history": [
+    { "id": "n-welcome", "app": "settings", "title": "Welcome, Alex", "body": "This is a fictional training desktop. Nothing here is real.", "time": "2026-11-02T09:00:00Z" }
+  ] },
+  "dock": {
+    "pins": ["files", "browser", "mail", "messages", "calendar", "notes", "reminders", "photos", "media", "store", "settings", "terminal"],
+    "badges": { "mail": 2, "messages": 1 }
+  },
+  "installed": ["files", "browser", "mail", "messages", "mfa", "updates", "settings", "terminal", "notes", "texteditor", "calendar", "reminders", "contacts", "photos", "media", "calculator", "clock", "store", "taskmanager", "stickies", "whiteboard"],
+  "data": {
+    "mail": {
+      "folders": ["inbox", "drafts", "sent", "junk", "trash", "archive"],
+      "messages": [
+        { "id": "m-standup", "folder": "inbox", "from": "Priya Shah <priya.shah@northwind.example>", "to": "alex.rivera@northwind.example", "subject": "Stand-up moved to 10:30", "body": "Hi Alex,\n\nTomorrow's stand-up moves to 10:30 because of the facilities walk-through.\n\nPriya", "time": "2026-11-02T08:12:00Z", "read": false, "flagged": false, "attachments": [] },
+        { "id": "m-budget", "folder": "inbox", "from": "Marcus Lee <marcus.lee@northwind.example>", "to": "alex.rivera@northwind.example", "subject": "Budget draft for review", "body": "Alex,\n\nThe 2027 draft is in Documents. Comments by Friday please.\n\nMarcus", "time": "2026-11-01T16:40:00Z", "read": false, "flagged": true, "attachments": ["f-budget"] },
+        { "id": "m-it", "folder": "inbox", "from": "IT Service Desk <servicedesk@northwind.example>", "to": "alex.rivera@northwind.example", "subject": "Planned maintenance Saturday", "body": "Email will be unavailable from 22:00 to 23:00 on Saturday. No action is needed.", "time": "2026-10-31T12:00:00Z", "read": true, "flagged": false, "attachments": [] },
+        { "id": "m-sent-1", "folder": "sent", "from": "Alex Rivera <alex.rivera@northwind.example>", "to": "priya.shah@northwind.example", "subject": "Re: Offsite photos", "body": "Saved them to Pictures. Thanks!", "time": "2026-08-22T09:15:00Z", "read": true, "flagged": false, "attachments": [] }
+      ]
+    },
+    "messages": { "threads": [
+      { "id": "t-priya", "with": "Priya Shah", "items": [
+        { "id": "i-1", "from": "Priya Shah", "text": "Are you joining the 10:30?", "time": "2026-11-02T08:20:00Z" }
+      ] },
+      { "id": "t-team", "with": "Platform team", "items": [
+        { "id": "i-2", "from": "Marcus Lee", "text": "Release notes are in the shared folder.", "time": "2026-11-01T17:02:00Z" },
+        { "id": "i-3", "from": "Alex Rivera", "text": "Thanks, reading now.", "time": "2026-11-01T17:05:00Z" }
+      ] }
+    ] },
+    "notes": [
+      { "id": "n-groceries", "folder": "notes", "title": "Groceries", "body": "Oat milk\nCoffee beans\nLimes", "modified": "2026-11-01T19:00:00Z", "pinned": false },
+      { "id": "n-ideas", "folder": "notes", "title": "Offsite ideas", "body": "Harbour walk\nEscape room\nCooking class", "modified": "2026-10-20T12:00:00Z", "pinned": true }
+    ],
+    "calendar": [
+      { "id": "e-standup", "title": "Stand-up", "start": "2026-11-03T10:30:00Z", "end": "2026-11-03T10:45:00Z", "location": "Room 4B" },
+      { "id": "e-review", "title": "Budget review", "start": "2026-11-06T14:00:00Z", "end": "2026-11-06T15:00:00Z", "location": "Video call" }
+    ],
+    "reminders": [
+      { "id": "r-budget", "list": "work", "title": "Comment on budget draft", "due": "2026-11-06T17:00:00Z", "done": false },
+      { "id": "r-badge", "list": "work", "title": "Renew building badge", "due": "2026-11-10T09:00:00Z", "done": false },
+      { "id": "r-plants", "list": "home", "title": "Water plants", "due": null, "done": true }
+    ],
+    "contacts": [
+      { "id": "p-priya", "name": "Priya Shah", "email": "priya.shah@northwind.example", "phone": "+1 555 0101", "org": "Northwind" },
+      { "id": "p-marcus", "name": "Marcus Lee", "email": "marcus.lee@northwind.example", "phone": "+1 555 0102", "org": "Northwind" },
+      { "id": "p-dana", "name": "Dana Okafor", "email": "dana.okafor@northwind.example", "phone": "+1 555 0103", "org": "Northwind" },
+      { "id": "p-sam", "name": "Sam Novak", "email": "sam.novak@fabrikam.example", "phone": "+1 555 0104", "org": "Fabrikam" }
+    ],
+    "contents": {
+      "c-welcome": { "text": "Welcome to the Northwind training desktop.\n\nEverything here is fictional: the people, the company, the email and the files. Explore normally. When something looks wrong, trust that instinct." },
+      "c-q3-notes": { "text": "Q3 planning\n- Hiring: two engineers\n- Migrate build agents\n- Security awareness week in November" },
+      "c-budget": { "text": "Team budget 2027 (draft)\nTravel: 12,000\nTraining: 8,500\nTooling: 21,000\nTotal: 41,500" },
+      "c-handbook": { "text": "Employee handbook (excerpt)\nReport suspicious email with the Report button. IT will never ask for your password." },
+      "c-offsite": { "asset": "offsite" },
+      "c-installer": { "text": "Placeholder file. Fictional installer name used for training only." },
+      "c-song": { "text": "Placeholder audio entry." }
+    },
+    "browser": { "tabs": [], "activeTabId": null, "bookmarks": [], "history": [] },
+    "media": {
+      "tracks": [
+        { "id": "t1", "title": "Neon Skyline", "artist": "Vector Fields", "album": "Neon Skyline", "genre": "Synthwave", "asset": "track-1", "cover": "cover-1", "duration": 0, "loved": true },
+        { "id": "t2", "title": "Golden Hour", "artist": "Cafe Mono", "album": "Golden Hour", "genre": "Lo-Fi", "asset": "track-2", "cover": "cover-2", "duration": 0, "loved": false },
+        { "id": "t3", "title": "Blue Note Sessions", "artist": "The Meridian Trio", "album": "Blue Note Sessions", "genre": "Jazz", "asset": "track-3", "cover": "cover-3", "duration": 0, "loved": false },
+        { "id": "t4", "title": "Drift", "artist": "Isla Wave", "album": "Drift", "genre": "Ambient", "asset": "track-4", "cover": "cover-4", "duration": 0, "loved": true }
+      ],
+      "playlists": [
+        { "id": "pl-focus", "name": "Focus", "trackIds": ["t2", "t4"] },
+        { "id": "pl-commute", "name": "Commute", "trackIds": ["t1", "t3"] }
+      ],
+      "shuffle": false, "repeat": "off", "nowPlaying": null
+    },
+    "photos": {
+      "items": [
+        { "id": "p1", "name": "IMG_0101.jpg", "asset": "photo-1", "taken": "2026-07-14T17:42:00Z", "favorite": false, "trashed": false },
+        { "id": "p2", "name": "IMG_0102.jpg", "asset": "photo-2", "taken": "2026-07-09T09:15:00Z", "favorite": true, "trashed": false },
+        { "id": "p3", "name": "IMG_0103.jpg", "asset": "photo-3", "taken": "2026-06-28T08:05:00Z", "favorite": false, "trashed": false },
+        { "id": "p4", "name": "IMG_0104.jpg", "asset": "photo-4", "taken": "2026-06-12T19:30:00Z", "favorite": false, "trashed": false },
+        { "id": "p5", "name": "IMG_0105.jpg", "asset": "photo-5", "taken": "2026-05-30T12:10:00Z", "favorite": true, "trashed": false },
+        { "id": "p6", "name": "IMG_0106.jpg", "asset": "photo-6", "taken": "2026-05-18T07:45:00Z", "favorite": false, "trashed": false },
+        { "id": "p7", "name": "IMG_0107.jpg", "asset": "photo-7", "taken": "2026-05-04T16:20:00Z", "favorite": false, "trashed": false },
+        { "id": "p8", "name": "IMG_0108.jpg", "asset": "photo-8", "taken": "2026-05-02T18:44:00Z", "favorite": false, "trashed": false }
+      ],
+      "albums": [
+        { "id": "al-offsite", "name": "Team offsite", "photoIds": ["p5", "p8"] },
+        { "id": "al-coffee", "name": "Coffee", "photoIds": ["p3"] }
+      ]
+    },
+    "whiteboard": {
+      "boards": [
+        { "id": "board-q3", "name": "Q3 planning", "modified": "2026-10-28T15:10:00Z", "items": [
+          { "id": "ff-title", "type": "text", "x": 320, "y": 140, "w": 320, "h": 40, "text": "Q3 planning" },
+          { "id": "ff-hiring", "type": "sticky", "x": 160, "y": 240, "w": 200, "h": 200, "text": "Hiring: two engineers", "color": "yellow" },
+          { "id": "ff-agents", "type": "sticky", "x": 420, "y": 260, "w": 200, "h": 200, "text": "Migrate build agents", "color": "pink" },
+          { "id": "ff-box", "type": "shape", "x": 700, "y": 220, "w": 220, "h": 130, "color": "#30D158", "shape": "rect" },
+          { "id": "ff-week", "type": "text", "x": 710, "y": 250, "w": 200, "h": 80, "text": "Security awareness\nweek in November" }
+        ] }
+      ],
+      "activeId": "board-q3"
+    },
+    "calculator": { "mode": "basic", "angle": "deg", "base": 10, "memory": 0, "history": [] },
+    "clock": {
+      "worldClocks": [
+        { "id": "harbor-city", "name": "Harbor City", "tz": "local" },
+        { "id": "new-york", "name": "New York", "tz": "America/New_York" },
+        { "id": "london", "name": "London", "tz": "Europe/London" },
+        { "id": "tokyo", "name": "Tokyo", "tz": "Asia/Tokyo" }
+      ],
+      "timer": null,
+      "stopwatch": { "running": false, "elapsedMs": 0, "at": null, "laps": [] }
+    },
+    "terminal": { "cwd": "home", "history": [] },
+    "stickies": [
+      { "id": "stk-week", "text": "Security week\nNov 4-8", "color": "yellow", "x": 40, "y": 40, "w": 200, "h": 160, "collapsed": false },
+      { "id": "stk-desk", "text": "IT desk: ext. 4410", "color": "blue", "x": 280, "y": 60, "w": 200, "h": 150, "collapsed": false }
+    ]
+  },
+  "scene": { "phase": "boot", "stepId": null, "highlight": null }
+}

@@ -1,0 +1,268 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Walter Brandt",
+    "short": "walter",
+    "email": "walter.brandt@brandtadvisory.example",
+    "avatar": "colin-powell-2016"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img3.jpg",
+    "wifiNetwork": "Brandt-Home",
+    "battery": 88
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "walter"
+      },
+      "f-talk": {
+        "id": "f-talk",
+        "parentId": "documents",
+        "name": "Talk outline.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 78,
+        "modified": "2016-03-14T09:30:00Z",
+        "trashed": false,
+        "contentId": "c-talk"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-board",
+        "app": "calendar",
+        "title": "Advisory board call",
+        "body": "Call with the board at 11.",
+        "time": "2016-03-16T14:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "calculator",
+    "clock",
+    "updates"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "contacts",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-speak",
+          "folder": "inbox",
+          "from": "Julia Strand <julia.strand@brandtadvisory.example>",
+          "to": "walter.brandt@brandtadvisory.example",
+          "subject": "Speaking engagement in May",
+          "body": "Walter,\n\nThe veterans' forum confirmed May 12th. They would like a short talk on leadership. Details are in the calendar invite.\n\nJulia",
+          "time": "2016-03-15T18:00:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-memoir",
+          "folder": "inbox",
+          "from": "Arlo Finch <arlo.finch@lanternbooks.example>",
+          "to": "walter.brandt@brandtadvisory.example",
+          "subject": "Chapter notes",
+          "body": "Here are my notes on chapter six. Mostly small edits.\n\nArlo",
+          "time": "2016-03-14T16:40:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-family",
+          "folder": "inbox",
+          "from": "Helen Brandt <helen.brandt@brandtadvisory.example>",
+          "to": "walter.brandt@brandtadvisory.example",
+          "subject": "Grandchildren visit",
+          "body": "They arrive Friday and stay the weekend. Please do not schedule calls.",
+          "time": "2016-03-13T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Walter Brandt <walter.brandt@brandtadvisory.example>",
+          "to": "julia.strand@brandtadvisory.example",
+          "subject": "Re: May travel",
+          "body": "May 12th works. Please book the early flight.",
+          "time": "2016-03-11T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-julia",
+          "with": "Julia Strand",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Julia Strand",
+              "text": "Board call moved to 11.",
+              "time": "2016-03-15T18:30:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Walter Brandt",
+              "text": "Fine. Thank you.",
+              "time": "2016-03-15T18:34:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-talk",
+        "folder": "notes",
+        "title": "Talk outline",
+        "body": "Lead from the front\nListen first\nAdmit mistakes early",
+        "modified": "2016-03-14T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-board",
+        "title": "Advisory board call",
+        "start": "2016-03-16T16:00:00Z",
+        "end": "2016-03-16T17:00:00Z",
+        "location": "Conference line"
+      },
+      {
+        "id": "e-forum",
+        "title": "Veterans forum talk",
+        "start": "2016-05-12T14:00:00Z",
+        "end": "2016-05-12T15:00:00Z",
+        "location": "Convention centre"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-ch6",
+        "list": "work",
+        "title": "Review chapter six notes",
+        "due": "2016-03-18T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-julia",
+        "name": "Julia Strand",
+        "email": "julia.strand@brandtadvisory.example",
+        "phone": "+1 555 0201",
+        "org": "Brandt Advisory"
+      },
+      {
+        "id": "p-arlo",
+        "name": "Arlo Finch",
+        "email": "arlo.finch@lanternbooks.example",
+        "phone": "+1 555 0202",
+        "org": "Lantern Books"
+      },
+      {
+        "id": "p-helen",
+        "name": "Helen Brandt",
+        "email": "helen.brandt@brandtadvisory.example",
+        "phone": "+1 555 0203",
+        "org": "Family"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-talk": {
+        "text": "Leadership talk\n1. Lead from the front\n2. Listen first\n3. Admit mistakes early"
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-advisory": {
+          "title": "Brandt Advisory",
+          "url": "www.brandtadvisory.example",
+          "brand": "Brandt Advisory",
+          "heading": "Leadership and public service",
+          "body": "Speaking and advisory work. This is a fictional advisory firm page.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-advisory",
+          "title": "Brandt Advisory"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

@@ -1,0 +1,36 @@
+# Template for /etc/caddy/Caddyfile. setup.sh substitutes the three double-underscore tokens below: the site address becomes the
+# --host value; the global-option and tls lines stay empty (automatic certificates, HTTP redirects on port 80) except in dry
+# runs (`--no-http-redirect`, `--tls-internal`).
+# Caddy is the only public listener (SPEC 7.1); the controller listens on 127.0.0.1:4173.
+{
+	# HTTP/3 would need UDP 443, which the firewall keeps closed (firewall.md): serve HTTP/1.1 and HTTP/2 only.
+	servers {
+		protocols h1 h2
+	}
+	__GLOBAL_OPTION__
+}
+
+__PUBLIC_HOST__ {
+	__TLS__
+
+	# Browser login gate. The bcrypt hash lives in /etc/caddy/access.caddy on the VM, not in this repository. Caddy refuses to
+	# start unless that file exists and contains basic_auth (deploy/vultr-vm/README.md).
+	import /etc/caddy/access.caddy
+
+	# 100 MB upload cap in the controller plus multipart overhead (SPEC 7.3).
+	request_body {
+		max_size 110MB
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+
+	reverse_proxy 127.0.0.1:4173 {
+		# Caddy replaces any client-supplied X-Forwarded-For with the address it saw (no trusted_proxies are set); the
+		# controller rate-limits on the last entry.
+		# Job progress is a server-sent-event stream.
+		flush_interval -1
+	}
+}

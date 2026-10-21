@@ -1,0 +1,307 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Owen Calloway",
+    "short": "owen",
+    "email": "owen.calloway@brinecom.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "green",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img3.jpg",
+    "wifiNetwork": "Brinecom-Corp"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "owen"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Standby roster.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 49,
+        "modified": "2022-05-17T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "East cluster plan.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 71,
+        "modified": "2022-05-18T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Owen",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-05-19T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings",
+      "terminal"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-change-window-to",
+          "folder": "inbox",
+          "from": "Brinecom Network Ops <netops@brinecom.example>",
+          "to": "owen.calloway@brinecom.example",
+          "subject": "Change window tonight",
+          "body": "A change window runs from 23:00 to 01:00 tonight on the east cluster. Standby engineers are listed in the roster.\n\nNetwork Ops",
+          "time": "2022-05-18T14:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-reminder-keep-wo",
+          "folder": "inbox",
+          "from": "Brinecom Security <security@brinecom.example>",
+          "to": "owen.calloway@brinecom.example",
+          "subject": "Reminder: keep work logins out of personal browsers",
+          "body": "Do not save work passwords in a personal browser profile. If security needs to reach you we call the number in the staff directory and open a ticket.\n\nBrinecom Security",
+          "time": "2022-05-10T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-standby-roster",
+          "folder": "inbox",
+          "from": "Ruth Amadi <ruth.amadi@brinecom.example>",
+          "to": "owen.calloway@brinecom.example",
+          "subject": "Standby roster",
+          "body": "Owen, you are on standby Thursday night. Roster attached in the shared folder.\n\nRuth",
+          "time": "2022-05-17T16:45:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-ruth-amadi",
+          "with": "Ruth Amadi",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Ruth Amadi",
+              "text": "Thanks for covering Thursday.",
+              "time": "2022-05-19T08:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-network-team",
+          "with": "Network team",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Pavel Doran",
+              "text": "East cluster change tonight, as expected.",
+              "time": "2022-05-19T08:35:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-change-plan-east-cluster",
+        "folder": "notes",
+        "title": "Change plan east cluster",
+        "body": "Back up configs\nApply the change\nVerify routes",
+        "modified": "2022-05-18T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-lab-notes",
+        "folder": "notes",
+        "title": "Lab notes",
+        "body": "Switch firmware test passed\nRouter test next week",
+        "modified": "2022-05-12T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-east-cluster-change",
+        "title": "East cluster change",
+        "start": "2022-05-19T23:00:00Z",
+        "end": "2022-05-20T01:00:00Z",
+        "location": "Remote"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-back-up-the-east-cluster-confi",
+        "list": "work",
+        "title": "Back up the east cluster configs",
+        "due": "2022-05-19T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-ruth-amadi",
+        "name": "Ruth Amadi",
+        "email": "ruth.amadi@brinecom.example",
+        "phone": "+1 555 0271",
+        "org": "Brinecom"
+      },
+      {
+        "id": "p-2-pavel-doran",
+        "name": "Pavel Doran",
+        "email": "pavel.doran@brinecom.example",
+        "phone": "+1 555 0272",
+        "org": "Brinecom"
+      },
+      {
+        "id": "p-3-brinecom-security",
+        "name": "Brinecom Security",
+        "email": "security@brinecom.example",
+        "phone": "+1 555 0270",
+        "org": "Brinecom"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Standby roster, May\nThursday night: Owen Calloway"
+      },
+      "c-doc-2": {
+        "text": "Change window 23:00 to 01:00.\nRollback plan: restore the saved configs."
+      }
+    },
+    "web": {
+      "pages": {
+        "brinecom-access": {
+          "title": "Brinecom secure access",
+          "url": "access.brinecom.example",
+          "body": "Secure access\n\nNo open security cases. Security reaches you through the staff directory number and a ticket.",
+          "choices": []
+        },
+        "brinecom-roster": {
+          "title": "Standby roster",
+          "url": "roster.brinecom.example",
+          "body": "Standby roster for May.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-brinecom-access",
+          "title": "Brinecom secure access",
+          "url": "scene:brinecom-access"
+        },
+        {
+          "id": "bm-brinecom-roster",
+          "title": "Standby roster",
+          "url": "scene:brinecom-roster"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-brinecom-access",
+          "url": "scene:brinecom-access",
+          "title": "Brinecom secure access",
+          "time": "2022-05-19T08:05:00Z"
+        },
+        {
+          "id": "h-brinecom-roster",
+          "url": "scene:brinecom-roster",
+          "title": "Standby roster",
+          "time": "2022-05-18T15:10:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Call security back on the directory number",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Rowan Teague",
+    "short": "rowan",
+    "email": "rowan.teague@harborwire.example",
+    "avatar": "ap-2013"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img0.jpg",
+    "wifiNetwork": "HarborWire-Corp",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "rowan"
+      },
+      "f-rota": {
+        "id": "f-rota",
+        "parentId": "documents",
+        "name": "Social rota.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 52,
+        "modified": "2013-04-17T10:00:00Z",
+        "trashed": false,
+        "contentId": "c-rota"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-call",
+        "app": "calendar",
+        "title": "Desk call at 3 pm",
+        "body": "Daily desk call.",
+        "time": "2013-04-22T17:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "contacts",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-desk",
+          "folder": "inbox",
+          "from": "News Desk <newsdesk@harborwire.example>",
+          "to": "rowan.teague@harborwire.example",
+          "subject": "Afternoon budget",
+          "body": "Afternoon budget: three leads, one developing. Social: hold anything unconfirmed until the editor clears it.\n\nNews desk",
+          "time": "2013-04-22T15:40:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-photo",
+          "folder": "inbox",
+          "from": "Photo Desk <photos@harborwire.example>",
+          "to": "rowan.teague@harborwire.example",
+          "subject": "Photo of the day",
+          "body": "Three candidates for the photo of the day are in the shared folder.",
+          "time": "2013-04-22T13:05:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-it",
+          "folder": "inbox",
+          "from": "IT Helpdesk <helpdesk@harborwire.example>",
+          "to": "rowan.teague@harborwire.example",
+          "subject": "Reminder: scheduled maintenance Sunday",
+          "body": "The internal mail system is offline for an hour on Sunday morning. No action needed.",
+          "time": "2013-04-19T12:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Rowan Teague <rowan.teague@harborwire.example>",
+          "to": "newsdesk@harborwire.example",
+          "subject": "Re: Weekend social rota",
+          "body": "I can take Sunday evening.",
+          "time": "2013-04-18T10:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-social",
+          "with": "Social desk",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Ines Calloway",
+              "text": "Queue is clear until four.",
+              "time": "2013-04-22T17:10:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Rowan Teague",
+              "text": "Thanks, I am on replies.",
+              "time": "2013-04-22T17:12:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-rules",
+        "folder": "notes",
+        "title": "Posting checklist",
+        "body": "Confirm with the editor\nLink the story\nNo rumours",
+        "modified": "2013-04-20T09:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-call",
+        "title": "Desk call",
+        "start": "2013-04-22T19:00:00Z",
+        "end": "2013-04-22T19:30:00Z",
+        "location": "Conference line"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-photo",
+        "list": "work",
+        "title": "Pick photo of the day",
+        "due": "2013-04-22T21:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-ines",
+        "name": "Ines Calloway",
+        "email": "ines.calloway@harborwire.example",
+        "phone": "+1 555 0171",
+        "org": "The Harbor Wire"
+      },
+      {
+        "id": "p-desk",
+        "name": "News Desk",
+        "email": "newsdesk@harborwire.example",
+        "phone": "+1 555 0172",
+        "org": "The Harbor Wire"
+      },
+      {
+        "id": "p-it",
+        "name": "IT Helpdesk",
+        "email": "helpdesk@harborwire.example",
+        "phone": "+1 555 0173",
+        "org": "The Harbor Wire"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-rota": {
+        "text": "Mon-Fri days: Rowan\nEvenings: Ines\nWeekend: rotating"
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-wire": {
+          "title": "The Harbor Wire",
+          "url": "www.harborwire.example",
+          "brand": "The Harbor Wire",
+          "heading": "Top stories",
+          "body": "Breaking news from the wire. This is a fictional news agency site.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-wire",
+          "title": "The Harbor Wire"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}

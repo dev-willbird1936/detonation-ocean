@@ -1,0 +1,32 @@
+{
+  "profile": "squid-kraken-v1",
+  "sourceProfile": "../../palette-profiles.json#families.octopus",
+  "family": "Squid → Kraken",
+  "toneOrder": ["shadow", "base", "highlight"],
+  "neutral": {
+    "outline": "#17232D",
+    "mouth_pupil": "#0B1118",
+    "eye_teeth": "#E9E3D3"
+  },
+  "roles": {
+    "primary": {
+      "role": "mantle, head and body",
+      "shadow": "#633A46",
+      "base": "#A95650",
+      "highlight": "#E28B6C"
+    },
+    "secondary": {
+      "role": "one compact, grouped tentacle bundle; no radial spread",
+      "shadow": "#243B61",
+      "base": "#3C6A93",
+      "highlight": "#89ABD0"
+    },
+    "tertiary": {
+      "role": "mantle fins, sucker rows and tentacle-tip accents",
+      "shadow": "#79612C",
+      "base": "#C0A33F",
+      "highlight": "#F1D075"
+    }
+  },
+  "preservation": "Colors reuse the former octopus role palette; the original palette-profiles.json and all octopus images remain unchanged."
+}

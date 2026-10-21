@@ -1,0 +1,312 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Helen Ostrander",
+    "short": "helen",
+    "email": "helen.ostrander@baylinefreight.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img0.jpg",
+    "wifiNetwork": "Bayline-Office"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "helen"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Payment run October.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 65,
+        "modified": "2023-10-11T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Cost codes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 34,
+        "modified": "2023-08-01T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Helen",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-10-12T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-invoice-20418-fo",
+          "folder": "inbox",
+          "from": "Cresta Supplies Accounts <ar@cresta-supplies.example>",
+          "to": "helen.ostrander@baylinefreight.example",
+          "subject": "Invoice 20418 for September deliveries",
+          "body": "Please find invoice 20418 attached in our portal. Payment terms are 30 days.\n\nCresta Supplies Accounts",
+          "time": "2023-10-10T11:20:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-please-code-the-",
+          "folder": "inbox",
+          "from": "Gus Hale <gus.hale@baylinefreight.example>",
+          "to": "helen.ostrander@baylinefreight.example",
+          "subject": "Please code the fuel invoices",
+          "body": "Helen, the fuel invoices for the week need cost codes before Friday.\n\nGus",
+          "time": "2023-10-11T15:45:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-reminder-about-s",
+          "folder": "inbox",
+          "from": "Bayline IT <it@baylinefreight.example>",
+          "to": "helen.ostrander@baylinefreight.example",
+          "subject": "Reminder about shared documents",
+          "body": "Open shared documents from our document portal bookmark. We do not send sign-in links by email.\n\nBayline IT",
+          "time": "2023-10-05T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-gus-hale",
+          "with": "Gus Hale",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Gus Hale",
+              "text": "Fuel invoices are in the shared folder.",
+              "time": "2023-10-12T08:10:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-accounts-team",
+          "with": "Accounts team",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Lorna Quist",
+              "text": "Month end is on the 31st.",
+              "time": "2023-10-12T08:30:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-month-end-checklist",
+        "folder": "notes",
+        "title": "Month-end checklist",
+        "body": "Match invoices\nCode fuel costs\nSend the payment file to Gus",
+        "modified": "2023-10-09T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-supplier-phone-numbers",
+        "folder": "notes",
+        "title": "Supplier phone numbers",
+        "body": "Cresta Supplies: number on the supplier sheet\nHarbour Tyres: number on the supplier sheet",
+        "modified": "2023-09-28T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-payment-run",
+        "title": "Payment run",
+        "start": "2023-10-13T14:00:00Z",
+        "end": "2023-10-13T15:00:00Z",
+        "location": "Accounts office"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-send-the-payment-file",
+        "list": "work",
+        "title": "Send the payment file",
+        "due": "2023-10-13T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2-ring-cresta-about-invoice-2041",
+        "list": "work",
+        "title": "Ring Cresta about invoice 20418",
+        "due": "2023-10-12T17:00:00Z",
+        "done": true
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-gus-hale",
+        "name": "Gus Hale",
+        "email": "gus.hale@baylinefreight.example",
+        "phone": "+1 555 0221",
+        "org": "Bayline Freight"
+      },
+      {
+        "id": "p-2-lorna-quist",
+        "name": "Lorna Quist",
+        "email": "lorna.quist@baylinefreight.example",
+        "phone": "+1 555 0222",
+        "org": "Bayline Freight"
+      },
+      {
+        "id": "p-3-cresta-supplies-accounts",
+        "name": "Cresta Supplies Accounts",
+        "email": "ar@cresta-supplies.example",
+        "phone": "+1 555 0223",
+        "org": "Cresta Supplies"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Payment run 13 October\nSuppliers: 14\nStatus: waiting for approval"
+      },
+      "c-doc-2": {
+        "text": "Fuel: 4100\nTyres: 4200\nTolls: 4300"
+      }
+    },
+    "web": {
+      "pages": {
+        "bayline-docs": {
+          "title": "Bayline document portal",
+          "url": "docs.baylinefreight.example",
+          "body": "Document portal\n\nShared with you: Payment run October. No remittance advice is waiting.",
+          "choices": []
+        },
+        "bayline-bank": {
+          "title": "Bayline bank statements",
+          "url": "statements.baylinefreight.example",
+          "body": "Latest statement posted on 10 October. No payment from Cresta Supplies is listed.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-bayline-docs",
+          "title": "Bayline document portal",
+          "url": "scene:bayline-docs"
+        },
+        {
+          "id": "bm-bayline-bank",
+          "title": "Bayline bank statements",
+          "url": "scene:bayline-bank"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-bayline-docs",
+          "url": "scene:bayline-docs",
+          "title": "Bayline document portal",
+          "time": "2023-10-12T08:20:00Z"
+        },
+        {
+          "id": "h-bayline-bank",
+          "url": "scene:bayline-bank",
+          "title": "Bayline bank statements",
+          "time": "2023-10-11T10:05:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Call suppliers on the sheet number, not the email",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

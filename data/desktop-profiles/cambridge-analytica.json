@@ -1,0 +1,245 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Marcus Bell",
+    "short": "marcus",
+    "email": "marcus.bell@homemail.example",
+    "avatar": "cambridge-analytica"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img3.jpg",
+    "wifiNetwork": "Home-WiFi"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "marcus"
+      },
+      "f-cambridge-an-1": {
+        "id": "f-cambridge-an-1",
+        "parentId": "documents",
+        "name": "Task-log.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 40,
+        "modified": "2014-05-02T12:00:00Z",
+        "trashed": false,
+        "contentId": "c-cambridge-an-1"
+      },
+      "f-cambridge-an-2": {
+        "id": "f-cambridge-an-2",
+        "parentId": "pictures",
+        "name": "Weekend-photo.png",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 28,
+        "modified": "2014-05-02T12:00:00Z",
+        "trashed": false,
+        "contentId": "c-cambridge-an-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Marcus",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2014-05-02T12:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "photos",
+      "media",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-panel",
+          "folder": "inbox",
+          "from": "Panelpay Surveys <welcome@panelpay-surveys.example>",
+          "to": "marcus.bell@homemail.example",
+          "subject": "Welcome to Panelpay",
+          "body": "Thanks for joining. Short paid tasks are posted here. Rewards are paid weekly.\n\nPanelpay Surveys",
+          "time": "2014-05-02T12:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sis",
+          "folder": "inbox",
+          "from": "Jo Bell <jo.bell@homemail.example>",
+          "to": "marcus.bell@homemail.example",
+          "subject": "Photos from the weekend",
+          "body": "Marcus,\n\nI put the photos from the weekend in the shared album.\n\nJo",
+          "time": "2014-05-13T21:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Jo Bell",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Jo Bell",
+              "text": "Did you see the album?",
+              "time": "2014-05-13T21:35:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Marcus Bell",
+              "text": "Looking now.",
+              "time": "2014-05-13T21:40:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Money tasks",
+        "body": "Panelpay: 3 tasks done\nPaid weekly\nFind more short ones",
+        "modified": "2014-05-02T12:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Dentist",
+        "start": "2014-05-16T14:30:00Z",
+        "end": "2014-05-16T15:30:00Z",
+        "location": "High Street"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Jo Bell",
+        "email": "jo.bell@homemail.example",
+        "phone": "+1 555 0101",
+        "org": "Family"
+      },
+      {
+        "id": "p-2",
+        "name": "Panelpay Surveys",
+        "email": "tasks@panelpay-surveys.example",
+        "phone": "+1 555 0102",
+        "org": "Panelpay"
+      },
+      {
+        "id": "p-3",
+        "name": "Dev Anand",
+        "email": "dev.anand@homemail.example",
+        "phone": "+1 555 0103",
+        "org": "Friends"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-cambridge-an-1": {
+        "text": "Survey tasks this month: 3 done, 2 paid."
+      },
+      "c-cambridge-an-2": {
+        "text": "Fictional photo placeholder."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-friendnest-home": {
+          "title": "Friendnest",
+          "url": "friendnest.example/home",
+          "brand": "Friendnest",
+          "heading": "Friendnest",
+          "body": "Catch up with friends. Your news feed, photos and events live here.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Friendnest",
+          "url": "scene:pg-friendnest-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-friendnest-home",
+          "title": "Friendnest"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Friendnest",
+          "url": "scene:pg-friendnest-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-friendnest-home",
+          "title": "Friendnest",
+          "time": "2014-05-02T12:00:00Z"
+        }
+      ]
+    }
+  }
+}

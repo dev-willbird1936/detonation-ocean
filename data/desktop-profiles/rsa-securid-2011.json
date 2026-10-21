@@ -1,0 +1,331 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Mira Castellan",
+    "short": "mira",
+    "email": "mira.castellan@brinemark-sec.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeD/img1.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Brinemark-Corp",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "mira"
+      },
+      "f-shortlist": {
+        "id": "f-shortlist",
+        "parentId": "documents",
+        "name": "Candidate-shortlist.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1300,
+        "modified": "2011-02-28T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-shortlist"
+      },
+      "f-headcount": {
+        "id": "f-headcount",
+        "parentId": "documents",
+        "name": "Headcount-2010.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 900,
+        "modified": "2011-01-02T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-headcount"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Mira",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2011-03-03T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "settings",
+    "updates",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-headcount-for-q2",
+          "folder": "inbox",
+          "from": "Gideon Marsh <gideon.marsh@brinemark-sec.example>",
+          "to": "mira.castellan@brinemark-sec.example",
+          "subject": "Headcount for Q2",
+          "body": "Mira, please send the Q2 headcount by Thursday so finance can lock the budget.\n\nGideon",
+          "time": "2011-03-02T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-interview-panel-en",
+          "folder": "inbox",
+          "from": "Alba Nordin <alba.nordin@brinemark-sec.example>",
+          "to": "mira.castellan@brinemark-sec.example",
+          "subject": "Interview panel: engineers",
+          "body": "The panel for Thursday's engineer interviews is confirmed. Rooms are booked.\n\nAlba",
+          "time": "2011-03-01T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-candidate-shortlis",
+          "folder": "inbox",
+          "from": "Talia Keene <talia.keene@talentbridge-hire.example>",
+          "to": "mira.castellan@brinemark-sec.example",
+          "subject": "Candidate shortlist",
+          "body": "Two more candidates for the support engineer role. CVs are in the shared folder.\n\nTalia",
+          "time": "2011-02-28T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Mira Castellan <mira.castellan@brinemark-sec.example>",
+          "to": "alba.nordin@brinemark-sec.example",
+          "subject": "Re: Interview panel",
+          "body": "Thanks, I will send the schedule to the candidates tomorrow.\n\nMira",
+          "time": "2011-03-01T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-alba-nordin",
+          "with": "Alba Nordin",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Alba Nordin",
+              "text": "Rooms are booked for Thursday.",
+              "time": "2011-03-01T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Mira Castellan",
+              "text": "Perfect, thanks.",
+              "time": "2011-03-01T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-hiring-this-qu",
+        "folder": "notes",
+        "title": "Hiring this quarter",
+        "body": "Support engineers: 3\nSales engineer: 1\nInterview panel Thursday",
+        "modified": "2011-03-02T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Planning call",
+        "start": "2011-03-04T14:00:00Z",
+        "end": "2011-03-04T14:45:00Z",
+        "location": "Conference line"
+      },
+      {
+        "id": "e-2",
+        "title": "Engineer interviews",
+        "start": "2011-03-04T10:00:00Z",
+        "end": "2011-03-04T14:00:00Z",
+        "location": "Rooms 2 and 3"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Send the Q2 headcount to Gideon",
+        "due": "2011-03-04T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-gideon-marsh",
+        "name": "Gideon Marsh",
+        "email": "gideon.marsh@brinemark-sec.example",
+        "phone": "+1 555 0231",
+        "org": "Brinemark Security"
+      },
+      {
+        "id": "p-2-alba-nordin",
+        "name": "Alba Nordin",
+        "email": "alba.nordin@brinemark-sec.example",
+        "phone": "+1 555 0232",
+        "org": "Brinemark Security"
+      },
+      {
+        "id": "p-3-talia-keene",
+        "name": "Talia Keene",
+        "email": "talia.keene@talentbridge-hire.example",
+        "phone": "+1 555 0233",
+        "org": "Talentbridge Recruiting"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-shortlist": {
+        "text": "Shortlist\nSupport engineer: 5 candidates\nSales engineer: 2 candidates"
+      },
+      "c-f-headcount": {
+        "text": "Headcount 2010\nTotal: 212"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2011-02-19T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2011-02-07T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2011-01-26T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2011-01-14T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "brinemark-intranet": {
+          "title": "Brinemark intranet",
+          "url": "intranet.brinemark-sec.example/hr",
+          "brand": "Brinemark",
+          "heading": "People and hiring",
+          "body": "Open roles, referral bonus rules and the interview calendar.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Brinemark intranet",
+          "url": "scene:brinemark-intranet"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:brinemark-intranet",
+          "title": "Brinemark intranet",
+          "time": "2011-03-02T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

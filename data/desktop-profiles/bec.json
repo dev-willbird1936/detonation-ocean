@@ -1,0 +1,240 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Priya Raman",
+    "short": "priya",
+    "email": "priya.raman@halvorsen-supply.example",
+    "avatar": "bec"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/default/img0.jpg",
+    "wifiNetwork": "Halvorsen-Staff"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "priya"
+      },
+      "f-bec-1": {
+        "id": "f-bec-1",
+        "parentId": "documents",
+        "name": "Payment-run-Friday.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 56,
+        "modified": "2024-09-11T16:00:00Z",
+        "trashed": false,
+        "contentId": "c-bec-1"
+      },
+      "f-bec-2": {
+        "id": "f-bec-2",
+        "parentId": "documents",
+        "name": "Approver-list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 74,
+        "modified": "2024-09-11T16:00:00Z",
+        "trashed": false,
+        "contentId": "c-bec-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Priya",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2024-09-11T16:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "updates",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-it",
+          "folder": "inbox",
+          "from": "Halvorsen IT <it@halvorsen-supply.example>",
+          "to": "priya.raman@halvorsen-supply.example",
+          "subject": "Reminder: wire cut-off is 3 pm",
+          "body": "Hi Priya,\n\nAs usual, same-day wires must be approved by 3 pm. A second approver is required above 25,000.\n\nHalvorsen IT",
+          "time": "2024-09-11T16:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-ap",
+          "folder": "inbox",
+          "from": "Marcus Oyelaran <marcus.oyelaran@halvorsen-supply.example>",
+          "to": "priya.raman@halvorsen-supply.example",
+          "subject": "Friday payment run: approvals",
+          "body": "Priya,\n\nThe Friday run has 14 invoices. Please attach the signed delivery notes before 11.\n\nMarcus",
+          "time": "2024-09-12T08:20:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Marcus Oyelaran",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Marcus Oyelaran",
+              "text": "Delivery notes are in the shared folder.",
+              "time": "2024-09-12T08:45:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Wire checklist",
+        "body": "Call-back check\nSecond approver above 25,000\nNew payee: ask for a signed form",
+        "modified": "2024-09-11T16:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Payment run review",
+        "start": "2024-09-13T10:00:00Z",
+        "end": "2024-09-13T11:00:00Z",
+        "location": "Finance room"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Marcus Oyelaran",
+        "email": "marcus.oyelaran@halvorsen-supply.example",
+        "phone": "+1 555 0101",
+        "org": "Halvorsen Supply"
+      },
+      {
+        "id": "p-2",
+        "name": "Gareth Lindqvist",
+        "email": "gareth.lindqvist@halvorsen-supply.example",
+        "phone": "+1 555 0102",
+        "org": "Halvorsen Supply"
+      },
+      {
+        "id": "p-3",
+        "name": "Calder Banking",
+        "email": "service@calder-bank.example",
+        "phone": "+1 555 0103",
+        "org": "Calder Bank"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-bec-1": {
+        "text": "Friday payment run\n14 invoices, delivery notes attached."
+      },
+      "c-bec-2": {
+        "text": "Approvers: Gareth Lindqvist (finance chief), Marcus Oyelaran (controller)."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-supply-news": {
+          "title": "Building supplies weekly",
+          "url": "trade.halvorsen-news.example/weekly",
+          "brand": "Building supplies weekly",
+          "heading": "Building supplies weekly",
+          "body": "Concrete prices steady this quarter. Delivery windows remain tight.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Building supplies weekly",
+          "url": "scene:pg-supply-news"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-supply-news",
+          "title": "Building supplies weekly"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Building supplies weekly",
+          "url": "scene:pg-supply-news"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-supply-news",
+          "title": "Building supplies weekly",
+          "time": "2024-09-11T16:00:00Z"
+        }
+      ]
+    }
+  }
+}

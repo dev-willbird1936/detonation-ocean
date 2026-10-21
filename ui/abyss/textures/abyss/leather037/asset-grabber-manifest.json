@@ -1,0 +1,162 @@
+{
+  "request": "leather dark brown",
+  "generatedAt": "2026-10-02T16:07:22.876Z",
+  "source": "ambientcg",
+  "asset": {
+    "source": "ambientcg",
+    "id": "Leather037",
+    "title": "Leather 037",
+    "url": "https://ambientcg.com/a/Leather037",
+    "category": "Textures",
+    "tags": [
+      "37",
+      "brown",
+      "clean",
+      "dark",
+      "leather"
+    ],
+    "series": [],
+    "license": "Creative Commons CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false,
+    "licenseSafety": 10,
+    "score": 28.5,
+    "reason": "ambientCG CC0 material result",
+    "previewUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Leather037.jpg",
+    "downloadUrl": "https://ambientcg.com/get?file=Leather037_1K-JPG.zip",
+    "downloadFileName": "Leather037_1K-JPG.zip",
+    "downloadMode": "direct",
+    "manualDownload": false
+  },
+  "paths": {
+    "root": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Leather037",
+    "pack": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Leather037\\pack",
+    "ready": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Leather037\\ready",
+    "manifest": "D:\\Projects\\Detonation-Dioramas\\.agent-logs\\grab\\ambientcg\\Leather037\\asset-grabber-manifest.json"
+  },
+  "selectedFiles": [
+    "Leather037.png",
+    "Leather037_1K-JPG_Color.jpg",
+    "Leather037_1K-JPG_Displacement.jpg",
+    "Leather037_1K-JPG_NormalDX.jpg",
+    "Leather037_1K-JPG_NormalGL.jpg",
+    "Leather037_1K-JPG_Roughness.jpg",
+    "Leather037_1K-JPG.blend",
+    "Leather037_1K-JPG.mtlx",
+    "Leather037_1K-JPG.tres",
+    "Leather037_1K-JPG.usdc"
+  ],
+  "readyFiles": [
+    "Leather037.png",
+    "Leather037_1K-JPG_Color.jpg",
+    "Leather037_1K-JPG_Displacement.jpg",
+    "Leather037_1K-JPG_NormalDX.jpg",
+    "Leather037_1K-JPG_NormalGL.jpg",
+    "Leather037_1K-JPG_Roughness.jpg",
+    "Leather037_1K-JPG.blend",
+    "Leather037_1K-JPG.mtlx",
+    "Leather037_1K-JPG.tres",
+    "Leather037_1K-JPG.usdc"
+  ],
+  "allExtractedFileCount": 10,
+  "cacheKey": "{\"request\":\"leather dark brown\",\"category\":\"Textures\",\"source\":\"ambientcg\",\"fullPack\":false,\"maxReadyFiles\":80,\"asset\":{\"source\":\"ambientcg\",\"id\":\"Leather037\",\"url\":\"https://ambientcg.com/a/Leather037\",\"downloadUrl\":\"https://ambientcg.com/get?file=Leather037_1K-JPG.zip\"}}",
+  "advisor": {
+    "provider": "none",
+    "used": false,
+    "originalRequest": "leather dark brown",
+    "request": "leather dark brown",
+    "category": "Textures",
+    "source": "ambientcg"
+  },
+  "diagnostics": [
+    {
+      "source": "ambientcg",
+      "ok": true,
+      "count": 3,
+      "durationMs": 425
+    }
+  ],
+  "license": {
+    "name": "Creative Commons CC0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false,
+    "shipSafe": true
+  },
+  "engineReadiness": {
+    "recommendedFormats": [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp"
+    ],
+    "selectedFormats": [
+      "blend",
+      "jpg",
+      "mtlx",
+      "png",
+      "tres",
+      "usdc"
+    ],
+    "warnings": [],
+    "notes": [
+      "Use files from ready/ first; full extracted pack remains in pack/."
+    ]
+  },
+  "importNotes": [
+    "Use files from ready/ first; full extracted pack remains in pack/."
+  ],
+  "alternatives": [
+    {
+      "source": "ambientcg",
+      "id": "Leather030",
+      "title": "Leather 030",
+      "url": "https://ambientcg.com/a/Leather030",
+      "category": "Textures",
+      "tags": [
+        "30",
+        "brown",
+        "dark",
+        "leather"
+      ],
+      "series": [],
+      "license": "Creative Commons CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false,
+      "licenseSafety": 10,
+      "score": 28.5,
+      "reason": "ambientCG CC0 material result",
+      "previewUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Leather030.jpg",
+      "downloadUrl": "https://ambientcg.com/get?file=Leather030_1K-JPG.zip",
+      "downloadFileName": "Leather030_1K-JPG.zip",
+      "downloadMode": "direct",
+      "manualDownload": false
+    },
+    {
+      "source": "ambientcg",
+      "id": "Leather034C",
+      "title": "Leather 034 C",
+      "url": "https://ambientcg.com/a/Leather034C",
+      "category": "Textures",
+      "tags": [
+        "34",
+        "black",
+        "brown",
+        "dark",
+        "leather",
+        "stitched"
+      ],
+      "series": [],
+      "license": "Creative Commons CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false,
+      "licenseSafety": 10,
+      "score": 28.5,
+      "reason": "ambientCG CC0 material result",
+      "previewUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/512-JPG-FFFFFF/Leather034C.jpg",
+      "downloadUrl": "https://ambientcg.com/get?file=Leather034C_1K-JPG.zip",
+      "downloadFileName": "Leather034C_1K-JPG.zip",
+      "downloadMode": "direct",
+      "manualDownload": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+[Unit]
+Description=Detonation Ocean controller
+Documentation=file:///opt/detonation-ocean/deploy/vultr-vm/README.md
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=detonation
+Group=detonation
+# The docker group is root-equivalent (SPEC 10): this VM runs nothing but this app.
+SupplementaryGroups=docker
+WorkingDirectory=/opt/detonation-ocean
+EnvironmentFile=/etc/detonation-ocean/env
+ExecStart=/usr/bin/node server.mjs
+Restart=on-failure
+RestartSec=5
+# Let a running job finish its teardown before systemd kills the process.
+TimeoutStopSec=30
+
+# Hardening that keeps /run/docker.sock, /var/lib/detonation-ocean and /var/log/runsc usable.
+# runsc writes /var/log/runsc/<container>/ as root; the controller reads and deletes it (SPEC 6.4, 7.4).
+NoNewPrivileges=true
+CapabilityBoundingSet=CAP_DAC_OVERRIDE
+AmbientCapabilities=CAP_DAC_OVERRIDE
+ProtectSystem=strict
+ReadWritePaths=/var/lib/detonation-ocean /var/log/runsc
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+ProtectClock=true
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+LockPersonality=true
+SystemCallArchitectures=native
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+# Not set: MemoryDenyWriteExecute (breaks V8) and UMask=0077 (job files must stay readable by the sandbox user).
+
+[Install]
+WantedBy=multi-user.target

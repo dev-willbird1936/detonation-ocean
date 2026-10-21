@@ -1,0 +1,312 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Gareth Lindqvist",
+    "short": "gareth",
+    "email": "gareth.lindqvist@quillmark.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeB/img3.jpg",
+    "wifiNetwork": "Quillmark-Exec"
+  },
+  "fs": {
+    "nodes": {
+      "home": {
+        "name": "gareth"
+      },
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "f-doc-1": {
+        "id": "f-doc-1",
+        "parentId": "documents",
+        "name": "Board pack draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 73,
+        "modified": "2023-05-15T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-1"
+      },
+      "f-doc-2": {
+        "id": "f-doc-2",
+        "parentId": "documents",
+        "name": "Depot numbers.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 55,
+        "modified": "2023-05-12T16:20:00Z",
+        "trashed": false,
+        "contentId": "c-doc-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Gareth",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2023-05-16T08:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "calculator",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "mfa",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-board-pack-draft",
+          "folder": "inbox",
+          "from": "Anika Rossi <anika.rossi@quillmark.example>",
+          "to": "gareth.lindqvist@quillmark.example",
+          "subject": "Board pack draft",
+          "body": "Gareth, the board pack draft is in the shared folder. Operations section needs your numbers by Thursday.\n\nAnika",
+          "time": "2023-05-15T17:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-expenses-now-run",
+          "folder": "inbox",
+          "from": "Quillmark Finance <finance@quillmark.example>",
+          "to": "gareth.lindqvist@quillmark.example",
+          "subject": "Expenses now run in the finance tool",
+          "body": "Expense approvals are done in the finance tool you open from the intranet. We will never ask you to approve a report from a link in an email.\n\nQuillmark Finance",
+          "time": "2023-05-02T09:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-passkeys-availab",
+          "folder": "inbox",
+          "from": "Quillmark IT <it@quillmark.example>",
+          "to": "gareth.lindqvist@quillmark.example",
+          "subject": "Passkeys available for executives",
+          "body": "Executives can enrol a passkey in the staff dashboard. It only works on the real site.\n\nQuillmark IT",
+          "time": "2023-05-09T10:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-anika-rossi",
+          "with": "Anika Rossi",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Anika Rossi",
+              "text": "Board pack is on track.",
+              "time": "2023-05-16T07:45:00Z"
+            }
+          ]
+        },
+        {
+          "id": "t-2-operations-leads",
+          "with": "Operations leads",
+          "items": [
+            {
+              "id": "i-2-1",
+              "from": "Femi Adeyemi",
+              "text": "Depot numbers coming this afternoon.",
+              "time": "2023-05-16T08:15:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-board-talking-points",
+        "folder": "notes",
+        "title": "Board talking points",
+        "body": "Depot consolidation\nOn-time delivery\nHiring plan",
+        "modified": "2023-05-14T18:00:00Z",
+        "pinned": true
+      },
+      {
+        "id": "n-2-travel",
+        "folder": "notes",
+        "title": "Travel",
+        "body": "Flight Thursday\nHotel confirmed",
+        "modified": "2023-05-10T18:00:00Z",
+        "pinned": false
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1-board-call",
+        "title": "Board call",
+        "start": "2023-05-17T15:00:00Z",
+        "end": "2023-05-17T16:00:00Z",
+        "location": "Video call"
+      },
+      {
+        "id": "e-2-depot-review",
+        "title": "Depot review",
+        "start": "2023-05-18T09:00:00Z",
+        "end": "2023-05-18T10:00:00Z",
+        "location": "Boardroom"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1-send-operations-numbers",
+        "list": "work",
+        "title": "Send operations numbers",
+        "due": "2023-05-18T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-anika-rossi",
+        "name": "Anika Rossi",
+        "email": "anika.rossi@quillmark.example",
+        "phone": "+1 555 0301",
+        "org": "Quillmark"
+      },
+      {
+        "id": "p-2-femi-adeyemi",
+        "name": "Femi Adeyemi",
+        "email": "femi.adeyemi@quillmark.example",
+        "phone": "+1 555 0302",
+        "org": "Quillmark"
+      },
+      {
+        "id": "p-3-quillmark-finance",
+        "name": "Quillmark Finance",
+        "email": "finance@quillmark.example",
+        "phone": "+1 555 0300",
+        "org": "Quillmark"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-doc-1": {
+        "text": "Board pack, May\nOperations section: pending numbers\nFinance section: done"
+      },
+      "c-doc-2": {
+        "text": "Depot A: 96 percent on time\nDepot B: 91 percent on time"
+      }
+    },
+    "web": {
+      "pages": {
+        "quillmark-finance": {
+          "title": "Quillmark finance tool",
+          "url": "finance.quillmark.example",
+          "body": "Finance tool\n\nApprovals waiting for you: none. Expense approvals are only done here.",
+          "choices": []
+        },
+        "quillmark-dash": {
+          "title": "Quillmark staff dashboard",
+          "url": "dash.quillmark.example",
+          "body": "Staff dashboard with passkey enrolment.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bm-quillmark-finance",
+          "title": "Quillmark finance tool",
+          "url": "scene:quillmark-finance"
+        },
+        {
+          "id": "bm-quillmark-dash",
+          "title": "Quillmark staff dashboard",
+          "url": "scene:quillmark-dash"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-quillmark-finance",
+          "url": "scene:quillmark-finance",
+          "title": "Quillmark finance tool",
+          "time": "2023-05-16T08:30:00Z"
+        },
+        {
+          "id": "h-quillmark-dash",
+          "url": "scene:quillmark-dash",
+          "title": "Quillmark staff dashboard",
+          "time": "2023-05-15T12:00:00Z"
+        }
+      ]
+    },
+    "stickies": [
+      {
+        "id": "stk-1",
+        "text": "Approve expenses in the finance tool only",
+        "color": "yellow",
+        "x": 40,
+        "y": 40,
+        "w": 200,
+        "h": 150,
+        "collapsed": false
+      }
+    ],
+    "photos": {
+      "items": [],
+      "albums": []
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    }
+  }
+}

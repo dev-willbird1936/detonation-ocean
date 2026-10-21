@@ -1,0 +1,229 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Noor Haddad",
+    "short": "noor",
+    "email": "noor.haddad@harbourmail.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-bigsur.jpg",
+    "wifiNetwork": "Noor-Home"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "noor"
+      },
+      "f-proofs": {
+        "id": "f-proofs",
+        "parentId": "documents",
+        "name": "Poster-proofs.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1100,
+        "modified": "2021-10-02T15:20:00Z",
+        "trashed": false,
+        "contentId": "c-f-proofs"
+      },
+      "f-invoices": {
+        "id": "f-invoices",
+        "parentId": "documents",
+        "name": "Invoices 2021.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 900,
+        "modified": "2021-09-30T12:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-invoices"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Noor",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2021-10-04T07:40:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal",
+    "mfa",
+    "store"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "updates",
+      "notes",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-statement",
+          "folder": "inbox",
+          "from": "Tidewave Mobile <billing@tidewave-mobile.example>",
+          "to": "noor.haddad@harbourmail.example",
+          "subject": "Your October plan summary",
+          "body": "Hi Noor,\n\nYour plan summary for October is ready. Your number and plan are unchanged.\n\nTidewave Mobile",
+          "time": "2021-10-04T07:40:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-bank",
+          "folder": "inbox",
+          "from": "Cobalt Credit Union <service@cobalt-cu.example>",
+          "to": "noor.haddad@harbourmail.example",
+          "subject": "Your monthly statement is ready",
+          "body": "Your statement is ready to read in online banking. We will never ask for your codes by email.",
+          "time": "2021-10-03T06:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-studio",
+          "folder": "inbox",
+          "from": "Ines Varga <ines.varga@studio-lantern.example>",
+          "to": "noor.haddad@harbourmail.example",
+          "subject": "Poster proofs",
+          "body": "Noor, the proofs look good. Can you send the final files on Thursday?\n\nInes",
+          "time": "2021-10-02T15:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Noor Haddad <noor.haddad@harbourmail.example>",
+          "to": "ines.varga@studio-lantern.example",
+          "subject": "Re: Poster proofs",
+          "body": "Will do. Thursday morning works.",
+          "time": "2021-10-02T16:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-ines",
+          "with": "Ines Varga",
+          "items": [
+            {
+              "id": "i-ines-1",
+              "from": "Ines Varga",
+              "text": "Lunch on Friday?",
+              "time": "2021-10-04T08:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-rates",
+        "folder": "notes",
+        "title": "Freelance rates",
+        "body": "Poster: 400\nLogo: 650\nWorkshop day: 900",
+        "modified": "2021-09-20T11:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-proofs",
+        "title": "Send final poster files",
+        "start": "2021-10-07T09:00:00Z",
+        "end": "2021-10-07T09:30:00Z",
+        "location": "Home studio"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-tax",
+        "list": "work",
+        "title": "Send quarterly tax estimate",
+        "due": "2021-10-15T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-ines",
+        "name": "Ines Varga",
+        "email": "ines.varga@studio-lantern.example",
+        "phone": "+1 555 0201",
+        "org": "Studio Lantern"
+      },
+      {
+        "id": "p-cu",
+        "name": "Cobalt Credit Union",
+        "email": "service@cobalt-cu.example",
+        "phone": "+1 555 0202",
+        "org": "Cobalt CU"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-proofs": {
+        "text": "Poster proofs: notes on the three colour options. Option B was chosen."
+      },
+      "c-f-invoices": {
+        "text": "Invoice log for 2021. Fictional training file."
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "revision": "evolution-iteration-03",
+  "kind": "evolution-reference-manifest",
+  "status": "prepared-not-generated",
+  "image_generation_performed": false,
+  "provider_or_api_called": false,
+  "background_policy": "uniform solid #FF00FF chroma key; flat removable key field, not transparency, not a checkerboard; keyed offline later",
+  "output_directory": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/evolution-iteration-03/",
+  "source_review": "docs/evidence/evolution-sonnet-review-round-2.md",
+  "targets": [
+    {
+      "target_id": "siphonophore-trench-v3",
+      "family": "siphonophore",
+      "stage": "trench",
+      "output_filename": "siphonophore-trench-v3-native.png",
+      "prompt_file": {
+        "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/evolution-iteration-03/requests/siphonophore-trench-v3.txt",
+        "path_relative_to_revision": "requests/siphonophore-trench-v3.txt",
+        "sha256": "61eaf2e09ea1b76a09fdd6f640e6dd2f3310272b83ff6226ed17f79dc29dfb4a"
+      },
+      "intended_background": {
+        "mode": "solid-chroma-key",
+        "color": "#FF00FF",
+        "transparency_requested": false,
+        "removal": "offline later (background removal and RGBA conversion)"
+      },
+      "references": [
+        {
+          "order": 1,
+          "image_label": "Image 1",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/variants/siphonophore-midnight-abyss-256.png",
+          "path_relative_to_family_root": "variants/siphonophore-midnight-abyss-256.png",
+          "sha256": "6832d4f68711e73e9ae3149af176d0f625465db6fc086339c298d40dd66205f6",
+          "role": "current Siphonophore Mid; lineage and coarse pixel-scale reference"
+        },
+        {
+          "order": 2,
+          "image_label": "Image 2",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/variants/siphonophore-base-rich-256.png",
+          "path_relative_to_family_root": "variants/siphonophore-base-rich-256.png",
+          "sha256": "0e5c8bb073da9e7908c21f7fd58abfb52f830bd8601a00f9c04c49b69f86edfc",
+          "role": "Base; species identity"
+        },
+        {
+          "order": 3,
+          "image_label": "Image 3",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/evolution-iteration-02/siphonophore-trench-v2-native.png",
+          "path_relative_to_family_root": "revisions/evolution-iteration-02/siphonophore-trench-v2-native.png",
+          "sha256": "4c4a8e51413eb76942e4a202bccc54498cd771aeda223c11521157883dfbbd30",
+          "role": "rejected Trench v2; composition inspiration only (baked checkerboard and ~40 thin tendrils must not be copied)"
+        }
+      ],
+      "notes": "About 18-22 thick separated tendrils with larger tip beads; one connected colony; >=6% margin; palette from palette-profiles.json families.siphonophore.",
+      "generation_performed": false,
+      "palette_profile": {
+        "path": "ocean-style-prototypes/codex-creature-depth-evolution/palette-profiles.json",
+        "family_key": "siphonophore",
+        "sha256": "c1dd02d3c9f7fe8889c173e00628bac9468bd7e62ccdb7148f782c3c5edf9712"
+      }
+    },
+    {
+      "target_id": "cookiecutter-midnight-abyss-v3",
+      "family": "cookiecutter",
+      "stage": "midnight-abyss",
+      "output_filename": "cookiecutter-midnight-abyss-v3-native.png",
+      "prompt_file": {
+        "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/evolution-iteration-03/requests/cookiecutter-midnight-abyss-v3.txt",
+        "path_relative_to_revision": "requests/cookiecutter-midnight-abyss-v3.txt",
+        "sha256": "dedae567afab6da32231e62cabc97e8a67ecb359d362fb8a529b420eb86aa41e"
+      },
+      "intended_background": {
+        "mode": "solid-chroma-key",
+        "color": "#FF00FF",
+        "transparency_requested": false,
+        "removal": "offline later (background removal and RGBA conversion)"
+      },
+      "references": [
+        {
+          "order": 1,
+          "image_label": "Image 1",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/variants/cookiecutter-base-rich-256.png",
+          "path_relative_to_family_root": "variants/cookiecutter-base-rich-256.png",
+          "sha256": "271c7cac9b83774037e2c01dff188758bf1060d4ea1735cee6870ac32c9899b8",
+          "role": "Base; identity, facing and pose family"
+        },
+        {
+          "order": 2,
+          "image_label": "Image 2",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/variants/cookiecutter-trench-256.png",
+          "path_relative_to_family_root": "variants/cookiecutter-trench-256.png",
+          "sha256": "56f265b9d3f4bde095553b23d7ddf32dceb7ca237ff3ad21d0ee59ac0497a358",
+          "role": "current valid Trench (unchanged); advanced endpoint to stay clearly below"
+        }
+      ],
+      "notes": "True intermediate; low single dorsal fin about half Trench height; smaller ring mouth; Trench kept unchanged; rejected Mid v2 deliberately not used as a reference; >=6% margin.",
+      "generation_performed": false,
+      "palette_profile": {
+        "path": "ocean-style-prototypes/codex-creature-depth-evolution/palette-profiles.json",
+        "family_key": "cookiecutter",
+        "sha256": "c1dd02d3c9f7fe8889c173e00628bac9468bd7e62ccdb7148f782c3c5edf9712"
+      }
+    },
+    {
+      "target_id": "squid-trench-v3",
+      "family": "squid",
+      "stage": "trench",
+      "output_filename": "squid-trench-v3-native.png",
+      "prompt_file": {
+        "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/evolution-iteration-03/requests/squid-trench-v3.txt",
+        "path_relative_to_revision": "requests/squid-trench-v3.txt",
+        "sha256": "72846391cbf649a8baa82dafb811109cb9a74a7cbba1983321aac81832c9833c"
+      },
+      "intended_background": {
+        "mode": "solid-chroma-key",
+        "color": "#FF00FF",
+        "transparency_requested": false,
+        "removal": "offline later (background removal and RGBA conversion)"
+      },
+      "references": [
+        {
+          "order": 1,
+          "image_label": "Image 1",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/evolution-iteration-02/squid-trench-v2-native.png",
+          "path_relative_to_family_root": "revisions/evolution-iteration-02/squid-trench-v2-native.png",
+          "sha256": "04ef3476ae4b2ff8cbdd69af3376437169479b7f3804e78bc7915266d2a7f5ca",
+          "role": "rejected Trench v2; composition reference (baked checkerboard ignored)"
+        },
+        {
+          "order": 2,
+          "image_label": "Image 2",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/squid-kraken-v1/app-preview/squid-midnight-abyss-256.png",
+          "path_relative_to_family_root": "revisions/squid-kraken-v1/app-preview/squid-midnight-abyss-256.png",
+          "sha256": "628f125266d6176485d1ac9f8ad2830bfa5007163dd8e4492af157c9665ec290",
+          "role": "current Squid Mid; lineage"
+        },
+        {
+          "order": 3,
+          "image_label": "Image 3",
+          "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/squid-kraken-v1/app-preview/squid-base-rich-256.png",
+          "path_relative_to_family_root": "revisions/squid-kraken-v1/app-preview/squid-base-rich-256.png",
+          "sha256": "ce9c4fc74f9f3e7be7a03f17ccbe27979bb53de0703d50a7b4b2c1a88b7ef723",
+          "role": "Squid Base; identity"
+        }
+      ],
+      "notes": "Squid references only; no Octopus asset; one compact grouped bundle; optional small stepped wavy yellow fin edge; >=6% margin.",
+      "generation_performed": false,
+      "palette_profile": {
+        "path": "ocean-style-prototypes/codex-creature-depth-evolution/revisions/squid-kraken-v1/palette-profile.json",
+        "family_key": "roles",
+        "sha256": "525dda6c1cf036181f37f1451df9dad712fe2ab070feaa7b910bcb24c5b29d56"
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Dana Okafor",
+    "short": "dana",
+    "email": "dana.okafor@northwind.example",
+    "avatar": "initials"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "id": "home",
+        "parentId": "root",
+        "name": "dana",
+        "kind": "folder",
+        "mime": null,
+        "size": 0,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false
+      },
+      "rp-q3-report-docx-706edd5b": {
+        "id": "rp-q3-report-docx-706edd5b",
+        "parentId": "documents",
+        "name": "Q3-report.docx",
+        "kind": "file",
+        "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 400,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false
+      },
+      "rp-budget-xlsx-cce6a6ae": {
+        "id": "rp-budget-xlsx-cce6a6ae",
+        "parentId": "documents",
+        "name": "budget.xlsx",
+        "kind": "file",
+        "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "size": 437,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false
+      },
+      "rp-notes-txt-993856e7": {
+        "id": "rp-notes-txt-993856e7",
+        "parentId": "documents",
+        "name": "notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 474,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false,
+        "contentId": "c-rp-notes-txt-993856e7"
+      },
+      "rp-photos-list-csv-8f43f70c": {
+        "id": "rp-photos-list-csv-8f43f70c",
+        "parentId": "documents",
+        "name": "photos-list.csv",
+        "kind": "file",
+        "mime": "text/csv",
+        "size": 511,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false,
+        "contentId": "c-rp-photos-list-csv-8f43f70c"
+      },
+      "rp-todo-txt-8a6638b4": {
+        "id": "rp-todo-txt-8a6638b4",
+        "parentId": "desktop",
+        "name": "todo.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 548,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false,
+        "contentId": "c-rp-todo-txt-8a6638b4"
+      },
+      "rp-holiday-01-png-318fc29a": {
+        "id": "rp-holiday-01-png-318fc29a",
+        "parentId": "pictures",
+        "name": "holiday-01.png",
+        "kind": "file",
+        "mime": "image/png",
+        "size": 585,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false,
+        "contentId": "c-rp-holiday-01-png-318fc29a"
+      },
+      "rp-holiday-02-png-1bd0967b": {
+        "id": "rp-holiday-02-png-1bd0967b",
+        "parentId": "pictures",
+        "name": "holiday-02.png",
+        "kind": "file",
+        "mime": "image/png",
+        "size": 622,
+        "modified": "2026-01-01T00:00:00.000Z",
+        "trashed": false,
+        "contentId": "c-rp-holiday-02-png-1bd0967b"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Dana",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2026-11-02T09:00:00Z"
+      }
+    ]
+  },
+  "data": {
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-rp-notes-txt-993856e7": {
+        "text": "Fictional notes.txt: synthetic content for the sandbox."
+      },
+      "c-rp-photos-list-csv-8f43f70c": {
+        "text": "Fictional photos-list.csv: synthetic content for the sandbox."
+      },
+      "c-rp-todo-txt-8a6638b4": {
+        "text": "Fictional todo.txt: synthetic content for the sandbox."
+      },
+      "c-rp-holiday-01-png-318fc29a": {
+        "asset": "photo-1"
+      },
+      "c-rp-holiday-02-png-1bd0967b": {
+        "asset": "photo-2"
+      }
+    },
+    "mail": {
+      "messages": [
+        {
+          "id": "m-welcome",
+          "folder": "inbox",
+          "from": "Northwind IT <servicedesk@northwind.example>",
+          "to": "dana.okafor@northwind.example",
+          "subject": "Your sandbox replay desktop",
+          "body": "Hi Dana,\n\nThis fictional desktop replays what the uploaded file did in the sandbox. Nothing here is real.\n\nNorthwind IT",
+          "time": "2026-11-02T08:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-it",
+          "with": "Northwind IT",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Northwind IT",
+              "text": "Welcome to the replay desktop.",
+              "time": "2026-11-02T08:05:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dock": {
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Ayesha Rahman",
+    "short": "ayesha",
+    "email": "ayesha.rahman@rahman-home.example",
+    "avatar": "polyfill-io-2024"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "orange",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-tahoe-day.jpg",
+    "wifiNetwork": "Rahman-Home"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "ayesha"
+      },
+      "f-polyfill-io--1": {
+        "id": "f-polyfill-io--1",
+        "parentId": "documents",
+        "name": "Concert-budget.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 44,
+        "modified": "2024-06-25T20:15:00Z",
+        "trashed": false,
+        "contentId": "c-polyfill-io--1"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Ayesha",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2024-06-25T20:15:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "reminders",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "photos",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-friend",
+          "folder": "inbox",
+          "from": "Noor Hashemi <noor.hashemi@rahman-home.example>",
+          "to": "ayesha.rahman@rahman-home.example",
+          "subject": "Are you going to the show?",
+          "body": "Ayesha,\n\nThe band announced a second night. Want to try for tickets?\n\nNoor",
+          "time": "2024-06-25T20:15:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-bank",
+          "folder": "inbox",
+          "from": "Calder Bank <service@calder-bank.example>",
+          "to": "ayesha.rahman@rahman-home.example",
+          "subject": "Your statement is ready",
+          "body": "Your June statement is ready to view in the app.\n\nCalder Bank",
+          "time": "2024-06-24T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Noor Hashemi",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Noor Hashemi",
+              "text": "Presale is tomorrow evening!",
+              "time": "2024-06-25T20:20:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Ayesha Rahman",
+              "text": "I have the code ready.",
+              "time": "2024-06-25T20:22:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Concert plan",
+        "body": "Presale tomorrow\nTwo tickets, floor or seats\nBudget 180",
+        "modified": "2024-06-25T20:15:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Concert presale",
+        "start": "2024-06-26T18:00:00Z",
+        "end": "2024-06-26T19:00:00Z",
+        "location": "Online"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Noor Hashemi",
+        "email": "noor.hashemi@rahman-home.example",
+        "phone": "+1 555 0101",
+        "org": "Friends"
+      },
+      {
+        "id": "p-2",
+        "name": "Setlist Tickets",
+        "email": "support@setlist-tickets.example",
+        "phone": "+1 555 0102",
+        "org": "Setlist Tickets"
+      },
+      {
+        "id": "p-3",
+        "name": "Calder Bank",
+        "email": "service@calder-bank.example",
+        "phone": "+1 555 0103",
+        "org": "Calder Bank"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-polyfill-io--1": {
+        "text": "Tickets 2 x 85. Parking 20. Total under 200."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-tickets-home": {
+          "title": "Setlist Tickets",
+          "url": "setlist-tickets.example/home",
+          "brand": "Setlist Tickets",
+          "heading": "Setlist Tickets",
+          "body": "Find shows near you. Presales, sold-out alerts and seat maps.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Setlist Tickets",
+          "url": "scene:pg-tickets-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-tickets-home",
+          "title": "Setlist Tickets"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Setlist Tickets",
+          "url": "scene:pg-tickets-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-tickets-home",
+          "title": "Setlist Tickets",
+          "time": "2024-06-25T20:15:00Z"
+        }
+      ]
+    }
+  }
+}

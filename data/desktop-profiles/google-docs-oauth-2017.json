@@ -1,0 +1,247 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Naomi Caldwell",
+    "short": "naomi",
+    "email": "naomi.caldwell@eastgate-college.example",
+    "avatar": "google-docs-oauth-2017"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-aurora.jpg",
+    "wifiNetwork": "Eastgate-Staff"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "naomi"
+      },
+      "f-google-docs--1": {
+        "id": "f-google-docs--1",
+        "parentId": "documents",
+        "name": "Open-day-schedule.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 62,
+        "modified": "2017-05-02T16:45:00Z",
+        "trashed": false,
+        "contentId": "c-google-docs--1"
+      },
+      "f-google-docs--2": {
+        "id": "f-google-docs--2",
+        "parentId": "documents",
+        "name": "Offers-list-draft.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 52,
+        "modified": "2017-05-02T16:45:00Z",
+        "trashed": false,
+        "contentId": "c-google-docs--2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Naomi",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2017-05-02T16:45:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "photos",
+    "media",
+    "reminders",
+    "calculator",
+    "clock"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "contacts",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 2
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-dean",
+          "folder": "inbox",
+          "from": "Imani Cole <imani.cole@eastgate-college.example>",
+          "to": "naomi.caldwell@eastgate-college.example",
+          "subject": "Open day schedule",
+          "body": "Naomi,\n\nThe open day schedule is final. Please print 40 copies for the welcome desk.\n\nImani",
+          "time": "2017-05-02T16:45:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-reg",
+          "folder": "inbox",
+          "from": "Registrar <registrar@eastgate-college.example>",
+          "to": "naomi.caldwell@eastgate-college.example",
+          "subject": "Offers go out Friday",
+          "body": "The admissions offers go out on Friday. Please check the lists by Thursday.\n\nRegistrar",
+          "time": "2017-05-01T10:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Admissions team",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Rafael Duarte",
+              "text": "Offers list is in the shared drive.",
+              "time": "2017-05-03T09:10:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Naomi Caldwell",
+              "text": "Checking it now.",
+              "time": "2017-05-03T09:15:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Open day",
+        "body": "Print 40 schedules\nTours at 10 and 2\nCoffee for visitors",
+        "modified": "2017-05-02T16:45:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Open day",
+        "start": "2017-05-06T09:00:00Z",
+        "end": "2017-05-06T10:00:00Z",
+        "location": "Main hall"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Imani Cole",
+        "email": "imani.cole@eastgate-college.example",
+        "phone": "+1 555 0101",
+        "org": "Eastgate College"
+      },
+      {
+        "id": "p-2",
+        "name": "Rafael Duarte",
+        "email": "rafael.duarte@eastgate-college.example",
+        "phone": "+1 555 0102",
+        "org": "Eastgate College"
+      },
+      {
+        "id": "p-3",
+        "name": "Hannah Whitlock",
+        "email": "hannah.whitlock@eastgate-college.example",
+        "phone": "+1 555 0103",
+        "org": "Eastgate College"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-google-docs--1": {
+        "text": "Open day schedule. Tours at 10 and 2. Welcome desk opens at 9."
+      },
+      "c-google-docs--2": {
+        "text": "Offers list draft. Check against the registrar file."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-college-home": {
+          "title": "Eastgate College",
+          "url": "eastgate-college.example/home",
+          "brand": "Eastgate College",
+          "heading": "Eastgate College",
+          "body": "Welcome to Eastgate College. Admissions, open days and student life.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Eastgate College",
+          "url": "scene:pg-college-home"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-college-home",
+          "title": "Eastgate College"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Eastgate College",
+          "url": "scene:pg-college-home"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-college-home",
+          "title": "Eastgate College",
+          "time": "2017-05-02T16:45:00Z"
+        }
+      ]
+    }
+  }
+}

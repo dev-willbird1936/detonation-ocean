@@ -1,0 +1,227 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Omar Haddad",
+    "short": "omar",
+    "email": "omar.haddad@marlowmail.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-dark.jpg",
+    "wifiNetwork": "Haddad-Home"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "omar"
+      },
+      "f-house": {
+        "id": "f-house",
+        "parentId": "documents",
+        "name": "House-move-plan.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 900,
+        "modified": "2017-08-20T20:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-house"
+      },
+      "f-payslips": {
+        "id": "f-payslips",
+        "parentId": "documents",
+        "name": "Payslips-summary.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1300,
+        "modified": "2017-08-29T11:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-payslips"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Omar",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2017-08-31T07:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "messages",
+      "notes",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-credit",
+          "folder": "inbox",
+          "from": "Brightline Credit <summary@brightline-credit.example>",
+          "to": "omar.haddad@marlowmail.example",
+          "subject": "Your monthly credit summary is ready",
+          "body": "Your monthly summary is ready to read in Credit Profile. Nothing needs your attention this month.",
+          "time": "2017-08-31T07:00:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-mortgage",
+          "folder": "inbox",
+          "from": "Harbour Mortgages <advisor@harbour-mortgages.example>",
+          "to": "omar.haddad@marlowmail.example",
+          "subject": "Documents for your application",
+          "body": "Thanks for sending your payslips. We will be in touch within a week.\n\nHarbour Mortgages",
+          "time": "2017-08-29T11:45:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-friend",
+          "folder": "inbox",
+          "from": "Leila Haddad <leila.haddad@marlowmail.example>",
+          "to": "omar.haddad@marlowmail.example",
+          "subject": "Sunday lunch",
+          "body": "Are you and the kids coming on Sunday? Mum is cooking.\n\nLeila",
+          "time": "2017-08-30T19:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Omar Haddad <omar.haddad@marlowmail.example>",
+          "to": "leila.haddad@marlowmail.example",
+          "subject": "Re: Sunday lunch",
+          "body": "We will be there.",
+          "time": "2017-08-30T19:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-leila",
+          "with": "Leila Haddad",
+          "items": [
+            {
+              "id": "i-leila-1",
+              "from": "Leila Haddad",
+              "text": "Bring the photos from the lake trip.",
+              "time": "2017-08-31T08:10:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-house",
+        "folder": "notes",
+        "title": "House move",
+        "body": "Mortgage advice call Thursday\nRequest utility statements\nBook the removal van",
+        "modified": "2017-08-20T20:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-lunch",
+        "title": "Sunday lunch",
+        "start": "2017-09-03T12:30:00Z",
+        "end": "2017-09-03T15:00:00Z",
+        "location": "Leila's house"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-statements",
+        "list": "home",
+        "title": "Request utility statements",
+        "due": "2017-09-05T18:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-leila",
+        "name": "Leila Haddad",
+        "email": "leila.haddad@marlowmail.example",
+        "phone": "+1 555 0301",
+        "org": "Family"
+      },
+      {
+        "id": "p-mortgage",
+        "name": "Harbour Mortgages",
+        "email": "advisor@harbour-mortgages.example",
+        "phone": "+1 555 0302",
+        "org": "Harbour Mortgages"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-house": {
+        "text": "House move plan. Fictional training file."
+      },
+      "c-f-payslips": {
+        "text": "Payslip summary. Fictional training file."
+      }
+    }
+  }
+}

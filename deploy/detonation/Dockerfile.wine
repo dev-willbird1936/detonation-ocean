@@ -1,0 +1,63 @@
+# detonation-ocean/wine, M4b: WineHQ stable 11.0 (new WoW64), Xvfb and a pre-built prefix (docs/SPEC.md 6.6 "Run under Wine").
+# It runs only under `--runtime runc` with deploy/detonation/seccomp-wine.json and only when DETONATION_WINE_RUNC=true
+# (docs/safety-amendment-DRAFT.md; docs/evidence/gvisor-wsl/PIDS-AND-WINE.md Part B: Wine does not run under gVisor).
+# Build with deploy/detonation/build-images.sh. Base pinned by digest (resolved 2026-10-07):
+#   debian:bookworm-slim -> Debian 12
+# Packaging traps (PIDS-AND-WINE.md B.3, both verified):
+#  1. wine-stable-amd64 holds only libraries; bin/wine and bin/wineserver are in wine-stable, whose Depends on wine-stable-i386
+#     cannot be met without i386 multiarch. wine-stable is unpacked with dpkg -x (dependencies installed below).
+#  2. The 32-bit PE files live in wine-stable-i386 (lib/wine/i386-windows). Without them C:\windows\syswow64\*.exe fails with c0000135.
+# Prefix: Wine's own DLLs only (TOOLS.md "Decisions taken" 4); no winetricks, no Microsoft redistributables. Wine Mono is not installed:
+# its prefix copy alone is larger than the prefix tmpfs, and .NET assemblies are analysed statically (SPEC 6.6 Unwrap).
+# The only ENV lines are the three of the detonate image: the AT-1 environment check pins the variable names, so wine_run.py sets every
+# Wine variable itself.
+FROM debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587
+
+ARG WINE_VERSION=11.0.0.0~bookworm-1
+ARG WINEHQ_KEY_SHA256=d965d646defe94b3dfba6d5b4406900ac6c81065428bf9d9303ad7a72ee8d1b8
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates curl \
+ && mkdir -pm755 /etc/apt/keyrings \
+ && curl -fsSL -o /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key \
+ && echo "${WINEHQ_KEY_SHA256}  /etc/apt/keyrings/winehq-archive.key" | sha256sum -c - \
+ && printf 'Types: deb\nURIs: https://dl.winehq.org/wine-builds/debian\nSuites: bookworm\nComponents: main\nArchitectures: amd64\nSigned-By: /etc/apt/keyrings/winehq-archive.key\n' > /etc/apt/sources.list.d/winehq.sources \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends "wine-stable-amd64=${WINE_VERSION}" \
+    python3 xvfb xauth procps fonts-wine libfreetype6 libfontconfig1 libpng16-16 libgnutls30 libxcursor1 libxi6 libxrandr2 \
+    libxrender1 libxcomposite1 libxfixes3 libxinerama1 libxxf86vm1 libxslt1.1 \
+ && cd /tmp && apt-get download "wine-stable=${WINE_VERSION}" && dpkg -x wine-stable_*.deb / && rm -f wine-stable_*.deb \
+ && dpkg --add-architecture i386 \
+ && sed -i 's/^Architectures: amd64$/Architectures: amd64 i386/' /etc/apt/sources.list.d/winehq.sources \
+ && apt-get update \
+ && apt-get download "wine-stable-i386:i386=${WINE_VERSION}" \
+ && dpkg-deb --fsys-tarfile wine-stable-i386_*.deb | tar -x -C / ./opt/wine-stable/lib/wine/i386-windows \
+ && rm -f wine-stable-i386_*.deb \
+ && dpkg --remove-architecture i386 \
+ && apt-get purge -y --auto-remove curl \
+ && rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/log/apt /var/log/dpkg.log \
+ && ln -s /opt/wine-stable/bin/wine /usr/local/bin/wine \
+ && ln -s /opt/wine-stable/bin/wineserver /usr/local/bin/wineserver \
+ && groupadd --gid 10001 dana \
+ && useradd --uid 10001 --gid 10001 --no-create-home --home-dir /home/dana --shell /bin/sh dana \
+ && install -d -o 10001 -g 10001 -m 0755 /home/dana /opt/wineprefix-src
+
+# The prefix is built as the sandbox user, once, at image build time. The shell folders are symlinks to /home/dana/<folder>, which is the
+# job's seeded home volume at run time, so a file the program writes to Documents lands in the same file diff as a Linux run. The honey
+# files the seed holds are linked where Windows software looks: Credentials, the browser profile and the wallet folder.
+USER 10001:10001
+COPY --chown=10001:10001 runner/wine_prefix.sh /tmp/wine_prefix.sh
+RUN sed -i 's/$//' /tmp/wine_prefix.sh && mkdir -p /home/dana/Documents /home/dana/Downloads /home/dana/Desktop /home/dana/Pictures \
+ && HOME=/home/dana PATH=/opt/wine-stable/bin:/usr/local/bin:/usr/bin:/bin sh /tmp/wine_prefix.sh /opt/wineprefix-src \
+ && rm -rf /home/dana/.cache /home/dana/.local /home/dana/.config /tmp/*
+
+USER root
+COPY runner/wine_run.py runner/wine_evidence.py runner/runnerlib.py /opt/detonation/
+COPY runner/wine_NOTICE.txt /usr/share/doc/detonation-ocean/THIRD-PARTY.txt
+RUN chmod 0755 /opt/detonation/wine_run.py && sed -i 's/$//' /opt/detonation/wine_run.py
+
+ENV HOME=/home/dana DETONATION_SANDBOX=1 PYTHONDONTWRITEBYTECODE=1
+USER 10001:10001
+WORKDIR /home/dana
+ENTRYPOINT ["/opt/detonation/wine_run.py"]

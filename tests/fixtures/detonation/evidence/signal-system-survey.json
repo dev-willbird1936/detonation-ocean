@@ -1,0 +1,22 @@
+{
+  "description": "Evidence that adds only the system-survey signal.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [
+      "system-survey"
+    ],
+    "depth": "twilight",
+    "findings": []
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "static",
+      "kind": "system-survey",
+      "detail": "system-survey",
+      "at": "2026-01-01T00:00:00.000Z",
+      "indicator": "Lists running processes and installed antivirus"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Tomas Vrebel",
+    "short": "tomas",
+    "email": "tomas.vrebel@bellmoor-trade.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img0.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Bellmoor-Staff",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "tomas"
+      },
+      "f-q1-summary": {
+        "id": "f-q1-summary",
+        "parentId": "documents",
+        "name": "Export-figures-Q1.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1800,
+        "modified": "2022-05-28T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-q1-summary"
+      },
+      "f-visit-plan": {
+        "id": "f-visit-plan",
+        "parentId": "documents",
+        "name": "Delegation-visit-plan.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 920,
+        "modified": "2022-05-24T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-visit-plan"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Tomas",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2022-05-30T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "mfa",
+    "updates",
+    "settings",
+    "terminal",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "clock",
+    "store",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-briefing-at-2-pm-d",
+          "folder": "inbox",
+          "from": "Dorothea Pell <dorothea.pell@bellmoor-trade.example>",
+          "to": "tomas.vrebel@bellmoor-trade.example",
+          "subject": "Briefing at 2 pm: delegation visit",
+          "body": "Tomas,\n\nThe delegation briefing is at 2 pm in the east room. Please bring the export figures summary.\n\nDorothea",
+          "time": "2022-05-29T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-export-figures-q1-",
+          "folder": "inbox",
+          "from": "Rafi Anders <rafi.anders@bellmoor-trade.example>",
+          "to": "tomas.vrebel@bellmoor-trade.example",
+          "subject": "Export figures: Q1 summary",
+          "body": "Draft summary is in Documents. Comments welcome by Wednesday.\n\nRafi",
+          "time": "2022-05-28T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-planned-maintenanc",
+          "folder": "inbox",
+          "from": "Bellmoor IT Desk <bellmoor.it.desk@bellmoor-trade.example>",
+          "to": "tomas.vrebel@bellmoor-trade.example",
+          "subject": "Planned maintenance Saturday",
+          "body": "Mail will be unavailable from 22:00 to 23:00 on Saturday. No action is needed.",
+          "time": "2022-05-26T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Tomas Vrebel <tomas.vrebel@bellmoor-trade.example>",
+          "to": "dorothea.pell@bellmoor-trade.example",
+          "subject": "Re: Delegation visit logistics",
+          "body": "Rooms are booked. I will confirm the interpreter tomorrow.\n\nTomas",
+          "time": "2022-05-24T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-rafi-anders",
+          "with": "Rafi Anders",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Rafi Anders",
+              "text": "Did you see the Q1 numbers?",
+              "time": "2022-05-28T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Tomas Vrebel",
+              "text": "Yes, reading them now.",
+              "time": "2022-05-28T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-delegation-vis",
+        "folder": "notes",
+        "title": "Delegation visit",
+        "body": "Briefing 2 pm east room\nInterpreter to confirm\nLunch booking",
+        "modified": "2022-05-29T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Delegation briefing",
+        "start": "2022-05-30T14:00:00Z",
+        "end": "2022-05-30T15:00:00Z",
+        "location": "East room"
+      },
+      {
+        "id": "e-2",
+        "title": "Export figures review",
+        "start": "2022-06-02T10:00:00Z",
+        "end": "2022-06-02T11:00:00Z",
+        "location": "Video call"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Comment on the Q1 summary",
+        "due": "2022-06-01T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "Confirm interpreter",
+        "due": "2022-05-31T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-dorothea-pell",
+        "name": "Dorothea Pell",
+        "email": "dorothea.pell@bellmoor-trade.example",
+        "phone": "+1 555 0151",
+        "org": "Bellmoor Trade Office"
+      },
+      {
+        "id": "p-2-rafi-anders",
+        "name": "Rafi Anders",
+        "email": "rafi.anders@bellmoor-trade.example",
+        "phone": "+1 555 0152",
+        "org": "Bellmoor Trade Office"
+      },
+      {
+        "id": "p-3-helena-voss",
+        "name": "Helena Voss",
+        "email": "helena.voss@partner-agency.example",
+        "phone": "+1 555 0153",
+        "org": "Partner agency"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-q1-summary": {
+        "text": "Export figures Q1 (draft)\nMachinery: up 4%\nTextiles: down 2%\nFood: flat"
+      },
+      "c-f-visit-plan": {
+        "text": "Delegation visit plan\nDay 1: briefing\nDay 2: site visits"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2022-05-18T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2022-05-06T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2022-04-24T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2022-04-12T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "trade-intranet": {
+          "title": "Bellmoor staff intranet",
+          "url": "intranet.bellmoor-trade.example/home",
+          "brand": "Bellmoor",
+          "heading": "Staff intranet",
+          "body": "News: delegation visit this week. Reminder: report suspicious email with the Report button.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Bellmoor staff intranet",
+          "url": "scene:trade-intranet"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:trade-intranet",
+          "title": "Bellmoor staff intranet",
+          "time": "2022-05-29T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

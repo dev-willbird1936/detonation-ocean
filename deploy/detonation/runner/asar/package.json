@@ -1,0 +1,9 @@
+{
+  "name": "detonation-ocean-asar",
+  "private": true,
+  "version": "1.0.0",
+  "description": "@electron/asar for the unwrap step of detonation-ocean/detonate (docs/SPEC.md 6.6)",
+  "dependencies": {
+    "@electron/asar": "4.3.1"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Tomas Lindgren",
+    "short": "tomas",
+    "email": "tomas.lindgren@brightloom.example",
+    "avatar": "aurora-2010"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "graphite",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img0.jpg",
+    "wifiNetwork": "Brightloom-Corp"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "tomas"
+      },
+      "f-aurora-2010-1": {
+        "id": "f-aurora-2010-1",
+        "parentId": "documents",
+        "name": "Parser-notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 49,
+        "modified": "2010-01-05T07:00:00Z",
+        "trashed": false,
+        "contentId": "c-aurora-2010-1"
+      },
+      "f-aurora-2010-2": {
+        "id": "f-aurora-2010-2",
+        "parentId": "desktop",
+        "name": "Build-notes.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 35,
+        "modified": "2010-01-05T07:00:00Z",
+        "trashed": false,
+        "contentId": "c-aurora-2010-2"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Tomas",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2010-01-05T07:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "texteditor",
+    "calendar",
+    "contacts",
+    "calculator",
+    "taskmanager",
+    "terminal"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "terminal",
+      "calendar",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-build",
+          "folder": "inbox",
+          "from": "Build Bot <build@brightloom.example>",
+          "to": "tomas.lindgren@brightloom.example",
+          "subject": "Nightly build 1182: passed",
+          "body": "Nightly build 1182 passed all 3,204 tests.\n\nBuild Bot",
+          "time": "2010-01-05T07:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-lead",
+          "folder": "inbox",
+          "from": "Priya Nandakumar <priya.nandakumar@brightloom.example>",
+          "to": "tomas.lindgren@brightloom.example",
+          "subject": "Release branch freeze on Friday",
+          "body": "Tomas,\n\nWe freeze the release branch on Friday at noon. Please land your changes by Thursday.\n\nPriya",
+          "time": "2010-01-04T17:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-main",
+          "with": "Kendra Voss",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Kendra Voss",
+              "text": "Lunch at 12:30?",
+              "time": "2010-01-05T11:50:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Tomas Lindgren",
+              "text": "Sure, the usual place.",
+              "time": "2010-01-05T11:52:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-main",
+        "folder": "notes",
+        "title": "Release to-do",
+        "body": "Land the parser fix\nUpdate the build notes\nBack up the repo mirror",
+        "modified": "2010-01-05T07:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-main",
+        "title": "Release branch freeze",
+        "start": "2010-01-08T12:00:00Z",
+        "end": "2010-01-08T13:00:00Z",
+        "location": "Dev room"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-1",
+        "name": "Kendra Voss",
+        "email": "kendra.voss@brightloom.example",
+        "phone": "+1 555 0101",
+        "org": "Brightloom Software"
+      },
+      {
+        "id": "p-2",
+        "name": "Priya Nandakumar",
+        "email": "priya.nandakumar@brightloom.example",
+        "phone": "+1 555 0102",
+        "org": "Brightloom Software"
+      },
+      {
+        "id": "p-3",
+        "name": "Build Bot",
+        "email": "build@brightloom.example",
+        "phone": "+1 555 0103",
+        "org": "Brightloom Software"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-aurora-2010-1": {
+        "text": "Parser fix: handle empty headers. Review pending."
+      },
+      "c-aurora-2010-2": {
+        "text": "Build 1182 notes. All tests passed."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-dev-wiki": {
+          "title": "Brightloom dev wiki",
+          "url": "wiki.brightloom.example/start",
+          "brand": "Brightloom dev wiki",
+          "heading": "Brightloom dev wiki",
+          "body": "Welcome to the developer wiki. Build status, coding rules and the release calendar are linked below.",
+          "choices": []
+        }
+      },
+      "favorites": [
+        {
+          "title": "Brightloom dev wiki",
+          "url": "scene:pg-dev-wiki"
+        }
+      ]
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-dev-wiki",
+          "title": "Brightloom dev wiki"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [
+        {
+          "id": "bm-1",
+          "title": "Brightloom dev wiki",
+          "url": "scene:pg-dev-wiki"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:pg-dev-wiki",
+          "title": "Brightloom dev wiki",
+          "time": "2010-01-05T07:00:00Z"
+        }
+      ]
+    }
+  }
+}

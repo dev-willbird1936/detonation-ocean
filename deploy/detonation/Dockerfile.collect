@@ -1,0 +1,9 @@
+# detonation-ocean/collect: the collector script only (docs/SPEC.md 6.1, 6.4). Standard library, no pip.
+FROM python:3.12-slim@sha256:05cda9777409a9c3ffddd94a4c476b79f0769a0b4857f0c7ed9226b6800b0d6f
+
+COPY collect/collect.py /opt/detonation/collect.py
+
+# The python base image sets GPG_KEY (its release-signing fingerprint); blank it so no *KEY variable carries a value.
+ENV GPG_KEY= PYTHONDONTWRITEBYTECODE=1
+USER 10001:10001
+ENTRYPOINT ["python", "/opt/detonation/collect.py"]

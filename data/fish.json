@@ -1,0 +1,32 @@
+{
+  "fish": [
+    { "species": "pufferfish", "types": ["zip", "rar", "7z", "iso", "img"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/pufferfish-swim.png" },
+    { "species": "flounder", "types": ["pdf"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/flounder-swim.png" },
+    { "species": "leafy-seadragon", "types": ["docx", "docm", "doc"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/leafy-seadragon-swim.png" },
+    { "species": "boxfish", "types": ["xlsx", "xlsm", "xls", "xll"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/boxfish-swim.png" },
+    { "species": "lionfish", "types": ["pptx"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/lionfish-swim.png" },
+    { "species": "ribbonfish", "types": ["rtf"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/ribbonfish-swim.png" },
+    { "species": "barracuda", "types": ["exe", "scr", "com", "cpl"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/barracuda-swim.png" },
+    { "species": "remora", "types": ["dll"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/remora-swim.png" },
+    { "species": "mandarin-dragonet", "types": ["html", "htm", "chm"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/mandarin-dragonet-swim.png" },
+    { "species": "picasso-triggerfish", "types": ["svg"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/picasso-triggerfish-swim.png" },
+    { "species": "flying-fish", "types": ["eml", "msg"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/flying-fish-swim.png" },
+    { "species": "batfish", "types": ["bat", "cmd"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/batfish-swim.png" },
+    { "species": "pilot-fish", "types": ["js-wsh", "vbs", "hta", "wsf"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/pilot-fish-swim.png" },
+    { "species": "torpedo-ray", "types": ["ps1"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/torpedo-ray-swim.png" },
+    { "species": "archerfish", "types": ["lnk", "url"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/archerfish-swim.png" },
+    { "species": "snake-eel", "types": ["py"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/snake-eel-swim.png" },
+    { "species": "jack", "types": ["js-node"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/jack-swim.png" },
+    { "species": "sea-bass", "types": ["sh"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/sea-bass-swim.png" },
+    { "species": "goblin-shark", "types": ["elf"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/goblin-shark-swim.png" },
+    { "species": "jawfish", "types": ["msi"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/jawfish-swim.png" },
+    { "species": "pocket-shark", "types": ["apk"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/pocket-shark-swim.png" },
+    { "species": "mackerel", "types": ["dmg", "pkg", "macho"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/mackerel-swim.png" },
+    { "species": "java-rabbitfish", "types": ["jar"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/java-rabbitfish-swim.png" },
+    { "species": "sole", "types": ["one"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/sole-swim.png" },
+    { "species": "butterflyfish", "types": ["png", "jpeg", "gif"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/butterflyfish-swim.png" },
+    { "species": "plaice", "types": ["txt", "csv", "text"], "hackathon": false, "sprite": "ui/abyss/pixel/fish/plaice-swim.png" },
+    { "species": "coelacanth", "types": ["unknown"], "hackathon": true, "sprite": "ui/abyss/pixel/fish/coelacanth-swim.png" }
+  ],
+  "fallback": "coelacanth"
+}

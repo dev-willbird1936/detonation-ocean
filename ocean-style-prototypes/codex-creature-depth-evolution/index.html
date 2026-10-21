@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ocean Depth Forms — Creature Design Review</title>
+  <style>
+    :root{color-scheme:dark;--ink:#eaf3f6;--muted:#9db1bb;--panel:#101b27;--line:#293b49;--aqua:#63d9d0;--gold:#edbb70}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at 50% -30%,#214357 0,#101b27 42rem,#070d14 90rem);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{max-width:1440px;margin:auto;padding:36px clamp(16px,3vw,44px) 64px}
+    .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua);font-weight:750}
+    h1{font-size:clamp(2rem,4vw,3.7rem);line-height:1.03;max-width:900px;margin:.55rem 0 1rem;letter-spacing:-.04em}
+    .intro{max-width:760px;color:#c2d0d6;font-size:1.05rem;margin:0 0 24px}
+    .mapping{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 40px}
+    .mapping span{border:1px solid #355264;background:#112332;border-radius:999px;padding:8px 13px;color:#dcebf0}
+    .mapping b{color:var(--aqua)}
+    .viewer-links{display:flex;flex-wrap:wrap;gap:12px;margin:-24px 0 30px;font-size:.82rem}
+    .viewer-links a{color:var(--aqua);text-decoration:none}
+    .viewer-links a:hover{text-decoration:underline}
+    .family{border-top:1px solid var(--line);padding:26px 0 34px}
+    .family-head{display:flex;align-items:center;gap:14px;margin-bottom:17px}
+    .family-head h2{margin:0;font-size:1.5rem;letter-spacing:-.02em}
+    .family-head p{margin:0;color:var(--muted);font-size:.88rem}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .card{min-width:0;border:1px solid var(--line);background:linear-gradient(155deg,rgba(21,36,49,.96),rgba(10,17,25,.97));border-radius:16px;overflow:hidden;box-shadow:0 12px 32px #0003}
+    .card-top{padding:15px 16px 11px;min-height:82px}
+    .depth{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);font-weight:750}
+    .card h3{margin:4px 0 2px;font-size:1.06rem}
+    .tag{font-size:.77rem;color:var(--muted)}
+    .artboard{height:290px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#23394a 0,#152532 52%,#0d1721 100%);border-top:1px solid #213543;border-bottom:1px solid #213543}
+    .artboard:before{content:"";position:absolute;inset:0;opacity:.14;background-image:linear-gradient(45deg,#94b5c11c 25%,transparent 25%),linear-gradient(-45deg,#94b5c11c 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#94b5c11c 75%),linear-gradient(-45deg,transparent 75%,#94b5c11c 75%);background-size:26px 26px;background-position:0 0,0 13px,13px -13px,-13px 0}
+    .artboard img{position:relative;z-index:1;width:auto;height:auto;max-width:min(100%,256px);max-height:min(100%,256px);object-fit:contain;image-rendering:pixelated}
+    .card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;color:var(--muted);font-size:.75rem}
+    .card-foot a{color:var(--aqua);text-decoration:none}
+    .card-foot a:hover{text-decoration:underline}
+    .palette{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .swatch-group{display:flex;align-items:center;gap:5px;border:1px solid #263844;border-radius:8px;padding:5px 7px;color:var(--muted);font-size:.68rem}
+    .swatch{width:15px;height:15px;border-radius:4px;border:1px solid #ffffff33}
+    .note{color:#9fb3bc;font-size:.82rem;margin-top:38px;border-left:2px solid #d9a657;padding:4px 0 4px 13px;max-width:900px}
+    @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.artboard{height:260px}}
+    @media(max-width:600px){main{padding-top:24px}.cards{grid-template-columns:1fr}.artboard{height:min(84vw,360px)}.family-head{align-items:flex-start;flex-direction:column;gap:3px}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Ocean creature evolution · normalized morphology review</div>
+  <h1>Three forms.<br>Five depths.</h1>
+  <p class="intro">Six creature families keep their base form near the surface, evolve once for the dark middle depths, then become more formidable in the trench. This page shows the 18 normalized morphology sources (six families × Base, Mid and Trench) in their Sunlight palette. Click an image to open its transparent PNG.</p>
+  <div class="mapping" aria-label="Depth-to-form mapping">
+    <span><b>Sunlight + Twilight</b> · shared base</span>
+    <span><b>Midnight + Abyss</b> · shared evolved form</span>
+    <span><b>Trench</b> · advanced form</span>
+  </div>
+  <div class="viewer-links"><a href="../index.html">← Six-style / five-depth composition viewer</a><a href="depth-evolution-contact-sheet.png">Open earlier palette-indexed contact sheet</a><a href="../codex-creature-palette-base/index.html">Separate 6×5 depth-colour grid →</a></div>
+  <div id="families"></div>
+  <p class="note">These 18 images are normalized morphology sources: transparent, palette-indexed 128 px sprites with a 256 px display copy, all candidates accepted for the colour pipeline, not final art. The five-depth colour variants are built from them and shown in the separate 6×5 grid; this page is the three-form study only. Animation is not generated and no playback is offered here. The Squid → Kraken line uses Squid sources only; no Octopus asset is used. This family-form study is separate from the six-style, five-depth ocean composition viewer.</p>
+</main>
+<script>
+const root='../codex-creature-depth-evolution/';
+const families=[
+ {id:'anglerfish',name:'Anglerfish',palette:{Primary:['#0B4752','#167D88','#55B6AD'],Secondary:['#536A70','#8FADAA','#DDD5B8'],Tertiary:['#A9562F','#D7883E','#F2C66D']}},
+ {id:'viperfish',name:'Viperfish',palette:{Primary:['#0A334E','#176286','#51A6B8'],Secondary:['#344A5D','#6D8591','#B7C8C8'],Tertiary:['#2FAABB','#55D6CF','#C7F1DC']}},
+ {id:'siphonophore',name:'Siphonophore',palette:{Primary:['#30284E','#514D79','#9B95BC'],Secondary:['#07545D','#168A97','#73D2CF'],Tertiary:['#7A4547','#C16B5A','#E9B47E']}},
+ {id:'isopod-host',name:'Isopod Host Fish',palette:{Primary:['#105554','#16857C','#68B69C'],Secondary:['#506A72','#9BB2AA','#E1DDC7'],Tertiary:['#5C4338','#9C7051','#D1AF7A']}},
+ {id:'cookiecutter',name:'Cookiecutter Shark',palette:{Primary:['#1E3445','#3F6277','#809FA4'],Secondary:['#61574E','#A49580','#E3D6B7'],Tertiary:['#6C2F48','#A35540','#E0A85D']}},
+ {id:'squid',name:'Squid → Kraken',palette:{Primary:['#633A46','#A95650','#E28B6C'],Secondary:['#243B61','#3C6A93','#89ABD0'],Tertiary:['#79612C','#C0A33F','#F1D075']}}
+];
+const stages=[
+ {key:'base-rich',title:'Sunlight + Twilight',sub:'Shared base form'},
+ {key:'midnight-abyss',title:'Midnight + Abyss',sub:'Shared mid form'},
+ {key:'trench',title:'Trench',sub:'Advanced evolution'}
+];
+document.querySelector('#families').innerHTML=families.map(f=>`<section class="family" aria-labelledby="${f.id}-title"><header class="family-head"><h2 id="${f.id}-title">${f.name}</h2><p>Same family identity · replaceable 3-region palette</p></header><div class="cards">${stages.map(s=>{const png=size=>root+`depth-colors/morphology/${f.id}-${s.key}-${size}.png`;return `<article class="card"><div class="card-top"><div class="depth">${s.title}</div><h3>${s.sub}</h3><div class="tag">Normalized morphology source · candidate</div></div><a class="artboard" href="${png(256)}" target="_blank" rel="noreferrer" aria-label="Open normalized source for ${f.name} ${s.title}"><img src="${png(256)}" alt="${f.name}, ${s.title} normalized morphology source" loading="eager"></a><div class="card-foot"><a href="${png(256)}" download>PNG 256</a><a href="${png(128)}" download>PNG 128</a></div></article>`}).join('')}</div><div class="palette" aria-label="${f.name} role palette">${Object.entries(f.palette).map(([role,colors])=>`<div class="swatch-group"><span>${role}</span>${colors.map((c,i)=>`<span class="swatch" title="${role} ${['shadow','base','highlight'][i]} ${c}" style="background:${c}"></span>`).join('')}</div>`).join('')}</div></section>`).join('');
+</script>
+</body>
+</html>

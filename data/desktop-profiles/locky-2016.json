@@ -1,0 +1,338 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Teodor Lindqvist",
+    "short": "teodor",
+    "email": "teodor.lindqvist@marlowe-clinic.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img1.jpg",
+    "wifi": true,
+    "bluetooth": true,
+    "wifiNetwork": "Marlowe-Clinic",
+    "battery": 100
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "teodor"
+      },
+      "f-day-sheet": {
+        "id": "f-day-sheet",
+        "parentId": "documents",
+        "name": "Day-sheet-Thu.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 1000,
+        "modified": "2016-02-16T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-day-sheet"
+      },
+      "f-supplier-list": {
+        "id": "f-supplier-list",
+        "parentId": "documents",
+        "name": "Supplier-list.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 700,
+        "modified": "2016-01-08T10:30:00Z",
+        "trashed": false,
+        "contentId": "c-f-supplier-list"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Teodor",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2016-02-17T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "texteditor",
+    "calendar",
+    "reminders",
+    "contacts",
+    "photos",
+    "media",
+    "calculator",
+    "settings",
+    "updates",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-1-appointment-book-t",
+          "folder": "inbox",
+          "from": "Priscilla Hale <priscilla.hale@marlowe-clinic.example>",
+          "to": "teodor.lindqvist@marlowe-clinic.example",
+          "subject": "Appointment book: Thursday",
+          "body": "Teodor, Dr Osei has two cancellations on Thursday. Please offer the slots to the waiting list.\n\nPriscilla",
+          "time": "2016-02-16T08:10:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-2-order-3012-confirm",
+          "folder": "inbox",
+          "from": "Colin Strand <colin.strand@medsupply-direct.example>",
+          "to": "teodor.lindqvist@marlowe-clinic.example",
+          "subject": "Order 3012 confirmed",
+          "body": "Your order 3012 of exam gloves and paper rolls is confirmed for delivery Friday.\n\nColin",
+          "time": "2016-02-15T09:17:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-3-clinic-hours-next-",
+          "folder": "inbox",
+          "from": "Dr Amara Osei <dr.amara.osei@marlowe-clinic.example>",
+          "to": "teodor.lindqvist@marlowe-clinic.example",
+          "subject": "Clinic hours next week",
+          "body": "I will finish at 4 pm on Monday because of the training session.\n\nAmara",
+          "time": "2016-02-14T10:24:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Teodor Lindqvist <teodor.lindqvist@marlowe-clinic.example>",
+          "to": "priscilla.hale@marlowe-clinic.example",
+          "subject": "Re: Waiting list",
+          "body": "I called the first three patients. Two accepted.\n\nTeodor",
+          "time": "2016-02-13T15:20:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-1-priscilla-ha",
+          "with": "Priscilla Hale",
+          "items": [
+            {
+              "id": "i-1-1",
+              "from": "Priscilla Hale",
+              "text": "Did the Thursday slots fill?",
+              "time": "2016-02-16T10:05:00Z"
+            },
+            {
+              "id": "i-1-2",
+              "from": "Teodor Lindqvist",
+              "text": "Two of three so far.",
+              "time": "2016-02-16T11:05:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-1-front-desk-che",
+        "folder": "notes",
+        "title": "Front desk checklist",
+        "body": "Offer Thursday slots\nPrint the day sheet\nForward supplier invoices to Priscilla",
+        "modified": "2016-02-16T18:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-1",
+        "title": "Staff training",
+        "start": "2016-02-22T15:00:00Z",
+        "end": "2016-02-22T16:00:00Z",
+        "location": "Waiting room"
+      },
+      {
+        "id": "e-2",
+        "title": "Supplier delivery",
+        "start": "2016-02-20T11:00:00Z",
+        "end": "2016-02-20T11:30:00Z",
+        "location": "Back door"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-1",
+        "list": "work",
+        "title": "Forward invoices to the billing manager",
+        "due": "2016-02-18T17:00:00Z",
+        "done": false
+      },
+      {
+        "id": "r-2",
+        "list": "work",
+        "title": "Print Thursday day sheet",
+        "due": "2016-02-19T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-1-priscilla-hale",
+        "name": "Priscilla Hale",
+        "email": "priscilla.hale@marlowe-clinic.example",
+        "phone": "+1 555 0251",
+        "org": "Marlowe Community Clinic"
+      },
+      {
+        "id": "p-2-dr-amara-osei",
+        "name": "Dr Amara Osei",
+        "email": "dr.amara.osei@marlowe-clinic.example",
+        "phone": "+1 555 0252",
+        "org": "Marlowe Community Clinic"
+      },
+      {
+        "id": "p-3-colin-strand",
+        "name": "Colin Strand",
+        "email": "colin.strand@medsupply-direct.example",
+        "phone": "+1 555 0253",
+        "org": "MedSupply Direct"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-day-sheet": {
+        "text": "Day sheet Thursday\n9:00 open\n11:30 two slots free\n14:00 flu clinic"
+      },
+      "c-f-supplier-list": {
+        "text": "Supplier list\nMedSupply Direct: gloves, paper rolls"
+      }
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2016-02-05T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2016-01-24T16:30:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2016-01-12T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p4",
+          "name": "IMG_0104.jpg",
+          "asset": "photo-4",
+          "taken": "2015-12-31T16:30:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-recent",
+          "name": "Recent",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": [],
+    "web": {
+      "pages": {
+        "clinic-site": {
+          "title": "Marlowe Community Clinic",
+          "url": "www.marlowe-clinic.example/home",
+          "brand": "Marlowe Clinic",
+          "heading": "Marlowe Community Clinic",
+          "body": "Opening hours, flu clinic dates and how to book an appointment by phone.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [],
+      "activeTabId": null,
+      "bookmarks": [
+        {
+          "id": "bk-1",
+          "title": "Marlowe Community Clinic",
+          "url": "scene:clinic-site"
+        }
+      ],
+      "history": [
+        {
+          "id": "h-1",
+          "url": "scene:clinic-site",
+          "title": "Marlowe Community Clinic",
+          "time": "2016-02-16T12:15:00Z"
+        }
+      ]
+    }
+  }
+}

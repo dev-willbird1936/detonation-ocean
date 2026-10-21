@@ -1,0 +1,229 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Mei-Lin Chou",
+    "short": "meilin",
+    "email": "meilin.chou@meridian-freight.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "dark",
+    "accent": "purple",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeA/img0.jpg",
+    "wifiNetwork": "Meridian-Staff"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "meilin"
+      },
+      "f-ledger": {
+        "id": "f-ledger",
+        "parentId": "documents",
+        "name": "Carrier-ledger-March.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 3100,
+        "modified": "2019-03-10T17:00:00Z",
+        "trashed": false,
+        "contentId": "c-f-ledger"
+      },
+      "f-checklist": {
+        "id": "f-checklist",
+        "parentId": "documents",
+        "name": "Month-end-checklist.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 700,
+        "modified": "2019-02-27T16:05:00Z",
+        "trashed": false,
+        "contentId": "c-f-checklist"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Mei-Lin",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2019-03-11T08:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager",
+    "clock",
+    "photos",
+    "terminal",
+    "mfa",
+    "store"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "messages",
+      "calendar",
+      "store",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1,
+      "messages": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-invoices",
+          "folder": "inbox",
+          "from": "Wen Zhao <wen.zhao@meridian-freight.example>",
+          "to": "meilin.chou@meridian-freight.example",
+          "subject": "Carrier invoices for approval",
+          "body": "Mei-Lin, the March carrier invoices are in the shared ledger. Please check by Friday.\n\nWen",
+          "time": "2019-03-11T08:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-it",
+          "folder": "inbox",
+          "from": "Meridian IT Desk <itdesk@meridian-freight.example>",
+          "to": "meilin.chou@meridian-freight.example",
+          "subject": "Laptop refresh schedule",
+          "body": "Laptops are refreshed in rotation. Yours is booked for June. No action needed.",
+          "time": "2019-03-07T13:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-hr",
+          "folder": "inbox",
+          "from": "Meridian HR <hr@meridian-freight.example>",
+          "to": "meilin.chou@meridian-freight.example",
+          "subject": "Spring benefits briefing",
+          "body": "The briefing is on 21 March at 14:00 in the canteen.",
+          "time": "2019-03-05T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Mei-Lin Chou <meilin.chou@meridian-freight.example>",
+          "to": "wen.zhao@meridian-freight.example",
+          "subject": "Re: Carrier invoices",
+          "body": "Thanks Wen, starting after lunch.",
+          "time": "2019-03-11T08:45:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-wen",
+          "with": "Wen Zhao",
+          "items": [
+            {
+              "id": "i-wen-1",
+              "from": "Wen Zhao",
+              "text": "Ledger is open if you want to start early.",
+              "time": "2019-03-11T08:40:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-close",
+        "folder": "notes",
+        "title": "Month-end checklist",
+        "body": "Match invoices to delivery notes\nFlag mismatches to Wen\nExport the ledger report",
+        "modified": "2019-02-27T16:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-brief",
+        "title": "Benefits briefing",
+        "start": "2019-03-21T14:00:00Z",
+        "end": "2019-03-21T15:00:00Z",
+        "location": "Canteen"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-expense",
+        "list": "work",
+        "title": "File expense claim",
+        "due": "2019-03-15T17:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-wen",
+        "name": "Wen Zhao",
+        "email": "wen.zhao@meridian-freight.example",
+        "phone": "+1 555 0231",
+        "org": "Meridian Freight"
+      },
+      {
+        "id": "p-it",
+        "name": "Meridian IT Desk",
+        "email": "itdesk@meridian-freight.example",
+        "phone": "+1 555 0232",
+        "org": "Meridian Freight"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-ledger": {
+        "text": "Carrier ledger for March. Fictional training file."
+      },
+      "c-f-checklist": {
+        "text": "Month-end checklist. Fictional training file."
+      }
+    }
+  }
+}

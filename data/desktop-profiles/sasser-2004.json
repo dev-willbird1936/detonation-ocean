@@ -1,0 +1,200 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Joseph Adeyemi",
+    "short": "joseph",
+    "email": "joseph.adeyemi@quayside-couriers.example",
+    "avatar": "initials"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "blue",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/win11-final/img/wallpaper/ThemeC/img0.jpg",
+    "wifiNetwork": "Quayside-Depot"
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "joseph"
+      },
+      "f-routine": {
+        "id": "f-routine",
+        "parentId": "documents",
+        "name": "Dispatch-routine.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 520,
+        "modified": "2004-02-02T07:35:00Z",
+        "trashed": false,
+        "contentId": "c-f-routine"
+      },
+      "f-routes": {
+        "id": "f-routes",
+        "parentId": "documents",
+        "name": "Routes-May.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 2700,
+        "modified": "2004-04-29T15:40:00Z",
+        "trashed": false,
+        "contentId": "c-f-routes"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-welcome",
+        "app": "settings",
+        "title": "Welcome, Joseph",
+        "body": "This is a fictional training desktop. Nothing here is real.",
+        "time": "2004-04-29T15:30:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "notes",
+    "calendar",
+    "contacts",
+    "calculator",
+    "updates",
+    "settings",
+    "texteditor",
+    "taskmanager"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "updates",
+      "calendar",
+      "notes",
+      "calculator",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-routes",
+          "folder": "inbox",
+          "from": "Isla Brandt <isla.brandt@quayside-couriers.example>",
+          "to": "joseph.adeyemi@quayside-couriers.example",
+          "subject": "Route changes for Monday",
+          "body": "Joseph, two routes change on Monday because of road works. Details are on the planner.\n\nIsla",
+          "time": "2004-04-29T15:30:00Z",
+          "read": false,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-driver",
+          "folder": "inbox",
+          "from": "Depot Office <depot@quayside-couriers.example>",
+          "to": "joseph.adeyemi@quayside-couriers.example",
+          "subject": "Driver sign-in sheet",
+          "body": "The new sign-in sheet starts Monday. Please remind drivers.",
+          "time": "2004-04-28T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-van",
+          "folder": "inbox",
+          "from": "Fleet Garage <garage@fleet-garage.example>",
+          "to": "joseph.adeyemi@quayside-couriers.example",
+          "subject": "Van 7 is ready",
+          "body": "Van 7 has passed its service and is ready for collection.",
+          "time": "2004-04-27T16:10:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent-1",
+          "folder": "sent",
+          "from": "Joseph Adeyemi <joseph.adeyemi@quayside-couriers.example>",
+          "to": "isla.brandt@quayside-couriers.example",
+          "subject": "Re: Route changes",
+          "body": "Got it, I will brief the drivers.",
+          "time": "2004-04-29T15:50:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": []
+    },
+    "notes": [
+      {
+        "id": "n-morning",
+        "folder": "notes",
+        "title": "Dispatch routine",
+        "body": "Check overnight parcels\nConfirm driver sheet\nSend route list to depot",
+        "modified": "2004-02-02T07:30:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-brief",
+        "title": "Driver briefing",
+        "start": "2004-05-03T07:30:00Z",
+        "end": "2004-05-03T07:45:00Z",
+        "location": "Depot"
+      }
+    ],
+    "reminders": [],
+    "contacts": [
+      {
+        "id": "p-isla",
+        "name": "Isla Brandt",
+        "email": "isla.brandt@quayside-couriers.example",
+        "phone": "+1 555 0281",
+        "org": "Quayside Couriers"
+      },
+      {
+        "id": "p-depot",
+        "name": "Depot Office",
+        "email": "depot@quayside-couriers.example",
+        "phone": "+1 555 0282",
+        "org": "Quayside Couriers"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-f-routine": {
+        "text": "Dispatch routine. Fictional training file."
+      },
+      "c-f-routes": {
+        "text": "Routes for May. Fictional training file."
+      }
+    }
+  }
+}

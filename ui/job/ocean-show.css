@@ -1,0 +1,107 @@
+/* The ocean show (ui/job/ocean-show.mjs) in the retro pixel theme of ui/abyss/retro-pixel.css (supplies --u, the palette and
+   Jersey 10). The art is one canvas at the theme's pixel size; labels, evidence bubbles, the octopus's slate and the caption
+   bar are DOM so their text stays sharp. No blur, rounded corners or soft shadows; transitions are stepped. */
+
+/* While the show runs, the hero, the drop panel and the creature tags step aside; the gauge and the depth HUD stay. */
+html.os-on { overflow: hidden; } /* the show drives the scroll; without Lenis this stops the wheel */
+html.os-on .hero, html.os-on .tag, html.os-on .ret, html.os-on .hint, html.os-on .zone-card { opacity: 0; visibility: hidden; transition: opacity .4s steps(4), visibility 0s .4s; }
+
+.os { position: fixed; z-index: 40; inset: 0; pointer-events: none; color: var(--ink); font: 400 var(--t)/1.25 var(--serif); }
+.os *, .os *::before, .os *::after { box-sizing: border-box; }
+.os [hidden] { display: none !important; }
+.os-canvas { position: absolute; left: 0; top: 0; image-rendering: pixelated; }
+.os-labels { position: absolute; inset: 0; }
+
+.os-tag { position: absolute; left: 0; top: 0; margin: 0; translate: -50% -100%; padding: var(--u) calc(var(--u) * 2); white-space: nowrap; background: var(--p0); color: var(--p8); box-shadow: 0 0 0 var(--u) var(--p4); }
+.os-file-tag { color: var(--gold); }
+/* An invisible button over the revealed fish (ocean-show.mjs sizes and places it); only its focus ring shows. */
+.os-fish-hit { position: absolute; left: 0; top: 0; translate: -50% -50%; padding: 0; border: 0; border-radius: 0; background: none; pointer-events: auto; cursor: pointer; }
+.os-fish-hit:focus-visible { outline: var(--u) dashed var(--gold); outline-offset: var(--u); }
+.os-fish-tag { font-size: calc(var(--t) * 1.15); }
+
+.os-ev { position: absolute; left: 0; top: 0; max-width: 24rem; margin: 0; translate: -50% -100%; padding: var(--u) calc(var(--u) * 2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: calc(var(--t) * .85); color: var(--p8); background: var(--p0); box-shadow: 0 0 0 var(--u) var(--p5); animation: os-ev 4.2s steps(28) forwards; }
+.os-ev::before { content: attr(data-src) "  "; color: var(--p6); }
+@keyframes os-ev { 0% { opacity: 0; margin-top: 0; } 8% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; margin-top: calc(var(--u) * -40); } }
+
+.os-term { position: absolute; left: 0; top: 0; width: min(19rem, 40vw); translate: -100% -50%; padding: calc(var(--u) * 2) calc(var(--u) * 3); background: var(--p0); box-shadow: 0 0 0 var(--u) var(--p5), calc(var(--u) * 2) calc(var(--u) * 2) 0 0 #02060cb0; font-size: calc(var(--t) * .85); }
+.os-term-head { margin: 0 0 var(--u); color: var(--p6); }
+.os-term-body { margin: 0; padding: 0; list-style: none; color: var(--p7); }
+.os-term-body li { animation: os-type .3s steps(6) both; }
+.os-term-body li::before { content: "> "; color: var(--gold); }
+@keyframes os-type { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+/* ---------- Caption bar ---------- */
+.os-bar { position: absolute; left: calc(var(--u) * 6); bottom: calc(var(--u) * 6); width: min(40rem, calc(100vw - 32rem)); min-width: min(24rem, 92vw); padding: calc(var(--u) * 3) calc(var(--u) * 4); pointer-events: auto;
+  background: var(--dither), var(--p1); animation: os-bar .45s steps(5) both;
+  box-shadow: 0 calc(var(--u) * -1) 0 0 var(--p4), 0 var(--u) 0 0 var(--p4), calc(var(--u) * -1) 0 0 0 var(--p4), var(--u) 0 0 0 var(--p4), calc(var(--u) * 2) calc(var(--u) * 2) 0 0 #02060cb0; }
+@keyframes os-bar { from { transform: translateY(calc(var(--u) * 12)); opacity: 0; } }
+.os-bar.os-bar-late { visibility: hidden; animation: none; }
+.os-pips { display: flex; flex-wrap: wrap; gap: calc(var(--u) * 1.5); margin: 0 0 calc(var(--u) * 2); padding: 0; list-style: none; }
+.os-pip { padding: calc(var(--u) * .5) calc(var(--u) * 1.5); font-size: calc(var(--t) * .7); letter-spacing: .06em; text-transform: uppercase; color: var(--faint); background: var(--p2); }
+.os-pip[data-state="done"] { color: var(--p6); }
+.os-pip[data-state="now"] { color: var(--p0); background: var(--gold); }
+.os-title { margin: 0 0 calc(var(--u) * 1.5); font-size: calc(var(--t) * 1.35); font-weight: 400; letter-spacing: .04em; text-transform: uppercase; color: var(--p8); }
+.os-text p { margin: 0 0 calc(var(--u) * 1.5); }
+.os-muted { color: var(--faint); }
+.os-warn { color: var(--gold); }
+.os-plan, .os-count { color: var(--p6); }
+.os-receipt { color: var(--p8); font-size: calc(var(--t) * 1.15); }
+.os-findings { margin: 0 0 calc(var(--u) * 2); padding: 0; list-style: none; color: var(--dim); }
+.os-findings li { padding: calc(var(--u) * .5) 0; border-bottom: var(--u) solid var(--p2); }
+.os-badge { display: inline-block; padding: var(--u) calc(var(--u) * 3); color: var(--p0); background: var(--p6); }
+.os-badge { background: #7fe8ff; } .os-badge[data-depth="twilight"] { background: #b6a6ff; } .os-badge[data-depth="midnight"] { background: #ffd166; }
+.os-badge[data-depth="abyss"] { background: #ff9a5a; } .os-badge[data-depth="trench"] { background: #ff4f6d; }
+.os-name { display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--u) * 2) calc(var(--u) * 3); margin: 0 0 calc(var(--u) * 2); }
+.os-name-label { color: var(--p6); }
+.os-name-input { flex: 1 1 10rem; min-width: 0; padding: var(--u) calc(var(--u) * 2); font: 400 var(--t) var(--serif); color: var(--gold); background: var(--p0); border: 0; border-radius: 0; box-shadow: 0 0 0 var(--u) var(--p4); }
+.os-name-input:focus-visible { outline: var(--u) solid var(--gold); outline-offset: var(--u); }
+.os-name-new { padding: var(--u) calc(var(--u) * 3); font-size: calc(var(--t) * .85); }
+.os-nav { display: flex; align-items: center; gap: calc(var(--u) * 4); margin-top: calc(var(--u) * 2); }
+.os-status { flex: 1; color: var(--faint); }
+.os-status:not(:empty) { animation: os-blink 1.2s steps(2) infinite; }
+@keyframes os-blink { 50% { opacity: .35; } }
+.os-btn { display: inline-block; padding: calc(var(--u) * 2) calc(var(--u) * 4); font: 400 var(--t) var(--serif); letter-spacing: .06em; text-transform: uppercase; color: var(--p8); background: var(--p2); border: 0; border-radius: 0; text-decoration: none; cursor: pointer;
+  box-shadow: 0 calc(var(--u) * -1) 0 0 var(--p4), 0 var(--u) 0 0 var(--p4), calc(var(--u) * -1) 0 0 0 var(--p4), var(--u) 0 0 0 var(--p4), calc(var(--u) * 2) calc(var(--u) * 2) 0 0 #02060cb0; }
+.os-btn:hover:not(:disabled), .os-btn:focus-visible { background: var(--p3); outline: var(--u) solid var(--gold); outline-offset: calc(var(--u) * 2); }
+.os-btn:disabled { opacity: .4; cursor: not-allowed; box-shadow: none; }
+.os-next, .os-primary { background: var(--p4); }
+.os-next:not(:disabled) { animation: os-nudge 1.4s steps(2) infinite; }
+@keyframes os-nudge { 50% { translate: var(--u) 0; } }
+.os-final { display: flex; flex-wrap: wrap; gap: calc(var(--u) * 4); margin-top: calc(var(--u) * 2); }
+.os-skip { display: inline-block; margin-top: calc(var(--u) * 2); font-size: calc(var(--t) * .8); color: var(--faint); }
+.os-skip:hover { color: var(--p6); }
+
+@media (max-width: 1100px) { .os-bar { left: calc(var(--u) * 3); right: calc(var(--u) * 3); width: auto; bottom: calc(var(--u) * 3); } }
+
+@media (prefers-reduced-motion: reduce) { .os *, .os *::before, .os *::after { animation: none !important; transition: none !important; } }
+
+/* ---------- Severity: trace bubbles, analysis lines, screen reactions ----------
+   The site's tier palette (retro-pixel.css --t5..--t1, the bestiary): sunlight cyan, twilight lilac, midnight gold,
+   abyss orange, trench red. Worse traces also get a heavier border, a warning prefix and, in the Trench, a jolt. */
+.os-ev[data-sev="sunlight"] { box-shadow: 0 0 0 var(--u) #7fe8ff; }
+.os-ev[data-sev="twilight"] { color: #e6deff; box-shadow: 0 0 0 var(--u) #b6a6ff; }
+.os-ev[data-sev="midnight"] { color: #ffe9b0; box-shadow: 0 0 0 var(--u) #ffd166, 0 0 0 calc(var(--u) * 2) #ffd16655; }
+.os-ev[data-sev="abyss"] { color: #ffd9c2; box-shadow: 0 0 0 var(--u) #ff9a5a, 0 0 0 calc(var(--u) * 2) #ff9a5a66; font-size: calc(var(--t) * .95); }
+.os-ev[data-sev="trench"] { color: #ffd0d8; background: #2a0710; box-shadow: 0 0 0 var(--u) #ff4f6d, 0 0 0 calc(var(--u) * 3) #ff4f6d77; font-size: var(--t); animation: os-ev 5.2s steps(28) forwards, os-ev-jolt .12s steps(2) 6; }
+.os-ev[data-sev="twilight"]::before { content: "! " attr(data-src) "  "; color: #b6a6ff; }
+.os-ev[data-sev="midnight"]::before { content: "!! " attr(data-src) "  "; color: #ffd166; }
+.os-ev[data-sev="abyss"]::before { content: "!!! " attr(data-src) "  "; color: #ff9a5a; }
+.os-ev[data-sev="trench"]::before { content: "☠ " attr(data-src) "  "; color: #ff4f6d; }
+@keyframes os-ev-jolt { 50% { translate: calc(-50% + var(--u)) -100%; } }
+.os-term-body li[data-sev="sunlight"] { color: #7fe8ff; }
+.os-term-body li[data-sev="twilight"] { color: #b6a6ff; }
+.os-term-body li[data-sev="midnight"] { color: #ffd166; }
+.os-term-body li[data-sev="abyss"] { color: #ff9a5a; }
+.os-term-body li[data-sev="trench"] { color: #ff4f6d; }
+
+.os-flash { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
+.os-flash.on { animation: os-flash 1.1s steps(8) both; }
+.os-flash[data-sev="sunlight"] { background: radial-gradient(circle at 60% 40%, #7fe8ff44, transparent 60%); }
+.os-flash[data-sev="twilight"] { background: radial-gradient(circle at 60% 40%, #b6a6ff33, transparent 65%); }
+.os-flash[data-sev="midnight"] { background: radial-gradient(circle at 60% 40%, transparent 30%, #ffd16655); }
+.os-flash[data-sev="abyss"] { background: radial-gradient(circle at 60% 40%, transparent 25%, #ff9a5a77); }
+.os-flash[data-sev="trench"] { background: radial-gradient(circle at 60% 40%, transparent 20%, #ff4f6d99 70%, #2a0710cc); }
+@keyframes os-flash { 0% { opacity: 0; } 15% { opacity: 1; } 100% { opacity: 0; } }
+.os.os-shake .os-canvas { animation: os-shake .45s steps(6); }
+@keyframes os-shake { 20% { translate: var(--shake) 0; } 40% { translate: calc(var(--shake) * -1) var(--shake); } 60% { translate: var(--shake) calc(var(--shake) * -1); } 80% { translate: calc(var(--shake) * -1) 0; } }

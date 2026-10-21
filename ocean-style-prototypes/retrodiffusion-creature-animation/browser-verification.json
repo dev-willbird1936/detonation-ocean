@@ -1,0 +1,6 @@
+{
+  "url":"http://127.0.0.1:8775/index.html",
+  "desktop":{"viewport":[1440,1000],"canvases":30,"all_have_drawn_pixels":true,"motions_advance":true,"five_depth_variants_synchronized_per_family":true,"pause_holds_all_frames":true,"preview_modal":true,"still_reference_images_loaded":30,"light_backdrop":true,"ocean_backdrop_restored":true,"page_overflow":false,"table_overflow":false,"reviewed_badges":30},
+  "mobile":{"viewport":[390,844],"canvases":30,"preview_modal":true,"page_overflow":false,"table_scrolls_internally":true,"motion_advances_when_explicitly_playing":true},
+  "visual_review":"All 48 unique native poses inspected in six frame grids; exported forward/reverse frame grids also inspected. All eight octopus tips counted in every unique pose. Full rendered 30-cell desktop table inspected on intended depth backdrops. Viperfish jaw closes during some poses, temporarily reducing tooth visibility. Native sequence resets are retained untouched and repaired only by labelled game-pose forward/reverse playback."
+}

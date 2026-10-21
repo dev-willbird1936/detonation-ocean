@@ -1,0 +1,27 @@
+{
+  "description": "Script kills the ClamAV daemon.",
+  "path": "run",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "findings": [
+      "defence-tamper"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "trace",
+      "kind": "execve",
+      "detail": "execve /usr/bin/pkill",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "/usr/bin/pkill",
+      "argv": [
+        "pkill",
+        "-f",
+        "clamd"
+      ]
+    }
+  ]
+}

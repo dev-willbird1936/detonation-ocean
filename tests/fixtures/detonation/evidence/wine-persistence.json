@@ -1,0 +1,58 @@
+{
+  "description": "AT-22: Windows program under Wine writes a Run key and a file in Documents.",
+  "path": "wine",
+  "complete": true,
+  "expect": {
+    "signals": [],
+    "depth": "abyss",
+    "family": "intrusion",
+    "findings": [
+      "persistence"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev-1",
+      "source": "wine",
+      "kind": "execve",
+      "detail": "execve C:\\Users\\Dana\\Downloads\\test.exe",
+      "at": "2026-01-01T00:00:00.000Z",
+      "path": "C:\\Users\\Dana\\Downloads\\test.exe",
+      "argv": [
+        "test.exe"
+      ]
+    },
+    {
+      "id": "ev-2",
+      "source": "trace",
+      "kind": "file-write",
+      "detail": "file-write C:\\Users\\Dana\\Documents\\report-copy.txt",
+      "at": "2026-01-01T00:00:01.000Z",
+      "path": "C:\\Users\\Dana\\Documents\\report-copy.txt"
+    },
+    {
+      "id": "ev-3",
+      "source": "registry",
+      "kind": "key-added",
+      "detail": "key-added Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "at": "2026-01-01T00:00:02.000Z",
+      "hive": "HKCU",
+      "key": "Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "value": "TestUpdater",
+      "data": "C:\\Users\\Dana\\Downloads\\test.exe"
+    },
+    {
+      "id": "ev-4",
+      "source": "diff",
+      "kind": "added",
+      "detail": "added /home/dana/Documents/report-copy.txt",
+      "at": "2026-01-01T00:00:03.000Z",
+      "path": "/home/dana/Documents/report-copy.txt",
+      "seeded": false,
+      "entropyBefore": null,
+      "entropyAfter": 4.1,
+      "sizeBefore": null,
+      "sizeAfter": 210
+    }
+  ]
+}

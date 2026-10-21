@@ -1,0 +1,304 @@
+{
+  "user": {
+    "id": "trainee",
+    "name": "Marisol Vega",
+    "short": "marisol",
+    "email": "marisol.vega@vegaworks.example",
+    "avatar": "ryan-collins-2014"
+  },
+  "sys": {
+    "theme": "light",
+    "accent": "pink",
+    "wallpaper": "stock",
+    "wallpaperUrl": "/previews/macos-final/wallpaper-glass-light.jpg",
+    "wifiNetwork": "Vega-Home",
+    "battery": 78
+  },
+  "fs": {
+    "nodes": {
+      "f-welcome": null,
+      "f-q3": null,
+      "f-q3-notes": null,
+      "f-budget": null,
+      "f-handbook": null,
+      "f-offsite": null,
+      "f-installer": null,
+      "f-song": null,
+      "home": {
+        "name": "marisol"
+      },
+      "f-sides": {
+        "id": "f-sides",
+        "parentId": "documents",
+        "name": "Pilot sides.txt",
+        "kind": "file",
+        "mime": "text/plain",
+        "size": 52,
+        "modified": "2014-06-11T10:00:00Z",
+        "trashed": false,
+        "contentId": "c-sides"
+      }
+    }
+  },
+  "notifications": {
+    "history": [
+      {
+        "id": "n-table",
+        "app": "calendar",
+        "title": "Table read tomorrow",
+        "body": "Script table read, studio B.",
+        "time": "2014-06-12T19:00:00Z"
+      }
+    ]
+  },
+  "installed": [
+    "files",
+    "browser",
+    "mail",
+    "messages",
+    "settings",
+    "notes",
+    "calendar",
+    "contacts",
+    "reminders",
+    "photos",
+    "media",
+    "calculator",
+    "clock",
+    "store",
+    "updates"
+  ],
+  "dock": {
+    "pins": [
+      "files",
+      "browser",
+      "mail",
+      "messages",
+      "photos",
+      "calendar",
+      "contacts",
+      "settings"
+    ],
+    "badges": {
+      "mail": 1
+    }
+  },
+  "data": {
+    "mail": {
+      "messages": [
+        {
+          "id": "m-agent",
+          "folder": "inbox",
+          "from": "Lena Oduya <lena.oduya@oduyatalent.example>",
+          "to": "marisol.vega@vegaworks.example",
+          "subject": "Callback for the pilot",
+          "body": "Marisol,\n\nThe network wants you back for a chemistry read on Friday. Sides are attached to the booking.\n\nLena",
+          "time": "2014-06-12T16:20:00Z",
+          "read": false,
+          "flagged": true,
+          "attachments": []
+        },
+        {
+          "id": "m-wardrobe",
+          "folder": "inbox",
+          "from": "Costume Dept <costumes@harborlot.example>",
+          "to": "marisol.vega@vegaworks.example",
+          "subject": "Fitting moved to Wednesday",
+          "body": "Your fitting moves to Wednesday at 10 am, trailer 3.",
+          "time": "2014-06-11T13:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-mum",
+          "folder": "inbox",
+          "from": "Rosa Vega <rosa.vega@vegaworks.example>",
+          "to": "marisol.vega@vegaworks.example",
+          "subject": "Sunday dinner",
+          "body": "Your brother is bringing the dessert. Come early if you can.",
+          "time": "2014-06-10T20:30:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        },
+        {
+          "id": "m-sent",
+          "folder": "sent",
+          "from": "Marisol Vega <marisol.vega@vegaworks.example>",
+          "to": "lena.oduya@oduyatalent.example",
+          "subject": "Re: Availability",
+          "body": "Free all of next week. Thanks Lena.",
+          "time": "2014-06-09T09:00:00Z",
+          "read": true,
+          "flagged": false,
+          "attachments": []
+        }
+      ]
+    },
+    "messages": {
+      "threads": [
+        {
+          "id": "t-lena",
+          "with": "Lena Oduya",
+          "items": [
+            {
+              "id": "i-1",
+              "from": "Lena Oduya",
+              "text": "Callback is confirmed for Friday.",
+              "time": "2014-06-12T16:25:00Z"
+            },
+            {
+              "id": "i-2",
+              "from": "Marisol Vega",
+              "text": "Wonderful, thank you!",
+              "time": "2014-06-12T16:30:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "id": "n-lines",
+        "folder": "notes",
+        "title": "Lines to learn",
+        "body": "Scene 4 monologue\nScene 9 argument at the pier",
+        "modified": "2014-06-11T08:00:00Z",
+        "pinned": true
+      }
+    ],
+    "calendar": [
+      {
+        "id": "e-table",
+        "title": "Table read",
+        "start": "2014-06-13T15:00:00Z",
+        "end": "2014-06-13T17:00:00Z",
+        "location": "Studio B"
+      },
+      {
+        "id": "e-fit",
+        "title": "Costume fitting",
+        "start": "2014-06-18T17:00:00Z",
+        "end": "2014-06-18T18:00:00Z",
+        "location": "Trailer 3"
+      }
+    ],
+    "reminders": [
+      {
+        "id": "r-lines",
+        "list": "work",
+        "title": "Learn scene 4 monologue",
+        "due": "2014-06-13T09:00:00Z",
+        "done": false
+      }
+    ],
+    "contacts": [
+      {
+        "id": "p-lena",
+        "name": "Lena Oduya",
+        "email": "lena.oduya@oduyatalent.example",
+        "phone": "+1 555 0151",
+        "org": "Oduya Talent"
+      },
+      {
+        "id": "p-costume",
+        "name": "Costume Dept",
+        "email": "costumes@harborlot.example",
+        "phone": "+1 555 0152",
+        "org": "Harbor Lot Studios"
+      },
+      {
+        "id": "p-rosa",
+        "name": "Rosa Vega",
+        "email": "rosa.vega@vegaworks.example",
+        "phone": "+1 555 0153",
+        "org": "Family"
+      }
+    ],
+    "contents": {
+      "c-welcome": null,
+      "c-q3-notes": null,
+      "c-budget": null,
+      "c-handbook": null,
+      "c-offsite": null,
+      "c-installer": null,
+      "c-song": null,
+      "c-sides": {
+        "text": "Pilot, scene 4\nMARISOL: We keep the lighthouse open."
+      }
+    },
+    "web": {
+      "pages": {
+        "pg-castdb": {
+          "title": "Harbor Lot Studios",
+          "url": "www.harborlot.example",
+          "brand": "Harbor Lot Studios",
+          "heading": "Now casting",
+          "body": "Open roles and production news.\n\nThis is a fictional studio page.",
+          "choices": []
+        }
+      }
+    },
+    "browser": {
+      "tabs": [
+        {
+          "id": "tab-1",
+          "url": "scene:pg-castdb",
+          "title": "Harbor Lot Studios"
+        }
+      ],
+      "activeTabId": "tab-1",
+      "bookmarks": [],
+      "history": []
+    },
+    "media": {
+      "tracks": [],
+      "playlists": [],
+      "nowPlaying": null
+    },
+    "photos": {
+      "items": [
+        {
+          "id": "p1",
+          "name": "IMG_0101.jpg",
+          "asset": "photo-1",
+          "taken": "2014-06-02T17:42:00Z",
+          "favorite": false,
+          "trashed": false
+        },
+        {
+          "id": "p2",
+          "name": "IMG_0102.jpg",
+          "asset": "photo-2",
+          "taken": "2014-05-24T09:15:00Z",
+          "favorite": true,
+          "trashed": false
+        },
+        {
+          "id": "p3",
+          "name": "IMG_0103.jpg",
+          "asset": "photo-3",
+          "taken": "2014-05-10T08:05:00Z",
+          "favorite": false,
+          "trashed": false
+        }
+      ],
+      "albums": [
+        {
+          "id": "al-trip",
+          "name": "Coast trip",
+          "photoIds": [
+            "p1",
+            "p2"
+          ]
+        }
+      ]
+    },
+    "whiteboard": {
+      "boards": [],
+      "activeId": null
+    },
+    "stickies": []
+  }
+}
