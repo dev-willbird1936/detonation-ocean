@@ -43,10 +43,16 @@ Upload `samples/invoice.py`. It tries to steal credentials, exfiltrate, hijack r
 
 The site sits behind a Caddy login (user `judge`). Put the password in the form's private notes, not in this repository. The login does not cover `/api/jobs/<id>`, which carries its own bearer token. Removing the gate is a one-line change recorded in `USER-DECISIONS.md`; it is kept on because a public upload box could receive real malware from a visitor.
 
+- Re-check after key rotation (about 16:37 UTC): the rotated Serverless Inference key is installed on the VM (`/etc/detonation-ocean/env`, previous file kept as `env.bak-prerotate`). A public upload of `clean-chart.py` gave job `j-a2722cad78cf8d60`: stages `received` to `done` in 21 s, analysis and explanation by the model, `teardownConfirmed:true`, `uploadDeleted:true`, `hostCanary:unchanged`; afterwards 0 containers and 0 volumes on the VM.
+
+## Public repository
+
+https://github.com/dev-willbird1936/detonation-ocean (public, single squashed commit). The Windows 11 and macOS shells (`desktop-comparison/`), `docs/desktop-parity/`, `docs/evidence/` and the unused style prototypes are withheld from it; they stay in this private checkout, unchanged.
+
 ## Open items
 
-1. Public GitHub repository: needs the user's approval of name and visibility, and the unlicensed macOS shell and Win11React artwork replaced or withheld (SPEC section 14 items 7 and 13).
-2. Recorded demo video with the containment moment above.
-3. Submission form: cover image, slides, tags.
+1. ~~Public GitHub repository~~ done (above). The withheld shells still need licensed replacements before they can be published.
+2. ~~Recorded demo video~~ done: `docs/demo-video/containment-demo.mp4` (2 min, 22 MB, local only, not in the public repository). It records `samples/invoice.py` on the live site (job `j-4be00c4bf97f6082`): Trench, five findings, `limitsHit:["pids-limit"]`, `teardownConfirmed:true`, `hostCanary:unchanged`, 0 containers and 0 volumes left. Re-record with `RECORD_BASE_URL`/`RECORD_AUTH` set (see `tools/record-upload.mjs`). Uploading it to the form is the remaining step.
+3. Submission form on lablab.ai: cover image, slides, tags; needs the user's lablab account, so it is not filled in.
 4. Inference key rotation (the user deferred it).
 5. Teardown after judging: `deploy/vultr-vm/README.md`, "Teardown after the hackathon".

@@ -1,5 +1,5 @@
 // Records one upload through the local demo (start-hackathon-demo.bat) as an MP4: main menu, drop panel, the ocean show step by step (octopus,
-// clam, fish, dive), then the full report page. Usage: node tools/record-upload.mjs <file> <out.mp4>. Needs playwright-core, its headless shell and ffmpeg.
+// clam, fish, dive), then the full report page. Usage: node tools/record-upload.mjs <file> <out.mp4>. Set RECORD_BASE_URL/RECORD_AUTH for a remote site. Needs playwright-core, its headless shell and ffmpeg.
 import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, readdirSync, rmSync } from 'node:fs';
@@ -11,14 +11,15 @@ const { chromium } = createRequire(import.meta.url)(process.env.PLAYWRIGHT_CORE 
 const shell = 'C:/Users/warcr/AppData/Local/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-win64/chrome-headless-shell.exe';
 const dir = mkdtempSync(join(tmpdir(), 'record-'));
 const size = { width: 1280, height: 800 };
+const base = process.env.RECORD_BASE_URL || 'http://127.0.0.1:4173/'; // set RECORD_BASE_URL (and RECORD_AUTH=user:password) to record the live site
 
 const browser = await chromium.launch({ executablePath: shell, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
-const context = await browser.newContext({ viewport: size, recordVideo: { dir, size } });
+const context = await browser.newContext({ viewport: size, recordVideo: { dir, size }, ...(process.env.RECORD_AUTH && { httpCredentials: { username: process.env.RECORD_AUTH.split(':')[0], password: process.env.RECORD_AUTH.split(':').slice(1).join(':') } }) });
 const page = await context.newPage();
 const errors = [];
 page.on('pageerror', (e) => errors.push(e.message));
 try {
-  await page.goto('http://127.0.0.1:4173/');
+  await page.goto(base);
   await page.waitForTimeout(6000); // the dive-in intro
   await page.setInputFiles('.drop-file', file);
   await page.check('#drop-consent');
